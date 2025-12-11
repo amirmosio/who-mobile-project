@@ -1,0 +1,3471 @@
+{
+  "@@locale": "de",
+  "welcome_back": "Willkommen zurück!",
+  "login": "Anmelden",
+  "enter_your_email": "Geben Sie Ihre E-Mail-Adresse ein",
+  "email": "E-Mail",
+  "password": "Passwort",
+  "enter_your_password": "Geben Sie Ihr Passwort ein",
+  "forgot_password": "Passwort vergessen",
+  "communication_error": "Kommunikationsfehler",
+  "open": "Öffnen",
+  "close": "Schließen",
+  "manually": "Manuell",
+  "date": "Datum:",
+  "time": "Uhrzeit:",
+  "mandatory_field": "Pflichtfeld",
+  "invalid_field": "Ungültige Eingabe",
+  "invalid_phone_number": "Ungültiges Telefonnummernformat",
+  "phone_must_include_country_code": "Die Telefonnummer muss die Landesvorwahl enthalten (z.B. +49)",
+  "passwords_do_not_match": "Passwörter stimmen nicht überein",
+  "no_item_found": "Keine Elemente gefunden",
+  "the_list_is_currently_empty": "Die Liste ist derzeit leer.",
+  "please_try_again_later": "Bitte überprüfen Sie Ihre Internetverbindung und versuchen Sie es später erneut.",
+  "unauthorized_request": "Ihre Sitzung ist nicht mehr gültig. Sie müssen sich erneut anmelden. Weiterleitung zur Anmeldeseite...",
+  "select_dates": "Datum auswählen",
+  "save": "Speichern",
+  "continue_as_guest": "Als Gast fortfahren",
+  "guest": "Gast",
+  "guest_account": "Gastkonto",
+  "guest_account_type": "Gastkonto",
+  "guest_user": "Gastbenutzer",
+  "guest_registration_successful": "Gastregistrierung erfolgreich",
+  "guest_registration_description": "Erstellen Sie ein temporäres Konto, um die App sofort zu nutzen. Sie können später auf ein vollständiges Konto upgraden.",
+  "guest_account_limitations": "Hinweis: Gastkonten haben eingeschränkte Funktionen und Daten werden temporär gespeichert.",
+  "guest_account_info_description": "Dies ist ein temporäres Gastkonto. Erstellen Sie ein vollständiges Konto, um alle Funktionen freizuschalten und Ihre Daten zu sichern.",
+  "guest_conversion_benefits": "Erhalten Sie vollen Zugriff, sichere Datenspeicherung und personalisierte Funktionen.",
+  "convert_to_full_account": "Konto upgraden",
+  "upgrade_your_account": "Upgraden Sie Ihr Konto",
+  "upgrade": "Upgraden",
+  "dismiss": "Verwerfen",
+  "clear_guest_data": "Gastdaten löschen",
+  "clear_guest_data_confirmation": "Sind Sie sicher, dass Sie alle Gastdaten löschen möchten? Diese Aktion kann nicht rückgängig gemacht werden.",
+  "clear": "Löschen",
+  "clear_data": "Daten löschen",
+  "quick_guest_start": "Schnellstart",
+  "first_name": "Vorname",
+  "last_name": "Nachname",
+  "first_name_required": "Vorname ist erforderlich",
+  "last_name_required": "Nachname ist erforderlich",
+  "accept_marketing_communications": "Marketing-Kommunikation akzeptieren",
+  "created_at": "Erstellt",
+  "cancel": "Abbrechen",
+  "account_type": "Kontotyp",
+  "welcome_to_guidaevai": "Willkommen bei GuidaEVAI",
+  "intro_community_description": "Geben Sie hier Ihre Daten ein",
+  "intro_feature_learning": "Vollständiges Lernen",
+  "intro_feature_learning_desc": "Theorie, Praxis und Prüfungsvorbereitung",
+  "intro_feature_practice": "Übungstests",
+  "intro_feature_practice_desc": "Tausende von Fragen zum Üben",
+  "intro_feature_community": "Community-Unterstützung",
+  "intro_feature_community_desc": "Vernetzen Sie sich mit anderen Lernenden",
+  "get_started": "Loslegen",
+  "whats_your_name": "Wie heißen Sie?",
+  "name_minimum_3_characters": "Der Name muss mindestens 3 Zeichen lang sein",
+  "intro_select_license_type": "Wählen Sie Ihren Führerscheintyp",
+  "intro_license_description": "Wählen Sie die Führerscheinklasse, für die Sie lernen möchten",
+  "intro_license_group": "Führerscheinklasse",
+  "intro_license_specific_type": "Spezifischer Führerscheintyp",
+  "intro_license_classica": "Klassisch",
+  "intro_license_classica_desc": "Standard PKW- und Motorradführerscheine",
+  "intro_license_superiori": "Beruflich",
+  "intro_license_superiori_desc": "Gewerbliche und professionelle Führerscheine",
+  "intro_license_cap": "CAP",
+  "intro_license_cap_desc": "Berufsbefähigungsnachweis",
+  "intro_license_revisione": "Überprüfung",
+  "intro_license_revisione_desc": "Führerscheinerneuerung und -überprüfung",
+  "intro_final_configuration": "Abschlusskonfiguration",
+  "intro_configuration_description": "Überprüfen Sie Ihre Auswahl und schließen Sie die Einrichtung ab",
+  "intro_your_selections": "Ihre Auswahl",
+  "intro_license_type": "Führerscheintyp",
+  "intro_confirm_age_over_16": "Ich bestätige, dass ich über 16 Jahre alt bin",
+  "intro_age_requirement": "Erforderlich zur Nutzung der App",
+  "intro_accept_privacy_policy": "Ich akzeptiere die Datenschutzerklärung",
+  "intro_privacy_required": "Erforderlich zum Fortfahren",
+  "intro_terms_required": "Erforderlich zum Fortfahren",
+  "intro_accept_marketing": "Ich möchte Marketing-Kommunikation erhalten",
+  "intro_marketing_optional": "Optional - Sie können dies später ändern",
+  "intro_terms_note": "Durch Fortfahren stimmen Sie unseren Nutzungsbedingungen und der Datenschutzerklärung zu",
+  "intro_start_using_app": "App nutzen",
+  "income": "EINKOMMEN",
+  "non_income": "KEIN EINKOMMEN",
+  "month": "Monat",
+  "week": "Woche",
+  "day": "Tag",
+  "italian": "Italienisch",
+  "english": "Englisch",
+  "spanish": "Spanisch",
+  "french": "Französisch",
+  "german": "Deutsch",
+  "arabic": "Arabisch",
+  "owner": "Eigentümer",
+  "administrator": "Administrator",
+  "operator": "Operator",
+  "pending": "Ausstehend",
+  "confirmed": "Bestätigt",
+  "approved": "Genehmigt",
+  "rejected": "Abgelehnt",
+  "account_verification": "Kontoüberprüfung",
+  "check_your_email": "Überprüfen Sie Ihre E-Mail",
+  "insert_otp_code_receieved_at_email": "Geben Sie den OTP-Code ein, den Sie per E-Mail erhalten haben",
+  "continue_title": "Fortfahren",
+  "register": "Registrieren",
+  "personal_data": "Persönliche Daten",
+  "enter_your_first_name": "Geben Sie Ihren Vornamen ein",
+  "name": "Name",
+  "surname": "Nachname",
+  "enter_your_last_name": "Geben Sie Ihren Nachnamen ein",
+  "phone_number": "Telefonnummer",
+  "enter_your_phone_number": "Geben Sie Ihre Telefonnummer ein",
+  "confirm_password": "Passwort bestätigen",
+  "write_password": "Passwort eingeben",
+  "modify_password": "Passwort ändern",
+  "enter_new_password": "Neues Passwort eingeben",
+  "password_requirements": "Mindestens 12–16 Zeichen, Großbuchstaben (A–Z), Kleinbuchstaben (a–z), Zahlen (0–9), Sonderzeichen",
+  "password_hint": "Ihr Passwort",
+  "send": "Senden",
+  "update_app": "App aktualisieren",
+  "you_app_is_updated_however_a_new_version": "Ihre App ist auf dem aktuellen Stand. Eine neuere Version ist jedoch verfügbar. Sie können sie aus Ihrem Store aktualisieren. Aktuelle Version: {current_version}.",
+  "@you_app_is_updated_however_a_new_version": {
+    "placeholders": {
+      "current_version": {
+        "type": "String"
+      }
+    }
+  },
+  "you_app_is_outdated_update": "Ihre App ist veraltet. Aktualisieren Sie auf die neueste Version, um die App weiterhin zu nutzen. Aktuelle Version: {current_version}.",
+  "@you_app_is_outdated_update": {
+    "placeholders": {
+      "current_version": {
+        "type": "String"
+      }
+    }
+  },
+  "platform_not_found": "Plattform wurde nicht unter unseren unterstützten Geräten gefunden.",
+  "connection_timeout": "Verbindungs-Timeout",
+  "receive_timeout": "Empfangs-Timeout",
+  "user_is_not_authorized": "Benutzer ist nicht autorisiert",
+  "email_not_registered": "E-Mail nicht registriert",
+  "not_handled": "Unbekannte Ausnahme",
+  "conflict": "Konflikt",
+  "validation": "Validierung",
+  "home": "Startseite",
+  "calls": "Anrufe",
+  "menu": "Menü",
+  "store": "Shop",
+  "profile": "Profil",
+  "news": "Neuigkeiten",
+  "welcomeBack": "Willkommen zurück, {name}!",
+  "@welcomeBack": {
+    "description": "Welcome message for the user on the dashboard page.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "continueLearning": "Weiter lernen",
+  "@continueLearning": {
+    "description": "Prompt to continue learning on the dashboard page."
+  },
+  "overallProgress": "Gesamtfortschritt",
+  "@overallProgress": {
+    "description": "Label for overall progress bar on the dashboard page."
+  },
+  "streak": "Serie",
+  "@streak": {
+    "description": "Label for the user's learning streak on the dashboard page."
+  },
+  "days": "Tage",
+  "@days": {
+    "description": "Days label"
+  },
+  "unit1Basics": "Einheit 1: Grundlagen",
+  "@unit1Basics": {
+    "description": "Label for Unit 1 Basics card on the dashboard page."
+  },
+  "quizzes": "Quiz",
+  "@quizzes": {
+    "description": "Label for quizzes card on the dashboard page."
+  },
+  "lessons": "Lektionen",
+  "@lessons": {
+    "description": "Label for lessons card on the dashboard page."
+  },
+  "videoLessons": "Videolektionen",
+  "@videoLessons": {
+    "description": "Label for video lessons card on the dashboard page."
+  },
+  "myLicense": "Mein Führerschein",
+  "@myLicense": {
+    "description": "Label for my license card on the dashboard page."
+  },
+  "choose_email_for_verification_code": "Wählen Sie die E-Mail-Adresse, an die Sie den Bestätigungscode erhalten möchten:",
+  "alternative_email_address": "Alternative E-Mail-Adresse",
+  "select": "Auswählen",
+  "monday": "Montag",
+  "tuesday": "Dienstag",
+  "wednesday": "Mittwoch",
+  "thursday": "Donnerstag",
+  "friday": "Freitag",
+  "saturday": "Samstag",
+  "sunday": "Sonntag",
+  "username": "Benutzername",
+  "copy_profile_link": "Profillink kopieren",
+  "go_back": "ZURÜCK",
+  "@go_back": {
+    "description": "Go back button text"
+  },
+  "password_reset_success_title": "Passwort erfolgreich zurückgesetzt",
+  "password_reset_success_subtitle": "Sie können sich jetzt mit Ihrem neuen Passwort anmelden",
+  "go_to_login": "Zur Anmeldung",
+  "email_link_sent": "Ein Link wurde an Ihre E-Mail-Adresse gesendet. Bitte folgen Sie den Anweisungen.",
+  "myProgress": "Mein Fortschritt",
+  "@myProgress": {
+    "description": "My progress section title"
+  },
+  "live": "Live",
+  "@live": {
+    "description": "Live page title"
+  },
+  "quiz": "Quiz",
+  "@quiz": {
+    "description": "Label for quiz progress."
+  },
+  "preparation": "Vorbereitung: {percentage}%",
+  "@preparation": {
+    "description": "Label for preparation percentage.",
+    "placeholders": {
+      "percentage": {
+        "type": "String"
+      }
+    }
+  },
+  "showProgressChart": "Fortschrittsdiagramm anzeigen",
+  "@showProgressChart": {
+    "description": "Label for show progress chart button."
+  },
+  "theSteps": "Die Schritte",
+  "@theSteps": {
+    "description": "Title for steps section in my license page."
+  },
+  "uploadDocuments": "Dokumente hochladen",
+  "@uploadDocuments": {
+    "description": "Title for upload documents step."
+  },
+  "completeYourDossier": "Vervollständigen Sie Ihre Unterlagen",
+  "@completeYourDossier": {
+    "description": "Subtitle for upload documents."
+  },
+  "documentsUploaded": "{uploaded}/{total} hochgeladen",
+  "@documentsUploaded": {
+    "description": "Status for uploaded documents.",
+    "placeholders": {
+      "uploaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "bookMedicalVisit": "Ärztliche Untersuchung buchen",
+  "@bookMedicalVisit": {
+    "description": "Title for book medical visit step."
+  },
+  "medicalCertificate": "Ärztliches Attest",
+  "@medicalCertificate": {
+    "description": "Subtitle for medical visit."
+  },
+  "availableAfterDocumentUpload": "Verfügbar nach Dokumenten-Upload",
+  "@availableAfterDocumentUpload": {
+    "description": "Status available after document upload."
+  },
+  "readyToBook": "Bereit zur Buchung",
+  "@readyToBook": {
+    "description": "Status wenn bereit zur Buchung der medizinischen Untersuchung."
+  },
+  "completeAllDocuments": "Vervollständigen Sie alle Dokumente",
+  "@completeAllDocuments": {
+    "description": "Status wenn alle Dokumente vervollständigt werden müssen."
+  },
+  "bookMedicalExamFirst": "Buchen Sie zuerst die ärztliche Untersuchung",
+  "@bookMedicalExamFirst": {
+    "description": "Status wenn die ärztliche Untersuchung vor der Theorieprüfung gebucht werden muss."
+  },
+  "bookTheoreticalExam": "Theorieprüfung buchen",
+  "@bookTheoreticalExam": {
+    "description": "Title for book theoretical exam step."
+  },
+  "availableAfterBooking": "Verfügbar nach Buchung",
+  "@availableAfterBooking": {
+    "description": "Status available after booking."
+  },
+  "needHelp": "Brauchen Sie Hilfe?",
+  "@needHelp": {
+    "description": "Label for help button."
+  },
+  "limitedSeats": "BEGRENZTE PLÄTZE",
+  "@limitedSeats": {
+    "description": "Banner text indicating limited seats available."
+  },
+  "examOctoberPrice": "Oktober-Prüfung für nur 9,90€",
+  "@examOctoberPrice": {
+    "description": "Banner text showing exam date and price."
+  },
+  "registerNow": "Jetzt anmelden!",
+  "@registerNow": {
+    "description": "Call to action button text for registration."
+  },
+  "ciaoGiacomo": "Hallo Giacomo!",
+  "@ciaoGiacomo": {
+    "description": "Personalized greeting for Giacomo on the dashboard."
+  },
+  "timeForQuiz": "Es ist Zeit für ein paar Quiz!",
+  "@timeForQuiz": {
+    "description": "Encouragement text to take quizzes."
+  },
+  "salvoGreeting": "Hallo! Ich bin Salvo, Ihr virtueller, aber echter Fahrlehrer\nWie kann ich Ihnen heute helfen?",
+  "@salvoGreeting": {
+    "description": "Greeting message from Salvo in the chat bubble."
+  },
+  "askSalvoAI": "Fragen Sie Salvo (KI)",
+  "@askSalvoAI": {
+    "description": "Label for Salvo AI chat button with AI indicator."
+  },
+  "support": "Support",
+  "@support": {
+    "description": "Label for support/assistance button."
+  },
+  "reviewTopic": "Ich möchte ein Thema wiederholen",
+  "@reviewTopic": {
+    "description": "Option to review a topic in the chat bubble."
+  },
+  "quizDoubts": "Ich habe Zweifel an einer Quizfrage",
+  "@quizDoubts": {
+    "description": "Option to ask about quiz questions in the chat bubble."
+  },
+  "fullSimulation": "Ich möchte eine vollständige Simulation",
+  "@fullSimulation": {
+    "description": "Option to request a full simulation in the chat bubble."
+  },
+  "user_area": "Benutzerbereich",
+  "@user_area": {
+    "description": "Profile page title"
+  },
+  "logout": "Abmelden",
+  "@logout": {
+    "description": "Logout button text"
+  },
+  "logout_confirmation_title": "Abmeldung bestätigen",
+  "@logout_confirmation_title": {
+    "description": "Logout confirmation dialog title"
+  },
+  "logout_confirmation_message": "Sind Sie sicher, dass Sie sich von Ihrem Konto abmelden möchten?",
+  "@logout_confirmation_message": {
+    "description": "Logout confirmation dialog message"
+  },
+  "edit_profile": "Profil bearbeiten",
+  "@edit_profile": {
+    "description": "Edit profile button text"
+  },
+  "edit_profile_title": "Profil Bearbeiten",
+  "@edit_profile_title": {
+    "description": "Edit profile page title"
+  },
+  "@first_name": {
+    "description": "First name label"
+  },
+  "@last_name": {
+    "description": "Last name label"
+  },
+  "phone": "Telefon",
+  "@phone": {
+    "description": "Phone field label"
+  },
+  "save_changes": "Änderungen Speichern",
+  "@save_changes": {
+    "description": "Save changes button text"
+  },
+  "profile_updated_successfully": "Profil erfolgreich aktualisiert",
+  "@profile_updated_successfully": {
+    "description": "Success message after profile update"
+  },
+  "failed_to_update_license_type": "Führerscheintyp konnte nicht aktualisiert werden. Bitte versuchen Sie es erneut.",
+  "@failed_to_update_license_type": {
+    "description": "Error message when license type update fails"
+  },
+  "change_password": "Passwort Ändern",
+  "@change_password": {
+    "description": "Change password button text"
+  },
+  "enter_first_name": "Geben Sie Ihren Vornamen ein",
+  "@enter_first_name": {
+    "description": "First name field placeholder"
+  },
+  "enter_last_name": "Geben Sie Ihren Nachnamen ein",
+  "@enter_last_name": {
+    "description": "Last name field placeholder"
+  },
+  "enter_phone": "Geben Sie Ihre Telefonnummer ein",
+  "@enter_phone": {
+    "description": "Phone field placeholder"
+  },
+  "phone_must_be_at_least_10_digits": "Telefon muss mindestens 10 Ziffern enthalten",
+  "@phone_must_be_at_least_10_digits": {
+    "description": "Phone validation error"
+  },
+  "profile_name_not_available": "Name nicht verfügbar",
+  "@profile_name_not_available": {
+    "description": "Text shown when user name is not available"
+  },
+  "profile_email_not_available": "E-Mail nicht verfügbar",
+  "@profile_email_not_available": {
+    "description": "Text shown when user email is not available"
+  },
+  "merge_accounts": "Konten zusammenführen",
+  "@merge_accounts": {
+    "description": "Merge accounts button text"
+  },
+  "preparation_status": "Vorbereitungsstatus",
+  "@preparation_status": {
+    "description": "Preparation status section title"
+  },
+  "next_step": "Nächster Schritt",
+  "@next_step": {
+    "description": "Next step label"
+  },
+  "quiz_reminder": "Quiz-Erinnerung",
+  "@quiz_reminder": {
+    "description": "Quiz reminder title"
+  },
+  "quiz_reminder_description": "Legen Sie die Zeit fest, zu der Ihr virtueller Fahrlehrer Sie an Quiz erinnern soll",
+  "@quiz_reminder_description": {
+    "description": "Quiz reminder description"
+  },
+  "set_time": "Zeit einstellen",
+  "@set_time": {
+    "description": "Set time button text"
+  },
+  "quiz_reminder_title": "Zeit zum Üben!",
+  "@quiz_reminder_title": {
+    "description": "Quiz reminder notification title"
+  },
+  "quiz_reminder_body": "{firstName}, Zeit für ein Quiz!",
+  "@quiz_reminder_body": {
+    "description": "Quiz reminder notification body",
+    "placeholders": {
+      "firstName": {
+        "type": "String"
+      }
+    }
+  },
+  "language": "Sprache",
+  "@language": {
+    "description": "Language setting"
+  },
+  "dyslexia_font": "DSA-Schriftart",
+  "@dyslexia_font": {
+    "description": "Dyslexia font setting"
+  },
+  "improve_readability": "Lesbarkeit verbessern",
+  "@improve_readability": {
+    "description": "Improve readability setting"
+  },
+  "write_review": "Bewertung schreiben",
+  "@write_review": {
+    "description": "Write a review section"
+  },
+  "rate_app": "Bewerten Sie unsere App in den Stores",
+  "@rate_app": {
+    "description": "Rate our app description"
+  },
+  "contact_us": "Kontaktieren Sie uns",
+  "@contact_us": {
+    "description": "Contact us section"
+  },
+  "chat_support": "Chat-Support",
+  "@chat_support": {
+    "description": "Chat support option"
+  },
+  "email_support": "E-Mail-Support",
+  "@email_support": {
+    "description": "Email support option"
+  },
+  "privacy_conditions": "Datenschutz und Bedingungen",
+  "@privacy_conditions": {
+    "description": "Privacy and conditions section"
+  },
+  "terms_of_service": "Nutzungsbedingungen",
+  "@terms_of_service": {
+    "description": "Terms of service option"
+  },
+  "terms_and_conditions": "Allgemeine Geschäftsbedingungen",
+  "@terms_and_conditions": {
+    "description": "Terms and Conditions document name"
+  },
+  "privacy_policy": "Datenschutzerklärung",
+  "@privacy_policy": {
+    "description": "Privacy Policy document name"
+  },
+  "accept_data_sharing": "Ich akzeptiere die Weitergabe meiner Daten",
+  "@accept_data_sharing": {
+    "description": "Accept data sharing setting"
+  },
+  "delete_account": "Konto löschen",
+  "@delete_account": {
+    "description": "Delete account section"
+  },
+  "delete_profile": "Ihr Profil dauerhaft löschen",
+  "@delete_profile": {
+    "description": "Delete profile permanently description"
+  },
+  "type_to_confirm_deletion": "Geben Sie \"Guida e vai\" ein, um zu bestätigen",
+  "@type_to_confirm_deletion": {
+    "description": "Instruction to type confirmation text for account deletion"
+  },
+  "error_deleting_account": "Fehler beim Löschen des Kontos. Bitte versuchen Sie es erneut.",
+  "@error_deleting_account": {
+    "description": "Error message when account deletion fails"
+  },
+  "merge_your_accounts": "Ihre Konten zusammenführen",
+  "@merge_your_accounts": {
+    "description": "Merge accounts page title"
+  },
+  "account_unification_description": "Geben Sie die E-Mail-Adresse des anderen Kontos ein und folgen Sie den Anweisungen, die wir Ihnen per E-Mail senden, um mit der Zusammenführung fortzufahren und alle Ihre Fortschritte zu synchronisieren.",
+  "@account_unification_description": {
+    "description": "Account unification page description"
+  },
+  "enter_email_placeholder": "ihre@email.de",
+  "@enter_email_placeholder": {
+    "description": "Email input placeholder"
+  },
+  "send_code": "Code senden",
+  "@send_code": {
+    "description": "Send code button text"
+  },
+  "select_time": "Zeit auswählen",
+  "@select_time": {
+    "description": "Select time dialog title"
+  },
+  "am": "Vormittag",
+  "@am": {
+    "description": "AM time period"
+  },
+  "pm": "Nachmittag",
+  "@pm": {
+    "description": "PM time period"
+  },
+  "ok": "OK",
+  "@ok": {
+    "description": "OK button text"
+  },
+  "cancel_button": "Abbrechen",
+  "@cancel_button": {
+    "description": "Cancel button text"
+  },
+  "ministerial_quiz": "Amtliches Quiz",
+  "@ministerial_quiz": {
+    "description": "Ministerial quiz card title"
+  },
+  "start_quiz": "Quiz starten",
+  "@start_quiz": {
+    "description": "Start quiz button text"
+  },
+  "create_topic_combinations": "Themenkombinationen erstellen und Quiz starten",
+  "@create_topic_combinations": {
+    "description": "Create topic combinations description"
+  },
+  "start_button": "Starten",
+  "@start_button": {
+    "description": "Start button text"
+  },
+  "booking_summary": "Buchungszusammenfassung",
+  "@booking_summary": {
+    "description": "Booking summary card title"
+  },
+  "default_instructor": "Lorenzo",
+  "@default_instructor": {
+    "description": "Default instructor name"
+  },
+  "traffic_lights_topic": "Ampeln und Verkehrspolizei",
+  "@traffic_lights_topic": {
+    "description": "Traffic lights and officers topic"
+  },
+  "ministerial_quiz_sheet": "Amtliches Quiz",
+  "@ministerial_quiz_sheet": {
+    "description": "Ministerial quiz sheet title"
+  },
+  "live_calendar": "Live-Kalender",
+  "@live_calendar": {
+    "description": "Live calendar page title"
+  },
+  "book_next_live": "Buchen Sie Ihre nächste Live-Sitzung",
+  "@book_next_live": {
+    "description": "Book your next live session"
+  },
+  "recorded_lives": "Aufgezeichnete Lives",
+  "@recorded_lives": {
+    "description": "Recorded live sessions"
+  },
+  "live_in_progress": "Live",
+  "@live_in_progress": {
+    "description": "Live in progress indicator"
+  },
+  "road_priorities": "Straßenvorrang",
+  "@road_priorities": {
+    "description": "Road priorities topic"
+  },
+  "learn_priority_rules": "Grundlegende Vorfahrtsregeln lernen",
+  "@learn_priority_rules": {
+    "description": "Learn fundamental priority rules"
+  },
+  "join_now": "Jetzt teilnehmen",
+  "@join_now": {
+    "description": "Join now button"
+  },
+  "my_upcoming_lives": "Meine kommenden Lives",
+  "@my_upcoming_lives": {
+    "description": "My upcoming live sessions"
+  },
+  "my_previous_lives": "Meine vorherigen Lives",
+  "@my_previous_lives": {
+    "description": "My previous live sessions"
+  },
+  "quiz_with_theory": "Quiz mit Theorie",
+  "@quiz_with_theory": {
+    "description": "Quiz with theory card title"
+  },
+  "quizzes_completed": "{completed} Quiz von {total} abgeschlossen",
+  "@quizzes_completed": {
+    "description": "Quiz progress text",
+    "placeholders": {
+      "completed": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "select_topics": "Amtliche Themen auswählen und personalisiertes Quiz erstellen",
+  "@select_topics": {
+    "description": "Select topics description"
+  },
+  "error_statistics": "Fehlerstatistik",
+  "@error_statistics": {
+    "description": "Error statistics title"
+  },
+  "review_errors": "Fehler überprüfen",
+  "@review_errors": {
+    "description": "Review errors button text"
+  },
+  "total_errors": "Fehler gesamt",
+  "@total_errors": {
+    "description": "Total errors label"
+  },
+  "errors_per_month": "Fehler pro Monat",
+  "@errors_per_month": {
+    "description": "Errors per month label"
+  },
+  "select_review_topics": "Wählen Sie die Themen aus, die Sie überprüfen möchten, und erstellen Sie ein personalisiertes Quiz",
+  "@select_review_topics": {
+    "description": "Select topics for review description"
+  },
+  "banner": "Banner",
+  "@banner": {
+    "description": "Banner placeholder text"
+  },
+  "quiz_question_number": "Frage {current} von {total}",
+  "@quiz_question_number": {
+    "description": "Question number indicator",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "quiz_time_remaining": "Verbleibende Zeit: {time}s",
+  "@quiz_time_remaining": {
+    "description": "Time remaining indicator",
+    "placeholders": {
+      "time": {
+        "type": "int"
+      }
+    }
+  },
+  "quiz_true": "RICHTIG",
+  "@quiz_true": {
+    "description": "True answer button"
+  },
+  "quiz_false": "FALSCH",
+  "@quiz_false": {
+    "description": "False answer button"
+  },
+  "quiz_listen": "Anhören",
+  "@quiz_listen": {
+    "description": "Listen button"
+  },
+  "loading_quiz": "Quiz wird geladen...",
+  "@loading_quiz": {
+    "description": "Loading quiz message"
+  },
+  "quiz_translate": "Übersetzen",
+  "@quiz_translate": {
+    "description": "Translate button"
+  },
+  "quiz_end": "Beenden",
+  "@quiz_end": {
+    "description": "End quiz button"
+  },
+  "attention": "ACHTUNG",
+  "@attention": {
+    "description": "Attention dialog title"
+  },
+  "quit_quiz_message": "Sie haben noch nicht alle Fragen beantwortet.\nSind Sie sicher, dass Sie das Quiz jetzt beenden möchten?",
+  "@quit_quiz_message": {
+    "description": "End quiz confirmation dialog message"
+  },
+  "complete_quiz_message": "Sind Sie sicher, dass Sie das Quiz jetzt beenden möchten?",
+  "@complete_quiz_message": {
+    "description": "Complete quiz confirmation dialog message when all questions answered"
+  },
+  "back_quiz_message": "Sind Sie sicher, dass Sie zurückgehen möchten? Sie verlieren Ihren gesamten Fortschritt.",
+  "@back_quiz_message": {
+    "description": "Back button confirmation dialog message"
+  },
+  "@cancel": {
+    "description": "Cancel button"
+  },
+  "end_quiz": "BEENDEN",
+  "@end_quiz": {
+    "description": "End quiz button text"
+  },
+  "no_topics_selected": "Bitte wählen Sie zuerst Themen aus",
+  "@no_topics_selected": {
+    "description": "Message shown when no topics are selected for quiz"
+  },
+  "no_topics_available": "Keine Themen verfügbar",
+  "@no_topics_available": {
+    "description": "Message when no topics are available"
+  },
+  "quiz_correct_answer": "Richtig!",
+  "@quiz_correct_answer": {
+    "description": "Correct answer feedback"
+  },
+  "quiz_wrong_answer": "Falsch!",
+  "@quiz_wrong_answer": {
+    "description": "Wrong answer feedback"
+  },
+  "quiz_timeout": "Zeit abgelaufen!",
+  "@quiz_timeout": {
+    "description": "Timeout message"
+  },
+  "quiz_results": "Quizergebnisse",
+  "@quiz_results": {
+    "description": "Quiz results title"
+  },
+  "quiz_score": "Punktzahl: {correct}/{total}",
+  "@quiz_score": {
+    "description": "Quiz score display",
+    "placeholders": {
+      "correct": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "quiz_percentage": "{percentage}%",
+  "@quiz_percentage": {
+    "description": "Quiz percentage score",
+    "placeholders": {
+      "percentage": {
+        "type": "double"
+      }
+    }
+  },
+  "quiz_completed": "Quiz abgeschlossen!",
+  "@quiz_completed": {
+    "description": "Quiz completion message"
+  },
+  "signing_in_please_wait": "Anmeldung läuft, bitte warten...",
+  "@signing_in_please_wait": {
+    "description": "Login loading message"
+  },
+  "quiz_error": "Fehler beim Laden des Quiz",
+  "@quiz_error": {
+    "description": "Quiz error message"
+  },
+  "quiz_result_title": "Quizergebnis",
+  "@quiz_result_title": {
+    "description": "Quiz result page title"
+  },
+  "failed": "Nicht bestanden",
+  "@failed": {
+    "description": "Quiz failed status"
+  },
+  "passed": "Bestanden",
+  "@passed": {
+    "description": "Quiz passed status"
+  },
+  "minutes": "Min",
+  "@minutes": {
+    "description": "Minutes abbreviation"
+  },
+  "retry_quiz": "Quiz wiederholen",
+  "@retry_quiz": {
+    "description": "Retry quiz button"
+  },
+  "correct": "Richtig",
+  "@correct": {
+    "description": "Correct answers label"
+  },
+  "unanswered": "Unbeantwortet",
+  "@unanswered": {
+    "description": "Unanswered questions label"
+  },
+  "incorrect": "Falsch",
+  "@incorrect": {
+    "description": "Incorrect answers label"
+  },
+  "question_analysis": "Fragenanalyse",
+  "@question_analysis": {
+    "description": "Question analysis section title"
+  },
+  "correct_answer": "Richtige Antwort",
+  "@correct_answer": {
+    "description": "Label for correct answer"
+  },
+  "your_answer": "Ihre Antwort: {answer}",
+  "@your_answer": {
+    "description": "User answer text",
+    "placeholders": {
+      "answer": {
+        "type": "String"
+      }
+    }
+  },
+  "video_correction": "Video-Korrektur",
+  "@video_correction": {
+    "description": "Video correction link"
+  },
+  "consult_theory": "Theorie konsultieren",
+  "@consult_theory": {
+    "description": "Consult theory link"
+  },
+  "true_answer": "Richtig",
+  "@true_answer": {
+    "description": "True answer option"
+  },
+  "false_answer": "Falsch",
+  "@false_answer": {
+    "description": "False answer option"
+  },
+  "not_answered": "Nicht beantwortet",
+  "@not_answered": {
+    "description": "Not answered status"
+  },
+  "booking_success_title": "Buchung erfolgreich abgeschlossen!",
+  "@booking_success_title": {
+    "description": "Booking confirmation page title"
+  },
+  "instructor": "Fahrlehrer",
+  "@instructor": {
+    "description": "Instructor label"
+  },
+  "topic": "Thema:",
+  "@topic": {
+    "description": "Topic label"
+  },
+  "book": "Buchen",
+  "@book": {
+    "description": "Book button text"
+  },
+  "documentUploadProgress": "Dokument-Upload",
+  "@documentUploadProgress": {
+    "description": "Document upload progress title"
+  },
+  "uploadInstructions": "Upload-Anweisungen",
+  "@uploadInstructions": {
+    "description": "Upload instructions title"
+  },
+  "uploadInstructionsList": "• Laden Sie Dateien hoch oder machen Sie klare und gut beleuchtete Fotos\n• Stellen Sie sicher, dass alle Texte lesbar sind\n• Unterstütztes Format: JPG, PNG, PDF\n• Maximale Größe: 5 MB pro Datei",
+  "@uploadInstructionsList": {
+    "description": "Upload instructions list"
+  },
+  "requiredDocuments": "Erforderliche Dokumente",
+  "@requiredDocuments": {
+    "description": "Required documents title"
+  },
+  "identityCard": "Personalausweis",
+  "@identityCard": {
+    "description": "Identity card document title"
+  },
+  "healthCard": "Gesundheitskarte",
+  "@healthCard": {
+    "description": "Health card document title"
+  },
+  "frontAndBackRequired": "Vorder- und Rückseite erforderlich",
+  "@frontAndBackRequired": {
+    "description": "Front and back required subtitle"
+  },
+  "residencePermit": "Aufenthaltserlaubnis",
+  "@residencePermit": {
+    "description": "Residence permit document title"
+  },
+  "onlyForNonEuCitizens": "Nur für Nicht-EU-Bürger",
+  "@onlyForNonEuCitizens": {
+    "description": "Only for non-EU citizens subtitle"
+  },
+  "issuedByAuthorizedDoctor": "Ausgestellt von einem zugelassenen Arzt",
+  "@issuedByAuthorizedDoctor": {
+    "description": "Issued by authorized doctor subtitle"
+  },
+  "passportPhoto": "Passfoto",
+  "@passportPhoto": {
+    "description": "Passport photo document title"
+  },
+  "jpgPngFormat": "JPG-, PNG-Format",
+  "@jpgPngFormat": {
+    "description": "JPG, PNG format subtitle"
+  },
+  "digitalSignature": "Digitale Unterschrift",
+  "@digitalSignature": {
+    "description": "Digital signature document title"
+  },
+  "signatureOnWhiteBackground": "Unterschrift auf weißem Hintergrund",
+  "@signatureOnWhiteBackground": {
+    "description": "Signature on white background subtitle"
+  },
+  "pendingApproval": "Genehmigung ausstehend",
+  "@pendingApproval": {
+    "description": "Pending approval status"
+  },
+  "missing": "Fehlend",
+  "@missing": {
+    "description": "Missing status"
+  },
+  "iAmItalianCitizen": "Ich bin italienischer Staatsbürger",
+  "@iAmItalianCitizen": {
+    "description": "Italian citizen checkbox label"
+  },
+  "residenceMatchesIdCard": "Entspricht Ihr Wohnsitz dem auf Ihrem Personalausweis angegebenen?",
+  "@residenceMatchesIdCard": {
+    "description": "Residence matches ID card question"
+  },
+  "documentUploadSuccess": "Dokument erfolgreich hochgeladen",
+  "@documentUploadSuccess": {
+    "description": "Document upload success message"
+  },
+  "documentUploadError": "Fehler beim Hochladen des Dokuments: {error}",
+  "@documentUploadError": {
+    "description": "Document upload error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "certificateOfResidence": "Wohnsitzbescheinigung",
+  "@certificateOfResidence": {
+    "description": "Certificate of residence document title"
+  },
+  "onlyIfDifferentFromIdCard": "Nur wenn abweichend vom Personalausweis",
+  "@onlyIfDifferentFromIdCard": {
+    "description": "Certificate of residence subtitle"
+  },
+  "yes": "Ja",
+  "@yes": {
+    "description": "Yes button"
+  },
+  "no": "Nein",
+  "@no": {
+    "description": "No button"
+  },
+  "medical_visit_booking_title": "Ärztliche Untersuchung buchen",
+  "@medical_visit_booking_title": {
+    "description": "Medical visit booking page title"
+  },
+  "booking_steps_title": "Schritte zur Buchung der ärztlichen Untersuchung",
+  "@booking_steps_title": {
+    "description": "Booking steps section title"
+  },
+  "booking_step_find_center": "Finden Sie das nächstgelegene Zentrum",
+  "@booking_step_find_center": {
+    "description": "First booking step"
+  },
+  "booking_step_preferences": "Geben Sie 3 Zeitpräferenzen an",
+  "@booking_step_preferences": {
+    "description": "Second booking step"
+  },
+  "booking_step_wait_call": "Warten Sie auf den Anruf zur Bestätigung",
+  "@booking_step_wait_call": {
+    "description": "Third booking step"
+  },
+  "where_do_you_live": "Wo wohnen Sie jetzt?",
+  "@where_do_you_live": {
+    "description": "Where do you live now section title"
+  },
+  "enter_city_where_you_live": "Geben Sie die Stadt ein, in der Sie jetzt wohnen",
+  "@enter_city_where_you_live": {
+    "description": "Enter city instruction"
+  },
+  "city_placeholder": "Stadt",
+  "@city_placeholder": {
+    "description": "City input placeholder"
+  },
+  "enter_province_where_you_live": "Geben Sie die Provinz ein, in der Sie jetzt wohnen",
+  "@enter_province_where_you_live": {
+    "description": "Enter province instruction"
+  },
+  "province_placeholder": "Provinz",
+  "@province_placeholder": {
+    "description": "Province input placeholder"
+  },
+  "medical_visit_nearest_center": "Die ärztliche Untersuchung wird im Zentrum gebucht, das Ihrem Wohnort am nächsten liegt.",
+  "@medical_visit_nearest_center": {
+    "description": "Medical visit center location info"
+  },
+  "book_in_another_city": "In einer anderen Stadt buchen",
+  "@book_in_another_city": {
+    "description": "Book in another city checkbox label"
+  },
+  "time_preferences": "Zeitpräferenzen",
+  "@time_preferences": {
+    "description": "Time preferences section title"
+  },
+  "select_three_availability": "Wählen Sie mindestens 3 Verfügbarkeiten für Ihre ärztliche Untersuchung",
+  "@select_three_availability": {
+    "description": "Select three availability instruction"
+  },
+  "preferences_placeholder": "Präferenzen",
+  "@preferences_placeholder": {
+    "description": "Preferences dropdown placeholder"
+  },
+  "request_medical_visit_booking": "Buchung der ärztlichen Untersuchung anfordern",
+  "@request_medical_visit_booking": {
+    "description": "Request medical visit booking button text"
+  },
+  "congratulationsReadyForExam": "Herzlichen Glückwunsch! Sie sind bereit für die Prüfung",
+  "@congratulationsReadyForExam": {
+    "description": "Congratulations message for exam readiness"
+  },
+  "preparationCompleted100": "Vorbereitung zu 100% abgeschlossen",
+  "@preparationCompleted100": {
+    "description": "Preparation completed 100% message"
+  },
+  "recommendedSchoolForYou": "Empfohlene Fahrschule für Sie",
+  "@recommendedSchoolForYou": {
+    "description": "Recommended school section title"
+  },
+  "selectAtLeast3Availabilities": "Wählen Sie mindestens 3 Verfügbarkeiten für Ihre Theorieprüfung",
+  "@selectAtLeast3Availabilities": {
+    "description": "Select at least 3 availabilities instruction"
+  },
+  "preferences": "Präferenzen",
+  "@preferences": {
+    "description": "Preferences dropdown label"
+  },
+  "requestTheoreticalExamBooking": "Theorieprüfung buchen",
+  "@requestTheoreticalExamBooking": {
+    "description": "Request theoretical exam booking button text"
+  },
+  "bookingRequestSent": "Buchungsanfrage gesendet!",
+  "@bookingRequestSent": {
+    "description": "Booking request sent confirmation message"
+  },
+  "morningSlot": "Vormittag (9:00 - 12:00)",
+  "@morningSlot": {
+    "description": "Morning time slot option"
+  },
+  "afternoonSlot": "Nachmittag (14:00 - 17:00)",
+  "@afternoonSlot": {
+    "description": "Afternoon time slot option"
+  },
+  "morning": "Vormittag",
+  "@morning": {
+    "description": "Morning time period"
+  },
+  "afternoon": "Nachmittag",
+  "@afternoon": {
+    "description": "Afternoon time period"
+  },
+  "express_your_preference": "Geben Sie Ihre Präferenz an",
+  "@express_your_preference": {
+    "description": "Time preference selection header"
+  },
+  "eveningSlot": "Abend (17:00 - 19:00)",
+  "@eveningSlot": {
+    "description": "Evening time slot option"
+  },
+  "book_theoretical_exam": "Theorieprüfung buchen",
+  "@book_theoretical_exam": {
+    "description": "Book theoretical exam page title"
+  },
+  "book_medical_visit": "Ärztliche Untersuchung buchen",
+  "@book_medical_visit": {
+    "description": "Book medical visit page title"
+  },
+  "upload_documents": "Dokumente hochladen",
+  "@upload_documents": {
+    "description": "Upload documents page title"
+  },
+  "summary": "Zusammenfassung",
+  "@summary": {
+    "description": "Summary section title"
+  },
+  "frequently_asked_questions": "Häufig gestellte Fragen",
+  "@frequently_asked_questions": {
+    "description": "FAQ section title"
+  },
+  "quiz_result": "Quizergebnis",
+  "@quiz_result": {
+    "description": "Quiz result page title"
+  },
+  "recorded_live": "Aufgezeichnetes Live",
+  "@recorded_live": {
+    "description": "Recorded live sessions page title"
+  },
+  "general_definitions_road_use": "Allgemeine Definitionen und Pflichten im Straßenverkehr",
+  "@general_definitions_road_use": {
+    "description": "Topic title"
+  },
+  "danger_signals": "Gefahrenzeichen",
+  "@danger_signals": {
+    "description": "Danger signals topic"
+  },
+  "prohibition_road_signals": "Verbotszeichen",
+  "@prohibition_road_signals": {
+    "description": "Prohibition road signals topic"
+  },
+  "mandatory_road_signals": "Gebotszeichen",
+  "@mandatory_road_signals": {
+    "description": "Topic title"
+  },
+  "priority_road_signals": "Vorfahrtszeichen",
+  "@priority_road_signals": {
+    "description": "Topic title"
+  },
+  "horizontal_marking_obstacle_signs": "Fahrbahnmarkierungen und Hinderniszeichen",
+  "@horizontal_marking_obstacle_signs": {
+    "description": "Topic title"
+  },
+  "traffic_light_signals": "Lichtzeichen und Verkehrspolizei",
+  "@traffic_light_signals": {
+    "description": "Topic title"
+  },
+  "indication_signals": "Hinweiszeichen",
+  "@indication_signals": {
+    "description": "Topic title"
+  },
+  "booking_confirmation": "Buchungsbestätigung",
+  "@booking_confirmation": {
+    "description": "Booking confirmation page title"
+  },
+  "virtual_teacher_quiz": "Virtuelles Fahrlehrer-Quiz",
+  "@virtual_teacher_quiz": {
+    "description": "Button text for virtual teacher quiz"
+  },
+  "road": "Straße",
+  "@road": {
+    "description": "Road definition"
+  },
+  "carriageway": "Fahrbahn",
+  "@carriageway": {
+    "description": "Carriageway definition"
+  },
+  "lane": "Fahrstreifen",
+  "@lane": {
+    "description": "Lane definition"
+  },
+  "acceleration_lane": "Beschleunigungsstreifen",
+  "@acceleration_lane": {
+    "description": "Acceleration lane definition"
+  },
+  "deceleration_lane": "Verzögerungsstreifen",
+  "@deceleration_lane": {
+    "description": "Deceleration lane definition"
+  },
+  "shoulder": "Seitenstreifen",
+  "@shoulder": {
+    "description": "Road shoulder definition"
+  },
+  "sidewalk": "Gehweg",
+  "@sidewalk": {
+    "description": "Sidewalk definition"
+  },
+  "generic_danger_signals": "Allgemeine Gefahrenzeichen",
+  "@generic_danger_signals": {
+    "description": "Generic danger signals topic"
+  },
+  "dangerous_curve_signals": "Zeichen für gefährliche Kurven",
+  "@dangerous_curve_signals": {
+    "description": "Dangerous curve signals topic"
+  },
+  "crossing_signals": "Kreuzungszeichen",
+  "@crossing_signals": {
+    "description": "Crossing signals topic"
+  },
+  "transit_prohibitions": "Durchfahrtsverbote",
+  "@transit_prohibitions": {
+    "description": "Transit prohibitions topic"
+  },
+  "speed_prohibitions": "Geschwindigkeitsbeschränkungen",
+  "@speed_prohibitions": {
+    "description": "Speed prohibitions topic"
+  },
+  "parking_prohibitions": "Parkverbote",
+  "@parking_prohibitions": {
+    "description": "Parking prohibitions topic"
+  },
+  "direction_obligations": "Richtungsgebote",
+  "@direction_obligations": {
+    "description": "Direction obligations topic"
+  },
+  "speed_obligations": "Geschwindigkeitsgebote",
+  "@speed_obligations": {
+    "description": "Speed obligations topic"
+  },
+  "vehicle_category_obligations": "Fahrzeugkategoriegebote",
+  "@vehicle_category_obligations": {
+    "description": "Vehicle category obligations topic"
+  },
+  "right_of_way": "Vorfahrt",
+  "@right_of_way": {
+    "description": "Right of way topic"
+  },
+  "give_way": "Vorfahrt gewähren",
+  "@give_way": {
+    "description": "Give way topic"
+  },
+  "stop_and_halt": "Halt und Stopp",
+  "@stop_and_halt": {
+    "description": "Stop and halt topic"
+  },
+  "longitudinal_stripes": "Längsstreifen",
+  "@longitudinal_stripes": {
+    "description": "Longitudinal stripes topic"
+  },
+  "transverse_stripes": "Querstreifen",
+  "@transverse_stripes": {
+    "description": "Transverse stripes topic"
+  },
+  "pedestrian_crossings": "Fußgängerüberwege",
+  "@pedestrian_crossings": {
+    "description": "Pedestrian crossings topic"
+  },
+  "traffic_lights": "Ampeln",
+  "@traffic_lights": {
+    "description": "Traffic lights topic"
+  },
+  "agent_signals": "Polizistenzeichen",
+  "@agent_signals": {
+    "description": "Agent signals topic"
+  },
+  "special_traffic_lights": "Spezielle Ampeln",
+  "@special_traffic_lights": {
+    "description": "Special traffic lights topic"
+  },
+  "generic_topic": "Allgemeines Thema",
+  "@generic_topic": {
+    "description": "Generic topic title"
+  },
+  "manual_topics": "Manuelle Themen",
+  "@manual_topics": {
+    "description": "Manual topics page title"
+  },
+  "safety_behaviors": "Sicherheitsverhalten",
+  "@safety_behaviors": {
+    "description": "Safety behaviors topic"
+  },
+  "emergency_procedures": "Notfallverfahren",
+  "@emergency_procedures": {
+    "description": "Emergency procedures topic"
+  },
+  "workplace_safety_regulations": "Arbeitsschutzvorschriften",
+  "@workplace_safety_regulations": {
+    "description": "Workplace safety regulations topic"
+  },
+  "risks_and_prevention": "Risiken und Prävention",
+  "@risks_and_prevention": {
+    "description": "Risks and prevention topic"
+  },
+  "correct_use_protection_devices": "Korrekte Verwendung von Schutzausrüstung",
+  "@correct_use_protection_devices": {
+    "description": "Correct use of protection devices topic"
+  },
+  "select_topic": "Thema auswählen",
+  "@select_topic": {
+    "description": "Select topic instruction"
+  },
+  "my_license": "Mein Führerschein",
+  "@my_license": {
+    "description": "My license page title"
+  },
+  "license_type": "Führerscheintyp",
+  "@license_type": {
+    "description": "License type label"
+  },
+  "license_type_not_selected": "Kein Führerscheintyp ausgewählt",
+  "@license_type_not_selected": {
+    "description": "Message when no license type is selected"
+  },
+  "revision": "Überprüfung",
+  "@revision": {
+    "description": "Revision label for license type"
+  },
+  "questions": "Fragen",
+  "@questions": {
+    "description": "Questions label"
+  },
+  "theory": "Theorie",
+  "@theory": {
+    "description": "Theory page title"
+  },
+  "search_teacher_network": "Fahrlehrer in unserem Netzwerk suchen",
+  "@search_teacher_network": {
+    "description": "Search teacher placeholder"
+  },
+  "search_topic": "Thema suchen",
+  "@search_topic": {
+    "description": "Search topic placeholder"
+  },
+  "your_password": "Ihr Passwort",
+  "@your_password": {
+    "description": "Password input placeholder"
+  },
+  "enter_base_url": "Basis-URL eingeben",
+  "@enter_base_url": {
+    "description": "Base URL input placeholder"
+  },
+  "enter_base_websocket_url": "Basis-WebSocket-URL eingeben",
+  "@enter_base_websocket_url": {
+    "description": "Base websocket URL input placeholder"
+  },
+  "token": "Token",
+  "@token": {
+    "description": "Token input placeholder"
+  },
+  "statistics": "Statistiken",
+  "@statistics": {
+    "description": "Statistics label"
+  },
+  "guides": "Fahrstunden",
+  "@guides": {
+    "description": "Guides label"
+  },
+  "completedGuides": "Abgeschlossene Fahrstunden",
+  "@completedGuides": {
+    "description": "Completed guides count"
+  },
+  "myGuides": "Meine Fahrstunden",
+  "@myGuides": {
+    "description": "My guides button text"
+  },
+  "pastGuides": "Vergangene Fahrstunden",
+  "@pastGuides": {
+    "description": "Past guides section title"
+  },
+  "noCurrentBookings": "Sie haben keine geplanten Fahrstunden",
+  "@noCurrentBookings": {
+    "description": "Message when no current guide bookings"
+  },
+  "noPastBookings": "Sie haben keine abgeschlossenen Fahrstunden",
+  "@noPastBookings": {
+    "description": "Message when no past guide bookings"
+  },
+  "cancelBooking": "Buchung stornieren",
+  "@cancelBooking": {
+    "description": "Cancel booking dialog title"
+  },
+  "cancelBookingConfirmation": "Sind Sie sicher, dass Sie diese Buchung stornieren möchten?",
+  "@cancelBookingConfirmation": {
+    "description": "Cancel booking confirmation message"
+  },
+  "confirmCancel": "Stornierung bestätigen",
+  "@confirmCancel": {
+    "description": "Confirm cancel button text"
+  },
+  "bookingCancelled": "Buchung erfolgreich storniert",
+  "@bookingCancelled": {
+    "description": "Booking cancelled success message"
+  },
+  "guideRebooked": "Fahrstunde erfolgreich neu gebucht",
+  "@guideRebooked": {
+    "description": "Guide rebooked success message"
+  },
+  "bookAgain": "Erneut buchen",
+  "@bookAgain": {
+    "description": "Book again button text"
+  },
+  "cannotCancelGuide": "Sie können diese Fahrstunde nicht stornieren",
+  "@cannotCancelGuide": {
+    "description": "Cannot cancel guide message"
+  },
+  "upcomingAppointments": "Bevorstehende Termine",
+  "@upcomingAppointments": {
+    "description": "Upcoming appointments section title"
+  },
+  "nextAppointment": "Nächster Termin",
+  "@nextAppointment": {
+    "description": "Next appointment label"
+  },
+  "noUpcomingAppointments": "Sie haben keine bevorstehenden Termine",
+  "@noUpcomingAppointments": {
+    "description": "Message when no upcoming appointments"
+  },
+  "appointmentWith": "Termin mit {instructorName}",
+  "@appointmentWith": {
+    "description": "Appointment with instructor label",
+    "placeholders": {
+      "instructorName": {
+        "type": "String"
+      }
+    }
+  },
+  "cancelAppointment": "Termin stornieren",
+  "@cancelAppointment": {
+    "description": "Cancel appointment button text"
+  },
+  "cancelAppointmentConfirmation": "Möchten Sie diesen Termin wirklich stornieren?",
+  "@cancelAppointmentConfirmation": {
+    "description": "Cancel appointment confirmation message"
+  },
+  "appointmentCancelled": "Termin erfolgreich storniert",
+  "@appointmentCancelled": {
+    "description": "Appointment cancelled success message"
+  },
+  "cannotCancelWithin24Hours": "Sie können Termine nicht innerhalb von 24 Stunden vor dem geplanten Zeitpunkt stornieren",
+  "@cannotCancelWithin24Hours": {
+    "description": "Cannot cancel appointment within 24 hours message"
+  },
+  "reminderDayBefore": "Erinnerung: Ihr Termin ist morgen",
+  "@reminderDayBefore": {
+    "description": "Reminder message for appointment tomorrow"
+  },
+  "reminderHourBefore": "Erinnerung: Ihr Termin ist in 1 Stunde",
+  "@reminderHourBefore": {
+    "description": "Reminder message for appointment in 1 hour"
+  },
+  "appointmentProgress": "Fortschritt",
+  "@appointmentProgress": {
+    "description": "Appointment progress section title"
+  },
+  "totalAppointments": "Gesamt",
+  "@totalAppointments": {
+    "description": "Total appointments label"
+  },
+  "upcoming": "Bevorstehend",
+  "@upcoming": {
+    "description": "Upcoming appointments label"
+  },
+  "cancelled": "Storniert",
+  "@cancelled": {
+    "description": "Cancelled appointments label"
+  },
+  "totalHours": "Gesamtstunden",
+  "@totalHours": {
+    "description": "Total hours of appointments label"
+  },
+  "completionRate": "Abschlussrate",
+  "@completionRate": {
+    "description": "Completion rate label"
+  },
+  "interestedInGuides": "Interessiert an Fahrstunden bei uns?",
+  "@interestedInGuides": {
+    "description": "CTA title for guest users interested in guides"
+  },
+  "leaveYourPhoneNumber": "Hinterlassen Sie Ihre Telefonnummer, wenn Sie Fahrstunden bei uns nehmen möchten",
+  "@leaveYourPhoneNumber": {
+    "description": "CTA message for guest users to leave phone number"
+  },
+  "phoneNumber": "Telefonnummer",
+  "@phoneNumber": {
+    "description": "Phone number field label"
+  },
+  "submit": "Absenden",
+  "@submit": {
+    "description": "Submit button text"
+  },
+  "thankYouForInterest": "Vielen Dank für Ihr Interesse! Wir werden Sie bald kontaktieren.",
+  "@thankYouForInterest": {
+    "description": "Thank you message after submitting phone number"
+  },
+  "answer3Questions": "Beantworten Sie 3 Fragen:",
+  "@answer3Questions": {"description": "Title text for the three questions form"},
+  "instructorsNearYou": "Wir haben Fahrlehrer in Ihrer Nähe",
+  "@instructorsNearYou": {
+    "description": "Message when instructors are near user location"
+  },
+  "availableInstructors": "Verfügbare Fahrlehrer",
+  "@availableInstructors": {
+    "description": "Available instructors title"
+  },
+  "seeAll": "Alle anzeigen",
+  "@seeAll": {
+    "description": "See all button text"
+  },
+  "selectZoneHint": "Wählen Sie das Gebiet aus, in dem Sie Fahrstunden nehmen möchten",
+  "@selectZoneHint": {
+    "description": "Select zone hint text"
+  },
+  "availableToday": "Heute verfügbar",
+  "@availableToday": {
+    "description": "Available today badge"
+  },
+  "availableInstructorsInMilano": "Verfügbare Fahrlehrer in Mailand",
+  "@availableInstructorsInMilano": {
+    "description": "Available instructors in Milano title"
+  },
+  "bookingSuccessful": "Buchung erfolgreich abgeschlossen!",
+  "@bookingSuccessful": {
+    "description": "Booking successful message"
+  },
+  "success_booking": "Unterricht erfolgreich gebucht!",
+  "@success_booking": {
+    "description": "Success message when live lesson is booked"
+  },
+  "bookingSummary": "Buchungszusammenfassung",
+  "@bookingSummary": {
+    "description": "Booking summary title"
+  },
+  "@date": {
+    "description": "Date label"
+  },
+  "@time": {
+    "description": "Time label"
+  },
+  "location": "Standort",
+  "@location": {
+    "description": "Location label for city selection"
+  },
+  "address": "Adresse",
+  "@address": {
+    "description": "Address label"
+  },
+  "code_sent_to_email": "Code gesendet an {email}",
+  "@code_sent_to_email": {
+    "description": "Code sent confirmation message",
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "booking_request_sent": "Buchungsanfrage gesendet!",
+  "@booking_request_sent": {
+    "description": "Booking request sent confirmation"
+  },
+  "feature_coming_soon": "Funktion kommt bald!",
+  "@feature_coming_soon": {
+    "description": "Feature coming soon message"
+  },
+  "playing_audio": "Audio wird abgespielt...",
+  "@playing_audio": {
+    "description": "Message when audio is playing"
+  },
+  "@english": {
+    "description": "English language option"
+  },
+  "@spanish": {
+    "description": "Spanish language option"
+  },
+  "@french": {
+    "description": "French language option"
+  },
+  "june_abbr": "Jun",
+  "@june_abbr": {
+    "description": "June month abbreviation"
+  },
+  "may_abbr": "Mai",
+  "@may_abbr": {
+    "description": "May month abbreviation"
+  },
+  "april_abbr": "Apr",
+  "@april_abbr": {
+    "description": "April month abbreviation"
+  },
+  "march_abbr": "Mär",
+  "@march_abbr": {
+    "description": "March month abbreviation"
+  },
+  "february_abbr": "Feb",
+  "@february_abbr": {
+    "description": "February month abbreviation"
+  },
+  "january_abbr": "Jan",
+  "@january_abbr": {
+    "description": "January month abbreviation"
+  },
+  "changes_apply_next_app_open": "Änderungen werden beim nächsten Öffnen der App angewendet.",
+  "@changes_apply_next_app_open": {
+    "description": "Changes apply next time message"
+  },
+  "current_base_url": "Aktuelle Basis-URL:",
+  "@current_base_url": {
+    "description": "Current base URL label"
+  },
+  "current_websocket_url": "Aktuelle WebSocket-URL:",
+  "@current_websocket_url": {
+    "description": "Current websocket URL label"
+  },
+  "done": "Fertig",
+  "@done": {
+    "description": "Done button text"
+  },
+  "back_to_home": "Zurück zur Startseite",
+  "@back_to_home": {
+    "description": "Back to home button text"
+  },
+  "one_of_two": "1/2",
+  "@one_of_two": {
+    "description": "Step 1 of 2 indicator"
+  },
+  "two_of_two": "2/2",
+  "@two_of_two": {
+    "description": "Step 2 of 2 indicator"
+  },
+  "document_ci": "Ausweisdokument",
+  "@document_ci": {
+    "description": "ID document subtitle"
+  },
+  "autoscuola_aurelia_milano": "Autoscuola Aurelia Mailand",
+  "@autoscuola_aurelia_milano": {
+    "description": "Autoscuola Aurelia Milano name"
+  },
+  "via_brera_address": "Via Brera, 12 - Mailand",
+  "@via_brera_address": {
+    "description": "Via Brera address"
+  },
+  "e_book": "E-Book",
+  "@e_book": {
+    "description": "E-Book label"
+  },
+  "tagbook": "Tagbook",
+  "@tagbook": {
+    "description": "Tagbook label"
+  },
+  "exercise": "Übung",
+  "@exercise": {
+    "description": "Exercise label"
+  },
+  "buy_now": "Jetzt kaufen",
+  "@buy_now": {
+    "description": "Buy now button"
+  },
+  "physical_theory_book": "Physisches Theoriebuch mit QR-Codes",
+  "@physical_theory_book": {
+    "description": "Physical theory book description"
+  },
+  "learn_with_physical_book": "Mit dem physischen Buch lernen",
+  "@learn_with_physical_book": {
+    "description": "Learn with physical book description"
+  },
+  "scan_and_practice": "Scannen und üben",
+  "@scan_and_practice": {
+    "description": "Scan and practice description"
+  },
+  "scan_qr_code_from_manual_book": "Scannen Sie den QR-Code aus Ihrem Lehrbuch, um mit dem Üben zu beginnen",
+  "@scan_qr_code_from_manual_book": {
+    "description": "QR scanner instructions"
+  },
+  "point_camera_at_qr_code": "Richten Sie Ihre Kamera auf den QR-Code",
+  "@point_camera_at_qr_code": {
+    "description": "QR scanner camera instructions"
+  },
+  "invalid_qr_code": "Ungültiger QR-Code",
+  "@invalid_qr_code": {
+    "description": "Invalid QR code error message"
+  },
+  "theory_showcase_exercise_title": "Übung",
+  "@theory_showcase_exercise_title": {
+    "description": "Exercise showcase title"
+  },
+  "theory_showcase_exercise_description": "Scannen Sie QR-Codes aus Ihrem Lehrbuch, um mit gezielten Fragen zu üben",
+  "@theory_showcase_exercise_description": {
+    "description": "Exercise showcase description"
+  },
+  "welcome": "Willkommen!",
+  "@welcome": {
+    "description": "Welcome message on login page"
+  },
+  "login_to_continue": "Greifen Sie auf Ihr Konto zu, um fortzufahren",
+  "@login_to_continue": {
+    "description": "Login page subtitle"
+  },
+  "remember_me": "Angemeldet bleiben",
+  "@remember_me": {
+    "description": "Remember me checkbox label"
+  },
+  "forgot_password_question": "Passwort vergessen?",
+  "@forgot_password_question": {
+    "description": "Forgot password link text"
+  },
+  "login_button": "Anmelden",
+  "@login_button": {
+    "description": "Login button text"
+  },
+  "no_account": "Sie haben noch kein Konto? ",
+  "@no_account": {
+    "description": "No account text"
+  },
+  "register_here": "Hier registrieren",
+  "account_not_found": "Konto nicht gefunden",
+  "account_not_found_message": "Kein Konto mit {provider} gefunden. Möchten Sie ein neues Konto erstellen?",
+  "create_account": "Konto erstellen",
+  "complete_registration": "Registrierung abschließen",
+  "welcome_social_user": "Willkommen! Lassen Sie uns Ihre Registrierung mit {provider} abschließen",
+  "complete_your_profile": "Vervollständigen Sie Ihr Profil",
+  "accept_terms": "Ich akzeptiere die Allgemeinen Geschäftsbedingungen",
+  "accept_privacy_policy": "Ich akzeptiere die Datenschutzerklärung",
+  "accept_terms_and_privacy": "Bitte akzeptieren Sie sowohl die Allgemeinen Geschäftsbedingungen als auch die Datenschutzerklärung, um fortzufahren",
+  "registration_successful": "Registrierung erfolgreich abgeschlossen!",
+  "registration_successful_title": "Willkommen!",
+  "registration_successful_message": "Ihr Konto wurde erfolgreich erstellt. Sie können jetzt alle Funktionen erkunden.",
+  "continue_to_app": "Zur App",
+  "continue_with_email": "Mit E-Mail fortfahren",
+  "check_other_options": "Andere Optionen prüfen",
+  "registration_failed": "Registrierung fehlgeschlagen. Bitte versuchen Sie es erneut.",
+  "registration_error": "Bei der Registrierung ist ein Fehler aufgetreten.",
+  "@register_here": {
+    "description": "Register here link text"
+  },
+  "search_topic_hint": "Thema suchen",
+  "@search_topic_hint": {
+    "description": "Search topic hint text"
+  },
+  "study_suggestions": "Vorschläge basierend auf Ihrem Studium",
+  "@study_suggestions": {
+    "description": "Study suggestions text"
+  },
+  "traffic_lights_and_officers": "Ampeln und Verkehrspolizei",
+  "@traffic_lights_and_officers": {
+    "description": "Traffic lights and officers suggestion"
+  },
+  "right_of_way_topics": "Vorfahrt",
+  "@right_of_way_topics": {
+    "description": "Right of way suggestion"
+  },
+  "intersections": "Kreuzungen",
+  "@intersections": {
+    "description": "Intersections suggestion"
+  },
+  "book_button": "Buchen",
+  "@book_button": {
+    "description": "Book button text"
+  },
+  "duration_label": "Dauer - ",
+  "@duration_label": {
+    "description": "Duration label"
+  },
+  "completed_badge": "Abgeschlossen",
+  "@completed_badge": {
+    "description": "Completed badge text"
+  },
+  "weekday_sun": "S",
+  "@weekday_sun": {
+    "description": "Sunday abbreviation"
+  },
+  "weekday_mon": "M",
+  "@weekday_mon": {
+    "description": "Monday abbreviation"
+  },
+  "weekday_tue": "D",
+  "@weekday_tue": {
+    "description": "Tuesday abbreviation"
+  },
+  "weekday_wed": "M",
+  "@weekday_wed": {
+    "description": "Wednesday abbreviation"
+  },
+  "weekday_thu": "D",
+  "@weekday_thu": {
+    "description": "Thursday abbreviation"
+  },
+  "weekday_fri": "F",
+  "@weekday_fri": {
+    "description": "Friday abbreviation"
+  },
+  "weekday_sat": "S",
+  "@weekday_sat": {
+    "description": "Saturday abbreviation"
+  },
+  "january": "Januar",
+  "@january": {
+    "description": "January month name"
+  },
+  "february": "Februar",
+  "@february": {
+    "description": "February month name"
+  },
+  "march": "März",
+  "@march": {
+    "description": "March month name"
+  },
+  "april": "April",
+  "@april": {
+    "description": "April month name"
+  },
+  "may": "Mai",
+  "@may": {
+    "description": "May month name"
+  },
+  "june": "Juni",
+  "@june": {
+    "description": "June month name"
+  },
+  "july": "Juli",
+  "@july": {
+    "description": "July month name"
+  },
+  "august": "August",
+  "@august": {
+    "description": "August month name"
+  },
+  "september": "September",
+  "@september": {
+    "description": "September month name"
+  },
+  "october": "Oktober",
+  "@october": {
+    "description": "October month name"
+  },
+  "november": "November",
+  "@november": {
+    "description": "November month name"
+  },
+  "december": "Dezember",
+  "@december": {
+    "description": "December month name"
+  },
+  "live_count": "Live",
+  "@live_count": {
+    "description": "Live count suffix"
+  },
+  "@create_account": {
+    "description": "Create account title"
+  },
+  "first_name_hint": "Mario",
+  "@first_name_hint": {
+    "description": "First name hint text"
+  },
+  "last_name_hint": "Rossi",
+  "@last_name_hint": {
+    "description": "Last name hint text"
+  },
+  "continue_registration": "Fortfahren",
+  "@continue_registration": {
+    "description": "Continue registration button"
+  },
+  "step_1_of_3": "Schritt 1 von 3",
+  "@step_1_of_3": {
+    "description": "Step 1 of 3 progress indicator"
+  },
+  "already_have_account": "Sie haben bereits ein Konto?",
+  "@already_have_account": {
+    "description": "Already have account text"
+  },
+  "login_link": "Anmelden",
+  "@login_link": {
+    "description": "Login link text"
+  },
+  "step_2_of_3": "Schritt 2 von 3",
+  "@step_2_of_3": {
+    "description": "Step 2 of 3 progress indicator"
+  },
+  "@phone_number": {
+    "description": "Phone number label"
+  },
+  "email_hint": "ihre@email.de",
+  "@email_hint": {
+    "description": "Email hint text"
+  },
+  "phone_hint": "+49 1512345678",
+  "@phone_hint": {
+    "description": "Phone number hint text with country code"
+  },
+  "step_3_of_3": "Schritt 3 von 3",
+  "@step_3_of_3": {
+    "description": "Step 3 of 3 progress indicator"
+  },
+  "@password_hint": {
+    "description": "Password hint text"
+  },
+  "confirm_password_hint": "Passwort bestätigen",
+  "@confirm_password_hint": {
+    "description": "Confirm password hint text"
+  },
+  "register_button": "Registrieren",
+  "@register_button": {
+    "description": "Register button text"
+  },
+  "reset_password": "Passwort zurücksetzen",
+  "@reset_password": {
+    "description": "Reset password title"
+  },
+  "reset_password_subtitle": "Geben Sie Ihre E-Mail-Adresse ein, um Anweisungen zum Zurücksetzen zu erhalten",
+  "@reset_password_subtitle": {
+    "description": "Reset password subtitle"
+  },
+  "send_reset_email": "E-Mail senden",
+  "@send_reset_email": {
+    "description": "Send reset email button"
+  },
+  "verify_email_title": "Bestätigen Sie Ihre E-Mail-Adresse",
+  "@verify_email_title": {
+    "description": "Verify email step title"
+  },
+  "verify_email_subtitle": "Wir haben einen Bestätigungscode gesendet an",
+  "@verify_email_subtitle": {
+    "description": "Verify email step subtitle"
+  },
+  "verification_code": "Bestätigungscode",
+  "@verification_code": {
+    "description": "Verification code label"
+  },
+  "verification_code_hint": "123456",
+  "@verification_code_hint": {
+    "description": "Verification code hint"
+  },
+  "verify_code": "Code bestätigen",
+  "@verify_code": {
+    "description": "Verify code button"
+  },
+  "new_password_title": "Neues Passwort",
+  "@new_password_title": {
+    "description": "New password step title"
+  },
+  "new_password_subtitle": "Erstellen Sie ein neues sicheres Passwort",
+  "@new_password_subtitle": {
+    "description": "New password step subtitle"
+  },
+  "new_password": "Neues Passwort",
+  "@new_password": {
+    "description": "New password label"
+  },
+  "new_password_hint": "Ihr neues Passwort",
+  "@new_password_hint": {
+    "description": "New password hint"
+  },
+  "confirm_new_password": "Neues Passwort bestätigen",
+  "@confirm_new_password": {
+    "description": "Confirm new password label"
+  },
+  "confirm_new_password_hint": "Neues Passwort bestätigen",
+  "@confirm_new_password_hint": {
+    "description": "Confirm new password hint"
+  },
+  "update_password": "Passwort aktualisieren",
+  "@update_password": {
+    "description": "Update password button"
+  },
+  "back_to_login": "Zurück zur Anmeldung",
+  "@back_to_login": {
+    "description": "Back to login link"
+  },
+  "resend_code": "Code erneut senden",
+  "@resend_code": {
+    "description": "Resend code link"
+  },
+  "theoretical_manual_with_video": "Theorielehrbuch mit Video",
+  "@theoretical_manual_with_video": {
+    "description": "Title for theoretical manual with video card"
+  },
+  "study_theory_with_virtual_teacher": "Studieren Sie die Theorie zusammen mit dem virtuellen Fahrlehrer",
+  "@study_theory_with_virtual_teacher": {
+    "description": "Description for theoretical manual with video card"
+  },
+  "your_digital_theory_manual": "Ihr digitales Theorielehrbuch",
+  "@your_digital_theory_manual": {
+    "description": "Description for e-book card"
+  },
+  "start_scan": "Scan starten",
+  "@start_scan": {
+    "description": "Button text to start QR code scan"
+  },
+  "scan_qr_code_and_practice": "QR-Code scannen und üben",
+  "@scan_qr_code_and_practice": {
+    "description": "Description for tagbook scan functionality"
+  },
+  "view_your_progress": "Ihren Fortschritt anzeigen",
+  "@view_your_progress": {
+    "description": "Text for viewing progress"
+  },
+  "by_topic": "Nach Thema",
+  "@by_topic": {
+    "description": "Progress view by topic"
+  },
+  "topic_label": "Thema:",
+  "@topic_label": {
+    "description": "Label for topic in virtual teacher quiz"
+  },
+  "answers": "Antworten",
+  "@answers": {
+    "description": "Label for answers progress"
+  },
+  "question_of_total": "{current} von {total}",
+  "@question_of_total": {
+    "description": "Progress indicator showing current question of total",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "verify_preparation_and_answer": "Überprüfen Sie Ihre Vorbereitung und beantworten Sie die Quiz",
+  "@verify_preparation_and_answer": {
+    "description": "Subtitle text for virtual teacher quiz"
+  },
+  "selected_true": "Ausgewählt: RICHTIG",
+  "@selected_true": {
+    "description": "Feedback message when true is selected"
+  },
+  "selected_false": "Ausgewählt: FALSCH",
+  "@selected_false": {
+    "description": "Feedback message when false is selected"
+  },
+  "street": "Straße",
+  "@street": {
+    "description": "Street address label"
+  },
+  "house_number": "Hausnummer",
+  "@house_number": {
+    "description": "House number label"
+  },
+  "postal_code": "Postleitzahl",
+  "@postal_code": {
+    "description": "Postal code label"
+  },
+  "street_placeholder": "Straßennamen eingeben",
+  "@street_placeholder": {
+    "description": "Street input placeholder"
+  },
+  "house_number_placeholder": "Hausnummer eingeben",
+  "@house_number_placeholder": {
+    "description": "House number input placeholder"
+  },
+  "postal_code_placeholder": "Postleitzahl eingeben",
+  "@postal_code_placeholder": {
+    "description": "Postal code input placeholder"
+  },
+  "alternative_address": "Alternative Adresse",
+  "@alternative_address": {
+    "description": "Alternative address section title"
+  },
+  "alternative_address_description": "Geben Sie die Adresse ein, an der Sie die ärztliche Untersuchung buchen möchten",
+  "@alternative_address_description": {
+    "description": "Alternative address description"
+  },
+  "city": "Stadt",
+  "@city": {
+    "description": "City label"
+  },
+  "search_city_placeholder": "Nach einer Stadt suchen...",
+  "@search_city_placeholder": {
+    "description": "City search autocomplete placeholder"
+  },
+  "assistance": "Unterstützung",
+  "@assistance": {
+    "description": "Title for assistance/support chat page"
+  },
+  "email_assistance_subject_ios": "Vorschläge / Unterstützung Quiz Patente iOS",
+  "@email_assistance_subject_ios": {
+    "description": "Email subject line for iOS assistance requests"
+  },
+  "email_assistance_subject_android": "Vorschläge / Unterstützung Quiz Patente Android",
+  "@email_assistance_subject_android": {
+    "description": "Email subject line for Android assistance requests"
+  },
+  "email_assistance_subject_generic": "Vorschläge / Unterstützung Quiz Patente",
+  "@email_assistance_subject_generic": {
+    "description": "Email subject line for generic assistance requests"
+  },
+  "cannot_cancel_guide": "Sie können die Fahrstunde nicht stornieren",
+  "@cannot_cancel_guide": {
+    "description": "Message shown when user cannot cancel a guide booking"
+  },
+  "download_concept_map": "Concept Map herunterladen",
+  "@download_concept_map": {
+    "description": "Button text to download concept map"
+  },
+  "conceptual_mind_map": "Konzeptionelle Mind Map",
+  "@conceptual_mind_map": {
+    "description": "Title for conceptual mind map modal"
+  },
+  "write_a_review": "Bewertung schreiben",
+  "@write_a_review": {
+    "description": "Review section title"
+  },
+  "rate_our_app_on_stores": "Bewerten Sie unsere App in den Stores",
+  "@rate_our_app_on_stores": {
+    "description": "Review section subtitle"
+  },
+  "write_your_feedback_for_us": "Schreiben Sie Ihr Feedback für uns",
+  "@write_your_feedback_for_us": {
+    "description": "Write feedback for us text"
+  },
+  "account_unification": "Kontenzusammenführung",
+  "@account_unification": {
+    "description": "Account unification banner title"
+  },
+  "account_unification_short_description": "Führen Sie Ihre Konten im Abschnitt Profil zusammen, um alle Fortschritte zu synchronisieren.",
+  "@account_unification_short_description": {
+    "description": "Short account unification description"
+  },
+  "exam_preparation": "Prüfungsvorbereitung",
+  "@exam_preparation": {
+    "description": "Exam preparation title"
+  },
+  "ministerial_sheets": "Amtliche Prüfungsbögen",
+  "@ministerial_sheets": {
+    "description": "Ministerial sheets label"
+  },
+  "ministerial_sheets_completed": "Amtliche Prüfungsbögen abgeschlossen",
+  "@ministerial_sheets_completed": {
+    "description": "Ministerial sheets completed count"
+  },
+  "average_errors_last_20_sheets": "Durchschnittliche Fehler letzten 20 Bögen",
+  "@average_errors_last_20_sheets": {
+    "description": "Average errors in last 20 sheets"
+  },
+  "show_statistics": "Statistiken anzeigen",
+  "@show_statistics": {
+    "description": "Show statistics button text"
+  },
+  "out_of": "von",
+  "@out_of": {
+    "description": "Out of label for progress"
+  },
+  "progress": "Fortschritt",
+  "@progress": {
+    "description": "Progress label"
+  },
+  "errors_this_week": "Fehler diese Woche",
+  "@errors_this_week": {
+    "description": "Errors this week label"
+  },
+  "overview": "Übersicht",
+  "@overview": {
+    "description": "Overview tab title"
+  },
+  "topics": "Themen",
+  "@topics": {
+    "description": "Topics tab title"
+  },
+  "trends": "Trends",
+  "@trends": {
+    "description": "Trends tab title"
+  },
+  "weekly_progress": "Wöchentlicher Fortschritt",
+  "@weekly_progress": {
+    "description": "Weekly progress title"
+  },
+  "studied_topics": "Studierte Themen",
+  "@studied_topics": {
+    "description": "Studied topics title"
+  },
+  "general_completion": "Gesamtabschluss",
+  "@general_completion": {
+    "description": "General completion label"
+  },
+  "completed": "Abgeschlossen",
+  "@completed": {
+    "description": "Text for completed status"
+  },
+  "in_progress": "In Bearbeitung",
+  "@in_progress": {
+    "description": "In progress status"
+  },
+  "to_start": "Zu beginnen",
+  "@to_start": {
+    "description": "To start status"
+  },
+  "weekday_l": "M",
+  "@weekday_l": {
+    "description": "Monday abbreviation in Italian"
+  },
+  "weekday_m": "D",
+  "@weekday_m": {
+    "description": "Tuesday/Wednesday abbreviation in Italian"
+  },
+  "weekday_g": "D",
+  "@weekday_g": {
+    "description": "Thursday abbreviation in Italian"
+  },
+  "weekday_v": "F",
+  "@weekday_v": {
+    "description": "Friday abbreviation in Italian"
+  },
+  "weekday_s": "S",
+  "@weekday_s": {
+    "description": "Saturday abbreviation in Italian"
+  },
+  "weekday_d": "S",
+  "@weekday_d": {
+    "description": "Sunday abbreviation in Italian"
+  },
+  "horizontal_marking": "Fahrbahnmarkierungen",
+  "@horizontal_marking": {
+    "description": "Horizontal marking topic"
+  },
+  "correct_quizzes": "Richtige Quiz",
+  "@correct_quizzes": {
+    "description": "Correct quizzes label"
+  },
+  "wrong_quizzes": "Falsche Quiz",
+  "@wrong_quizzes": {
+    "description": "Wrong quizzes label"
+  },
+  "average_time": "Durchschnittszeit",
+  "@average_time": {
+    "description": "Average time label"
+  },
+  "review": "Überprüfen",
+  "@review": {
+    "description": "Review button text"
+  },
+  "view_errors": "Fehler anzeigen",
+  "@view_errors": {
+    "description": "View errors button text"
+  },
+  "errors": "Fehler",
+  "@errors": {
+    "description": "Errors text for trend indicators"
+  },
+  "daily_ministerial_sheets": "Tägliche amtliche Prüfungsbögen",
+  "@daily_ministerial_sheets": {
+    "description": "Daily ministerial sheets chart title"
+  },
+  "error_trends": "Fehlertrends",
+  "@error_trends": {
+    "description": "Error trends chart title"
+  },
+  "last_week": "Letzte Woche",
+  "@last_week": {
+    "description": "Last week time period"
+  },
+  "weekly_total": "Wöchentliche Gesamtzahl:",
+  "@weekly_total": {
+    "description": "Weekly total label"
+  },
+  "sheets": "Bögen",
+  "@sheets": {
+    "description": "Sheets unit"
+  },
+  "current_average": "Aktueller Durchschnitt",
+  "@current_average": {
+    "description": "Current average label"
+  },
+  "sevenDayAverage": "7-Tage-Durchschnitt",
+  "@sevenDayAverage": {
+    "description": "7-day average label"
+  },
+  "exam_threshold": "Prüfungsschwelle",
+  "@exam_threshold": {
+    "description": "Exam threshold label"
+  },
+  "or": "oder",
+  "@or": {
+    "description": "Or conjunction"
+  },
+  "continue_with_google": "Mit Google fortfahren",
+  "@continue_with_google": {
+    "description": "Google sign in button text"
+  },
+  "continue_with_apple": "Mit Apple fortfahren",
+  "@continue_with_apple": {
+    "description": "Apple sign in button text"
+  },
+  "continue_with_facebook": "Mit Facebook fortfahren",
+  "@continue_with_facebook": {
+    "description": "Facebook sign in button text"
+  },
+  "recent_accounts": "Kürzlich verwendete Konten",
+  "@recent_accounts": {
+    "description": "Header for list of recent accounts"
+  },
+  "clear_all": "Alle löschen",
+  "@clear_all": {
+    "description": "Button to clear all stored accounts"
+  },
+  "all_accounts": "Alle Konten",
+  "@all_accounts": {
+    "description": "Header for all accounts bottom sheet"
+  },
+  "remove_account": "Konto entfernen",
+  "@remove_account": {
+    "description": "Remove account dialog title"
+  },
+  "remove_account_confirmation": "Sind Sie sicher, dass Sie {email} von diesem Gerät entfernen möchten?",
+  "@remove_account_confirmation": {
+    "description": "Remove account confirmation message",
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "clear_all_accounts": "Alle Konten löschen",
+  "@clear_all_accounts": {
+    "description": "Clear all accounts dialog title"
+  },
+  "clear_all_accounts_confirmation": "Sind Sie sicher, dass Sie alle gespeicherten Konten von diesem Gerät entfernen möchten?",
+  "@clear_all_accounts_confirmation": {
+    "description": "Clear all accounts confirmation message"
+  },
+  "remove": "Entfernen",
+  "@remove": {
+    "description": "Remove button text"
+  },
+  "see_more_accounts": "{count} weitere Konten anzeigen",
+  "@see_more_accounts": {
+    "description": "See more accounts button text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "invalid_credentials": "Ungültige E-Mail-Adresse oder Passwort. Bitte überprüfen Sie Ihre Anmeldedaten und versuchen Sie es erneut.",
+  "@invalid_credentials": {
+    "description": "Error message for invalid login credentials"
+  },
+  "invalid_email": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+  "@invalid_email": {
+    "description": "Error message for invalid email format"
+  },
+  "user_not_logged_in": "Benutzer nicht angemeldet",
+  "@user_not_logged_in": {
+    "description": "Text shown when user is not logged in"
+  },
+  "login_to_access_features": "Melden Sie sich an, um auf alle Funktionen zuzugreifen",
+  "@login_to_access_features": {
+    "description": "Text encouraging user to log in"
+  },
+  "dashboard_guest_mode_message": "Sie surfen als Gast. Melden Sie sich an, um auf alle Funktionen zuzugreifen und Ihren Fortschritt zu speichern!",
+  "@dashboard_guest_mode_message": {
+    "description": "Snackbar message shown to non-authenticated users on dashboard"
+  },
+  "logged_in_as_guest": "Als Gast angemeldet",
+  "@logged_in_as_guest": {
+    "description": "Text shown when user is logged in as a guest"
+  },
+  "guest_user_area": "Gast-Benutzerbereich",
+  "@guest_user_area": {
+    "description": "Title for guest user profile section"
+  },
+  "guest_account_active": "Gastkonto aktiv",
+  "@guest_account_active": {
+    "description": "Status message for active guest account"
+  },
+  "account_expired": "Problem mit diesem Konto. Es ist abgelaufen. Bitte melden Sie sich erneut an",
+  "@account_expired": {
+    "description": "Error message when stored account tokens have expired"
+  },
+  "confirm_medical_visit": "Ärztliche Untersuchung bestätigen",
+  "@confirm_medical_visit": {
+    "description": "Title for confirm medical visit page"
+  },
+  "medical_visit_location": "Ort der ärztlichen Untersuchung",
+  "@medical_visit_location": {
+    "description": "Title for medical visit location page"
+  },
+  "medical_visit_timing": "Zeitpunkt der ärztlichen Untersuchung",
+  "@medical_visit_timing": {
+    "description": "Title for medical visit timing page"
+  },
+  "almost_done": "Fast fertig!",
+  "@almost_done": {
+    "description": "Almost done message"
+  },
+  "progress_just_started": "Großartiger Start! Jeder Experte war einmal ein Anfänger",
+  "@progress_just_started": {
+    "description": "Progress message for 1-10%"
+  },
+  "progress_building_foundation": "Sie bauen eine solide Grundlage auf!",
+  "@progress_building_foundation": {
+    "description": "Progress message for 10-25%"
+  },
+  "progress_gaining_momentum": "Sie gewinnen an Schwung! Weiter so",
+  "@progress_gaining_momentum": {
+    "description": "Progress message for 25-40%"
+  },
+  "progress_halfway": "Halbzeit! Ihre harte Arbeit zahlt sich aus",
+  "@progress_halfway": {
+    "description": "Progress message for 40-50%"
+  },
+  "progress_over_halfway": "Über die Hälfte! Sie machen das großartig",
+  "@progress_over_halfway": {
+    "description": "Progress message for 50-60%"
+  },
+  "progress_strong_progress": "Starker Fortschritt! Die Ziellinie ist in Sicht",
+  "@progress_strong_progress": {
+    "description": "Progress message for 60-75%"
+  },
+  "progress_final_stretch": "Endspurt! Sie schaffen das",
+  "@progress_final_stretch": {
+    "description": "Progress message for 75-85%"
+  },
+  "progress_almost_there": "Fast geschafft! Nur noch ein bisschen",
+  "@progress_almost_there": {
+    "description": "Progress message for 85-95%"
+  },
+  "progress_excellence": "Herausragend! Sie sind nahezu perfekt",
+  "@progress_excellence": {
+    "description": "Progress message for 95-99%"
+  },
+  "check_your_data": "Überprüfen Sie Ihre Daten",
+  "@check_your_data": {
+    "description": "Check your data message"
+  },
+  "where_do_you_live_now": "Wo wohnen Sie jetzt?",
+  "@where_do_you_live_now": {
+    "description": "Where do you live now question"
+  },
+  "find_nearest_center": "Finden Sie das nächstgelegene Zentrum",
+  "@find_nearest_center": {
+    "description": "Find nearest center message"
+  },
+  "when_do_you_prefer": "Wann bevorzugen Sie es?",
+  "@when_do_you_prefer": {
+    "description": "When do you prefer question"
+  },
+  "select_3_time_slots": "Wählen Sie 3 Zeitfenster",
+  "@select_3_time_slots": {
+    "description": "Select 3 time slots instruction"
+  },
+  "city_where_you_live": "Die Stadt, in der Sie jetzt wohnen",
+  "@city_where_you_live": {
+    "description": "City where you live label"
+  },
+  "province_where_you_live": "Die Provinz, in der Sie jetzt wohnen",
+  "@province_where_you_live": {
+    "description": "Province where you live label"
+  },
+  "city_examples": "Z.B. Mailand, Rom, Neapel...",
+  "@city_examples": {
+    "description": "City examples placeholder"
+  },
+  "select_placeholder": "Auswählen",
+  "@select_placeholder": {
+    "description": "Select placeholder"
+  },
+  "where": "Wo",
+  "@where": {
+    "description": "Where label"
+  },
+  "when": "Wann",
+  "@when": {
+    "description": "When label"
+  },
+  "reason_city_change": "Grund für Stadtwechsel:",
+  "@reason_city_change": {
+    "description": "Reason for city change label"
+  },
+  "change_visit_city": "Untersuchungsstadt ändern",
+  "@change_visit_city": {
+    "description": "Change visit city checkbox label"
+  },
+  "useful_if_visit_far_from_home": "Nützlich, wenn Sie die Untersuchung weit von zu Hause aus anfordern müssen",
+  "@useful_if_visit_far_from_home": {
+    "description": "Useful if visit far from home description"
+  },
+  "reason_for_change": "Grund für die Änderung:",
+  "@reason_for_change": {
+    "description": "Reason for change label"
+  },
+  "why_change_city_placeholder": "Warum möchten Sie die Stadt für die ärztliche Untersuchung ändern?",
+  "@why_change_city_placeholder": {
+    "description": "Why change city placeholder"
+  },
+  "medical_visit_requested_nearest_center": "Die ärztliche Untersuchung wird im Zentrum angefordert, das dem angegebenen Ort am nächsten liegt.",
+  "@medical_visit_requested_nearest_center": {
+    "description": "Medical visit location info"
+  },
+  "you_will_receive_call_24h": "Sie erhalten innerhalb von 24 Stunden einen Anruf zur Terminbestätigung.",
+  "@you_will_receive_call_24h": {
+    "description": "Call confirmation message"
+  },
+  "request_booking": "Buchung anfordern",
+  "@request_booking": {
+    "description": "Request booking button"
+  },
+  "back": "Zurück",
+  "@back": {
+    "description": "Back button"
+  },
+  "select_availability": "Verfügbarkeit auswählen",
+  "@select_availability": {
+    "description": "Select availability label"
+  },
+  "choose_3_preferred_time_slots": "Wählen Sie 3 bevorzugte Zeitfenster",
+  "@choose_3_preferred_time_slots": {
+    "description": "Choose 3 preferred time slots instruction"
+  },
+  "select_more_time_slots": "Wählen Sie {count} weitere Zeitfenster, um fortzufahren",
+  "@select_more_time_slots": {
+    "description": "Select more time slots message",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "confirm_theoretical_exam": "Theorieprüfung bestätigen",
+  "@confirm_theoretical_exam": {
+    "description": "Confirm theoretical exam title"
+  },
+  "driving_school": "Fahrschule",
+  "@driving_school": {
+    "description": "Driving school label"
+  },
+  "km_from_address": "2,3 km von Ihrer Adresse",
+  "@km_from_address": {
+    "description": "Distance from address"
+  },
+  "time_availability": "Zeitliche Verfügbarkeit",
+  "@time_availability": {
+    "description": "Time availability label"
+  },
+  "call_24h_confirm_exam": "Sie erhalten innerhalb von 24 Stunden einen Anruf zur Bestätigung des Prüfungstermins.",
+  "@call_24h_confirm_exam": {
+    "description": "Call confirmation for exam message"
+  },
+  "request_exam_booking": "Prüfungsbuchung anfordern",
+  "@request_exam_booking": {
+    "description": "Request exam booking button"
+  },
+  "booking_request_sent_successfully": "Buchungsanfrage erfolgreich gesendet!",
+  "@booking_request_sent_successfully": {
+    "description": "Booking request success message"
+  },
+  "exam_booking_request_sent_successfully": "Prüfungsbuchungsanfrage erfolgreich gesendet!",
+  "@exam_booking_request_sent_successfully": {
+    "description": "Exam booking request success message"
+  },
+  "error_booking_medical_visit": "Fehler bei der Buchung der medizinischen Untersuchung. Bitte versuchen Sie es erneut.",
+  "@error_booking_medical_visit": {
+    "description": "Error message when booking medical visit fails"
+  },
+  "theory_showcase_manual_title": "Theorielehrbuch",
+  "@theory_showcase_manual_title": {
+    "description": "Showcase title for theoretical manual"
+  },
+  "theory_showcase_manual_description": "Greifen Sie auf Ihr interaktives Theorielehrbuch mit Videolektionen und Unterstützung durch den virtuellen Fahrlehrer zu.",
+  "@theory_showcase_manual_description": {
+    "description": "Showcase description for theoretical manual"
+  },
+  "theory_showcase_ebook_title": "E-Book",
+  "@theory_showcase_ebook_title": {
+    "description": "Showcase title for e-book"
+  },
+  "theory_showcase_ebook_description": "Ihr digitales Theorielehrbuch, immer verfügbar für Offline-Studium.",
+  "@theory_showcase_ebook_description": {
+    "description": "Showcase description for e-book"
+  },
+  "theory_showcase_tagbook_title": "Tagbook",
+  "@theory_showcase_tagbook_title": {
+    "description": "Showcase title for tagbook"
+  },
+  "theory_showcase_tagbook_description": "Scannen Sie QR-Codes zum Üben und sehen Sie Ihren Fortschritt nach Themen.",
+  "@theory_showcase_tagbook_description": {
+    "description": "Showcase description for tagbook"
+  },
+  "theory_showcase_banner_title": "Banner",
+  "@theory_showcase_banner_title": {
+    "description": "Showcase title for banner"
+  },
+  "theory_showcase_banner_description": "Bleiben Sie mit Ankündigungen und wichtigen Informationen auf dem Laufenden.",
+  "@theory_showcase_banner_description": {
+    "description": "Showcase description for banner"
+  },
+  "ebook_chapters_title": "E-Book-Kapitel",
+  "@ebook_chapters_title": {
+    "description": "Title for e-book chapters page"
+  },
+  "ebook_no_chapters": "Keine Kapitel verfügbar",
+  "@ebook_no_chapters": {
+    "description": "Message when no e-book chapters are available"
+  },
+  "ebook_load_error": "Fehler beim Laden des E-Book-Inhalts. Bitte überprüfen Sie Ihre Verbindung und versuchen Sie es erneut.",
+  "@ebook_load_error": {
+    "description": "Error message when e-book fails to load"
+  },
+  "ebook_increase_text_size": "Textgröße erhöhen",
+  "@ebook_increase_text_size": {
+    "description": "Tooltip for increasing text size"
+  },
+  "ebook_decrease_text_size": "Textgröße verringern",
+  "@ebook_decrease_text_size": {
+    "description": "Tooltip for decreasing text size"
+  },
+  "refresh": "Aktualisieren",
+  "@refresh": {
+    "description": "Refresh button label"
+  },
+  "retry": "Wiederholen",
+  "@retry": {
+    "description": "Retry button label"
+  },
+  "ebook_activation": "E-Book-Aktivierung",
+  "@ebook_activation": {
+    "description": "E-book activation page title"
+  },
+  "ebook_enter_code_title": "Aktivieren Sie Ihr E-Book",
+  "@ebook_enter_code_title": {
+    "description": "Title for ebook code entry screen"
+  },
+  "ebook_enter_code_description": "Geben Sie Ihren Aktivierungscode ein, um auf das digitale Theorielehrbuch zuzugreifen",
+  "@ebook_enter_code_description": {
+    "description": "Description for ebook code entry"
+  },
+  "ebook_code": "Aktivierungscode",
+  "@ebook_code": {
+    "description": "Label for ebook code input field"
+  },
+  "ebook_code_hint": "Geben Sie Ihren Code ein",
+  "@ebook_code_hint": {
+    "description": "Hint text for ebook code input"
+  },
+  "ebook_code_required": "Bitte geben Sie einen Aktivierungscode ein",
+  "@ebook_code_required": {
+    "description": "Error message when code field is empty"
+  },
+  "ebook_code_invalid": "Ungültiger Code. Bitte überprüfen und erneut versuchen",
+  "@ebook_code_invalid": {
+    "description": "Error message for invalid ebook code"
+  },
+  "ebook_code_active": "E-Book ist bereits aktiv",
+  "@ebook_code_active": {
+    "description": "Message when user already has active ebook"
+  },
+  "ebook_activate": "Aktivieren",
+  "@ebook_activate": {
+    "description": "Button to activate ebook code"
+  },
+  "ebook_locked_title": "E-Book-Zugriff erforderlich",
+  "@ebook_locked_title": {
+    "description": "Title when ebook chapters are locked"
+  },
+  "ebook_locked_description": "Geben Sie einen Aktivierungscode ein, um auf E-Book-Kapitel zuzugreifen",
+  "@ebook_locked_description": {
+    "description": "Description when ebook is locked"
+  },
+  "ebook_enter_code": "Code eingeben",
+  "@ebook_enter_code": {
+    "description": "Button to go to code entry page"
+  },
+  "ministerial_sheet_info_title": "AMTLICHER PRÜFUNGSBOGEN",
+  "@ministerial_sheet_info_title": {
+    "description": "Title for ministerial sheet info dialog"
+  },
+  "ministerial_sheet_info_description": "Wählen Sie aus, ob Sie an einem Prüfungstest üben möchten (d.h. denselben Fragen, die Sie in der Prüfung finden werden) oder an einem oder mehreren Themen. Sie haben das Lehrbuch nicht zur Verfügung.",
+  "@ministerial_sheet_info_description": {
+    "description": "Description for ministerial sheet info dialog"
+  },
+  "ministerial_sheet_with_manual_info_title": "AMTLICHER PRÜFUNGSBOGEN MIT LEHRBUCH",
+  "@ministerial_sheet_with_manual_info_title": {
+    "description": "Title for ministerial sheet with manual info dialog"
+  },
+  "ministerial_sheet_with_manual_info_description": "Wählen Sie aus, ob Sie an einem Prüfungstest üben möchten (d.h. denselben Fragen, die Sie in der Prüfung finden werden) oder an einem oder mehreren Themen. Sie haben das Lehrbuch zur Verfügung.",
+  "@ministerial_sheet_with_manual_info_description": {
+    "description": "Description for ministerial sheet with manual info dialog"
+  },
+  "error_review_info_title": "FEHLERÜBERPRÜFUNG",
+  "@error_review_info_title": {
+    "description": "Title for error review info dialog"
+  },
+  "error_review_info_description": "Wählen Sie aus, ob Sie an Fragen üben möchten, die Sie falsch beantwortet haben, oder an einem oder mehreren Themen.",
+  "@error_review_info_description": {
+    "description": "Description for error review info dialog"
+  },
+  "@close": {
+    "description": "Close button text for dialogs"
+  },
+  "select_error_review_topics": "Fehlerüberprüfungsthemen auswählen",
+  "@select_error_review_topics": {
+    "description": "Title for error review topic selection page"
+  },
+  "create_error_review_combinations": "Themenkombinationen erstellen und Fehlerüberprüfungs-Quiz starten",
+  "@create_error_review_combinations": {
+    "description": "Button text for starting error review quiz"
+  },
+  "no_manuals_available": "Keine Lehrbücher verfügbar",
+  "@no_manuals_available": {
+    "description": "Message when no manuals are available"
+  },
+  "no_manuals_found": "Keine Lehrbücher gefunden für \"{query}\"",
+  "@no_manuals_found": {
+    "description": "Message when no manuals match search query",
+    "placeholders": {
+      "query": {
+        "type": "String"
+      }
+    }
+  },
+  "no_content_available": "Kein Inhalt verfügbar",
+  "@no_content_available": {
+    "description": "Message when manual has no content"
+  },
+  "mark_as_completed": "Als abgeschlossen markieren",
+  "@mark_as_completed": {
+    "description": "Button text to mark manual as completed"
+  },
+  "read_more": "Weiterlesen",
+  "@read_more": {
+    "description": "Link text to read more content"
+  },
+  "manual_detail": "Lehrbuch-Details",
+  "@manual_detail": {
+    "description": "Title for manual detail page"
+  },
+  "open_manual": "Lehrbuch öffnen",
+  "@open_manual": {
+    "description": "Button text to open related manual/theory"
+  },
+  "no_topics_found": "Keine Themen gefunden für \"{query}\"",
+  "@no_topics_found": {
+    "description": "Message when no topics match search query",
+    "placeholders": {
+      "query": {
+        "type": "String"
+      }
+    }
+  },
+  "lesson_summary": "Lektionszusammenfassung",
+  "@lesson_summary": {
+    "description": "Title for lesson summary sheet"
+  },
+  "material": "Material",
+  "@material": {
+    "description": "Label for material/content section"
+  },
+  "read_aloud": "Vorlesen",
+  "@read_aloud": {
+    "description": "Button text to start text-to-speech"
+  },
+  "translation_unavailable": "Übersetzung nicht verfügbar, Anzeige des Originalinhalts",
+  "@translation_unavailable": {
+    "description": "Error message when translation cannot be fetched"
+  },
+  "stop_reading": "Vorlesen beenden",
+  "@stop_reading": {
+    "description": "Button text to stop text-to-speech"
+  },
+  "images": "Bilder",
+  "@images": {
+    "description": "Title for images section"
+  },
+  "quiz_questions": "Quizfragen",
+  "@quiz_questions": {
+    "description": "Title for quiz questions page"
+  },
+  "all_questions": "Alle Fragen",
+  "@all_questions": {
+    "description": "Filter option for all questions"
+  },
+  "true_false_only": "Nur Richtig/Falsch",
+  "@true_false_only": {
+    "description": "Filter option for true/false questions"
+  },
+  "multiple_choice_only": "Nur Multiple Choice",
+  "@multiple_choice_only": {
+    "description": "Filter option for multiple choice questions"
+  },
+  "filter_questions": "Fragen filtern",
+  "@filter_questions": {
+    "description": "Button text to filter questions"
+  },
+  "question": "Frage",
+  "@question": {
+    "description": "Label for question text"
+  },
+  "answer": "Antwort",
+  "@answer": {
+    "description": "Label for answer text"
+  },
+  "explanation": "Erklärung",
+  "@explanation": {
+    "description": "Label for explanation text"
+  },
+  "feedback_title": "Feedback senden",
+  "@feedback_title": {
+    "description": "Title for feedback dialog"
+  },
+  "feedback_description": "Helfen Sie uns, die App zu verbessern, indem Sie Ihre Gedanken teilen, Fehler melden oder neue Funktionen vorschlagen.",
+  "@feedback_description": {
+    "description": "Description text for feedback dialog"
+  },
+  "feedback_description_simple": "Helfen Sie uns, die App zu verbessern! Ihr Feedback ist wertvoll.",
+  "@feedback_description_simple": {
+    "description": "Simplified description text for feedback dialog"
+  },
+  "feedback_type": "Feedback-Typ",
+  "@feedback_type": {
+    "description": "Label for feedback type selection"
+  },
+  "feedback_type_bug": "Fehlerbericht",
+  "@feedback_type_bug": {
+    "description": "Option for bug report feedback type"
+  },
+  "feedback_type_feature": "Feature-Anfrage",
+  "@feedback_type_feature": {
+    "description": "Option for feature request feedback type"
+  },
+  "feedback_type_improvement": "Verbesserung",
+  "@feedback_type_improvement": {
+    "description": "Option for improvement feedback type"
+  },
+  "feedback_type_other": "Sonstiges",
+  "@feedback_type_other": {
+    "description": "Option for other feedback type"
+  },
+  "feedback_name": "Name",
+  "@feedback_name": {
+    "description": "Label for name field in feedback form"
+  },
+  "feedback_name_hint": "Geben Sie Ihren Namen ein",
+  "@feedback_name_hint": {
+    "description": "Hint text for name field"
+  },
+  "feedback_name_required": "Name ist erforderlich",
+  "@feedback_name_required": {
+    "description": "Validation message for required name field"
+  },
+  "feedback_email": "E-Mail",
+  "@feedback_email": {
+    "description": "Label for email field in feedback form"
+  },
+  "feedback_email_hint": "Geben Sie Ihre E-Mail-Adresse ein",
+  "@feedback_email_hint": {
+    "description": "Hint text for email field"
+  },
+  "feedback_email_required": "E-Mail ist erforderlich",
+  "@feedback_email_required": {
+    "description": "Validation message for required email field"
+  },
+  "feedback_email_invalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+  "@feedback_email_invalid": {
+    "description": "Validation message for invalid email format"
+  },
+  "feedback_comments": "Kommentare",
+  "@feedback_comments": {
+    "description": "Label for comments field in feedback form"
+  },
+  "feedback_comments_hint": "Beschreiben Sie Ihr Feedback, Ihren Fehlerbericht oder Ihre Feature-Anfrage...",
+  "@feedback_comments_hint": {
+    "description": "Hint text for comments field"
+  },
+  "feedback_comments_hint_simple": "Sagen Sie uns, was Sie denken...",
+  "@feedback_comments_hint_simple": {
+    "description": "Simplified hint text for comments field"
+  },
+  "feedback_comments_required": "Kommentare sind erforderlich",
+  "@feedback_comments_required": {
+    "description": "Validation message for required comments field"
+  },
+  "feedback_comments_min_length": "Bitte geben Sie mindestens 10 Zeichen ein",
+  "@feedback_comments_min_length": {
+    "description": "Validation message for minimum comment length"
+  },
+  "feedback_comments_min_length_simple": "Bitte geben Sie mindestens 5 Zeichen ein",
+  "@feedback_comments_min_length_simple": {
+    "description": "Simplified validation message for minimum comment length"
+  },
+  "feedback_submit": "Feedback senden",
+  "@feedback_submit": {"description": "Button text to submit feedback"},
+  "when_want_license": "Wann möchten Sie den Führerschein machen?",
+  "@when_want_license": {"description": "Question asking when user wants to get driver's license"},
+  "when_want_license_hint": "z.B. In 6 Monaten, Nächstes Jahr",
+  "@when_want_license_hint": {"description": "Hint text for when user wants license field"},
+  "current_age": "Wie alt sind Sie jetzt?",
+  "@current_age": {"description": "Question asking user's current age"},
+  "current_age_hint": "Geben Sie Ihr Alter ein",
+  "@current_age_hint": {"description": "Hint text for current age field"},
+  "feedback_submitted_successfully": "Vielen Dank! Ihr Feedback wurde erfolgreich übermittelt.",
+  "@feedback_submitted_successfully": {
+    "description": "Success message after feedback submission"
+  },
+  "feedback_submission_failed": "Feedback konnte nicht gesendet werden. Bitte versuchen Sie es erneut.",
+  "@feedback_submission_failed": {
+    "description": "Error message when feedback submission fails"
+  },
+  "feedback_button_label": "Feedback",
+  "@feedback_button_label": {
+    "description": "Label for feedback floating button"
+  },
+  "failed_to_update_content": "Inhalt konnte nicht aktualisiert werden. Bitte versuchen Sie es erneut.",
+  "@failed_to_update_content": {
+    "description": "Error message when language content update fails"
+  },
+  "your_residential_address": "Ihre Wohnadresse",
+  "@your_residential_address": {
+    "description": "Section title for residential address"
+  },
+  "address_placeholder": "Geben Sie Ihre Adresse ein",
+  "@address_placeholder": {
+    "description": "Placeholder text for address field"
+  },
+  "zip_code": "Postleitzahl",
+  "@zip_code": {
+    "description": "Zip code label"
+  },
+  "zip_code_placeholder": "Postleitzahl eingeben",
+  "@zip_code_placeholder": {
+    "description": "Placeholder text for zip code field"
+  },
+  "province": "Provinz",
+  "@province": {
+    "description": "Province label"
+  },
+  "select_province": "Provinz auswählen",
+  "@select_province": {
+    "description": "Placeholder for province dropdown"
+  },
+  "address_required_for_subscription": "Hinterlassen Sie uns Ihre Adresse, damit wir Ihren medizinischen Besuch und/oder Ihre Führungen bestmöglich verwalten können ☺️",
+  "@address_required_for_subscription": {
+    "description": "Message explaining why address is required for subscription"
+  },
+  "residential_address_info": "Es ist wichtig, dass Ihre Wohnadresse korrekt ist, um den nächstgelegenen Ort für Sie zu finden.",
+  "@residential_address_info": {
+    "description": "Info message about residential address"
+  },
+  "update_address": "Adresse aktualisieren",
+  "@update_address": {
+    "description": "Button text to update address"
+  },
+  "confirm_change": "Änderung bestätigen",
+  "address_updated_successfully": "Adresse erfolgreich aktualisiert",
+  "@address_updated_successfully": {
+    "description": "Success message when address is updated"
+  },
+  "error_updating_address": "Fehler beim Aktualisieren der Adresse. Bitte versuchen Sie es erneut.",
+  "@error_updating_address": {
+    "description": "Error message when address update fails"
+  },
+  "theoryExam": "Theorieprüfung",
+  "@theoryExam": {
+    "description": "Theory exam title"
+  },
+  "bookTheoryExam": "Theorieprüfung Buchen",
+  "@bookTheoryExam": {
+    "description": "Book theory exam button"
+  },
+  "readyToBookTheoryExam": "Sie sind bereit, Ihre Theorieprüfung zu buchen!",
+  "@readyToBookTheoryExam": {
+    "description": "Ready to book theory exam message"
+  },
+  "completeDocumentsAndMedicalExam": "Vervollständigen Sie zuerst Ihre Dokumente und ärztliche Untersuchung",
+  "@completeDocumentsAndMedicalExam": {
+    "description": "Complete requirements message"
+  },
+  "schedulingYourTheoryExam": "Wir planen Ihre Theorieprüfung",
+  "@schedulingYourTheoryExam": {
+    "description": "Scheduling theory exam message"
+  },
+  "theoryExamSchedulingMessage": "Sie werden bald das Datum Ihrer Theorieprüfung erfahren. Wir suchen nach dem ersten verfügbaren Termin. Wir werden Ihnen innerhalb von {waitingTime} ein Datum für die Theorieprüfung geben",
+  "@theoryExamSchedulingMessage": {
+    "description": "Theory exam scheduling detailed message",
+    "placeholders": {
+      "waitingTime": {
+        "type": "String"
+      }
+    }
+  },
+  "howMuchTimeUntilYourTheoryExam": "Wie lange bis zu Ihrer Theorieprüfung",
+  "@howMuchTimeUntilYourTheoryExam": {
+    "description": "Countdown title"
+  },
+  "yourTheoryExam": "Ihre Theorieprüfung",
+  "@yourTheoryExam": {
+    "description": "Your theory exam title"
+  },
+  "motorisationOfficeData": "Daten der Motorisierungsbehörde",
+  "@motorisationOfficeData": {
+    "description": "Motorization office data title"
+  },
+  "openInMaps": "In Karten Öffnen",
+  "@openInMaps": {
+    "description": "Open in maps button"
+  },
+  "didYouTakeTheTheoryExam": "Haben Sie die Theorieprüfung abgelegt?",
+  "@didYouTakeTheTheoryExam": {
+    "description": "Question if user took the exam"
+  },
+  "didYouPassTheTheoryExam": "Haben Sie die Theorieprüfung bestanden?",
+  "@didYouPassTheTheoryExam": {
+    "description": "Question if user passed the exam"
+  },
+  "congratulationsOnYourSuccess": "Herzlichen Glückwunsch zu Ihrem Erfolg!",
+  "@congratulationsOnYourSuccess": {
+    "description": "Congratulations message"
+  },
+  "completedFirstStepTowardLicense": "Sie haben den ersten Schritt zu Ihrem Führerschein abgeschlossen",
+  "@completedFirstStepTowardLicense": {
+    "description": "Completed first step message"
+  },
+  "notReadyForExamWarning": "Laut unseren Systemen sind Sie noch nicht bereit für die Theorieprüfung. Möchten Sie trotzdem buchen?",
+  "@notReadyForExamWarning": {
+    "description": "Warning when user is not ready for exam"
+  },
+  "bookAnyway": "Trotzdem Buchen",
+  "@bookAnyway": {
+    "description": "Book anyway button"
+  },
+  "theoryExamBookedSuccessfully": "Theorieprüfung erfolgreich gebucht!",
+  "@theoryExamBookedSuccessfully": {
+    "description": "Success message for booking"
+  },
+  "errorBookingTheoryExam": "Fehler beim Buchen der Theorieprüfung. Bitte versuchen Sie es erneut.",
+  "@errorBookingTheoryExam": {
+    "description": "Error message for booking"
+  },
+  "theoryExamConfirmedSuccessfully": "Theorieprüfung erfolgreich bestätigt!",
+  "@theoryExamConfirmedSuccessfully": {
+    "description": "Success message for confirmation"
+  },
+  "errorConfirmingTheoryExam": "Fehler beim Bestätigen der Theorieprüfung. Bitte versuchen Sie es erneut.",
+  "@errorConfirmingTheoryExam": {
+    "description": "Error message for confirmation"
+  },
+  "rescheduleExam": "Prüfungstermin Ändern",
+  "@rescheduleExam": {
+    "description": "Reschedule exam title"
+  },
+  "rescheduleExamConfirmation": "Sind Sie sicher, dass Sie das Datum Ihrer Theorieprüfung ändern möchten?",
+  "@rescheduleExamConfirmation": {
+    "description": "Reschedule confirmation message"
+  },
+  "reschedule": "Umplanen",
+  "@reschedule": {
+    "description": "Reschedule button"
+  },
+  "theoryExamRescheduledSuccessfully": "Theorieprüfung erfolgreich umgeplant!",
+  "@theoryExamRescheduledSuccessfully": {
+    "description": "Success message for rescheduling"
+  },
+  "errorReschedulingTheoryExam": "Fehler beim Umplanen der Theorieprüfung. Bitte versuchen Sie es erneut.",
+  "@errorReschedulingTheoryExam": {
+    "description": "Error message for rescheduling"
+  },
+  "congratulationsYouPassedTheTheoryExam": "Herzlichen Glückwunsch! Sie haben die Theorieprüfung bestanden!",
+  "@congratulationsYouPassedTheTheoryExam": {
+    "description": "Congratulations for passing"
+  },
+  "resultSubmittedSuccessfully": "Ergebnis erfolgreich übermittelt",
+  "@resultSubmittedSuccessfully": {
+    "description": "Result submitted message"
+  },
+  "errorSubmittingResult": "Fehler beim Übermitteln des Ergebnisses. Bitte versuchen Sie es erneut.",
+  "@errorSubmittingResult": {
+    "description": "Error submitting result"
+  },
+  "errorOpeningMaps": "Karten können nicht geöffnet werden",
+  "@errorOpeningMaps": {
+    "description": "Error opening maps"
+  },
+  "schedulingInProgress": "Planung läuft...",
+  "@schedulingInProgress": {
+    "description": "Scheduling in progress status"
+  },
+  "examDatePassed": "Das Prüfungsdatum ist verstrichen",
+  "@examDatePassed": {
+    "description": "Exam date passed status"
+  },
+  "examCompleted": "Prüfung abgeschlossen!",
+  "@examCompleted": {
+    "description": "Exam completed status"
+  },
+  "months": "Monate",
+  "@months": {
+    "description": "Months label"
+  },
+  "hours": "Stunden",
+  "@hours": {
+    "description": "Hours label"
+  },
+  "errorLoadingData": "Fehler beim Laden der Daten. Bitte versuchen Sie es erneut.",
+  "@errorLoadingData": {
+    "description": "Error loading data message"
+  },
+  "warning": "Warnung",
+  "@warning": {
+    "description": "Warning title"
+  },
+  "confirm": "Bestätigen",
+  "@confirm": {
+    "description": "Confirm button"
+  },
+  "zipCode": "Postleitzahl",
+  "@zipCode": {
+    "description": "ZIP code label"
+  },
+  "noLessonTopicsAvailable": "Keine Unterrichtsthemen verfügbar",
+  "@noLessonTopicsAvailable": {
+    "description": "Message when no lesson topics are available"
+  },
+  "noTopicsFoundForQuery": "Keine Themen gefunden für \"{query}\"",
+  "@noTopicsFoundForQuery": {
+    "description": "Message when no topics match the search query",
+    "placeholders": {
+      "query": {
+        "type": "String"
+      }
+    }
+  },
+  "trySearchingDifferentKeywords": "Versuchen Sie es mit anderen Suchbegriffen",
+  "@trySearchingDifferentKeywords": {
+    "description": "Suggestion to try different search terms"
+  },
+  "errorLoadingLessonTopics": "Fehler beim Laden der Unterrichtsthemen",
+  "@errorLoadingLessonTopics": {
+    "description": "Error message when lesson topics fail to load"
+  },
+  "noRecordedVideosAvailable": "Keine aufgezeichneten Videos verfügbar",
+  "@noRecordedVideosAvailable": {
+    "description": "Message when no recorded videos are available"
+  },
+  "noVideosFoundForQuery": "Keine Videos gefunden für \"{query}\"",
+  "@noVideosFoundForQuery": {
+    "description": "Message when no videos match the search query",
+    "placeholders": {
+      "query": {
+        "type": "String"
+      }
+    }
+  },
+  "errorLoadingVideos": "Fehler beim Laden der Videos",
+  "@errorLoadingVideos": {
+    "description": "Error message when videos fail to load"
+  },
+  "untitledVideo": "Video ohne Titel",
+  "@untitledVideo": {
+    "description": "Default title for video with no title"
+  },
+  "unknownTeacher": "Unbekannter Lehrer",
+  "@unknownTeacher": {
+    "description": "Default text when teacher information is not available"
+  },
+  "noDateAvailable": "Kein Datum verfügbar",
+  "@noDateAvailable": {
+    "description": "Default text when no date is available"
+  },
+  "prenotato": "Gebucht",
+  "@prenotato": {
+    "description": "Booked status label"
+  },
+  "init_step_migration": "Migration",
+  "@init_step_migration": {
+    "description": "Initialization step: Database migration"
+  },
+  "init_step_auth": "Authentifizierung",
+  "@init_step_auth": {
+    "description": "Initialization step: Authentication"
+  },
+  "init_step_sync": "Synchronisierung",
+  "@init_step_sync": {
+    "description": "Initialization step: Data sync"
+  },
+  "init_step_database_update": "Aktualisierung",
+  "@init_step_database_update": {
+    "description": "Initialization step: Database update"
+  },
+  "init_step_version": "Finalisierung",
+  "@init_step_version": {
+    "description": "Initialization step: Version check"
+  },
+  "init_step_starting": "Start",
+  "@init_step_starting": {
+    "description": "Initialization step: Starting up"
+  },
+  "view_only_mode_info": "Sie treten als Zuschauer bei. Sie können den Gastgeber sehen und hören, aber nicht interagieren.",
+  "@view_only_mode_info": {
+    "description": "Info message explaining view-only mode"
+  },
+  "joining_meeting": "Meeting beitreten...",
+  "@joining_meeting": {
+    "description": "Label shown while joining a meeting"
+  },
+  "magic_activation_title": "Abonnement aktivieren",
+  "@magic_activation_title": {
+    "description": "Title for magic activation page"
+  },
+  "magic_activation_validating": "Aktivierungscode wird überprüft...",
+  "@magic_activation_validating": {
+    "description": "Message shown while validating activation code"
+  },
+  "magic_activation_invalid_code": "Dieser Aktivierungscode ist ungültig oder wurde bereits verwendet.",
+  "@magic_activation_invalid_code": {
+    "description": "Error message for invalid activation code"
+  },
+  "magic_activation_failed": "Aktivierung des Abonnements fehlgeschlagen. Bitte versuche es erneut.",
+  "@magic_activation_failed": {
+    "description": "Error message when activation fails"
+  },
+  "magic_activation_login_required_title": "Anmeldung erforderlich",
+  "@magic_activation_login_required_title": {
+    "description": "Title for login required dialog"
+  },
+  "magic_activation_login_required_message": "Um dein Abonnement zu aktivieren, melde dich bitte zuerst an oder erstelle ein Konto.",
+  "@magic_activation_login_required_message": {
+    "description": "Message explaining login is required for activation"
+  },
+  "magic_activation_ready_title": "Bereit zur Aktivierung",
+  "@magic_activation_ready_title": {
+    "description": "Title when code is validated and ready to activate"
+  },
+  "magic_activation_confirm_for_account": "Abonnement für {email} aktivieren?",
+  "@magic_activation_confirm_for_account": {
+    "description": "Confirmation message with user email",
+    "placeholders": {
+      "email": {
+        "type": "String",
+        "example": "user@example.com"
+      }
+    }
+  },
+  "magic_activation_login_to_activate": "Bitte melde dich an oder erstelle ein Konto, um dein Abonnement zu aktivieren.",
+  "@magic_activation_login_to_activate": {
+    "description": "Message prompting user to login to activate"
+  },
+  "magic_activation_activate_button": "Jetzt aktivieren",
+  "@magic_activation_activate_button": {
+    "description": "Button text to activate subscription"
+  },
+  "magic_activation_login_button": "Anmelden zum Aktivieren",
+  "@magic_activation_login_button": {
+    "description": "Button text to login before activating"
+  },
+  "magic_activation_cancel": "Abbrechen",
+  "@magic_activation_cancel": {
+    "description": "Cancel button text"
+  },
+  "magic_activation_success_title": "Abonnement aktiviert!",
+  "@magic_activation_success_title": {
+    "description": "Title shown when activation is successful"
+  },
+  "magic_activation_success_message": "Dein Abonnement wurde erfolgreich aktiviert. Genieße den vollen Zugang zu allen Funktionen!",
+  "@magic_activation_success_message": {
+    "description": "Success message after activation"
+  },
+  "magic_activation_success_for_account": "Abonnement aktiviert für: {email}",
+  "@magic_activation_success_for_account": {
+    "description": "Success message showing which account was activated",
+    "placeholders": {
+      "email": {
+        "type": "String",
+        "example": "user@example.com"
+      }
+    }
+  },
+  "magic_activation_account_created": "Wir haben ein Konto für Sie erstellt!\n\nE-Mail: {email}\nPasswort: {password}\n\nBitte speichern Sie diese Anmeldedaten für die spätere Anmeldung.",
+  "@magic_activation_account_created": {
+    "description": "Message shown when account was auto-created during activation",
+    "placeholders": {
+      "email": {
+        "type": "String",
+        "example": "phone@guidaevai.com"
+      },
+      "password": {
+        "type": "String",
+        "example": "+391234567890"
+      }
+    }
+  },
+  "magic_activation_go_to_app": "Zur App",
+  "@magic_activation_go_to_app": {
+    "description": "Button text to go to main app"
+  },
+  "magic_activation_error_title": "Aktivierungsfehler",
+  "@magic_activation_error_title": {
+    "description": "Title shown when there's an activation error"
+  },
+  "magic_activation_retry": "Erneut versuchen",
+  "@magic_activation_retry": {
+    "description": "Button text to retry activation"
+  },
+  "magic_activation_no_phone": "Dieser Aktivierungscode ist keiner Telefonnummer zugeordnet. Bitte wenden Sie sich an den Support.",
+  "@magic_activation_no_phone": {
+    "description": "Error when activation code has no phone number for auto-registration"
+  },
+  "magic_activation_creating_account": "Ihr Konto wird erstellt...",
+  "@magic_activation_creating_account": {
+    "description": "Message shown while auto-creating account"
+  },
+  "magic_activation_will_create_account": "Ein Konto wird automatisch mit Ihrer Telefonnummer erstellt.",
+  "@magic_activation_will_create_account": {
+    "description": "Message explaining auto account creation for guest users"
+  },
+  "live_comments_student_comments": "Schülerkommentare",
+  "@live_comments_student_comments": {
+    "description": "Header for teacher view of comments"
+  },
+  "live_comments_your_comments": "Deine Kommentare",
+  "@live_comments_your_comments": {
+    "description": "Header for student view of comments"
+  },
+  "live_comments_no_comments_teacher": "Noch keine Kommentare erhalten",
+  "@live_comments_no_comments_teacher": {
+    "description": "Empty state for teacher when no comments"
+  },
+  "live_comments_no_comments_student": "Du hast noch keine Kommentare gesendet",
+  "@live_comments_no_comments_student": {
+    "description": "Empty state for student when no comments"
+  },
+  "live_comments_send_first_comment": "Sende deinen ersten Kommentar unten!",
+  "@live_comments_send_first_comment": {
+    "description": "Encouragement to send first comment"
+  },
+  "live_comments_write_comment_hint": "Schreibe einen Kommentar für den Lehrer...",
+  "@live_comments_write_comment_hint": {
+    "description": "Hint text for comment input field"
+  },
+  "live_comments_loading_error": "Fehler beim Laden",
+  "@live_comments_loading_error": {
+    "description": "Error message when comments fail to load"
+  },
+  "live_comments_delete_comment_title": "Kommentar löschen?",
+  "@live_comments_delete_comment_title": {
+    "description": "Title for delete comment confirmation dialog"
+  },
+  "live_comments_delete_comment_message": "Bist du sicher, dass du diesen Kommentar löschen möchtest?",
+  "@live_comments_delete_comment_message": {
+    "description": "Message for delete comment confirmation dialog"
+  },
+  "live_comments_delete": "Löschen",
+  "@live_comments_delete": {
+    "description": "Delete button text"
+  },
+  "uploadFrontSide": "Vorderseite hochladen",
+  "@uploadFrontSide": {
+    "description": "Title for uploading front side of document"
+  },
+  "uploadBackSide": "Rückseite hochladen",
+  "@uploadBackSide": {
+    "description": "Title for uploading back side of document"
+  },
+  "frontSide": "Vorderseite",
+  "@frontSide": {
+    "description": "Label for front side of document"
+  },
+  "backSide": "Rückseite",
+  "@backSide": {
+    "description": "Label for back side of document"
+  },
+  "confirmUpload": "Upload bestätigen",
+  "@confirmUpload": {
+    "description": "Button to confirm and proceed with upload"
+  },
+  "uploadDocument": "Dokument hochladen",
+  "@uploadDocument": {
+    "description": "Title for uploading single-sided document"
+  },
+  "takePhoto": "Foto aufnehmen",
+  "@takePhoto": {
+    "description": "Option to take photo with camera"
+  },
+  "chooseFromGallery": "Aus Galerie wählen",
+  "@chooseFromGallery": {
+    "description": "Option to choose image from gallery"
+  },
+  "fileSizeTooLarge": "Dateigröße überschreitet 5MB. Bitte wählen Sie eine kleinere Datei.",
+  "@fileSizeTooLarge": {
+    "description": "Error message when selected file is larger than 5MB"
+  },
+  "date_not_available": "Datum nicht verfügbar",
+  "@date_not_available": {
+    "description": "Message when a date is not available"
+  },
+  "error_loading_lessons": "Fehler beim Laden der Lektionen",
+  "@error_loading_lessons": {
+    "description": "Error message when lessons fail to load"
+  },
+  "failed_to_cancel_booking": "Buchung konnte nicht storniert werden",
+  "@failed_to_cancel_booking": {
+    "description": "Error message when booking cancellation fails"
+  },
+  "invalid_booking_id": "Ungültige Buchungs-ID",
+  "@invalid_booking_id": {
+    "description": "Error message for invalid booking ID"
+  },
+  "no_upcoming_lessons": "Keine anstehenden Lektionen",
+  "@no_upcoming_lessons": {
+    "description": "Message when there are no upcoming lessons"
+  },
+  "recorded_lives_description": "Schau dir vergangene Live-Sessions an: nach Themen sortiert",
+  "@recorded_lives_description": {
+    "description": "Description for recorded live sessions section"
+  },
+  "time_not_available": "Uhrzeit nicht verfügbar",
+  "@time_not_available": {
+    "description": "Message when a time slot is not available"
+  },
+  "tag_book": "Tag-Buch",
+  "@tag_book": {"description": "Title for the tag book feature"},
+  "tag_book_description": "QR-Codes aus dem Tag-Buch scannen",
+  "@tag_book_description": {"description": "Description for tag book feature"},
+  "detected_qr_codes": "Erkannte QR-Codes",
+  "@detected_qr_codes": {"description": "Header for detected QR codes list"},
+  "no_qr_codes_detected": "Keine QR-Codes auf dieser Seite erkannt",
+  "@no_qr_codes_detected": {"description": "Message when no QR codes found"},
+  "qr_code_copied": "QR-Code in die Zwischenablage kopiert",
+  "@qr_code_copied": {"description": "Success message when QR code is copied"},
+  "scanning_for_qr_codes": "Suche nach QR-Codes...",
+  "@scanning_for_qr_codes": {"description": "Loading message while scanning"},
+  "error_loading_pdf": "Fehler beim Laden der PDF",
+  "@error_loading_pdf": {"description": "Error message when PDF fails to load"},
+  "failed_to_scan_qr_codes": "QR-Codes konnten nicht gescannt werden",
+  "@failed_to_scan_qr_codes": {"description": "Error message when QR code scanning fails"},
+  "merge_accounts_instruction": "Geben Sie die Anmeldedaten ein oder verwenden Sie die soziale Authentifizierung, um ein anderes Konto mit Ihrem aktuellen Konto zusammenzuführen. Alle Daten (Quiz, Abonnements usw.) werden auf Ihr aktuelles Konto übertragen.",
+  "@merge_accounts_instruction": {
+    "description": "Instructions for merging accounts"
+  },
+  "merge_accounts_warning": "Hinweis: Beide Konten können nicht gleichzeitig aktive Abonnements haben",
+  "@merge_accounts_warning": {
+    "description": "Warning about subscription restrictions"
+  },
+  "merge_with_social_account": "Mit sozialem Konto zusammenführen",
+  "@merge_with_social_account": {
+    "description": "Button to merge with social account"
+  },
+  "or_lowercase": "oder",
+  "@or_lowercase": {
+    "description": "Lowercase 'or' conjunction"
+  },
+  "merge_with_credentials": "Mit E-Mail und Passwort zusammenführen",
+  "@merge_with_credentials": {
+    "description": "Button to merge with email credentials"
+  },
+  "merge_accounts_confirmation_title": "Kontozusammenführung bestätigen",
+  "@merge_accounts_confirmation_title": {
+    "description": "Title for account merge confirmation dialog"
+  },
+  "merge_accounts_confirmation_message": "Sind Sie sicher, dass Sie diese Konten zusammenführen möchten? Diese Aktion kann nicht rückgängig gemacht werden. Alle Daten des anderen Kontos werden auf Ihr aktuelles Konto übertragen.",
+  "@merge_accounts_confirmation_message": {
+    "description": "Message for account merge confirmation dialog"
+  },
+  "success": "Erfolg",
+  "@success": {
+    "description": "Success message title"
+  },
+  "merge_accounts_success_message": "Die Konten wurden erfolgreich zusammengeführt! Die App wird neu gestartet, um Ihre Daten zu aktualisieren.",
+  "@merge_accounts_success_message": {
+    "description": "Success message after merging accounts"
+  },
+  "google_sign_in_cancelled": "Google-Anmeldung wurde abgebrochen",
+  "@google_sign_in_cancelled": {
+    "description": "Message when Google sign in is cancelled"
+  },
+  "apple_sign_in_cancelled": "Apple-Anmeldung wurde abgebrochen",
+  "@apple_sign_in_cancelled": {
+    "description": "Message when Apple sign in is cancelled"
+  }
+}

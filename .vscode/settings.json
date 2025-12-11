@@ -1,0 +1,53 @@
+{
+    "typescript.preferences.includePackageJsonAutoImports": "off",
+    "typescript.suggest.autoImports": false,
+    "typescript.validate.enable": false,
+    "eslint.workingDirectories": [
+        {
+            "directory": "./",
+            "changeProcessCWD": true
+        }
+    ],
+    "eslint.options": {
+        "ignorePattern": [
+            "../neithapp/**",
+            "../guidaevai-backend/**",
+            "../QuizPatente-iOS/**"
+        ]
+    },
+    // Flutter & Dart settings
+    "dart.flutterSdkPath": null,
+    "dart.previewFlutterUiGuides": true,
+    "dart.previewFlutterUiGuidesCustomTracking": true,
+    "[dart]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.rulers": [120],
+        "editor.selectionHighlight": false,
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.suggestSelection": "first",
+        "editor.tabCompletion": "onlySnippets",
+        "editor.wordBasedSuggestions": "off",
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit"
+        }
+    },
+    // Exclude build artifacts from search/file explorer
+    "files.exclude": {
+        "**/.dart_tool": true,
+        "**/.flutter-plugins": true,
+        "**/.flutter-plugins-dependencies": true,
+        "**/.packages": true,
+        "**/build": true,
+        "**/*.freezed.dart": true,
+        "**/*.g.dart": true,
+        "**/*.gr.dart": true
+    },
+    "search.exclude": {
+        "**/.dart_tool": true,
+        "**/build": true,
+        "**/*.freezed.dart": true,
+        "**/*.g.dart": true,
+        "**/*.gr.dart": true
+    }
+}

@@ -1,0 +1,7 @@
+arb-dir: lib/l10n
+template-arb-file: intl_en.arb
+output-localization-file: app_localizations.dart
+untranslated-messages-report: true
+generate: true
+use-delegate: false
+output-dir: lib/generated/i18n

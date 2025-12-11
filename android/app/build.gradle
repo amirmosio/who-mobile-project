@@ -1,0 +1,96 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+
+def keyProperties = new Properties()
+def keyPropertiesFile = rootProject.file("key.properties")
+if (keyPropertiesFile.exists()) {
+    keyProperties.load(new FileInputStream(keyPropertiesFile))
+}
+
+
+android {
+    namespace = "com.who.mobile"
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        coreLibraryDesugaringEnabled true
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_17
+    }
+
+    defaultConfig {
+        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
+        applicationId = "com.who.mobile"
+        // You can update the following values to match your application needs.
+        // For more information, see: https://flutter.dev/to/review-gradle-config.
+        minSdk = 24
+        minSdkVersion = 24
+        targetSdk = flutter.targetSdkVersion
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
+    }
+
+    signingConfigs {
+        release {
+            keyAlias keyProperties['keyAlias']
+            keyPassword keyProperties['keyPassword']
+            storeFile file(keyProperties['storeFile'])
+            storePassword keyProperties['storePassword']
+        }
+    }
+
+    buildTypes {
+        release {
+            // TODO: Add your own signing config for the release build.
+            // Signing with the debug keys for now, so `flutter run --release` works.
+            signingConfig = signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            // Audio performance optimizations
+            minifyEnabled true
+            shrinkResources false
+
+            // Add NDK filters for better audio performance
+            ndk {
+                abiFilters 'arm64-v8a', 'armeabi-v7a', 'x86_64'
+            }
+        }
+    }
+
+    // Add lint options to handle the flutter_callkeep permission issue
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+        // Disable UnusedResources check to prevent failing lints
+        disable 'UnusedResources'
+    }
+}
+dependencies {
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.1.4'
+    // COMMENTED OUT - Firebase (keeping for future use)
+    // implementation(platform("com.google.firebase:firebase-bom:33.14.0"))
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+    // Add missing Android core dependencies
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.activity:activity-ktx:1.8.2'
+
+    // Realm SDK for Android (for migration from old app)
+    // Note: Realm is deprecated but still needed for reading old Realm databases
+    implementation 'io.realm:realm-android-library:10.15.1'
+}
+
+flutter {
+    source = "../.."
+}

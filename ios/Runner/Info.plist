@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Need to use the camera for call</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Need to use the microphone for call</string>
+	<key>CADisableMinimumFrameDurationOnPhone</key>
+	<true/>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>Quiz Patente Ufficiale</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Quiz Patente Ufficiale</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(FLUTTER_BUILD_NAME)</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.meraviglia.yourang</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>guidaevai</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>REVERSED_CLIENT_ID</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.127242242846-pgcug100pa293mbvr58s5s0un7brm0j0</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>FacebookApp</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb203364297969521</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>$(FLUTTER_BUILD_NUMBER)</string>
+	<key>FirebaseAppDelegateProxyEnabled</key>
+	<false/>
+	<key>GIDClientID</key>
+	<string>127242242846-pgcug100pa293mbvr58s5s0un7brm0j0.apps.googleusercontent.com</string>
+	<key>OneSignalAppId</key>
+	<string>efbd1014-faac-48b3-a6ae-017e738f1172</string>
+	<key>FacebookAppID</key>
+	<string>203364297969521</string>
+	<key>FacebookClientToken</key>
+	<string>c3e88204a65415c9e5ee60fba5aedc54</string>
+	<key>FacebookDisplayName</key>
+	<string>Quiz Patente Ufficiale</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>http</string>
+		<string>https</string>
+		<string>mailto</string>
+		<string>tel</string>
+		<string>guidaevai</string>
+		<string>fbapi</string>
+		<string>fb-messenger-share-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+	</array>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSAudioSessionUsageDescription</key>
+	<string>This app needs audio session access for voice calls and audio playback.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>We may need camera access to let you take picture to set for avatar</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>This app needs access to your location to show maps.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This app needs access to your location to show maps.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This app needs access to your location to show maps.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>To use the voice call option</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>We may need to be able to get photos from library for you to select and apply for avatar</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>The app requires access to your calendar to add reminders or events related to your study sessions.</string>
+	<key>NSContactsUsageDescription</key>
+	<string>The app requires access to your contacts to let you share results and invite friends.</string>
+	<key>NSUserNotificationsUsageDescription</key>
+	<string>This app needs notification access to receive incoming calls and messages.</string>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
+	<true/>
+	<key>UIRequiresFullScreen</key>
+	<true/>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+		<string>fetch</string>
+		<string>audio</string>
+	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+	</array>
+	<key>com.apple.security.device.audio-input</key>
+	<true/>
+	<key>FlutterDeepLinkingEnabled</key>
+	<true/>
+</dict>
+</plist>

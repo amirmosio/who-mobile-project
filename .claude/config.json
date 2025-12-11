@@ -1,0 +1,21 @@
+{
+  "name": "who-mobile-project",
+  "version": "1.0.0",
+  "agents": [
+    "django-developer",
+    "fastapi-builder",
+    "python-developer",
+    "postgres-dba",
+    "agent-selector",
+    "senior-software-engineer",
+    "ui-ux-designer"
+  ],
+  "categories": [
+    "frontend",
+    "backend",
+    "database",
+    "generic"
+  ],
+  "createdAt": "2025-10-09T10:21:08.181Z",
+  "updatedAt": "2025-10-09T10:21:08.182Z"
+}

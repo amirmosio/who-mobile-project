@@ -1,0 +1,18 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-labelledby="title">
+  <title>Email icon – rounded, black stroke</title>
+
+  <!-- Envelope body -->
+  <rect x="6" y="12" width="36" height="24" rx="4"
+        stroke="#000" stroke-width="2" fill="none" />
+
+  <!-- Envelope flap (top V) -->
+  <path d="M8 14 L24 26 L40 14"
+        stroke="#000" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- Bottom seams for extra definition -->
+  <path d="M8 34 L20 24" stroke="#000" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M40 34 L28 24" stroke="#000" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100" width="200" height="100">
+  <defs>
+    <style>
+      /* Road animation */
+      .road-line {
+        animation: road-move 1.2s linear infinite;
+      }
+
+      @keyframes road-move {
+        0%   { transform: translateX(0); }
+        100% { transform: translateX(-40px); }
+      }
+
+      /* Car bounce */
+      .car {
+        animation: car-bounce 0.6s ease-in-out infinite;
+      }
+
+      @keyframes car-bounce {
+        0%, 100% { transform: translateY(0); }
+        50%      { transform: translateY(-3px); }
+      }
+
+      /* Wheels rotation (important part) */
+      .wheel {
+        animation: wheel-rotate 0.8s linear infinite;
+        transform-box: fill-box;
+        transform-origin: center;
+      }
+
+      @keyframes wheel-rotate {
+        0%   { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
+  </defs>
+
+  <!-- Road -->
+  <rect x="0" y="70" width="200" height="30" fill="#F4F4F4"/>
+
+  <!-- Road lines (dashed) -->
+  <g class="road-line">
+    <rect x="0" y="83" width="25" height="3" rx="1.5" fill="#D9D9D9"/>
+    <rect x="40" y="83" width="25" height="3" rx="1.5" fill="#D9D9D9"/>
+    <rect x="80" y="83" width="25" height="3" rx="1.5" fill="#D9D9D9"/>
+    <rect x="120" y="83" width="25" height="3" rx="1.5" fill="#D9D9D9"/>
+    <rect x="160" y="83" width="25" height="3" rx="1.5" fill="#D9D9D9"/>
+    <rect x="200" y="83" width="25" height="3" rx="1.5" fill="#D9D9D9"/>
+  </g>
+
+  <!-- Car -->
+  <g class="car">
+    <!-- Car body -->
+    <rect x="70" y="50" width="60" height="20" rx="4" fill="#F29915"/>
+
+    <!-- Car top (cabin) -->
+    <path d="M 86 50 L 92 37 L 110 37 L 116 50 Z" fill="#F29915"/>
+
+    <!-- Car window -->
+    <path d="M 94 39 L 97 48 L 107 48 L 110 39 Z" fill="#FFFFFF" opacity="0.9"/>
+
+    <!-- Lights -->
+    <rect x="126" y="54" width="4" height="6" rx="1" fill="#FFFFFF" opacity="0.9"/>
+    <rect x="70"  y="54" width="4" height="6" rx="1" fill="#FFFFFF" opacity="0.9"/>
+
+    <!-- Wheels -->
+    <g class="wheel">
+      <circle cx="85" cy="70" r="7" fill="#3B3B3B"/>
+      <circle cx="85" cy="70" r="4" fill="#666666"/>
+    </g>
+    <g class="wheel">
+      <circle cx="115" cy="70" r="7" fill="#3B3B3B"/>
+      <circle cx="115" cy="70" r="4" fill="#666666"/>
+    </g>
+  </g>
+</svg>

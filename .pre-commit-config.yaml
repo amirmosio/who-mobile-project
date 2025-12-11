@@ -1,0 +1,47 @@
+# Exclude all html files from checks
+exclude: '.*\.html$'
+
+repos:
+  # Common
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-merge-conflict
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-json
+
+  # Flutter and Dart
+  - repo: local
+    hooks:
+      # Dart Formatter Hook
+      - id: dart-format
+        name: Dart Format
+        entry: dart format .
+        language: system
+        types: [dart]
+        stages: [pre-commit]
+
+      - id: flutter-analyze
+        name: Flutter Analyze
+        entry: flutter analyze
+        language: system
+        types: [dart]
+        stages: [pre-commit]
+
+      - id: dart-analyze
+        name: Dart Analyze
+        entry: dart analyze
+        language: system
+        types: [dart]
+        stages: [pre-commit]
+
+      - id: forbid-todo-temp
+        name: Forbid "TODO TEMP" markers
+        entry: bash
+        args: ['-c', 'for file in "$@"; do if grep -nH -E "TODO TEMP" "$file" 2>/dev/null; then echo "ERROR: Found TODO TEMP in $file"; exit 1; fi; done', '--']
+        language: system
+        types: [dart]
+        stages: [pre-commit]
+        pass_filenames: true

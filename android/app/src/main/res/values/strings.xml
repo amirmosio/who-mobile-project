@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Quiz Patente Ufficiale</string>
+    <string name="facebook_app_id">203364297969521</string>
+    <string name="facebook_client_token">c3e88204a65415c9e5ee60fba5aedc54</string>
+    <string name="fb_login_protocol_scheme">fb203364297969521</string>
+</resources>
