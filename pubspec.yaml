@@ -155,7 +155,7 @@ flutter:
     - assets/images/figma_designs/
     - assets/gifs/
     - assets/pdfs/
-    - .env
+    # - .env
   fonts:
     - family: BSIconFont
       fonts:

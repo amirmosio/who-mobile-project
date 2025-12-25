@@ -3,8 +3,9 @@ import 'package:flutter/services.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:sentry_flutter/sentry_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'firebase_options.dart';
+// COMMENTED OUT - Firebase (not used)
+// import 'package:firebase_core/firebase_core.dart';
+// import 'firebase_options.dart';
 // COMMENTED OUT - Firebase Messaging (keeping for future use)
 // import 'package:who_mobile_project/app_core/firebase_notification/firebase_service_manager.dart';
 import 'package:who_mobile_project/app_core/notification/notification_manager.dart';
@@ -37,9 +38,9 @@ Future<void> initialSetup() async {
 
   // Initialize CallKeep and set up handlers BEFORE any other initialization
 
-  // Initialize Firebase Core with platform-specific options (required for Firestore)
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  debugPrint('✅ Firebase initialized successfully');
+  // COMMENTED OUT - Firebase (not used)
+  // await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  // debugPrint('✅ Firebase initialized successfully');
 
   await configureDependencies();
 
