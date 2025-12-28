@@ -1,0 +1,377 @@
+[
+  {
+    "id": "idtc-lanco-2024",
+    "name": "Infectious Disease Treatment Centre",
+    "description": "A user friendly IDTM guide for the Infectious Disease Treatment Centre facility, providing step-by-step installation, maintenance, and dismantling instructions.",
+    "facilityType": "IDTC",
+    "manufacturer": "LANCO - Dr. Lange GmbH & Co. KG",
+    "version": "2024",
+    "totalSheets": 12,
+    "lastUpdated": "2024-01-26T00:00:00.000Z",
+    "thumbnailUrl": "assets/idtm/images/3d_views/front_view.png",
+    "view3dImages": [
+      "assets/idtm/images/3d_views/view_1.png",
+      "assets/idtm/images/3d_views/view_2.png",
+      "assets/idtm/images/3d_views/view_3.png",
+      "assets/idtm/images/3d_views/view_4.png"
+    ],
+    "specifications": {
+      "totalDimensions": "7.70m x 5.90m",
+      "height": "3.46m",
+      "weight": "Approximately 500kg",
+      "setupTime": "4-6 hours (4 people)",
+      "capacity": "2-4 patients"
+    },
+    "components": [
+      {
+        "id": "main-tent-external",
+        "name": "Main Tent External Cover",
+        "description": "Waterproof and UV-resistant external canopy",
+        "category": "Main Tent",
+        "quantity": 1,
+        "unit": "piece",
+        "dimensions": "4.71m x 3.46m",
+        "material": "P750 BO FR",
+        "color": "WHITE/GREY",
+        "installationOrder": 3
+      },
+      {
+        "id": "main-tent-pneumatic",
+        "name": "Main Tent Pneumatic Structure",
+        "description": "Inflatable arches providing structural support",
+        "category": "Main Tent",
+        "quantity": 1,
+        "unit": "set",
+        "dimensions": "4.70m x 4.00m",
+        "material": "P1100AT FR",
+        "color": "GREY",
+        "installationOrder": 2
+      },
+      {
+        "id": "main-tent-insulation",
+        "name": "Main Tent Insulation Liner",
+        "description": "Internal thermal insulation layer",
+        "category": "Main Tent",
+        "quantity": 1,
+        "unit": "piece",
+        "material": "RIS SILVER/GREY",
+        "installationOrder": 4
+      },
+      {
+        "id": "lightweight-flooring",
+        "name": "Light Weight Flooring",
+        "description": "Modular flooring panels",
+        "category": "Flooring",
+        "quantity": 12,
+        "unit": "panels",
+        "material": "P750 FR",
+        "color": "GREY",
+        "installationOrder": 1
+      },
+      {
+        "id": "vestibule-external-left",
+        "name": "Vestibule External Cover (Left)",
+        "description": "External cover for left entrance vestibule",
+        "category": "Vestibule",
+        "quantity": 1,
+        "unit": "piece",
+        "dimensions": "3.46m x 2.63m",
+        "material": "P750 BO FR",
+        "color": "WHITE",
+        "installationOrder": 5
+      },
+      {
+        "id": "vestibule-external-right",
+        "name": "Vestibule External Cover (Right)",
+        "description": "External cover for right entrance vestibule",
+        "category": "Vestibule",
+        "quantity": 1,
+        "unit": "piece",
+        "dimensions": "3.46m x 2.63m",
+        "material": "P750 BO FR",
+        "color": "WHITE",
+        "installationOrder": 5
+      },
+      {
+        "id": "vestibule-pneumatic-left",
+        "name": "Vestibule Pneumatic Structure (Left)",
+        "description": "Inflatable structure for left vestibule",
+        "category": "Vestibule",
+        "quantity": 1,
+        "unit": "piece",
+        "material": "P850AT",
+        "color": "GREY",
+        "installationOrder": 5
+      },
+      {
+        "id": "vestibule-pneumatic-right",
+        "name": "Vestibule Pneumatic Structure (Right)",
+        "description": "Inflatable structure for right vestibule",
+        "category": "Vestibule",
+        "quantity": 1,
+        "unit": "piece",
+        "material": "P850AT",
+        "color": "GREY",
+        "installationOrder": 5
+      },
+      {
+        "id": "sun-shadowing-net",
+        "name": "Sun Shadowing Net",
+        "description": "UV protection net for roof",
+        "category": "Accessories",
+        "quantity": 1,
+        "unit": "piece",
+        "installationOrder": 10
+      },
+      {
+        "id": "sun-shadowing-tubes",
+        "name": "Sun Shadowing Net Distance Tubes",
+        "description": "Support tubes for sun net",
+        "category": "Accessories",
+        "quantity": 6,
+        "unit": "pieces",
+        "installationOrder": 10
+      }
+    ],
+    "steps": [
+      {
+        "id": "step-packing-list",
+        "stepNumber": 0,
+        "title": "Packing List Verification",
+        "description": "Verify all components are present before starting installation. Check each item against the packing list and inspect for any damage during transport.",
+        "phase": "initial",
+        "images": [
+          "assets/idtm/images/exploded_view/exploded_view.png"
+        ],
+        "warnings": [
+          "Do not proceed with installation if any components are missing or damaged",
+          "Report any discrepancies immediately to the supplier"
+        ],
+        "estimatedMinutes": 30,
+        "isCritical": true,
+        "dependencies": [],
+        "componentIds": []
+      },
+      {
+        "id": "step-install-flooring",
+        "stepNumber": 1,
+        "title": "Install Lightweight Flooring",
+        "description": "Lay out the modular flooring panels in the designated area. Ensure the ground is level and free from sharp objects. Connect panels together following the numbered sequence.",
+        "phase": "installing",
+        "images": [
+          "assets/idtm/images/components/flooring.png"
+        ],
+        "warnings": [
+          "Ensure ground is level before laying flooring",
+          "Check for sharp objects that could puncture the flooring"
+        ],
+        "estimatedMinutes": 45,
+        "isCritical": true,
+        "dependencies": ["step-packing-list"],
+        "componentIds": ["lightweight-flooring"]
+      },
+      {
+        "id": "step-inflate-main-structure",
+        "stepNumber": 2,
+        "title": "Install Main Tent Pneumatic Structure",
+        "description": "Position the pneumatic arches on the flooring. Connect the inflation pump and inflate to the recommended pressure (check pressure gauge). Ensure all arches are properly inflated and secure.",
+        "phase": "installing",
+        "images": [
+          "assets/idtm/images/elevations/front_elevation.png",
+          "assets/idtm/images/elevations/side_elevation.png"
+        ],
+        "warnings": [
+          "Do not over-inflate - check pressure gauge regularly",
+          "Ensure all valves are properly closed after inflation",
+          "Keep inflation pump accessible for pressure adjustments"
+        ],
+        "estimatedMinutes": 60,
+        "isCritical": true,
+        "dependencies": ["step-install-flooring"],
+        "componentIds": ["main-tent-pneumatic"]
+      },
+      {
+        "id": "step-install-main-external",
+        "stepNumber": 3,
+        "title": "Install Main Tent External Cover",
+        "description": "Carefully drape the external cover over the inflated structure. Secure all connection points, guy ropes, and mud flaps. Ensure proper tensioning to prevent water pooling.",
+        "phase": "installing",
+        "images": [
+          "assets/idtm/images/3d_views/view_1.png"
+        ],
+        "warnings": [
+          "Ensure cover is properly aligned before securing",
+          "Check that mechanical openings are correctly positioned",
+          "Verify all guy ropes are properly tensioned"
+        ],
+        "estimatedMinutes": 90,
+        "isCritical": true,
+        "dependencies": ["step-inflate-main-structure"],
+        "componentIds": ["main-tent-external"]
+      },
+      {
+        "id": "step-install-insulation",
+        "stepNumber": 4,
+        "title": "Install Insulation Liner",
+        "description": "Attach the internal insulation liner to the main structure. Ensure all mechanical openings align correctly. Secure all fasteners and check for gaps.",
+        "phase": "installing",
+        "images": [
+          "assets/idtm/images/panels/patient_view.png"
+        ],
+        "warnings": [
+          "Ensure mechanical openings are aligned correctly",
+          "Check for gaps that could reduce insulation effectiveness"
+        ],
+        "estimatedMinutes": 60,
+        "isCritical": false,
+        "dependencies": ["step-install-main-external"],
+        "componentIds": ["main-tent-insulation"]
+      },
+      {
+        "id": "step-install-vestibules",
+        "stepNumber": 5,
+        "title": "Install Vestibule Structures",
+        "description": "Install both left and right vestibule structures. Inflate pneumatic frames, attach external covers, and connect to main tent using zipper connections.",
+        "phase": "installing",
+        "images": [
+          "assets/idtm/images/elevations/left_elevation.png",
+          "assets/idtm/images/elevations/right_elevation.png"
+        ],
+        "warnings": [
+          "Ensure zipper connections are fully closed",
+          "Check rain-dust protection flaps are properly positioned",
+          "Verify vestibule pressure matches main tent"
+        ],
+        "estimatedMinutes": 120,
+        "isCritical": true,
+        "dependencies": ["step-install-insulation"],
+        "componentIds": [
+          "vestibule-external-left",
+          "vestibule-external-right",
+          "vestibule-pneumatic-left",
+          "vestibule-pneumatic-right"
+        ]
+      },
+      {
+        "id": "step-install-sun-net",
+        "stepNumber": 6,
+        "title": "Install Sun Shadowing Net",
+        "description": "Position distance tubes and drape sun shadowing net over the main tent roof. This provides UV protection and reduces internal temperature.",
+        "phase": "installing",
+        "images": [
+          "assets/idtm/images/exploded_view/sun_net.png"
+        ],
+        "warnings": [
+          "Ensure net does not touch the tent surface directly",
+          "Secure all corners to prevent wind displacement"
+        ],
+        "estimatedMinutes": 30,
+        "isCritical": false,
+        "dependencies": ["step-install-vestibules"],
+        "componentIds": ["sun-shadowing-net", "sun-shadowing-tubes"]
+      },
+      {
+        "id": "step-final-inspection",
+        "stepNumber": 7,
+        "title": "Final Installation Inspection",
+        "description": "Conduct a complete walk-through inspection. Check all connections, inflation pressure, guy ropes, and mechanical openings. Test all entry/exit points.",
+        "phase": "installing",
+        "images": [
+          "assets/idtm/images/3d_views/view_1.png",
+          "assets/idtm/images/3d_views/view_2.png"
+        ],
+        "warnings": [
+          "Do not mark installation complete if any issues are found",
+          "Document any deviations from standard setup"
+        ],
+        "estimatedMinutes": 45,
+        "isCritical": true,
+        "dependencies": ["step-install-sun-net"],
+        "componentIds": []
+      },
+      {
+        "id": "step-maintenance-daily",
+        "stepNumber": 1,
+        "title": "Daily Maintenance Checks",
+        "description": "Perform daily visual inspection of structure, check inflation pressure, inspect for tears or damage, verify all connections are secure.",
+        "phase": "maintenance",
+        "images": [],
+        "warnings": [
+          "Report any pressure loss immediately",
+          "Document all findings in maintenance log"
+        ],
+        "estimatedMinutes": 15,
+        "isCritical": true,
+        "dependencies": [],
+        "componentIds": []
+      },
+      {
+        "id": "step-maintenance-weekly",
+        "stepNumber": 2,
+        "title": "Weekly Maintenance Checks",
+        "description": "Thorough inspection of all fabric surfaces, guy ropes, mechanical openings. Check flooring integrity. Clean and inspect all components.",
+        "phase": "maintenance",
+        "images": [],
+        "warnings": [
+          "Address any wear or damage promptly",
+          "Keep detailed maintenance records"
+        ],
+        "estimatedMinutes": 60,
+        "isCritical": true,
+        "dependencies": [],
+        "componentIds": []
+      },
+      {
+        "id": "step-dismantle-prepare",
+        "stepNumber": 1,
+        "title": "Prepare for Dismantling",
+        "description": "Clear all equipment and supplies from the facility. Ensure all components are clean and dry. Take inventory of all items.",
+        "phase": "dismantling",
+        "images": [],
+        "warnings": [
+          "Do not dismantle in wet conditions if possible",
+          "Ensure all components are clean before packing"
+        ],
+        "estimatedMinutes": 60,
+        "isCritical": true,
+        "dependencies": [],
+        "componentIds": []
+      },
+      {
+        "id": "step-dismantle-reverse",
+        "stepNumber": 2,
+        "title": "Reverse Installation Process",
+        "description": "Remove components in reverse order of installation. Start with sun net, then vestibules, insulation, external cover, pneumatic structure, and finally flooring.",
+        "phase": "dismantling",
+        "images": [
+          "assets/idtm/images/exploded_view/exploded_view.png"
+        ],
+        "warnings": [
+          "Deflate structures slowly to prevent damage",
+          "Fold components according to manufacturer instructions",
+          "Label all components for easy reassembly"
+        ],
+        "estimatedMinutes": 180,
+        "isCritical": true,
+        "dependencies": ["step-dismantle-prepare"],
+        "componentIds": []
+      },
+      {
+        "id": "step-dismantle-pack",
+        "stepNumber": 3,
+        "title": "Pack and Document",
+        "description": "Pack all components in their designated containers. Complete packing list verification. Document condition of all items and note any repairs needed.",
+        "phase": "dismantling",
+        "images": [],
+        "warnings": [
+          "Ensure all components are completely dry before packing",
+          "Document any damage for repair or replacement"
+        ],
+        "estimatedMinutes": 90,
+        "isCritical": true,
+        "dependencies": ["step-dismantle-reverse"],
+        "componentIds": []
+      }
+    ]
+  }
+]

@@ -19,7 +19,9 @@ class RefreshTokenInterceptor extends Interceptor {
     RegExp(r"^/authentication/exchange/legacy-token/$"),
   ];
   final DeviceOrBrowserInfo _deviceInfo;
+  // ignore: unused_field
   final SharedPreferencesAuthenticator _authenticator;
+  // ignore: unused_field
   late final RestClient _refreshClient;
 
   RefreshTokenInterceptor(this._deviceInfo, this._authenticator) {

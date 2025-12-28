@@ -28,7 +28,7 @@ GoRouter baseNavRouterBuilder() {
   GoRouter baseNavRouter = GoRouter(
     navigatorKey: mainRouterKey,
     observers: [routeObserver],
-    initialLocation: YRRoutes.initialLoading,
+    initialLocation: YRRoutes.dashBoard,
     redirect: (context, state) {
       // Track GoRouter navigation
       GoRouterTracker().trackNavigation(

@@ -70,7 +70,7 @@ Future<void> initialSetup() async {
     // getIt.get<FirebaseServiceManager>().configureBackgroundMessageHandler();
 
     // Initialize local notifications (independent of push notifications)
-    await getIt.get<NotificationManager>().initialize();
+    // await getIt.get<NotificationManager>().initialize();
   } catch (e) {
     debugPrint('Notification initialization failed: $e');
     // Continue with app initialization even if notifications fail
@@ -78,66 +78,13 @@ Future<void> initialSetup() async {
 }
 
 void main() async {
-  Constants.setEnvironment(Environment.staging);
-  await dotenv.load(fileName: ".env");
+  Constants.setEnvironment(Environment.local);
 
-  // Configure Sentry for all environments (local, staging, production)
-  await SentryFlutter.init(
-    (options) async {
-      options.dsn = dotenv.env['SENTRY_DSN'];
-      options.environment = Constants.env.name;
-      options.screenshotQuality = SentryScreenshotQuality.low;
-
-      if (Constants.env == Environment.local) {
-        // Local environment: Only user feedback, no crashes/exceptions
-        options.debug = false;
-
-        // Capture 100% of feedback messages (no sampling)
-        options.sampleRate = 1.0;
-
-        // Disable automatic error capture
-        options.enableAutoSessionTracking = false;
-        options.enableAutoNativeBreadcrumbs = false;
-        options.attachScreenshot = false;
-        options.attachViewHierarchy = false;
-
-        // Disable performance monitoring
-        options.tracesSampleRate = 0.0;
-        options.profilesSampleRate = 0.0;
-
-        // Only send events that are explicitly captured (user feedback)
-        options.beforeSend = (event, hint) {
-          // Allow feedback context events
-          if (event.contexts['feedback'] != null ||
-              event.contexts['feedback_details'] != null) {
-            return event;
-          }
-
-          // Drop all automatic crash/exception events
-          return null;
-        };
-      } else if (Constants.env == Environment.staging) {
-        options.debug = true;
-        options.sampleRate = 1.0;
-        options.enableAutoSessionTracking = true;
-        options.attachScreenshot = true;
-        options.attachViewHierarchy = true;
-      } else {
-        options.debug = false;
-        options.sampleRate = 1.0;
-        options.enableAutoSessionTracking = true;
-        options.attachScreenshot = true;
-        options.attachViewHierarchy = true;
-      }
-    },
-    appRunner: () async {
-      await initialSetup();
-      runApp(
-        DefaultAssetBundle(
-          bundle: SentryAssetBundle(),
-          child: RestartWidget(child: MyApp()),
-        ),
-      );
-    },
+  await initialSetup();
+  runApp(
+    DefaultAssetBundle(
+      bundle: SentryAssetBundle(),
+      child: RestartWidget(child: MyApp()),
+    ),
   );
 }

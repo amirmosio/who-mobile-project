@@ -16,6 +16,11 @@ import 'tables/quiz_answers_table.dart';
 import 'tables/manual_books_table.dart';
 import 'tables/picture_quiz_table.dart';
 import 'tables/redvertising_campaigns_table.dart';
+// IDTM tables
+import 'tables/facility_installations_table.dart';
+import 'tables/installation_progress_table.dart';
+import 'tables/facility_notes_table.dart';
+import 'tables/component_checklist_table.dart';
 
 part 'app_database.g.dart';
 
@@ -31,6 +36,11 @@ part 'app_database.g.dart';
     PictureQuizzes,
     RedvertisingCampaigns,
     RedvertisingImageSets,
+    // IDTM tables
+    FacilityInstallations,
+    InstallationProgress,
+    FacilityNotes,
+    ComponentChecklist,
   ],
 )
 class AppDatabase extends _$AppDatabase {

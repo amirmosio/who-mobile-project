@@ -40,7 +40,6 @@ class GVPrimaryTopBarHeader extends ConsumerWidget {
   Widget _buildTopBar(BuildContext context, WidgetRef ref) {
     // TODO: Removed - User profile and notifications
     // No user profile or notifications available anymore
-    const bool hasUnreadNotifications = false;
 
     return ClipRect(
       child: BackdropFilter(
@@ -74,38 +73,17 @@ class GVPrimaryTopBarHeader extends ConsumerWidget {
                     padding: const EdgeInsets.only(top: 2),
                     onPressed: () => EmailLauncher.launchSupportEmail(context),
                   ),
-                  Stack(
-                    children: [
-                      IconButton(
-                        icon: SvgPicture.asset(
-                          'assets/images/figma_designs/icon_notification.svg',
-                          width: 23,
-                          height: 23,
-                          colorFilter: const ColorFilter.mode(
-                            Colors.black,
-                            BlendMode.srcIn,
-                          ),
-                        ),
-                        onPressed: () {},
+                  IconButton(
+                    icon: SvgPicture.asset(
+                      'assets/images/figma_designs/icon_notification.svg',
+                      width: 23,
+                      height: 23,
+                      colorFilter: const ColorFilter.mode(
+                        Colors.black,
+                        BlendMode.srcIn,
                       ),
-                      if (hasUnreadNotifications)
-                        Positioned(
-                          top: 14,
-                          right: 14,
-                          child: Container(
-                            width: 10,
-                            height: 10,
-                            decoration: BoxDecoration(
-                              color: Colors.red,
-                              shape: BoxShape.circle,
-                              border: Border.all(
-                                color: Colors.white,
-                                width: 1.2,
-                              ),
-                            ),
-                          ),
-                        ),
-                    ],
+                    ),
+                    onPressed: () {},
                   ),
                 ],
               ),

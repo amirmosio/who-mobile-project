@@ -37,7 +37,6 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
-  introduction_screen: ^3.1.14
   responsive_builder: any
   provider: ^6.1.2
   go_router: ^14.3.0
@@ -61,10 +60,6 @@ dependencies:
   fl_chart: ^0.69.0
   calendar_date_picker2: ^1.1.7
   table_calendar: ^3.2.0
-  # Firebase - Firestore for real-time notifications
-  firebase_core: ^3.13.0
-  cloud_firestore: ^5.5.0
-  # firebase_messaging: ^15.2.5
   # OneSignal for push notifications
   onesignal_flutter: ^5.2.7
   flutter_secure_storage: ^9.2.2
@@ -155,6 +150,13 @@ flutter:
     - assets/images/figma_designs/
     - assets/gifs/
     - assets/pdfs/
+    # IDTM assets
+    - assets/idtm/data/
+    - assets/idtm/images/3d_views/
+    - assets/idtm/images/exploded_view/
+    - assets/idtm/images/elevations/
+    - assets/idtm/images/panels/
+    - assets/idtm/images/components/
     # - .env
   fonts:
     - family: BSIconFont

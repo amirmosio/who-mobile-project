@@ -14,6 +14,17 @@ class YRRoutes {
   static const dashBoard = "/dashboard";
   static const blog = "/blog";
   static const profileMenu = "/menu-and-settings";
+
+  /// IDTM pages
+  static const idtmHome = "/idtm";
+  static const idtmFacilityList = "/idtm/facilities";
+  static const idtmFacilityDetail = "/idtm/facility/:facilityId";
+  static const idtmInstallationsList = "/idtm/installations";
+  static const idtmCreateInstallation = "/idtm/create-installation/:facilityId";
+  static const idtmInstallationDetail = "/idtm/installation/:installationId";
+  static const idtmStepViewer = "/idtm/installation/:installationId/step/:stepId";
+  static const idtmNotes = "/idtm/installation/:installationId/notes";
+  static const idtmCreateNote = "/idtm/installation/:installationId/create-note";
 }
 
 extension RouteData on String {
