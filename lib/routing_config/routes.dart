@@ -25,6 +25,9 @@ class YRRoutes {
   static const idtmStepViewer = "/idtm/installation/:installationId/step/:stepId";
   static const idtmNotes = "/idtm/installation/:installationId/notes";
   static const idtmCreateNote = "/idtm/installation/:installationId/create-note";
+  static const idtmPackingList = "/idtm/packing-list";
+  static const idtmMaintenance = "/idtm/maintenance/:installationId";
+  static const idtmDismantling = "/idtm/dismantling/:installationId";
 }
 
 extension RouteData on String {
