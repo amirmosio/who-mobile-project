@@ -1,15 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:sentry_flutter/sentry_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-// COMMENTED OUT - Firebase (not used)
-// import 'package:firebase_core/firebase_core.dart';
-// import 'firebase_options.dart';
-// COMMENTED OUT - Firebase Messaging (keeping for future use)
-// import 'package:who_mobile_project/app_core/firebase_notification/firebase_service_manager.dart';
-import 'package:who_mobile_project/app_core/notification/notification_manager.dart';
-
 import 'package:who_mobile_project/general/services/storage/storage_manager.dart';
 import 'package:who_mobile_project/general/services/device/device_service.dart';
 import 'package:who_mobile_project/di/injector.dart';

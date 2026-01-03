@@ -6,25 +6,20 @@ import 'package:injectable/injectable.dart';
 import 'package:timezone/data/latest.dart' as tz_data;
 import 'package:timezone/timezone.dart' as tz;
 import 'package:who_mobile_project/general/services/permissions/permission_service.dart';
-import 'package:who_mobile_project/app_core/notification/notification_manager.dart';
 
 /// Service for managing quiz reminder local notifications
 @singleton
 class QuizReminderService {
-  final NotificationManager _notificationManager;
+  final FlutterLocalNotificationsPlugin _localNotifications;
   bool _isInitialized = false;
 
   static const MethodChannel _androidReminderChannel = MethodChannel(
     'com.bokapp.quizpatente/quizReminder',
   );
 
-  QuizReminderService(this._notificationManager) {
+  QuizReminderService(this._localNotifications) {
     _initialize();
   }
-
-  /// Get the local notifications plugin from FirebaseServiceManager
-  FlutterLocalNotificationsPlugin get _localNotifications =>
-      _notificationManager.plugin;
 
   Future<void> _initialize() async {
     debugPrint('🔧 Initializing QuizReminderService');

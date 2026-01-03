@@ -1,5 +1,3 @@
-import 'school_model.dart';
-
 class UserModel {
   // Core fields (mandatory)
   final int id;
@@ -27,8 +25,6 @@ class UserModel {
   final String? phone;
   final String? image;
 
-  // School and license information
-  final SchoolModel? school;
   final int? licenseType;
 
   // Date fields
@@ -255,7 +251,6 @@ class UserModel {
     this.longitude,
     this.phone,
     this.image,
-    this.school,
     this.licenseType,
     this.registrationDate,
     this.nowDatetime,
@@ -414,9 +409,6 @@ class UserModel {
       longitude: _parseCoordinate(json['longitude']),
       phone: json['phone'] as String?,
       image: json['image'] as String?,
-      school: json['driving_school'] != null
-          ? SchoolModel.fromJson(json['driving_school'] as Map<String, dynamic>)
-          : null,
       licenseType: _parseLicenseTypeId(json['license_type']),
       registrationDate: json['registration_datetime'] != null
           ? DateTime.tryParse(json['registration_datetime'] as String)
@@ -699,7 +691,6 @@ class UserModel {
       if (longitude != null) 'longitude': longitude,
       if (phone != null) 'phone': phone,
       if (image != null) 'image': image,
-      if (school != null) 'driving_school': school!.toJson(),
       if (licenseType != null) 'license_type': licenseType,
       if (registrationDate != null)
         'registration_datetime': registrationDate!.toIso8601String(),
@@ -917,7 +908,6 @@ class UserModel {
     double? longitude,
     String? phone,
     String? image,
-    SchoolModel? school,
     int? licenseType,
     DateTime? registrationDate,
     DateTime? nowDatetime,
@@ -1070,7 +1060,6 @@ class UserModel {
       longitude: longitude ?? this.longitude,
       phone: phone ?? this.phone,
       image: image ?? this.image,
-      school: school ?? this.school,
       licenseType: licenseType ?? this.licenseType,
       registrationDate: registrationDate ?? this.registrationDate,
       nowDatetime: nowDatetime ?? this.nowDatetime,
