@@ -1,23 +1,23 @@
 class InstallationImageModel {
   final String filename;
-  final String description;
+  final String? description;
 
   InstallationImageModel({
     required this.filename,
-    required this.description,
+    this.description,
   });
 
   factory InstallationImageModel.fromJson(Map<String, dynamic> json) {
     return InstallationImageModel(
       filename: json['filename'] as String,
-      description: json['description'] as String,
+      description: json['description'] as String?,
     );
   }
 
   Map<String, dynamic> toJson() {
     return {
       'filename': filename,
-      'description': description,
+      if (description != null) 'description': description,
     };
   }
 }

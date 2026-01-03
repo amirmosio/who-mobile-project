@@ -8,10 +8,7 @@ import 'package:who_mobile_project/routing_config/routes.dart';
 class InstallationStepDetailPage extends ConsumerWidget {
   final String stepId;
 
-  const InstallationStepDetailPage({
-    super.key,
-    required this.stepId,
-  });
+  const InstallationStepDetailPage({super.key, required this.stepId});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -20,9 +17,7 @@ class InstallationStepDetailPage extends ConsumerWidget {
     final lastCompletedIndex = ref.watch(installationProgressProvider);
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Step Detail'),
-      ),
+      appBar: AppBar(title: const Text('Step Detail')),
       body: installationDataAsync.when(
         loading: () => const Center(child: CircularProgressIndicator()),
         error: (error, stack) => Center(
@@ -38,23 +33,19 @@ class InstallationStepDetailPage extends ConsumerWidget {
         data: (installationData) {
           final step = installationData.sections.firstWhere(
             (section) => section.id == stepId,
-            orElse: () => InstallationStepModel(
-              id: '',
-              title: 'Not Found',
-            ),
+            orElse: () => InstallationStepModel(id: '', title: 'Not Found'),
           );
 
           if (step.id.isEmpty) {
-            return const Center(
-              child: Text('Step not found'),
-            );
+            return const Center(child: Text('Step not found'));
           }
 
           final substeps = step.allSubsteps;
 
           // Find substeps in flattened list for this section
-          final sectionSubsteps =
-              flattenedList.where((item) => item.stepId == step.id).toList();
+          final sectionSubsteps = flattenedList
+              .where((item) => item.stepId == step.id)
+              .toList();
 
           final completedSubsteps = sectionSubsteps
               .where((item) => item.globalIndex <= lastCompletedIndex)
@@ -74,10 +65,8 @@ class InstallationStepDetailPage extends ConsumerWidget {
                     children: [
                       Text(
                         step.title,
-                        style:
-                            Theme.of(context).textTheme.headlineSmall?.copyWith(
-                                  fontWeight: FontWeight.bold,
-                                ),
+                        style: Theme.of(context).textTheme.headlineSmall
+                            ?.copyWith(fontWeight: FontWeight.bold),
                       ),
                       if (step.pdfReference != null) ...[
                         const SizedBox(height: 8),
@@ -108,12 +97,8 @@ class InstallationStepDetailPage extends ConsumerWidget {
                             const SizedBox(width: 12),
                             Text(
                               '$completedSubsteps/${substeps.length}',
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .titleMedium
-                                  ?.copyWith(
-                                    fontWeight: FontWeight.bold,
-                                  ),
+                              style: Theme.of(context).textTheme.titleMedium
+                                  ?.copyWith(fontWeight: FontWeight.bold),
                             ),
                           ],
                         ),
@@ -141,12 +126,8 @@ class InstallationStepDetailPage extends ConsumerWidget {
                         padding: const EdgeInsets.symmetric(horizontal: 20),
                         child: Text(
                           'Images',
-                          style: Theme.of(context)
-                              .textTheme
-                              .titleLarge
-                              ?.copyWith(
-                                fontWeight: FontWeight.bold,
-                              ),
+                          style: Theme.of(context).textTheme.titleLarge
+                              ?.copyWith(fontWeight: FontWeight.bold),
                         ),
                       ),
                       const SizedBox(height: 12),
@@ -176,31 +157,34 @@ class InstallationStepDetailPage extends ConsumerWidget {
                                         fit: BoxFit.contain,
                                         errorBuilder:
                                             (context, error, stackTrace) {
-                                          return Center(
-                                            child: Column(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: [
-                                                const Icon(Icons.broken_image,
-                                                    size: 48),
-                                                const SizedBox(height: 8),
-                                                Text(
-                                                  'Image not found',
-                                                  style: Theme.of(context)
-                                                      .textTheme
-                                                      .bodySmall,
+                                              return Center(
+                                                child: Column(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: [
+                                                    const Icon(
+                                                      Icons.broken_image,
+                                                      size: 48,
+                                                    ),
+                                                    const SizedBox(height: 8),
+                                                    Text(
+                                                      'Image not found',
+                                                      style: Theme.of(
+                                                        context,
+                                                      ).textTheme.bodySmall,
+                                                    ),
+                                                  ],
                                                 ),
-                                              ],
-                                            ),
-                                          );
-                                        },
+                                              );
+                                            },
                                       ),
                                     ),
                                     const SizedBox(height: 8),
                                     Text(
-                                      image.description,
-                                      style:
-                                          Theme.of(context).textTheme.bodySmall,
+                                      image.description ?? "-",
+                                      style: Theme.of(
+                                        context,
+                                      ).textTheme.bodySmall,
                                       maxLines: 2,
                                       overflow: TextOverflow.ellipsis,
                                     ),
@@ -224,12 +208,8 @@ class InstallationStepDetailPage extends ConsumerWidget {
                         padding: const EdgeInsets.symmetric(horizontal: 20),
                         child: Text(
                           'Steps',
-                          style: Theme.of(context)
-                              .textTheme
-                              .titleLarge
-                              ?.copyWith(
-                                fontWeight: FontWeight.bold,
-                              ),
+                          style: Theme.of(context).textTheme.titleLarge
+                              ?.copyWith(fontWeight: FontWeight.bold),
                         ),
                       ),
                       const SizedBox(height: 12),
@@ -242,8 +222,9 @@ class InstallationStepDetailPage extends ConsumerWidget {
                             const SizedBox(height: 8),
                         itemBuilder: (context, index) {
                           final substep = substeps[index];
-                          final flattenedItem = sectionSubsteps
-                              .firstWhere((item) => item.substepId == substep.id);
+                          final flattenedItem = sectionSubsteps.firstWhere(
+                            (item) => item.substepId == substep.id,
+                          );
                           final isCompleted =
                               flattenedItem.globalIndex <= lastCompletedIndex;
 
@@ -254,12 +235,15 @@ class InstallationStepDetailPage extends ConsumerWidget {
                                     ? Colors.green
                                     : Theme.of(context).colorScheme.primary,
                                 child: isCompleted
-                                    ? const Icon(Icons.check,
-                                        color: Colors.white)
+                                    ? const Icon(
+                                        Icons.check,
+                                        color: Colors.white,
+                                      )
                                     : Text(
                                         '${index + 1}',
                                         style: const TextStyle(
-                                            color: Colors.white),
+                                          color: Colors.white,
+                                        ),
                                       ),
                               ),
                               title: Text(substep.title),

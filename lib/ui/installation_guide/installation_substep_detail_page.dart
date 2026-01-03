@@ -115,9 +115,7 @@ class _InstallationSubstepDetailPageState
           );
 
           if (substep.id.isEmpty) {
-            return const Center(
-              child: Text('Substep not found'),
-            );
+            return const Center(child: Text('Substep not found'));
           }
 
           return SingleChildScrollView(
@@ -146,12 +144,8 @@ class _InstallationSubstepDetailPageState
                           Expanded(
                             child: Text(
                               substep.title,
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .headlineSmall
-                                  ?.copyWith(
-                                    fontWeight: FontWeight.bold,
-                                  ),
+                              style: Theme.of(context).textTheme.headlineSmall
+                                  ?.copyWith(fontWeight: FontWeight.bold),
                             ),
                           ),
                         ],
@@ -219,9 +213,7 @@ class _InstallationSubstepDetailPageState
                             const SizedBox(width: 8),
                             Text(
                               'Purpose',
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .titleMedium
+                              style: Theme.of(context).textTheme.titleMedium
                                   ?.copyWith(
                                     fontWeight: FontWeight.bold,
                                     color: Colors.blue.shade900,
@@ -247,12 +239,8 @@ class _InstallationSubstepDetailPageState
                         padding: const EdgeInsets.symmetric(horizontal: 20),
                         child: Text(
                           'Images',
-                          style: Theme.of(context)
-                              .textTheme
-                              .titleLarge
-                              ?.copyWith(
-                                fontWeight: FontWeight.bold,
-                              ),
+                          style: Theme.of(context).textTheme.titleLarge
+                              ?.copyWith(fontWeight: FontWeight.bold),
                         ),
                       ),
                       const SizedBox(height: 12),
@@ -282,31 +270,34 @@ class _InstallationSubstepDetailPageState
                                         fit: BoxFit.contain,
                                         errorBuilder:
                                             (context, error, stackTrace) {
-                                          return Center(
-                                            child: Column(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: [
-                                                const Icon(Icons.broken_image,
-                                                    size: 48),
-                                                const SizedBox(height: 8),
-                                                Text(
-                                                  'Image not found',
-                                                  style: Theme.of(context)
-                                                      .textTheme
-                                                      .bodySmall,
+                                              return Center(
+                                                child: Column(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: [
+                                                    const Icon(
+                                                      Icons.broken_image,
+                                                      size: 48,
+                                                    ),
+                                                    const SizedBox(height: 8),
+                                                    Text(
+                                                      'Image not found',
+                                                      style: Theme.of(
+                                                        context,
+                                                      ).textTheme.bodySmall,
+                                                    ),
+                                                  ],
                                                 ),
-                                              ],
-                                            ),
-                                          );
-                                        },
+                                              );
+                                            },
                                       ),
                                     ),
                                     const SizedBox(height: 8),
                                     Text(
-                                      image.description,
-                                      style:
-                                          Theme.of(context).textTheme.bodySmall,
+                                      image.description ?? "-",
+                                      style: Theme.of(
+                                        context,
+                                      ).textTheme.bodySmall,
                                       maxLines: 2,
                                       overflow: TextOverflow.ellipsis,
                                     ),
@@ -330,31 +321,32 @@ class _InstallationSubstepDetailPageState
                       children: [
                         Text(
                           'Details',
-                          style: Theme.of(context)
-                              .textTheme
-                              .titleLarge
-                              ?.copyWith(
-                                fontWeight: FontWeight.bold,
-                              ),
+                          style: Theme.of(context).textTheme.titleLarge
+                              ?.copyWith(fontWeight: FontWeight.bold),
                         ),
                         const SizedBox(height: 12),
-                        ...substep.content.map((item) => Padding(
-                              padding: const EdgeInsets.only(bottom: 8),
-                              child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  const Text('• ',
-                                      style: TextStyle(fontSize: 20)),
-                                  Expanded(
-                                    child: Text(
-                                      item,
-                                      style:
-                                          Theme.of(context).textTheme.bodyLarge,
-                                    ),
+                        ...substep.content.map(
+                          (item) => Padding(
+                            padding: const EdgeInsets.only(bottom: 8),
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const Text(
+                                  '• ',
+                                  style: TextStyle(fontSize: 20),
+                                ),
+                                Expanded(
+                                  child: Text(
+                                    item,
+                                    style: Theme.of(
+                                      context,
+                                    ).textTheme.bodyLarge,
                                   ),
-                                ],
-                              ),
-                            )),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   ),
@@ -368,12 +360,8 @@ class _InstallationSubstepDetailPageState
                       children: [
                         Text(
                           'Actions',
-                          style: Theme.of(context)
-                              .textTheme
-                              .titleLarge
-                              ?.copyWith(
-                                fontWeight: FontWeight.bold,
-                              ),
+                          style: Theme.of(context).textTheme.titleLarge
+                              ?.copyWith(fontWeight: FontWeight.bold),
                         ),
                         const SizedBox(height: 12),
                         ...substep.actions!.asMap().entries.map((entry) {
@@ -406,8 +394,9 @@ class _InstallationSubstepDetailPageState
                                 Expanded(
                                   child: Text(
                                     action,
-                                    style:
-                                        Theme.of(context).textTheme.bodyMedium,
+                                    style: Theme.of(
+                                      context,
+                                    ).textTheme.bodyMedium,
                                   ),
                                 ),
                               ],
@@ -427,39 +416,43 @@ class _InstallationSubstepDetailPageState
                       children: [
                         Text(
                           'Warnings',
-                          style: Theme.of(context)
-                              .textTheme
-                              .titleLarge
+                          style: Theme.of(context).textTheme.titleLarge
                               ?.copyWith(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.red,
                               ),
                         ),
                         const SizedBox(height: 12),
-                        ...substep.warnings!.map((warning) => Container(
-                              margin: const EdgeInsets.only(bottom: 8),
-                              padding: const EdgeInsets.all(12),
-                              decoration: BoxDecoration(
-                                color: Colors.red.shade50,
-                                borderRadius: BorderRadius.circular(8),
-                                border: Border.all(color: Colors.red.shade200),
-                              ),
-                              child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  const Icon(Icons.warning,
-                                      color: Colors.red, size: 20),
-                                  const SizedBox(width: 12),
-                                  Expanded(
-                                    child: Text(
-                                      warning,
-                                      style:
-                                          Theme.of(context).textTheme.bodyMedium,
-                                    ),
+                        ...substep.warnings!.map(
+                          (warning) => Container(
+                            margin: const EdgeInsets.only(bottom: 8),
+                            padding: const EdgeInsets.all(12),
+                            decoration: BoxDecoration(
+                              color: Colors.red.shade50,
+                              borderRadius: BorderRadius.circular(8),
+                              border: Border.all(color: Colors.red.shade200),
+                            ),
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const Icon(
+                                  Icons.warning,
+                                  color: Colors.red,
+                                  size: 20,
+                                ),
+                                const SizedBox(width: 12),
+                                Expanded(
+                                  child: Text(
+                                    warning,
+                                    style: Theme.of(
+                                      context,
+                                    ).textTheme.bodyMedium,
                                   ),
-                                ],
-                              ),
-                            )),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   ),
