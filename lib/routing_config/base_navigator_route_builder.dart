@@ -19,7 +19,6 @@ import 'package:who_mobile_project/ui/dashboard/dashboard_page.dart';
 import 'package:who_mobile_project/ui/initial_loading/initial_loading.dart';
 import 'package:who_mobile_project/general/widgets/section_placeholder.dart';
 import 'package:who_mobile_project/ui/idtm/packing_list_page.dart';
-import 'package:who_mobile_project/ui/idtm/installation_steps_page.dart';
 import 'package:who_mobile_project/ui/idtm/maintenance_page.dart';
 import 'package:who_mobile_project/ui/idtm/dismantling_page.dart';
 
@@ -101,7 +100,7 @@ GoRouter baseNavRouterBuilder() {
           final stepId = state.pathParameters['stepId']!;
           return MaterialPage(
             child: InstallationStepDetailPage(stepId: stepId),
-                      );
+          );
         },
       ),
       // IDTM Routes
@@ -115,10 +114,7 @@ GoRouter baseNavRouterBuilder() {
         path: YRRoutes.idtmInstallationDetail,
         name: YRRoutes.idtmInstallationDetail,
         pageBuilder: (context, state) {
-          final installationId = state.pathParameters['installationId'] ?? '';
-          return MaterialPage(
-            child: InstallationStepsPage(installationId: installationId),
-          );
+          return const MaterialPage(child: InstallationStepsListPage());
         },
       ),
       GoRoute(
@@ -132,7 +128,7 @@ GoRouter baseNavRouterBuilder() {
               stepId: stepId,
               substepId: substepId,
             ),
-                      );
+          );
         },
       ),
       GoRoute(
@@ -198,9 +194,7 @@ GoRouter baseNavRouterBuilder() {
                 name: YRRoutes.blog,
                 pageBuilder: (context, state) => const MaterialPage(
                   child: Scaffold(
-                    body: Center(
-                      child: SectionPlaceholder(text: 'Blog'),
-                    ),
+                    body: Center(child: SectionPlaceholder(text: 'Blog')),
                   ),
                 ),
               ),
