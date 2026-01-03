@@ -1,5 +1,3 @@
-import 'package:who_mobile_project/general/models/user/license_type_model.dart';
-
 class GuestRegistrationModel {
   final String firstName;
   final String surname;
@@ -11,13 +9,9 @@ class GuestRegistrationModel {
   final bool acceptedMarketing;
   final int? drivingSchoolId;
   int licenseTypeId;
-  final LicenseTypeModel? tempLicenseType;
   final String? acceptedTermsVersion;
   final String? acceptedPrivacyVersion;
   final DateTime? lastConsentUpdate;
-
-  /// Getter to get license type ID from either the model or the ID field
-  int get effectiveLicenseTypeId => tempLicenseType?.id ?? licenseTypeId;
 
   GuestRegistrationModel({
     required this.firstName,
@@ -30,7 +24,6 @@ class GuestRegistrationModel {
     required this.acceptedMarketing,
     this.drivingSchoolId,
     required this.licenseTypeId,
-    this.tempLicenseType,
     this.acceptedTermsVersion,
     this.acceptedPrivacyVersion,
     this.lastConsentUpdate,
@@ -46,7 +39,6 @@ class GuestRegistrationModel {
     'accepted_privacy': acceptedPrivacy,
     'accepted_marketing': acceptedMarketing,
     if (drivingSchoolId != null) 'driving_school': drivingSchoolId,
-    'license_type': tempLicenseType?.id ?? licenseTypeId,
     if (acceptedTermsVersion != null)
       'accepted_terms_version': acceptedTermsVersion,
     if (acceptedPrivacyVersion != null)

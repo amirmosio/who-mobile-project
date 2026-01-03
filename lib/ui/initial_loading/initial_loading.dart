@@ -6,7 +6,6 @@ import 'package:who_mobile_project/app_core/config/environment_constants.dart';
 import 'package:who_mobile_project/routing_config/routes.dart';
 import 'package:who_mobile_project/di/injector.dart';
 import 'package:who_mobile_project/general/services/storage/storage_manager.dart';
-import 'package:who_mobile_project/general/database/native_database_migration_service.dart';
 import 'package:who_mobile_project/general/database/app_database.dart';
 import 'package:who_mobile_project/ui/initial_loading/initialization_progress_controller.dart';
 import 'package:who_mobile_project/general/services/permissions/permission_service.dart';
@@ -29,9 +28,6 @@ class _InitialAppLoadingState extends ConsumerState<InitialAppLoading> {
     _progressController = InitializationProgressController();
     WidgetsBinding.instance.addPostFrameCallback((_) async {
       _progressController.updateStep(InitializationStep.starting);
-      final nativeDatabaseMigrationService =
-          getIt<NativeDatabaseMigrationService>();
-
       // Check if reset has already been done
       if (!getIt<StorageManager>().getDevelopmentResetOfDatabase() &&
           [Environment.staging, Environment.local].contains(Constants.env)) {
@@ -53,15 +49,8 @@ class _InitialAppLoadingState extends ConsumerState<InitialAppLoading> {
       //await storageManager.setNativeDatabaseMigrationCompleted(false);
 
       _progressController.updateStep(InitializationStep.migration);
-      await nativeDatabaseMigrationService.migrateIfNeeded();
 
       // Pre-open DB and reduce first heavy-write contention
-      try {
-        await getIt<AppDatabase>().getDatabaseStats();
-      } catch (_) {}
-
-      // TODO: Removed - Load Redvertising campaigns on app startup (fire and forget)
-      // ref.read(redvertisingCampaignsProvider);
 
       _progressController.updateStep(InitializationStep.auth);
       // TODO: Removed - Authentication initialization and user profile fetching

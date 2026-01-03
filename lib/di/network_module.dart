@@ -13,7 +13,6 @@ import 'package:who_mobile_project/network/interceptors/refresh_token_intercepto
 import 'package:who_mobile_project/network/interceptors/network_blocker_interceptor.dart';
 import 'package:who_mobile_project/network/interceptors/dynamic_response_interceptor.dart';
 import 'package:who_mobile_project/network/rest_client.dart';
-import 'package:who_mobile_project/network/redvertising_client.dart';
 
 const baseUrl = '#baseUrl';
 const redvertisingBaseUrl = '#redvertisingBaseUrl';
@@ -25,25 +24,6 @@ abstract class NetworkModule {
   @singleton
   RestClient clientProvider(Dio dio, @Named(baseUrl) String url) {
     return RestClient(dio, baseUrl: url);
-  }
-
-  @singleton
-  RedvertisingClient redvertisingClientProvider(
-    @Named(redvertisingBaseUrl) String url,
-  ) {
-    // Create separate Dio instance for Redvertising API without interceptors
-    final dio = Dio();
-    dio.options.connectTimeout = Duration(seconds: 40);
-    dio.options.receiveTimeout = Duration(seconds: 45);
-    dio.interceptors.add(
-      LogInterceptor(
-        request: true,
-        requestBody: true,
-        requestHeader: true,
-        responseBody: true,
-      ),
-    );
-    return RedvertisingClient(dio, baseUrl: url);
   }
 
   @injectable
