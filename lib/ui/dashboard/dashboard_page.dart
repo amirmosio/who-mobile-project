@@ -11,7 +11,8 @@ class DashboardPage extends StatefulWidget {
   State<DashboardPage> createState() => _DashboardPageState();
 }
 
-class _DashboardPageState extends State<DashboardPage> with WidgetsBindingObserver {
+class _DashboardPageState extends State<DashboardPage>
+    with WidgetsBindingObserver {
   // Use a key to force rebuild of the installation status card
   Key _cardKey = UniqueKey();
 
@@ -46,9 +47,7 @@ class _DashboardPageState extends State<DashboardPage> with WidgetsBindingObserv
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Dashboard'),
-      ),
+      appBar: AppBar(title: const Text('Dashboard')),
       body: RefreshIndicator(
         onRefresh: () async {
           _refreshCard();
@@ -66,9 +65,6 @@ class _DashboardPageState extends State<DashboardPage> with WidgetsBindingObserv
 
               // Installation Guide Card (with progress tracking)
               const InstallationGuideCard(),
-
-              // IDTM Status Card
-              const IdtmStatusCard(),
 
               // IDTM Guide Card
               const IdtmGuideCard(),
