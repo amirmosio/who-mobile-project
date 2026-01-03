@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:who_mobile_project/di/injector.dart';
-import 'package:who_mobile_project/general/services/installation_status_service.dart';
+import 'package:who_mobile_project/general/services/storage/storage_manager.dart';
 
 /// Page for displaying and managing installation steps
 class InstallationStepsPage extends StatefulWidget {
@@ -16,7 +16,7 @@ class InstallationStepsPage extends StatefulWidget {
 }
 
 class _InstallationStepsPageState extends State<InstallationStepsPage> {
-  final _statusService = getIt<InstallationStatusService>();
+  final _storageManager = getIt<StorageManager>();
 
   // Sample installation steps - replace with actual data
   late final List<InstallationStep> _steps;
@@ -70,7 +70,7 @@ class _InstallationStepsPageState extends State<InstallationStepsPage> {
   }
 
   void _loadCompletedSteps() {
-    final completedStepIds = _statusService.getCompletedSteps();
+    final completedStepIds = _storageManager.getCompletedSteps();
     setState(() {
       for (var step in _steps) {
         step.isCompleted = completedStepIds.contains(step.id);
@@ -91,9 +91,9 @@ class _InstallationStepsPageState extends State<InstallationStepsPage> {
 
     // Save to shared preferences
     if (newState) {
-      await _statusService.markStepCompleted(step.id);
+      await _storageManager.markStepCompleted(step.id);
     } else {
-      await _statusService.markStepIncomplete(step.id);
+      await _storageManager.markStepIncomplete(step.id);
     }
 
     // If all steps completed, show completion dialog
@@ -117,7 +117,7 @@ class _InstallationStepsPageState extends State<InstallationStepsPage> {
           ),
           ElevatedButton(
             onPressed: () async {
-              await _statusService.completeInstallation();
+              await _storageManager.completeInstallation();
               if (mounted) {
                 Navigator.pop(context);
                 Navigator.pop(context);

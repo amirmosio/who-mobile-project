@@ -67,12 +67,12 @@ class InstallationProgress extends _$InstallationProgress {
 
   /// Get overall progress percentage (0.0 to 1.0)
   double getOverallProgress(int totalSubsteps) {
-    return getIt<StorageManager>().getOverallProgress(totalSubsteps);
+    return getIt<StorageManager>().getInstallationGuideProgress(totalSubsteps);
   }
 
   /// Reset all progress
   Future<void> resetProgress() async {
-    await getIt<StorageManager>().resetInstallationProgress();
+    await getIt<StorageManager>().resetInstallationGuideProgress();
     state = -1;
   }
 }
