@@ -14,7 +14,7 @@ class InstallationRepository {
 
     try {
       final String jsonString = await rootBundle.loadString(
-        'project_assets/project_feature_description/installation_description/installation_steps.json',
+        'assets/installation_description/installation_steps.json',
       );
       final Map<String, dynamic> jsonData = json.decode(jsonString);
       _cachedData = InstallationDataModel.fromJson(jsonData);
@@ -25,7 +25,7 @@ class InstallationRepository {
   }
 
   String getImagePath(String filename) {
-    return 'project_assets/project_feature_description/installation_description/installation_steps_images/$filename';
+    return 'assets/installation_description/images/$filename';
   }
 
   void clearCache() {
