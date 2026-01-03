@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:who_mobile_project/ui/dashboard/widgets/idtm_guide_card.dart';
+import 'package:who_mobile_project/ui/dashboard/widgets/idtm_status_card.dart';
 
 class DashboardPage extends StatelessWidget {
   const DashboardPage({super.key});
@@ -14,6 +15,9 @@ class DashboardPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            // Current IDTM Installation Status
+            const IdtmStatusCard(),
+
             // IDTM Guide Card
             const IdtmGuideCard(),
 
