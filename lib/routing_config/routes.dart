@@ -30,6 +30,10 @@ class YRRoutes {
   static const installationStepsList = "/installation-steps";
   static const installationStepDetail = "/installation-steps/:stepId";
   static const installationSubstepDetail = "/installation-steps/:stepId/substep/:substepId";
+  /// Packing list pages
+  static const idtmPackingList = "/idtm/packing-list";
+  static const idtmMaintenance = "/idtm/maintenance/:installationId";
+  static const idtmDismantling = "/idtm/dismantling/:installationId";
 }
 
 extension RouteData on String {

@@ -18,6 +18,10 @@ import 'package:who_mobile_project/services/navigation_tracker.dart';
 import 'package:who_mobile_project/ui/dashboard/dashboard_page.dart';
 import 'package:who_mobile_project/ui/initial_loading/initial_loading.dart';
 import 'package:who_mobile_project/general/widgets/section_placeholder.dart';
+import 'package:who_mobile_project/ui/idtm/packing_list_page.dart';
+import 'package:who_mobile_project/ui/idtm/installation_steps_page.dart';
+import 'package:who_mobile_project/ui/idtm/maintenance_page.dart';
+import 'package:who_mobile_project/ui/idtm/dismantling_page.dart';
 
 GoRouter baseNavRouterBuilder() {
   final homeGlobalKey = GlobalKey<NavigatorState>(debugLabel: "homeGlobalKey");
@@ -97,6 +101,23 @@ GoRouter baseNavRouterBuilder() {
           final stepId = state.pathParameters['stepId']!;
           return MaterialPage(
             child: InstallationStepDetailPage(stepId: stepId),
+                      );
+        },
+      ),
+      // IDTM Routes
+      GoRoute(
+        path: YRRoutes.idtmPackingList,
+        name: YRRoutes.idtmPackingList,
+        pageBuilder: (context, state) =>
+            const MaterialPage(child: PackingListPage()),
+      ),
+      GoRoute(
+        path: YRRoutes.idtmInstallationDetail,
+        name: YRRoutes.idtmInstallationDetail,
+        pageBuilder: (context, state) {
+          final installationId = state.pathParameters['installationId'] ?? '';
+          return MaterialPage(
+            child: InstallationStepsPage(installationId: installationId),
           );
         },
       ),
@@ -111,6 +132,26 @@ GoRouter baseNavRouterBuilder() {
               stepId: stepId,
               substepId: substepId,
             ),
+                      );
+        },
+      ),
+      GoRoute(
+        path: YRRoutes.idtmMaintenance,
+        name: YRRoutes.idtmMaintenance,
+        pageBuilder: (context, state) {
+          final installationId = state.pathParameters['installationId'] ?? '';
+          return MaterialPage(
+            child: MaintenancePage(installationId: installationId),
+          );
+        },
+      ),
+      GoRoute(
+        path: YRRoutes.idtmDismantling,
+        name: YRRoutes.idtmDismantling,
+        pageBuilder: (context, state) {
+          final installationId = state.pathParameters['installationId'] ?? '';
+          return MaterialPage(
+            child: DismantlingPage(installationId: installationId),
           );
         },
       ),
