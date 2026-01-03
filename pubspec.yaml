@@ -157,6 +157,9 @@ flutter:
     - assets/idtm/images/elevations/
     - assets/idtm/images/panels/
     - assets/idtm/images/components/
+    # Installation Guide assets
+    - project_assets/project_feature_description/installation_description/installation_steps.json
+    - project_assets/project_feature_description/installation_description/images/
     # - .env
   fonts:
     - family: BSIconFont

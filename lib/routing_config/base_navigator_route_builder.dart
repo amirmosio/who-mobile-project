@@ -9,6 +9,9 @@ import 'package:who_mobile_project/ui/not_found/not_found.dart';
 import 'package:who_mobile_project/ui/auth_pages/register/registration_page.dart';
 import 'package:who_mobile_project/ui/auth_pages/reset_password/reset_password_page.dart';
 import 'package:who_mobile_project/ui/auth_pages/reset_password/reset_password_successful.dart';
+import 'package:who_mobile_project/ui/installation_guide/installation_steps_list_page.dart';
+import 'package:who_mobile_project/ui/installation_guide/installation_step_detail_page.dart';
+import 'package:who_mobile_project/ui/installation_guide/installation_substep_detail_page.dart';
 import 'routes.dart';
 import 'route_observer.dart';
 import 'package:who_mobile_project/services/navigation_tracker.dart';
@@ -78,6 +81,38 @@ GoRouter baseNavRouterBuilder() {
         path: YRRoutes.unknown,
         pageBuilder: (context, state) =>
             MaterialPage(child: NotFoundPage("Error")),
+      ),
+
+      // Installation Guide Routes
+      GoRoute(
+        path: YRRoutes.installationStepsList,
+        name: YRRoutes.installationStepsList,
+        pageBuilder: (context, state) =>
+            const MaterialPage(child: InstallationStepsListPage()),
+      ),
+      GoRoute(
+        path: YRRoutes.installationStepDetail,
+        name: YRRoutes.installationStepDetail,
+        pageBuilder: (context, state) {
+          final stepId = state.pathParameters['stepId']!;
+          return MaterialPage(
+            child: InstallationStepDetailPage(stepId: stepId),
+          );
+        },
+      ),
+      GoRoute(
+        path: YRRoutes.installationSubstepDetail,
+        name: YRRoutes.installationSubstepDetail,
+        pageBuilder: (context, state) {
+          final stepId = state.pathParameters['stepId']!;
+          final substepId = state.pathParameters['substepId']!;
+          return MaterialPage(
+            child: InstallationSubstepDetailPage(
+              stepId: stepId,
+              substepId: substepId,
+            ),
+          );
+        },
       ),
 
       StatefulShellRoute.indexedStack(
