@@ -39,7 +39,6 @@ class _InitialAppLoadingState extends ConsumerState<InitialAppLoading> {
             DateTime.now().subtract(Duration(days: 365 * 20)).toIso8601String(),
           );
           await getIt<StorageManager>().setDevelopmentResetOfDatabase(true);
-          await getIt<StorageManager>().setTagBookQrCache({});
         }
       }
 

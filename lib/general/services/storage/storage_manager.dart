@@ -6,8 +6,6 @@ import 'package:who_mobile_project/general/services/storage/mixins/config_storag
 import 'package:who_mobile_project/general/services/storage/mixins/database_migration_storage_mixin.dart';
 import 'package:who_mobile_project/general/services/storage/mixins/guest_storage_mixin.dart';
 import 'package:who_mobile_project/general/services/storage/mixins/preferences_storage_mixin.dart';
-import 'package:who_mobile_project/general/services/storage/mixins/redvertising_storage_mixin.dart';
-import 'package:who_mobile_project/general/services/storage/mixins/tag_book_storage_mixin.dart';
 
 @singleton
 class StorageManager extends BaseStorage
@@ -17,9 +15,7 @@ class StorageManager extends BaseStorage
         PreferencesStorageMixin,
         AppStateStorageMixin,
         DatabaseMigrationStorageMixin,
-        ConfigStorageMixin,
-        RedvertisingStorageMixin,
-        TagBookStorageMixin {
+        ConfigStorageMixin {
   Future<void> initializeStorage() async {
     await initialize();
   }
