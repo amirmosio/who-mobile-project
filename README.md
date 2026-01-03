@@ -16,12 +16,32 @@ Major features of the app:
 - "read comment" only authenticated users
 
 
-Main page:
-- Show status (not installed, in progress, installed)
-- Based on the status we should show buttons to see maintanance steps or install steps, or continue installing, ...
-- Change feedback to comment
-- "Show packing list" in main page
-- if not installed "start installation"
-- if in progress "continue installation"
-- if installed "Maintanance mode"
-- if installed also show "dismantling"
+Dashboard (Main Page):
+The dashboard displays multiple cards to guide users through different stages:
+
+1. **Installation Status Card**
+   - Shows current installation status (Not Started, In Progress, Completed)
+   - Provides action buttons based on status:
+     - Not Started: "Start Installation"
+     - In Progress: "Continue Installation" + progress indicator
+     - Completed: Shows completion status
+
+2. **Installation Guide Card**
+   - Shows step-by-step installation guide
+   - Tracks progress for each installation step
+   - Allows navigation to detailed step instructions
+   - Displays substeps with completion status
+
+3. **IDTM Status Card**
+   - Shows IDTM (Installation, Dismantling, Transportation, Maintenance) status
+   - Displays available actions based on installation state
+
+4. **IDTM Guide Card**
+   - Provides access to IDTM documentation and guides:
+     - Packing List (visual item recognition)
+     - Installation Steps
+     - Maintenance Instructions (with automatic alerts)
+     - Dismantling and Repacking guide
+   - Each section has dedicated navigation
+
+Note: All cards refresh automatically when returning to the dashboard

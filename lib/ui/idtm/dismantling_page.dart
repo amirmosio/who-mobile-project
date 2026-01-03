@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:who_mobile_project/di/injector.dart';
-import 'package:who_mobile_project/general/services/installation_status_service.dart';
+import 'package:who_mobile_project/general/services/storage/storage_manager.dart';
 
 /// Page for managing dismantling/repacking steps
 class DismantlingPage extends StatefulWidget {
@@ -16,7 +16,7 @@ class DismantlingPage extends StatefulWidget {
 }
 
 class _DismantlingPageState extends State<DismantlingPage> {
-  final _statusService = getIt<InstallationStatusService>();
+  final _storageManager = getIt<StorageManager>();
 
   // Sample dismantling steps - reverse of installation
   late final List<DismantlingStep> _steps;
@@ -70,7 +70,7 @@ class _DismantlingPageState extends State<DismantlingPage> {
   }
 
   void _loadCompletedSteps() {
-    final completedStepIds = _statusService.getCompletedDismantlingSteps();
+    final completedStepIds = _storageManager.getCompletedDismantlingSteps();
     setState(() {
       for (var step in _steps) {
         step.isCompleted = completedStepIds.contains(step.id);
@@ -91,9 +91,9 @@ class _DismantlingPageState extends State<DismantlingPage> {
 
     // Save to shared preferences
     if (newState) {
-      await _statusService.markDismantlingStepCompleted(step.id);
+      await _storageManager.markDismantlingStepCompleted(step.id);
     } else {
-      await _statusService.markDismantlingStepIncomplete(step.id);
+      await _storageManager.markDismantlingStepIncomplete(step.id);
     }
 
     // If all steps completed, show completion dialog
@@ -117,7 +117,7 @@ class _DismantlingPageState extends State<DismantlingPage> {
           ),
           ElevatedButton(
             onPressed: () async {
-              await _statusService.completeDismantling();
+              await _storageManager.completeDismantling();
               if (mounted) {
                 Navigator.pop(context);
                 Navigator.pop(context);

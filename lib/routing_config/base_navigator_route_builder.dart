@@ -9,6 +9,9 @@ import 'package:who_mobile_project/ui/not_found/not_found.dart';
 import 'package:who_mobile_project/ui/auth_pages/register/registration_page.dart';
 import 'package:who_mobile_project/ui/auth_pages/reset_password/reset_password_page.dart';
 import 'package:who_mobile_project/ui/auth_pages/reset_password/reset_password_successful.dart';
+import 'package:who_mobile_project/ui/installation_guide/installation_steps_list_page.dart';
+import 'package:who_mobile_project/ui/installation_guide/installation_step_detail_page.dart';
+import 'package:who_mobile_project/ui/installation_guide/installation_substep_detail_page.dart';
 import 'routes.dart';
 import 'route_observer.dart';
 import 'package:who_mobile_project/services/navigation_tracker.dart';
@@ -16,7 +19,6 @@ import 'package:who_mobile_project/ui/dashboard/dashboard_page.dart';
 import 'package:who_mobile_project/ui/initial_loading/initial_loading.dart';
 import 'package:who_mobile_project/general/widgets/section_placeholder.dart';
 import 'package:who_mobile_project/ui/idtm/packing_list_page.dart';
-import 'package:who_mobile_project/ui/idtm/installation_steps_page.dart';
 import 'package:who_mobile_project/ui/idtm/maintenance_page.dart';
 import 'package:who_mobile_project/ui/idtm/dismantling_page.dart';
 
@@ -84,6 +86,23 @@ GoRouter baseNavRouterBuilder() {
             MaterialPage(child: NotFoundPage("Error")),
       ),
 
+      // Installation Guide Routes
+      GoRoute(
+        path: YRRoutes.installationStepsList,
+        name: YRRoutes.installationStepsList,
+        pageBuilder: (context, state) =>
+            const MaterialPage(child: InstallationStepsListPage()),
+      ),
+      GoRoute(
+        path: YRRoutes.installationStepDetail,
+        name: YRRoutes.installationStepDetail,
+        pageBuilder: (context, state) {
+          final stepId = state.pathParameters['stepId']!;
+          return MaterialPage(
+            child: InstallationStepDetailPage(stepId: stepId),
+          );
+        },
+      ),
       // IDTM Routes
       GoRoute(
         path: YRRoutes.idtmPackingList,
@@ -95,9 +114,20 @@ GoRouter baseNavRouterBuilder() {
         path: YRRoutes.idtmInstallationDetail,
         name: YRRoutes.idtmInstallationDetail,
         pageBuilder: (context, state) {
-          final installationId = state.pathParameters['installationId'] ?? '';
+          return const MaterialPage(child: InstallationStepsListPage());
+        },
+      ),
+      GoRoute(
+        path: YRRoutes.installationSubstepDetail,
+        name: YRRoutes.installationSubstepDetail,
+        pageBuilder: (context, state) {
+          final stepId = state.pathParameters['stepId']!;
+          final substepId = state.pathParameters['substepId']!;
           return MaterialPage(
-            child: InstallationStepsPage(installationId: installationId),
+            child: InstallationSubstepDetailPage(
+              stepId: stepId,
+              substepId: substepId,
+            ),
           );
         },
       ),
@@ -164,9 +194,7 @@ GoRouter baseNavRouterBuilder() {
                 name: YRRoutes.blog,
                 pageBuilder: (context, state) => const MaterialPage(
                   child: Scaffold(
-                    body: Center(
-                      child: SectionPlaceholder(text: 'Blog'),
-                    ),
+                    body: Center(child: SectionPlaceholder(text: 'Blog')),
                   ),
                 ),
               ),

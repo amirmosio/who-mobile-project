@@ -3,7 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:who_mobile_project/app_core/theme/colors.dart';
 import 'package:who_mobile_project/di/injector.dart';
 import 'package:who_mobile_project/general/models/idtm/installation_phase.dart';
-import 'package:who_mobile_project/general/services/installation_status_service.dart';
+import 'package:who_mobile_project/general/services/storage/storage_manager.dart';
 import 'package:who_mobile_project/routing_config/routes.dart';
 
 /// Dashboard card showing installation status and action buttons
@@ -20,14 +20,14 @@ class InstallationStatusCard extends StatefulWidget {
 }
 
 class _InstallationStatusCardState extends State<InstallationStatusCard> {
-  late final InstallationStatusService _statusService;
+  late final StorageManager _storageManager;
   late FacilityInstallationPhase _currentPhase;
 
   @override
   void initState() {
     super.initState();
-    _statusService = getIt<InstallationStatusService>();
-    _currentPhase = _statusService.getCurrentPhase();
+    _storageManager = getIt<StorageManager>();
+    _currentPhase = _storageManager.getCurrentPhase();
   }
 
 
@@ -90,7 +90,7 @@ class _InstallationStatusCardState extends State<InstallationStatusCard> {
             onPressed: () async {
               // Create a new installation
               final installationId = 'installation_${DateTime.now().millisecondsSinceEpoch}';
-              await _statusService.startInstallation(
+              await _storageManager.startInstallation(
                 installationId: installationId,
                 facilityId: 'default',
                 facilityName: 'Default Facility',
@@ -115,7 +115,7 @@ class _InstallationStatusCardState extends State<InstallationStatusCard> {
             icon: Icons.build,
             color: Colors.orange,
             onPressed: () {
-              final installationId = _statusService.getInstallationId();
+              final installationId = _storageManager.getInstallationId();
               if (installationId != null) {
                 context.push(YRRoutes.idtmInstallationDetail
                     .replaceAll(':installationId', installationId)).then((_) {
@@ -134,7 +134,7 @@ class _InstallationStatusCardState extends State<InstallationStatusCard> {
             icon: Icons.settings,
             color: Colors.green,
             onPressed: () {
-              final installationId = _statusService.getInstallationId();
+              final installationId = _storageManager.getInstallationId();
               if (installationId != null) {
                 context.push(YRRoutes.idtmMaintenance
                     .replaceAll(':installationId', installationId)).then((_) {
@@ -152,7 +152,7 @@ class _InstallationStatusCardState extends State<InstallationStatusCard> {
             color: Colors.red,
             outlined: true,
             onPressed: () {
-              final installationId = _statusService.getInstallationId();
+              final installationId = _storageManager.getInstallationId();
               if (installationId != null) {
                 context.push(YRRoutes.idtmDismantling
                     .replaceAll(':installationId', installationId)).then((_) {
@@ -171,7 +171,7 @@ class _InstallationStatusCardState extends State<InstallationStatusCard> {
             icon: Icons.delete,
             color: Colors.red,
             onPressed: () {
-              final installationId = _statusService.getInstallationId();
+              final installationId = _storageManager.getInstallationId();
               if (installationId != null) {
                 context.push(YRRoutes.idtmDismantling
                     .replaceAll(':installationId', installationId)).then((_) {
@@ -190,7 +190,7 @@ class _InstallationStatusCardState extends State<InstallationStatusCard> {
             icon: Icons.info_outline,
             color: Colors.blue,
             onPressed: () {
-              final installationId = _statusService.getInstallationId();
+              final installationId = _storageManager.getInstallationId();
               if (installationId != null) {
                 context.push(YRRoutes.idtmInstallationDetail
                     .replaceAll(':installationId', installationId)).then((_) {
