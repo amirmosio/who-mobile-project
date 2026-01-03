@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:sentry_flutter/sentry_flutter.dart';
@@ -7,6 +9,7 @@ import 'package:who_mobile_project/general/services/device/device_service.dart';
 import 'package:who_mobile_project/di/injector.dart';
 import 'package:who_mobile_project/app_core/config/environment_constants.dart';
 import 'package:who_mobile_project/general/widgets/restart_widget.dart';
+import 'package:who_mobile_project/firebase_options.dart';
 
 import '../application.dart';
 
@@ -30,9 +33,13 @@ Future<void> initialSetup() async {
 
   // Initialize CallKeep and set up handlers BEFORE any other initialization
 
-  // COMMENTED OUT - Firebase (not used)
-  // await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  // debugPrint('✅ Firebase initialized successfully');
+  // Initialize Firebase with offline persistence
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  FirebaseFirestore.instance.settings = const Settings(
+    persistenceEnabled: true,
+    cacheSizeBytes: Settings.CACHE_SIZE_UNLIMITED,
+  );
+  debugPrint('Firebase initialized successfully');
 
   await configureDependencies();
 

@@ -5,6 +5,8 @@ import 'package:who_mobile_project/application.dart';
 import 'package:who_mobile_project/main.dart';
 import 'package:who_mobile_project/ui/base_template/nav_bar_base_page.dart';
 import 'package:who_mobile_project/ui/auth_pages/login/login_page.dart';
+import 'package:who_mobile_project/ui/auth_pages/login/admin_login_page.dart';
+import 'package:who_mobile_project/ui/auth_pages/admin_panel/admin_panel_page.dart';
 import 'package:who_mobile_project/ui/not_found/not_found.dart';
 import 'package:who_mobile_project/ui/auth_pages/register/registration_page.dart';
 import 'package:who_mobile_project/ui/auth_pages/reset_password/reset_password_page.dart';
@@ -18,6 +20,7 @@ import 'package:who_mobile_project/services/navigation_tracker.dart';
 import 'package:who_mobile_project/ui/dashboard/dashboard_page.dart';
 import 'package:who_mobile_project/ui/initial_loading/initial_loading.dart';
 import 'package:who_mobile_project/general/widgets/section_placeholder.dart';
+import 'package:who_mobile_project/ui/profile_and_settings/profile_menu_page.dart';
 import 'package:who_mobile_project/ui/idtm/packing_list_page.dart';
 import 'package:who_mobile_project/ui/idtm/maintenance_page.dart';
 import 'package:who_mobile_project/ui/idtm/dismantling_page.dart';
@@ -84,6 +87,20 @@ GoRouter baseNavRouterBuilder() {
         path: YRRoutes.unknown,
         pageBuilder: (context, state) =>
             MaterialPage(child: NotFoundPage("Error")),
+      ),
+
+      // Admin Routes
+      GoRoute(
+        path: YRRoutes.adminLogin,
+        name: YRRoutes.adminLogin,
+        pageBuilder: (context, state) =>
+            const MaterialPage(child: AdminLoginPage()),
+      ),
+      GoRoute(
+        path: YRRoutes.adminPanel,
+        name: YRRoutes.adminPanel,
+        pageBuilder: (context, state) =>
+            const MaterialPage(child: AdminPanelPage()),
       ),
 
       // Installation Guide Routes
@@ -207,11 +224,7 @@ GoRouter baseNavRouterBuilder() {
                 path: YRRoutes.profileMenu,
                 name: YRRoutes.profileMenu,
                 pageBuilder: (context, state) => const MaterialPage(
-                  child: Scaffold(
-                    body: Center(
-                      child: SectionPlaceholder(text: 'Profile & Settings'),
-                    ),
-                  ),
+                  child: ProfileMenuPage(),
                 ),
               ),
             ],

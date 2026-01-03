@@ -282,4 +282,8 @@ class GVColors {
   static const Color eventConfirmed = Color(0x770000FF);
   static const Color eventApproved = Color(0x77008000);
   static const Color eventRejected = Color(0x77FF0000);
+
+  // Additional grey colors for admin pages
+  static const Color darkGrey = Color(0xFF666666);
+  static const Color lightGrey = Color(0xFFE0E0E0);
 }
