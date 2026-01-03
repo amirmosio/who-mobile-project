@@ -4,6 +4,114 @@
   "sourceDocument": "EN-MAN-AZF4-27-WFP_User_Manual_DRAFT01 (1).pdf",
   "totalImages": 168,
   "imagePages": 26,
+  "coverImages": [
+    {
+      "filename": "01_cover_idtm_general_view_img1.png",
+      "description": "IDTM cover page logo"
+    },
+    {
+      "filename": "01_cover_idtm_general_view_img2.png",
+      "description": "Cover page graphic element"
+    },
+    {
+      "filename": "01_cover_idtm_general_view_img3.png",
+      "description": "Cover page graphic element"
+    },
+    {
+      "filename": "01_cover_idtm_general_view_img4.png",
+      "description": "Cover page graphic element"
+    },
+    {
+      "filename": "01_cover_idtm_general_view_img5.png",
+      "description": "Cover page graphic element"
+    },
+    {
+      "filename": "01_cover_idtm_general_view_img6.png",
+      "description": "Cover page graphic element"
+    },
+    {
+      "filename": "01_cover_idtm_general_view_img7.png",
+      "description": "Cover page graphic element"
+    },
+    {
+      "filename": "01_cover_idtm_general_view_img8.jpeg",
+      "description": "IDTM general view photo"
+    }
+  ],
+  "overviewImages": [
+    {
+      "filename": "07_idtm_general_view_img1.png",
+      "description": "IDTM logo"
+    },
+    {
+      "filename": "07_idtm_general_view_img2.png",
+      "description": "IDTM layout diagram"
+    },
+    {
+      "filename": "07_idtm_general_view_img3.jpeg",
+      "description": "IDTM general view photo"
+    },
+    {
+      "filename": "08_idtm_exploded_view_img1.png",
+      "description": "Logo"
+    },
+    {
+      "filename": "08_idtm_exploded_view_img2.png",
+      "description": "IDTM exploded view label"
+    },
+    {
+      "filename": "08_idtm_exploded_view_img3.png",
+      "description": "IDTM exploded view diagram showing all components"
+    },
+    {
+      "filename": "09_idtm_dimensions_1_img1.png",
+      "description": "Logo"
+    },
+    {
+      "filename": "09_idtm_dimensions_1_img2.png",
+      "description": "Dimensions page label"
+    },
+    {
+      "filename": "09_idtm_dimensions_1_img3.png",
+      "description": "Top view dimensions diagram"
+    },
+    {
+      "filename": "09_idtm_dimensions_1_img4.jpeg",
+      "description": "3D perspective view"
+    },
+    {
+      "filename": "09_idtm_dimensions_1_img5.png",
+      "description": "Dimension detail 1"
+    },
+    {
+      "filename": "09_idtm_dimensions_1_img6.png",
+      "description": "Dimension detail 2"
+    },
+    {
+      "filename": "09_idtm_dimensions_1_img7.png",
+      "description": "Dimension detail 3"
+    },
+    {
+      "filename": "09_idtm_dimensions_1_img8.png",
+      "description": "Dimension detail 4"
+    },
+    {
+      "filename": "09_idtm_dimensions_1_img9.jpeg",
+      "description": "Additional 3D view"
+    },
+    {
+      "filename": "10_idtm_dimensions_2_img1.png",
+      "description": "Logo"
+    },
+    {
+      "filename": "10_idtm_dimensions_2_img2.png",
+      "description": "Dimensions page 2 label"
+    },
+    {
+      "filename": "10_idtm_dimensions_2_img3.png",
+      "description": "Side view dimensions diagram"
+    }
+  ],
   "sections": [
     {
       "id": "pre-installation",
@@ -11,6 +119,46 @@
       "pdfReference": "Pages 13-14 | Section 3.1 & 3.2",
       "description": "Required conditions and safety warnings before installation",
       "images": [
+        {
+          "filename": "13_required_conditions_img1.png",
+          "description": "Page header logo"
+        },
+        {
+          "filename": "13_required_conditions_img2.png",
+          "description": "Section title graphic"
+        },
+        {
+          "filename": "13_required_conditions_img3.png",
+          "description": "Required conditions icon"
+        },
+        {
+          "filename": "13_required_conditions_img4.png",
+          "description": "Personnel icon"
+        },
+        {
+          "filename": "13_required_conditions_img5.png",
+          "description": "Tools icon"
+        },
+        {
+          "filename": "13_required_conditions_img6.png",
+          "description": "Time icon"
+        },
+        {
+          "filename": "13_required_conditions_img7.png",
+          "description": "Climatic conditions icon"
+        },
+        {
+          "filename": "13_required_conditions_img8.png",
+          "description": "Space requirements icon"
+        },
+        {
+          "filename": "13_required_conditions_img9.png",
+          "description": "Additional requirement icon"
+        },
+        {
+          "filename": "13_required_conditions_img10.png",
+          "description": "Safety icon"
+        },
         {
           "filename": "13_required_conditions_img11.jpeg",
           "description": "Required personnel (4 persons minimum)"
@@ -21,7 +169,7 @@
         },
         {
           "filename": "13_required_conditions_img13.png",
-          "description": "Climatic conditions"
+          "description": "Climatic conditions diagram"
         },
         {
           "filename": "14_safety_warnings_img1.png",
@@ -30,6 +178,10 @@
         {
           "filename": "14_safety_warnings_img2.png",
           "description": "Visual inspection requirements"
+        },
+        {
+          "filename": "14_safety_warnings_img3.png",
+          "description": "Additional safety information"
         }
       ],
       "subsections": [
@@ -83,6 +235,16 @@
       "title": "Installation Site Selection and Preparation",
       "pdfReference": "Page 15 | Section 3.3",
       "description": "Site assessment and preparation procedures",
+      "images": [
+        {
+          "filename": "15_site_preparation_img1.png",
+          "description": "Site preparation page header"
+        },
+        {
+          "filename": "15_site_preparation_img2.png",
+          "description": "Site preparation guidelines"
+        }
+      ],
       "steps": [
         {
           "stepNumber": 1,
@@ -118,20 +280,36 @@
       "description": "Hard floor installation procedures",
       "images": [
         {
+          "filename": "16_hard_floor_installation_img1.png",
+          "description": "Page header logo"
+        },
+        {
+          "filename": "16_hard_floor_installation_img2.png",
+          "description": "Hard floor section title"
+        },
+        {
+          "filename": "16_hard_floor_installation_img3.png",
+          "description": "Floor installation icon"
+        },
+        {
           "filename": "16_hard_floor_installation_img4.jpeg",
           "description": "Pallet of floor tiles"
+        },
+        {
+          "filename": "16_hard_floor_installation_img5.png",
+          "description": "Floor layout configuration (17m x 8m)"
         },
         {
           "filename": "16_hard_floor_installation_img6.jpeg",
           "description": "Pallet placement diagram"
         },
         {
-          "filename": "16_hard_floor_installation_img8.jpeg",
-          "description": "Floor tile installation showing layout pattern"
+          "filename": "16_hard_floor_installation_img7.png",
+          "description": "Floor tile detail"
         },
         {
-          "filename": "16_hard_floor_installation_img5.png",
-          "description": "Floor layout configuration (17m x 8m)"
+          "filename": "16_hard_floor_installation_img8.jpeg",
+          "description": "Floor tile installation showing layout pattern"
         }
       ],
       "steps": [
@@ -172,8 +350,32 @@
           "purpose": "Prepare tents for deployment",
           "images": [
             {
+              "filename": "17_tent_inflation_step_1-2_img1.png",
+              "description": "Page header logo"
+            },
+            {
+              "filename": "17_tent_inflation_step_1-2_img2.png",
+              "description": "Section title"
+            },
+            {
+              "filename": "17_tent_inflation_step_1-2_img3.png",
+              "description": "Step number icon"
+            },
+            {
+              "filename": "17_tent_inflation_step_1-2_img4.png",
+              "description": "Instruction icon"
+            },
+            {
               "filename": "17_tent_inflation_step_1-2_img5.jpeg",
               "description": "Tent bags on pallet"
+            },
+            {
+              "filename": "17_tent_inflation_step_1-2_img6.png",
+              "description": "Step detail icon"
+            },
+            {
+              "filename": "17_tent_inflation_step_1-2_img7.png",
+              "description": "Additional instruction icon"
             },
             {
               "filename": "17_tent_inflation_step_1-2_img8.jpeg",
@@ -197,6 +399,22 @@
           "pdfStepReference": "Page 17-18, Steps 3.0-6.0",
           "purpose": "Unroll and position tent structures",
           "images": [
+            {
+              "filename": "18_tent_inflation_step_3-7_img1.png",
+              "description": "Page header logo"
+            },
+            {
+              "filename": "18_tent_inflation_step_3-7_img2.png",
+              "description": "Step icons"
+            },
+            {
+              "filename": "18_tent_inflation_step_3-7_img3.png",
+              "description": "Valve location on pneumatic arch"
+            },
+            {
+              "filename": "18_tent_inflation_step_3-7_img4.png",
+              "description": "Close-up of inflation valve and over-pressure valve"
+            },
             {
               "filename": "18_tent_inflation_step_3-7_img5.jpeg",
               "description": "Opening tent bag"
@@ -223,16 +441,6 @@
           "title": "Locate Inflation Valves",
           "pdfStepReference": "Page 18, Step 7.0",
           "purpose": "Prepare for inflation process",
-          "images": [
-            {
-              "filename": "18_tent_inflation_step_3-7_img3.png",
-              "description": "Valve location on pneumatic arch"
-            },
-            {
-              "filename": "18_tent_inflation_step_3-7_img4.png",
-              "description": "Close-up of inflation valve and over-pressure valve"
-            }
-          ],
           "keyInformation": {
             "valveLocation": "Lower end of each pneumatic arch, beneath protective flaps",
             "valveTypes": [
@@ -275,6 +483,10 @@
             {
               "filename": "19_tent_inflation_step_8-9_img6.jpeg",
               "description": "Complete sun shadowing installation"
+            },
+            {
+              "filename": "19_tent_inflation_step_8-9_img7.png",
+              "description": "Electric inflator unit"
             }
           ],
           "actions": [
@@ -293,16 +505,36 @@
           "purpose": "Prepare inflation equipment",
           "images": [
             {
-              "filename": "19_tent_inflation_step_8-9_img7.png",
-              "description": "Electric inflator unit"
-            },
-            {
               "filename": "20_tent_inflation_step_10-13_img1.png",
               "description": "Inflator with manifold attached"
             },
             {
+              "filename": "20_tent_inflation_step_10-13_img2.png",
+              "description": "Connection diagram"
+            },
+            {
+              "filename": "20_tent_inflation_step_10-13_img3.png",
+              "description": "Fastening screw ring"
+            },
+            {
+              "filename": "20_tent_inflation_step_10-13_img4.png",
+              "description": "Connecting hose to valve"
+            },
+            {
               "filename": "20_tent_inflation_step_10-13_img5.jpeg",
               "description": "Removing valve protective caps"
+            },
+            {
+              "filename": "20_tent_inflation_step_10-13_img6.png",
+              "description": "Valve states diagram (CLOSED vs OPEN)"
+            },
+            {
+              "filename": "20_tent_inflation_step_10-13_img7.jpeg",
+              "description": "Closing valve by turning clockwise"
+            },
+            {
+              "filename": "20_tent_inflation_step_10-13_img8.jpeg",
+              "description": "Verifying valve is closed"
             }
           ],
           "actions": [
@@ -317,20 +549,6 @@
           "title": "Prepare Valves for Inflation",
           "pdfStepReference": "Page 20, Step 12.0",
           "purpose": "Ensure valves are properly closed before inflation",
-          "images": [
-            {
-              "filename": "20_tent_inflation_step_10-13_img6.png",
-              "description": "Valve states diagram (CLOSED vs OPEN)"
-            },
-            {
-              "filename": "20_tent_inflation_step_10-13_img7.jpeg",
-              "description": "Closing valve by turning clockwise"
-            },
-            {
-              "filename": "20_tent_inflation_step_10-13_img8.jpeg",
-              "description": "Verifying valve is closed"
-            }
-          ],
           "criticalCheck": "All valves must be closed before starting inflation",
           "valveStates": {
             "closed": "Central spring pin is UP (~1cm below rim) ✓",
@@ -346,16 +564,6 @@
           "title": "Connect Inflation Hoses",
           "pdfStepReference": "Page 20, Step 13.0",
           "purpose": "Establish air connection to tent frame",
-          "images": [
-            {
-              "filename": "20_tent_inflation_step_10-13_img4.png",
-              "description": "Connecting hose to valve"
-            },
-            {
-              "filename": "20_tent_inflation_step_10-13_img3.png",
-              "description": "Fastening screw ring"
-            }
-          ],
           "actions": [
             "Connect end of inflation hoses to valves",
             "Fasten hoses by turning screw ring clockwise",
@@ -369,6 +577,18 @@
           "pdfStepReference": "Page 21, Steps 14.0-15.0",
           "purpose": "Erect tent structure to operating pressure",
           "images": [
+            {
+              "filename": "21_tent_inflation_step_14-15_img1.png",
+              "description": "Page header logo"
+            },
+            {
+              "filename": "21_tent_inflation_step_14-15_img2.png",
+              "description": "Step icons"
+            },
+            {
+              "filename": "21_tent_inflation_step_14-15_img3.png",
+              "description": "Inflation warning icon"
+            },
             {
               "filename": "21_tent_inflation_step_14-15_img4.jpeg",
               "description": "Inflator ON, tent inflating"
@@ -408,12 +628,28 @@
           "purpose": "Seal tent frame after inflation",
           "images": [
             {
+              "filename": "22_tent_inflation_step_16-18_img1.png",
+              "description": "Pressure monitoring coupling on inflator"
+            },
+            {
+              "filename": "22_tent_inflation_step_16-18_img2.png",
+              "description": "Pressure feedback tube insertion"
+            },
+            {
               "filename": "22_tent_inflation_step_16-18_img3.jpeg",
               "description": "Disconnecting inflation hoses"
             },
             {
+              "filename": "22_tent_inflation_step_16-18_img4.png",
+              "description": "Valve protection diagram"
+            },
+            {
               "filename": "22_tent_inflation_step_16-18_img5.jpeg",
               "description": "Screwing protective caps back on"
+            },
+            {
+              "filename": "22_tent_inflation_step_16-18_img6.png",
+              "description": "PVC protective flap detail"
             },
             {
               "filename": "22_tent_inflation_step_16-18_img7.jpeg",
@@ -433,16 +669,20 @@
           "purpose": "Enable automatic pressure maintenance",
           "images": [
             {
-              "filename": "22_tent_inflation_step_16-18_img1.png",
-              "description": "Pressure monitoring coupling on inflator"
+              "filename": "23_tent_inflation_step_19-23_img1.png",
+              "description": "Page header logo"
             },
             {
-              "filename": "22_tent_inflation_step_16-18_img2.png",
-              "description": "Pressure feedback tube insertion"
+              "filename": "23_tent_inflation_step_19-23_img2.png",
+              "description": "Step icons"
             },
             {
               "filename": "23_tent_inflation_step_19-23_img3.png",
               "description": "Feedback tube routing into tent"
+            },
+            {
+              "filename": "23_tent_inflation_step_19-23_img4.png",
+              "description": "Pressure monitoring system diagram"
             },
             {
               "filename": "23_tent_inflation_step_19-23_img5.jpeg",
@@ -451,6 +691,10 @@
             {
               "filename": "23_tent_inflation_step_19-23_img6.png",
               "description": "Connecting tap to feedback valve"
+            },
+            {
+              "filename": "23_tent_inflation_step_19-23_img7.png",
+              "description": "Inflator display showing AUTO mode and pressure reading"
             }
           ],
           "systemComponents": [
@@ -474,12 +718,6 @@
           "title": "Enable Automatic Pressure Control",
           "pdfStepReference": "Page 23, Step 23.0",
           "purpose": "Maintain proper tent pressure automatically",
-          "images": [
-            {
-              "filename": "23_tent_inflation_step_19-23_img7.png",
-              "description": "Inflator display showing AUTO mode and pressure reading"
-            }
-          ],
           "criticalWarning": "Never switch to AUTO if feedback tube is NOT connected - inflator will detect incorrect pressure and overheat",
           "operatingMode": {
             "mode": "AUTO",
@@ -506,12 +744,20 @@
           "purpose": "Ensure proper groundsheet alignment",
           "images": [
             {
-              "filename": "24_tent_inflation_step_24_img4.jpeg",
-              "description": "Pulling corners to straighten groundsheet"
+              "filename": "24_tent_inflation_step_24_img1.png",
+              "description": "Page header logo"
+            },
+            {
+              "filename": "24_tent_inflation_step_24_img2.png",
+              "description": "Step icon"
             },
             {
               "filename": "24_tent_inflation_step_24_img3.png",
               "description": "Aligned tent with no folds"
+            },
+            {
+              "filename": "24_tent_inflation_step_24_img4.jpeg",
+              "description": "Pulling corners to straighten groundsheet"
             }
           ],
           "actions": [
@@ -535,12 +781,40 @@
           "purpose": "Prepare vestibule structures for deployment",
           "images": [
             {
+              "filename": "25_vestibules_step_1-4_img1.png",
+              "description": "Page header logo"
+            },
+            {
+              "filename": "25_vestibules_step_1-4_img2.png",
+              "description": "Section title"
+            },
+            {
+              "filename": "25_vestibules_step_1-4_img3.png",
+              "description": "Step icons"
+            },
+            {
+              "filename": "25_vestibules_step_1-4_img4.png",
+              "description": "Instruction icons"
+            },
+            {
               "filename": "25_vestibules_step_1-4_img5.jpeg",
               "description": "Vestibule bags"
             },
             {
+              "filename": "25_vestibules_step_1-4_img6.png",
+              "description": "Placement diagram"
+            },
+            {
               "filename": "25_vestibules_step_1-4_img7.jpeg",
               "description": "Placing bags on hard floor"
+            },
+            {
+              "filename": "25_vestibules_step_1-4_img8.png",
+              "description": "Opening vestibule bag"
+            },
+            {
+              "filename": "25_vestibules_step_1-4_img9.png",
+              "description": "Rolling out vestibule"
             }
           ],
           "actions": [
@@ -557,12 +831,12 @@
           "purpose": "Unroll and position vestibule structures",
           "images": [
             {
-              "filename": "25_vestibules_step_1-4_img8.png",
-              "description": "Opening vestibule bag"
+              "filename": "26_vestibules_step_5-7_img1.png",
+              "description": "Page header logo"
             },
             {
-              "filename": "25_vestibules_step_1-4_img9.png",
-              "description": "Rolling out vestibule"
+              "filename": "26_vestibules_step_5-7_img2.png",
+              "description": "Step icons"
             },
             {
               "filename": "26_vestibules_step_5-7_img3.jpeg",
@@ -571,6 +845,18 @@
             {
               "filename": "26_vestibules_step_5-7_img4.jpeg",
               "description": "Spreading vestibule by corner loops"
+            },
+            {
+              "filename": "26_vestibules_step_5-7_img5.png",
+              "description": "Removing valve protective caps"
+            },
+            {
+              "filename": "26_vestibules_step_5-7_img6.png",
+              "description": "Connecting inflator to vestibule"
+            },
+            {
+              "filename": "26_vestibules_step_5-7_img7.png",
+              "description": "Inflator ON"
             }
           ],
           "actions": [
@@ -586,12 +872,6 @@
           "title": "Prepare Vestibule Valves",
           "pdfStepReference": "Page 26, Step 7.0",
           "purpose": "Ready vestibules for inflation",
-          "images": [
-            {
-              "filename": "26_vestibules_step_5-7_img5.png",
-              "description": "Removing valve protective caps"
-            }
-          ],
           "actions": [
             "Remove protective caps from inflation valves (turn counterclockwise)"
           ]
@@ -603,12 +883,16 @@
           "purpose": "Erect vestibule structures",
           "images": [
             {
-              "filename": "26_vestibules_step_5-7_img6.png",
-              "description": "Connecting inflator to vestibule"
+              "filename": "27_vestibules_step_8-10_img1.png",
+              "description": "Page header logo"
             },
             {
-              "filename": "26_vestibules_step_5-7_img7.png",
-              "description": "Inflator ON"
+              "filename": "27_vestibules_step_8-10_img2.png",
+              "description": "Step icons"
+            },
+            {
+              "filename": "27_vestibules_step_8-10_img3.png",
+              "description": "Inflation diagram"
             },
             {
               "filename": "27_vestibules_step_8-10_img4.jpeg",
@@ -643,8 +927,20 @@
           "purpose": "Create integrated tent system",
           "images": [
             {
+              "filename": "28_vestibules_step_11_img1.png",
+              "description": "Page header logo"
+            },
+            {
+              "filename": "28_vestibules_step_11_img2.png",
+              "description": "Step icon"
+            },
+            {
               "filename": "28_vestibules_step_11_img3.jpeg",
               "description": "Coupling system with double/single studs"
+            },
+            {
+              "filename": "28_vestibules_step_11_img4.png",
+              "description": "Connection diagram"
             },
             {
               "filename": "28_vestibules_step_11_img5.jpeg",
@@ -676,6 +972,18 @@
           "pdfStepReference": "Page 29, Steps 12.0-13.0",
           "purpose": "Secure vestibules to ground",
           "images": [
+            {
+              "filename": "29_vestibules_step_12-13_img1.png",
+              "description": "Page header logo"
+            },
+            {
+              "filename": "29_vestibules_step_12-13_img2.png",
+              "description": "Step icons"
+            },
+            {
+              "filename": "29_vestibules_step_12-13_img3.png",
+              "description": "Pegging instructions"
+            },
             {
               "filename": "29_vestibules_step_12-13_img4.jpeg",
               "description": "30cm T-pegs for groundsheet loops"
@@ -726,8 +1034,32 @@
           "purpose": "Create framework for inner cabins",
           "images": [
             {
+              "filename": "30_inner_cabins_step_1_img1.png",
+              "description": "Page header logo"
+            },
+            {
+              "filename": "30_inner_cabins_step_1_img2.png",
+              "description": "Section title"
+            },
+            {
+              "filename": "30_inner_cabins_step_1_img3.png",
+              "description": "Step icon"
+            },
+            {
+              "filename": "30_inner_cabins_step_1_img4.png",
+              "description": "Support bar diagram"
+            },
+            {
+              "filename": "30_inner_cabins_step_1_img5.png",
+              "description": "Installation layout"
+            },
+            {
               "filename": "30_inner_cabins_step_1_img6.jpeg",
               "description": "Support bar installation (patient pods: x4 bars)"
+            },
+            {
+              "filename": "30_inner_cabins_step_1_img7.png",
+              "description": "Staff pod configuration"
             },
             {
               "filename": "30_inner_cabins_step_1_img8.jpeg",
@@ -749,6 +1081,26 @@
           "pdfStepReference": "Page 31, Steps 2.0-3.0",
           "purpose": "Install internal partitions and climate control",
           "images": [
+            {
+              "filename": "31_inner_cabins_step_2-4_img1.png",
+              "description": "Toggle button attachment method"
+            },
+            {
+              "filename": "31_inner_cabins_step_2-4_img2.png",
+              "description": "Connecting toggle buttons to plastic studs"
+            },
+            {
+              "filename": "31_inner_cabins_step_2-4_img3.png",
+              "description": "Page header logo"
+            },
+            {
+              "filename": "31_inner_cabins_step_2-4_img4.png",
+              "description": "Step icons"
+            },
+            {
+              "filename": "31_inner_cabins_step_2-4_img5.png",
+              "description": "Installation diagram"
+            },
             {
               "filename": "31_inner_cabins_step_2-4_img6.jpeg",
               "description": "Inner cabin bag"
@@ -772,16 +1124,24 @@
           "purpose": "Secure inner partitions to tent structure",
           "images": [
             {
-              "filename": "31_inner_cabins_step_2-4_img1.png",
-              "description": "Toggle button attachment method"
+              "filename": "32_inner_cabins_step_5-6_img1.png",
+              "description": "Page header logo"
             },
             {
-              "filename": "31_inner_cabins_step_2-4_img2.png",
-              "description": "Connecting toggle buttons to plastic studs"
+              "filename": "32_inner_cabins_step_5-6_img2.png",
+              "description": "Step icons"
+            },
+            {
+              "filename": "32_inner_cabins_step_5-6_img3.png",
+              "description": "Attachment sequence diagram"
             },
             {
               "filename": "32_inner_cabins_step_5-6_img4.jpeg",
               "description": "Toggle button connection close-up"
+            },
+            {
+              "filename": "32_inner_cabins_step_5-6_img5.png",
+              "description": "Connection detail"
             },
             {
               "filename": "32_inner_cabins_step_5-6_img6.jpeg",
@@ -814,6 +1174,10 @@
           "pdfStepReference": "Page 33, Electrical System Diagram",
           "purpose": "Provide power and lighting to IDTM facility",
           "images": [
+            {
+              "filename": "33_electrical_system_img1.png",
+              "description": "Page header logo"
+            },
             {
               "filename": "33_electrical_system_img2.png",
               "description": "Complete electrical system diagram"
