@@ -40,7 +40,8 @@ class InstallationStepDetailPage extends ConsumerWidget {
             return const Center(child: Text('Step not found'));
           }
 
-          final substeps = step.allSubsteps;
+          // Only include actual steps, not requirements
+          final substeps = step.steps ?? [];
 
           // Find substeps in flattened list for this section
           final sectionSubsteps = flattenedList

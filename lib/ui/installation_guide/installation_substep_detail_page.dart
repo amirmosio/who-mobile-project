@@ -105,7 +105,9 @@ class _InstallationSubstepDetailPageState
             orElse: () => throw Exception('Step not found'),
           );
 
-          final substep = step.allSubsteps.firstWhere(
+          // Only search in actual steps, not requirements
+          final substeps = step.steps ?? [];
+          final substep = substeps.firstWhere(
             (sub) => sub.id == widget.substepId,
             orElse: () => InstallationSubstepModel(
               id: '',

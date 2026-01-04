@@ -27,7 +27,8 @@ class FlattenedSubstepsHelper {
     int globalIndex = 0;
 
     for (final section in sections) {
-      final substeps = section.allSubsteps;
+      // Only include actual steps, not requirements
+      final substeps = section.steps ?? [];
       for (final substep in substeps) {
         flattened.add(
           FlattenedSubstepModel(

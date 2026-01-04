@@ -1,6 +1,6 @@
 {
   "title": "IDTM Installation Description",
-  "overview": "This document describes all installation steps for the IDTM (Infectious Disease Treatment Module) based on the AZF4-27 Inflatable Tent system. The IDTM consists of 3 tents (2 patient pods + 1 staff pod) with 4 vestibules, hard flooring, and sun shadowing nets.",
+  "overview": "This document describes all installation steps for the IDTM (Infectious Disease Treatment Module) based on the AZF4-27 Inflatable Tent system. The IDTM consists of 3 tents (2 patient pods + 1 staff pod) with 6 vestibules, hard flooring, and sun shadowing nets.",
   "sourceDocument": "EN-MAN-AZF4-27-WFP_User_Manual_DRAFT01 (1).pdf",
   "totalImages": 168,
   "imagePages": 26,
@@ -184,7 +184,7 @@
           "description": "Additional safety information"
         }
       ],
-      "subsections": [
+      "requirements": [
         {
           "id": "required-personnel",
           "title": "Required Personnel",
@@ -227,6 +227,17 @@
             "Minimum surface area: 276 m² (23m x 12m)",
             "Additional 2m safety perimeter around installation area"
           ]
+        },
+        {
+          "id": "safety-warnings",
+          "title": "Safety and Security Warnings",
+          "content": [
+            "Weather: Never install under wind speeds higher than 40 km/h",
+            "Snow: Tent designed for snow loads up to 15 kg/sqm - remove major accumulation immediately",
+            "Wind load: Sustained winds up to 100 km/h (120 km/h gusts) - Close all openings above 40 km/h",
+            "Rain: Select elevated site, dig drainage trench, avoid flooding areas",
+            "Temperature changes: Check pressure regularly, use automatic pressure monitoring if available"
+          ]
         }
       ]
     },
@@ -247,6 +258,7 @@
       ],
       "steps": [
         {
+          "id": "site-selection-step-1",
           "stepNumber": 1,
           "title": "Site Assessment",
           "purpose": "Ensure optimal stability and longevity of the tent system",
@@ -258,6 +270,7 @@
           ]
         },
         {
+          "id": "site-selection-step-2",
           "stepNumber": 2,
           "title": "Site Preparation",
           "purpose": "Prevent damage to tent materials and ensure proper drainage",
@@ -314,6 +327,7 @@
       ],
       "steps": [
         {
+          "id": "hard-floor-step-3-1",
           "stepNumber": 3.1,
           "title": "Position Floor Tiles Pallet",
           "purpose": "Establish base foundation for tent structure",
@@ -323,6 +337,7 @@
           ]
         },
         {
+          "id": "hard-floor-step-3-2",
           "stepNumber": 3.2,
           "title": "Lay Hard Floor",
           "purpose": "Create stable, level platform",
@@ -344,6 +359,7 @@
       "description": "Complete tent inflation and pressure monitoring setup",
       "steps": [
         {
+          "id": "tent-inflation-step-4-1",
           "stepNumber": 4.1,
           "title": "Position Tent Bags",
           "pdfStepReference": "Page 17, Steps 1.0-2.0",
@@ -387,13 +403,14 @@
             }
           ],
           "actions": [
-            "With TBD persons, place 3 bags next to installation area",
+            "With 2-3 persons, place 3 bags next to installation area",
             "Weight per bag: 245 kg - use proper lifting technique",
             "Place bags on hard floor in correct positions",
             "Open all 3 bags"
           ]
         },
         {
+          "id": "tent-inflation-step-4-2",
           "stepNumber": 4.2,
           "title": "Deploy Tents",
           "pdfStepReference": "Page 17-18, Steps 3.0-6.0",
@@ -437,6 +454,7 @@
           ]
         },
         {
+          "id": "tent-inflation-step-4-3",
           "stepNumber": 4.3,
           "title": "Locate Inflation Valves",
           "pdfStepReference": "Page 18, Step 7.0",
@@ -455,6 +473,7 @@
           ]
         },
         {
+          "id": "tent-inflation-step-4-4",
           "stepNumber": 4.4,
           "title": "Install Sun Shadowing Nets",
           "pdfStepReference": "Page 19, Step 8.0",
@@ -499,6 +518,7 @@
           ]
         },
         {
+          "id": "tent-inflation-step-4-5",
           "stepNumber": 4.5,
           "title": "Connect Electric Inflator",
           "pdfStepReference": "Page 19-20, Steps 9.0-11.0",
@@ -545,6 +565,7 @@
           ]
         },
         {
+          "id": "tent-inflation-step-4-6",
           "stepNumber": 4.6,
           "title": "Prepare Valves for Inflation",
           "pdfStepReference": "Page 20, Step 12.0",
@@ -560,6 +581,7 @@
           ]
         },
         {
+          "id": "tent-inflation-step-4-7",
           "stepNumber": 4.7,
           "title": "Connect Inflation Hoses",
           "pdfStepReference": "Page 20, Step 13.0",
@@ -572,6 +594,7 @@
           ]
         },
         {
+          "id": "tent-inflation-step-4-8",
           "stepNumber": 4.8,
           "title": "Inflate Tents",
           "pdfStepReference": "Page 21, Steps 14.0-15.0",
@@ -622,6 +645,7 @@
           ]
         },
         {
+          "id": "tent-inflation-step-4-9",
           "stepNumber": 4.9,
           "title": "Disconnect and Secure Valves",
           "pdfStepReference": "Page 22, Step 16.0",
@@ -663,6 +687,7 @@
           ]
         },
         {
+          "id": "tent-inflation-step-4-10",
           "stepNumber": 4.10,
           "title": "Install Pressure Monitoring System",
           "pdfStepReference": "Page 22-23, Steps 18.0-21.0",
@@ -714,6 +739,7 @@
           ]
         },
         {
+          "id": "tent-inflation-step-4-11",
           "stepNumber": 4.11,
           "title": "Enable Automatic Pressure Control",
           "pdfStepReference": "Page 23, Step 23.0",
@@ -738,6 +764,7 @@
           ]
         },
         {
+          "id": "tent-inflation-step-4-12",
           "stepNumber": 4.12,
           "title": "Final Tent Positioning",
           "pdfStepReference": "Page 24, Step 24.0",
@@ -769,13 +796,46 @@
       ]
     },
     {
+      "id": "main-tent-anchoring",
+      "title": "Main Tent Anchoring",
+      "pdfReference": "Page 29 | Section 3.6",
+      "description": "Securing main tents to ground for wind resistance",
+      "steps": [
+        {
+          "id": "main-tent-anchoring-step-6-1",
+          "stepNumber": 6.1,
+          "title": "Anchor Main Tents to Ground",
+          "pdfStepReference": "Page 29, Steps 12.0-13.0",
+          "purpose": "Secure main tents to ground for wind resistance up to 100 km/h",
+          "pegTypes": {
+            "30cm": {
+              "use": "For groundsheet loop ropes",
+              "quantity": "x12 per tent"
+            },
+            "50cm": {
+              "use": "For guy ropes",
+              "distance": "~1.5m from tent"
+            }
+          },
+          "bestPractice": "Roll rope around peg for optimal tension/adhesion",
+          "actions": [
+            "Locate bag containing tent pegs and hammer",
+            "Use 30cm T-pegs for groundsheet loop ropes - Insert at appropriate distance for good tension - Roll rope around peg",
+            "Use 50cm T-pegs for guy ropes - Insert at ~1.5m from tent - Roll rope around peg",
+            "Adjust tension using cleat tensioners"
+          ]
+        }
+      ]
+    },
+    {
       "id": "vestibules",
       "title": "Vestibules Inflation and Connection",
       "pdfReference": "Pages 25-29 | Section 3.7",
       "description": "Vestibule deployment, inflation, and connection procedures",
       "steps": [
         {
-          "stepNumber": 5.1,
+          "id": "vestibules-step-7-1",
+          "stepNumber": 7.1,
           "title": "Position Vestibule Bags",
           "pdfStepReference": "Page 25, Steps 1.0-2.0",
           "purpose": "Prepare vestibule structures for deployment",
@@ -818,14 +878,14 @@
             }
           ],
           "actions": [
-            "With TBD persons, place 6 vestibule bags next to installation area",
-            "Weight per bag: TBD kg",
+            "With 2-3 persons, place 6 vestibule bags next to installation area",
             "Place bags on hard floor",
             "Open all 6 bags"
           ]
         },
         {
-          "stepNumber": 5.2,
+          "id": "vestibules-step-7-2",
+          "stepNumber": 7.2,
           "title": "Deploy Vestibules",
           "pdfStepReference": "Page 25-26, Steps 3.0-6.0",
           "purpose": "Unroll and position vestibule structures",
@@ -868,7 +928,8 @@
           ]
         },
         {
-          "stepNumber": 5.3,
+          "id": "vestibules-step-7-3",
+          "stepNumber": 7.3,
           "title": "Prepare Vestibule Valves",
           "pdfStepReference": "Page 26, Step 7.0",
           "purpose": "Ready vestibules for inflation",
@@ -877,7 +938,8 @@
           ]
         },
         {
-          "stepNumber": 5.4,
+          "id": "vestibules-step-7-4",
+          "stepNumber": 7.4,
           "title": "Inflate Vestibules",
           "pdfStepReference": "Page 26-27, Steps 8.0-9.0",
           "purpose": "Erect vestibule structures",
@@ -921,7 +983,8 @@
           ]
         },
         {
-          "stepNumber": 5.5,
+          "id": "vestibules-step-7-5",
+          "stepNumber": 7.5,
           "title": "Connect Vestibules to Main Tents",
           "pdfStepReference": "Page 28, Step 11.0",
           "purpose": "Create integrated tent system",
@@ -967,7 +1030,8 @@
           ]
         },
         {
-          "stepNumber": 5.6,
+          "id": "vestibules-step-7-6",
+          "stepNumber": 7.6,
           "title": "Anchor Vestibules",
           "pdfStepReference": "Page 29, Steps 12.0-13.0",
           "purpose": "Secure vestibules to ground",
@@ -1028,7 +1092,8 @@
       "description": "Inner cabin installation procedures",
       "steps": [
         {
-          "stepNumber": 6.1,
+          "id": "inner-cabins-step-8-1",
+          "stepNumber": 8.1,
           "title": "Install Support Bars",
           "pdfStepReference": "Page 30, Step 1.0",
           "purpose": "Create framework for inner cabins",
@@ -1076,7 +1141,8 @@
           ]
         },
         {
-          "stepNumber": 6.2,
+          "id": "inner-cabins-step-8-2",
+          "stepNumber": 8.2,
           "title": "Deploy Inner Cabin Liners",
           "pdfStepReference": "Page 31, Steps 2.0-3.0",
           "purpose": "Install internal partitions and climate control",
@@ -1118,7 +1184,8 @@
           ]
         },
         {
-          "stepNumber": 6.3,
+          "id": "inner-cabins-step-8-3",
+          "stepNumber": 8.3,
           "title": "Attach Inner Cabins to Frame",
           "pdfStepReference": "Page 31-32, Steps 4.0-6.0",
           "purpose": "Secure inner partitions to tent structure",
@@ -1169,7 +1236,8 @@
       "description": "Electrical system and lighting installation",
       "steps": [
         {
-          "stepNumber": 7.1,
+          "id": "electrical-system-step-9-1",
+          "stepNumber": 9.1,
           "title": "Electrical System Overview",
           "pdfStepReference": "Page 33, Electrical System Diagram",
           "purpose": "Provide power and lighting to IDTM facility",
@@ -1201,7 +1269,8 @@
           ]
         },
         {
-          "stepNumber": 7.2,
+          "id": "electrical-system-step-9-2",
+          "stepNumber": 9.2,
           "title": "Install Electrical Distribution",
           "purpose": "Create power distribution network",
           "actions": [
@@ -1212,7 +1281,8 @@
           ]
         },
         {
-          "stepNumber": 7.3,
+          "id": "electrical-system-step-9-3",
+          "stepNumber": 9.3,
           "title": "Install LED Lighting System",
           "purpose": "Provide interior illumination",
           "actions": [
@@ -1232,7 +1302,8 @@
       "description": "Final verification and system activation",
       "steps": [
         {
-          "stepNumber": 8.1,
+          "id": "final-inspection-step-10-1",
+          "stepNumber": 10.1,
           "title": "Final Inspection Checklist",
           "pdfStepReference": "Section 3.7 (Page 29) and Section 4.1 PMI 1 (Page 39)",
           "purpose": "Ensure complete and proper installation",
@@ -1251,7 +1322,8 @@
           ]
         },
         {
-          "stepNumber": 8.2,
+          "id": "final-inspection-step-10-2",
+          "stepNumber": 10.2,
           "title": "System Activation",
           "purpose": "Complete installation and begin operational readiness",
           "finalActions": [
