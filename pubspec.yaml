@@ -116,6 +116,11 @@ dependencies:
   # PDF Viewer
   pdfx: ^2.6.0
 
+  # Firebase
+  firebase_core: ^3.8.1
+  firebase_auth: ^5.3.4
+  cloud_firestore: ^5.6.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

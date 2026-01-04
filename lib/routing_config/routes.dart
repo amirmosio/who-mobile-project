@@ -10,6 +10,10 @@ class YRRoutes {
   static const resetPassword = "/reset-password";
   static const resetPasswordSuccess = "/reset-password-success";
 
+  /// Admin pages
+  static const adminLogin = "/admin/login";
+  static const adminPanel = "/admin/panel";
+
   /// nav bar pages
   static const dashBoard = "/dashboard";
   static const blog = "/blog";
