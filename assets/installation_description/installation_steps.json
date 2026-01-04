@@ -2,192 +2,31 @@
   "title": "IDTM Installation Description",
   "overview": "This document describes all installation steps for the IDTM (Infectious Disease Treatment Module) based on the AZF4-27 Inflatable Tent system. The IDTM consists of 3 tents (2 patient pods + 1 staff pod) with 6 vestibules, hard flooring, and sun shadowing nets.",
   "sourceDocument": "EN-MAN-AZF4-27-WFP_User_Manual_DRAFT01 (1).pdf",
-  "totalImages": 168,
-  "imagePages": 26,
-  "coverImages": [
-    {
-      "filename": "01_cover_idtm_general_view_img1.png",
-      "description": "IDTM cover page logo"
-    },
-    {
-      "filename": "01_cover_idtm_general_view_img2.png",
-      "description": "Cover page graphic element"
-    },
-    {
-      "filename": "01_cover_idtm_general_view_img3.png",
-      "description": "Cover page graphic element"
-    },
-    {
-      "filename": "01_cover_idtm_general_view_img4.png",
-      "description": "Cover page graphic element"
-    },
-    {
-      "filename": "01_cover_idtm_general_view_img5.png",
-      "description": "Cover page graphic element"
-    },
-    {
-      "filename": "01_cover_idtm_general_view_img6.png",
-      "description": "Cover page graphic element"
-    },
-    {
-      "filename": "01_cover_idtm_general_view_img7.png",
-      "description": "Cover page graphic element"
-    },
-    {
-      "filename": "01_cover_idtm_general_view_img8.jpeg",
-      "description": "IDTM general view photo"
-    }
-  ],
-  "overviewImages": [
-    {
-      "filename": "07_idtm_general_view_img1.png",
-      "description": "IDTM logo"
-    },
-    {
-      "filename": "07_idtm_general_view_img2.png",
-      "description": "IDTM layout diagram"
-    },
-    {
-      "filename": "07_idtm_general_view_img3.jpeg",
-      "description": "IDTM general view photo"
-    },
-    {
-      "filename": "08_idtm_exploded_view_img1.png",
-      "description": "Logo"
-    },
-    {
-      "filename": "08_idtm_exploded_view_img2.png",
-      "description": "IDTM exploded view label"
-    },
-    {
-      "filename": "08_idtm_exploded_view_img3.png",
-      "description": "IDTM exploded view diagram showing all components"
-    },
-    {
-      "filename": "09_idtm_dimensions_1_img1.png",
-      "description": "Logo"
-    },
-    {
-      "filename": "09_idtm_dimensions_1_img2.png",
-      "description": "Dimensions page label"
-    },
-    {
-      "filename": "09_idtm_dimensions_1_img3.png",
-      "description": "Top view dimensions diagram"
-    },
-    {
-      "filename": "09_idtm_dimensions_1_img4.jpeg",
-      "description": "3D perspective view"
-    },
-    {
-      "filename": "09_idtm_dimensions_1_img5.png",
-      "description": "Dimension detail 1"
-    },
-    {
-      "filename": "09_idtm_dimensions_1_img6.png",
-      "description": "Dimension detail 2"
-    },
-    {
-      "filename": "09_idtm_dimensions_1_img7.png",
-      "description": "Dimension detail 3"
-    },
-    {
-      "filename": "09_idtm_dimensions_1_img8.png",
-      "description": "Dimension detail 4"
-    },
-    {
-      "filename": "09_idtm_dimensions_1_img9.jpeg",
-      "description": "Additional 3D view"
-    },
-    {
-      "filename": "10_idtm_dimensions_2_img1.png",
-      "description": "Logo"
-    },
-    {
-      "filename": "10_idtm_dimensions_2_img2.png",
-      "description": "Dimensions page 2 label"
-    },
-    {
-      "filename": "10_idtm_dimensions_2_img3.png",
-      "description": "Side view dimensions diagram"
-    }
-  ],
   "sections": [
     {
       "id": "pre-installation",
       "title": "Pre-Installation Requirements",
       "pdfReference": "Pages 13-14 | Section 3.1 & 3.2",
       "description": "Required conditions and safety warnings before installation",
-      "images": [
-        {
-          "filename": "13_required_conditions_img1.png",
-          "description": "Page header logo"
-        },
-        {
-          "filename": "13_required_conditions_img2.png",
-          "description": "Section title graphic"
-        },
-        {
-          "filename": "13_required_conditions_img3.png",
-          "description": "Required conditions icon"
-        },
-        {
-          "filename": "13_required_conditions_img4.png",
-          "description": "Personnel icon"
-        },
-        {
-          "filename": "13_required_conditions_img5.png",
-          "description": "Tools icon"
-        },
-        {
-          "filename": "13_required_conditions_img6.png",
-          "description": "Time icon"
-        },
-        {
-          "filename": "13_required_conditions_img7.png",
-          "description": "Climatic conditions icon"
-        },
-        {
-          "filename": "13_required_conditions_img8.png",
-          "description": "Space requirements icon"
-        },
-        {
-          "filename": "13_required_conditions_img9.png",
-          "description": "Additional requirement icon"
-        },
-        {
-          "filename": "13_required_conditions_img10.png",
-          "description": "Safety icon"
-        },
-        {
-          "filename": "13_required_conditions_img11.jpeg",
-          "description": "Required personnel (4 persons minimum)"
-        },
-        {
-          "filename": "13_required_conditions_img12.jpeg",
-          "description": "Required tools and equipment"
-        },
-        {
-          "filename": "13_required_conditions_img13.png",
-          "description": "Climatic conditions diagram"
-        },
-        {
-          "filename": "14_safety_warnings_img1.png",
-          "description": "Safety warning symbols"
-        },
-        {
-          "filename": "14_safety_warnings_img2.png",
-          "description": "Visual inspection requirements"
-        },
-        {
-          "filename": "14_safety_warnings_img3.png",
-          "description": "Additional safety information"
-        }
-      ],
+      "images": [],
       "requirements": [
         {
           "id": "required-personnel",
           "title": "Required Personnel",
+          "images": [
+            {
+              "filename": "13_required_conditions_img3.png",
+              "description": "Required conditions icon"
+            },
+            {
+              "filename": "13_required_conditions_img4.png",
+              "description": "Personnel icon"
+            },
+            {
+              "filename": "13_required_conditions_img11.jpeg",
+              "description": "Required personnel (4 persons minimum)"
+            }
+          ],
           "content": [
             "4 persons minimum for safe installation",
             "Training recommended for all personnel"
@@ -196,6 +35,16 @@
         {
           "id": "required-tools",
           "title": "Required Tools and Equipment",
+          "images": [
+            {
+              "filename": "13_required_conditions_img5.png",
+              "description": "Tools icon"
+            },
+            {
+              "filename": "13_required_conditions_img12.jpeg",
+              "description": "Required tools and equipment"
+            }
+          ],
           "content": [
             "Power source (with extension cable and schuko socket)",
             "Electric inflator (with 7m electrical cable - schuko socket)",
@@ -206,6 +55,12 @@
         {
           "id": "time-requirements",
           "title": "Time Requirements",
+          "images": [
+            {
+              "filename": "13_required_conditions_img6.png",
+              "description": "Time icon"
+            }
+          ],
           "content": [
             "Per tent: ~5 minutes inflation",
             "Complete system: ~4 hours total installation"
@@ -214,6 +69,16 @@
         {
           "id": "climatic-conditions",
           "title": "Climatic Conditions",
+          "images": [
+            {
+              "filename": "13_required_conditions_img7.png",
+              "description": "Climatic conditions icon"
+            },
+            {
+              "filename": "13_required_conditions_img13.png",
+              "description": "Climatic conditions diagram"
+            }
+          ],
           "content": [
             "Wind: Maximum 40 km/h during installation",
             "Temperature: +5°C or higher desirable (unless special dispensation)",
@@ -223,6 +88,12 @@
         {
           "id": "required-space",
           "title": "Required Space",
+          "images": [
+            {
+              "filename": "13_required_conditions_img8.png",
+              "description": "Space requirements icon"
+            }
+          ],
           "content": [
             "Minimum surface area: 276 m² (23m x 12m)",
             "Additional 2m safety perimeter around installation area"
@@ -231,6 +102,28 @@
         {
           "id": "safety-warnings",
           "title": "Safety and Security Warnings",
+          "images": [
+            {
+              "filename": "13_required_conditions_img9.png",
+              "description": "Additional requirement icon"
+            },
+            {
+              "filename": "13_required_conditions_img10.png",
+              "description": "Safety icon"
+            },
+            {
+              "filename": "14_safety_warnings_img1.png",
+              "description": "Safety warning symbols"
+            },
+            {
+              "filename": "14_safety_warnings_img2.png",
+              "description": "Visual inspection requirements"
+            },
+            {
+              "filename": "14_safety_warnings_img3.png",
+              "description": "Additional safety information"
+            }
+          ],
           "content": [
             "Weather: Never install under wind speeds higher than 40 km/h",
             "Snow: Tent designed for snow loads up to 15 kg/sqm - remove major accumulation immediately",
@@ -246,16 +139,6 @@
       "title": "Installation Site Selection and Preparation",
       "pdfReference": "Page 15 | Section 3.3",
       "description": "Site assessment and preparation procedures",
-      "images": [
-        {
-          "filename": "15_site_preparation_img1.png",
-          "description": "Site preparation page header"
-        },
-        {
-          "filename": "15_site_preparation_img2.png",
-          "description": "Site preparation guidelines"
-        }
-      ],
       "steps": [
         {
           "id": "site-selection-step-1",
@@ -291,46 +174,27 @@
       "title": "Hard Floor Installation",
       "pdfReference": "Page 16 | Section 3.4",
       "description": "Hard floor installation procedures",
-      "images": [
-        {
-          "filename": "16_hard_floor_installation_img1.png",
-          "description": "Page header logo"
-        },
-        {
-          "filename": "16_hard_floor_installation_img2.png",
-          "description": "Hard floor section title"
-        },
-        {
-          "filename": "16_hard_floor_installation_img3.png",
-          "description": "Floor installation icon"
-        },
-        {
-          "filename": "16_hard_floor_installation_img4.jpeg",
-          "description": "Pallet of floor tiles"
-        },
-        {
-          "filename": "16_hard_floor_installation_img5.png",
-          "description": "Floor layout configuration (17m x 8m)"
-        },
-        {
-          "filename": "16_hard_floor_installation_img6.jpeg",
-          "description": "Pallet placement diagram"
-        },
-        {
-          "filename": "16_hard_floor_installation_img7.png",
-          "description": "Floor tile detail"
-        },
-        {
-          "filename": "16_hard_floor_installation_img8.jpeg",
-          "description": "Floor tile installation showing layout pattern"
-        }
-      ],
+      "images": [],
       "steps": [
         {
           "id": "hard-floor-step-3-1",
           "stepNumber": 3.1,
           "title": "Position Floor Tiles Pallet",
           "purpose": "Establish base foundation for tent structure",
+          "images": [
+            {
+              "filename": "16_hard_floor_installation_img3.png",
+              "description": "Floor installation icon"
+            },
+            {
+              "filename": "16_hard_floor_installation_img4.jpeg",
+              "description": "Pallet of floor tiles"
+            },
+            {
+              "filename": "16_hard_floor_installation_img6.jpeg",
+              "description": "Pallet placement diagram"
+            }
+          ],
           "actions": [
             "Use pallet truck to position tiles pallet next to installation area",
             "Weight: ~180 kg per pallet - use appropriate lifting equipment"
@@ -343,6 +207,20 @@
           "purpose": "Create stable, level platform",
           "layoutConfiguration": "[3 tiles] [9 tiles] [3 tiles] [8 tiles]\n[31 tiles] [10 tiles] [31 tiles]",
           "dimensions": "17m x 8m total area",
+          "images": [
+            {
+              "filename": "16_hard_floor_installation_img5.png",
+              "description": "Floor layout configuration (17m x 8m)"
+            },
+            {
+              "filename": "16_hard_floor_installation_img7.png",
+              "description": "Floor tile detail"
+            },
+            {
+              "filename": "16_hard_floor_installation_img8.jpeg",
+              "description": "Floor tile installation showing layout pattern"
+            }
+          ],
           "actions": [
             "Install hard floor tiles according to layout diagram",
             "Ensure tiles interlock properly",
@@ -365,14 +243,6 @@
           "pdfStepReference": "Page 17, Steps 1.0-2.0",
           "purpose": "Prepare tents for deployment",
           "images": [
-            {
-              "filename": "17_tent_inflation_step_1-2_img1.png",
-              "description": "Page header logo"
-            },
-            {
-              "filename": "17_tent_inflation_step_1-2_img2.png",
-              "description": "Section title"
-            },
             {
               "filename": "17_tent_inflation_step_1-2_img3.png",
               "description": "Step number icon"
@@ -416,10 +286,6 @@
           "pdfStepReference": "Page 17-18, Steps 3.0-6.0",
           "purpose": "Unroll and position tent structures",
           "images": [
-            {
-              "filename": "18_tent_inflation_step_3-7_img1.png",
-              "description": "Page header logo"
-            },
             {
               "filename": "18_tent_inflation_step_3-7_img2.png",
               "description": "Step icons"
@@ -502,10 +368,6 @@
             {
               "filename": "19_tent_inflation_step_8-9_img6.jpeg",
               "description": "Complete sun shadowing installation"
-            },
-            {
-              "filename": "19_tent_inflation_step_8-9_img7.png",
-              "description": "Electric inflator unit"
             }
           ],
           "actions": [
@@ -525,6 +387,10 @@
           "purpose": "Prepare inflation equipment",
           "images": [
             {
+              "filename": "19_tent_inflation_step_8-9_img7.png",
+              "description": "Electric inflator unit"
+            },
+            {
               "filename": "20_tent_inflation_step_10-13_img1.png",
               "description": "Inflator with manifold attached"
             },
@@ -543,18 +409,6 @@
             {
               "filename": "20_tent_inflation_step_10-13_img5.jpeg",
               "description": "Removing valve protective caps"
-            },
-            {
-              "filename": "20_tent_inflation_step_10-13_img6.png",
-              "description": "Valve states diagram (CLOSED vs OPEN)"
-            },
-            {
-              "filename": "20_tent_inflation_step_10-13_img7.jpeg",
-              "description": "Closing valve by turning clockwise"
-            },
-            {
-              "filename": "20_tent_inflation_step_10-13_img8.jpeg",
-              "description": "Verifying valve is closed"
             }
           ],
           "actions": [
@@ -575,6 +429,20 @@
             "closed": "Central spring pin is UP (~1cm below rim) ✓",
             "open": "Central spring pin is DOWN ✗"
           },
+          "images": [
+            {
+              "filename": "20_tent_inflation_step_10-13_img6.png",
+              "description": "Valve states diagram (CLOSED vs OPEN)"
+            },
+            {
+              "filename": "20_tent_inflation_step_10-13_img7.jpeg",
+              "description": "Closing valve by turning clockwise"
+            },
+            {
+              "filename": "20_tent_inflation_step_10-13_img8.jpeg",
+              "description": "Verifying valve is closed"
+            }
+          ],
           "actions": [
             "Close all open valves by: pushing central pin DOWN and turning valve tappet CLOCKWISE",
             "Verify all valves are closed (pin should be UP)"
@@ -600,10 +468,6 @@
           "pdfStepReference": "Page 21, Steps 14.0-15.0",
           "purpose": "Erect tent structure to operating pressure",
           "images": [
-            {
-              "filename": "21_tent_inflation_step_14-15_img1.png",
-              "description": "Page header logo"
-            },
             {
               "filename": "21_tent_inflation_step_14-15_img2.png",
               "description": "Step icons"
@@ -688,15 +552,11 @@
         },
         {
           "id": "tent-inflation-step-4-10",
-          "stepNumber": 4.10,
+          "stepNumber": 4.1,
           "title": "Install Pressure Monitoring System",
           "pdfStepReference": "Page 22-23, Steps 18.0-21.0",
           "purpose": "Enable automatic pressure maintenance",
           "images": [
-            {
-              "filename": "23_tent_inflation_step_19-23_img1.png",
-              "description": "Page header logo"
-            },
             {
               "filename": "23_tent_inflation_step_19-23_img2.png",
               "description": "Step icons"
@@ -771,10 +631,6 @@
           "purpose": "Ensure proper groundsheet alignment",
           "images": [
             {
-              "filename": "24_tent_inflation_step_24_img1.png",
-              "description": "Page header logo"
-            },
-            {
               "filename": "24_tent_inflation_step_24_img2.png",
               "description": "Step icon"
             },
@@ -841,14 +697,6 @@
           "purpose": "Prepare vestibule structures for deployment",
           "images": [
             {
-              "filename": "25_vestibules_step_1-4_img1.png",
-              "description": "Page header logo"
-            },
-            {
-              "filename": "25_vestibules_step_1-4_img2.png",
-              "description": "Section title"
-            },
-            {
               "filename": "25_vestibules_step_1-4_img3.png",
               "description": "Step icons"
             },
@@ -867,14 +715,6 @@
             {
               "filename": "25_vestibules_step_1-4_img7.jpeg",
               "description": "Placing bags on hard floor"
-            },
-            {
-              "filename": "25_vestibules_step_1-4_img8.png",
-              "description": "Opening vestibule bag"
-            },
-            {
-              "filename": "25_vestibules_step_1-4_img9.png",
-              "description": "Rolling out vestibule"
             }
           ],
           "actions": [
@@ -891,8 +731,12 @@
           "purpose": "Unroll and position vestibule structures",
           "images": [
             {
-              "filename": "26_vestibules_step_5-7_img1.png",
-              "description": "Page header logo"
+              "filename": "25_vestibules_step_1-4_img8.png",
+              "description": "Opening vestibule bag"
+            },
+            {
+              "filename": "25_vestibules_step_1-4_img9.png",
+              "description": "Rolling out vestibule"
             },
             {
               "filename": "26_vestibules_step_5-7_img2.png",
@@ -905,18 +749,6 @@
             {
               "filename": "26_vestibules_step_5-7_img4.jpeg",
               "description": "Spreading vestibule by corner loops"
-            },
-            {
-              "filename": "26_vestibules_step_5-7_img5.png",
-              "description": "Removing valve protective caps"
-            },
-            {
-              "filename": "26_vestibules_step_5-7_img6.png",
-              "description": "Connecting inflator to vestibule"
-            },
-            {
-              "filename": "26_vestibules_step_5-7_img7.png",
-              "description": "Inflator ON"
             }
           ],
           "actions": [
@@ -933,6 +765,12 @@
           "title": "Prepare Vestibule Valves",
           "pdfStepReference": "Page 26, Step 7.0",
           "purpose": "Ready vestibules for inflation",
+          "images": [
+            {
+              "filename": "26_vestibules_step_5-7_img5.png",
+              "description": "Removing valve protective caps"
+            }
+          ],
           "actions": [
             "Remove protective caps from inflation valves (turn counterclockwise)"
           ]
@@ -945,8 +783,12 @@
           "purpose": "Erect vestibule structures",
           "images": [
             {
-              "filename": "27_vestibules_step_8-10_img1.png",
-              "description": "Page header logo"
+              "filename": "26_vestibules_step_5-7_img6.png",
+              "description": "Connecting inflator to vestibule"
+            },
+            {
+              "filename": "26_vestibules_step_5-7_img7.png",
+              "description": "Inflator ON"
             },
             {
               "filename": "27_vestibules_step_8-10_img2.png",
@@ -990,10 +832,6 @@
           "purpose": "Create integrated tent system",
           "images": [
             {
-              "filename": "28_vestibules_step_11_img1.png",
-              "description": "Page header logo"
-            },
-            {
               "filename": "28_vestibules_step_11_img2.png",
               "description": "Step icon"
             },
@@ -1036,10 +874,6 @@
           "pdfStepReference": "Page 29, Steps 12.0-13.0",
           "purpose": "Secure vestibules to ground",
           "images": [
-            {
-              "filename": "29_vestibules_step_12-13_img1.png",
-              "description": "Page header logo"
-            },
             {
               "filename": "29_vestibules_step_12-13_img2.png",
               "description": "Step icons"
@@ -1099,14 +933,6 @@
           "purpose": "Create framework for inner cabins",
           "images": [
             {
-              "filename": "30_inner_cabins_step_1_img1.png",
-              "description": "Page header logo"
-            },
-            {
-              "filename": "30_inner_cabins_step_1_img2.png",
-              "description": "Section title"
-            },
-            {
               "filename": "30_inner_cabins_step_1_img3.png",
               "description": "Step icon"
             },
@@ -1156,10 +982,6 @@
               "description": "Connecting toggle buttons to plastic studs"
             },
             {
-              "filename": "31_inner_cabins_step_2-4_img3.png",
-              "description": "Page header logo"
-            },
-            {
               "filename": "31_inner_cabins_step_2-4_img4.png",
               "description": "Step icons"
             },
@@ -1190,10 +1012,6 @@
           "pdfStepReference": "Page 31-32, Steps 4.0-6.0",
           "purpose": "Secure inner partitions to tent structure",
           "images": [
-            {
-              "filename": "32_inner_cabins_step_5-6_img1.png",
-              "description": "Page header logo"
-            },
             {
               "filename": "32_inner_cabins_step_5-6_img2.png",
               "description": "Step icons"
@@ -1242,10 +1060,6 @@
           "pdfStepReference": "Page 33, Electrical System Diagram",
           "purpose": "Provide power and lighting to IDTM facility",
           "images": [
-            {
-              "filename": "33_electrical_system_img1.png",
-              "description": "Page header logo"
-            },
             {
               "filename": "33_electrical_system_img2.png",
               "description": "Complete electrical system diagram"

@@ -252,6 +252,72 @@ class InstallationStepDetailPage extends ConsumerWidget {
                                     ],
                                   ),
                                   const SizedBox(height: 8),
+
+                                  // Requirement Images
+                                  if (requirement.images != null && requirement.images!.isNotEmpty) ...[
+                                    const SizedBox(height: 12),
+                                    SizedBox(
+                                      height: 180,
+                                      child: ListView.builder(
+                                        scrollDirection: Axis.horizontal,
+                                        itemCount: requirement.images!.length,
+                                        itemBuilder: (context, imgIndex) {
+                                          final image = requirement.images![imgIndex];
+                                          final imagePath = ref
+                                              .read(installationDataProvider.notifier)
+                                              .getImagePath(image.filename);
+
+                                          return Card(
+                                            margin: const EdgeInsets.only(right: 12),
+                                            child: Container(
+                                              width: 200,
+                                              padding: const EdgeInsets.all(8),
+                                              child: Column(
+                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                children: [
+                                                  Expanded(
+                                                    child: Image.asset(
+                                                      imagePath,
+                                                      fit: BoxFit.contain,
+                                                      errorBuilder:
+                                                          (context, error, stackTrace) {
+                                                            return const Center(
+                                                              child: Column(
+                                                                mainAxisAlignment:
+                                                                    MainAxisAlignment.center,
+                                                                children: [
+                                                                  Icon(
+                                                                    Icons.broken_image,
+                                                                    size: 32,
+                                                                  ),
+                                                                  SizedBox(height: 4),
+                                                                  Text(
+                                                                    'Image not found',
+                                                                    style: TextStyle(fontSize: 10),
+                                                                  ),
+                                                                ],
+                                                              ),
+                                                            );
+                                                          },
+                                                    ),
+                                                  ),
+                                                  const SizedBox(height: 4),
+                                                  Text(
+                                                    image.description ?? "-",
+                                                    style: Theme.of(context).textTheme.bodySmall,
+                                                    maxLines: 2,
+                                                    overflow: TextOverflow.ellipsis,
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          );
+                                        },
+                                      ),
+                                    ),
+                                    const SizedBox(height: 12),
+                                  ],
+
                                   ...requirement.content.map(
                                     (item) => Padding(
                                       padding: const EdgeInsets.only(
