@@ -21,6 +21,7 @@ class YRRoutes {
 
   /// IDTM pages
   static const idtmHome = "/idtm";
+  static const whatIsIdtm = "/what-is-idtm";
   static const idtmFacilityList = "/idtm/facilities";
   static const idtmFacilityDetail = "/idtm/facility/:facilityId";
   static const idtmInstallationsList = "/idtm/installations";

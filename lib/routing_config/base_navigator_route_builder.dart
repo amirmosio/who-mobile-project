@@ -27,6 +27,7 @@ import 'package:who_mobile_project/ui/profile_and_settings/profile_menu_page.dar
 import 'package:who_mobile_project/ui/idtm/packing_list_page.dart';
 import 'package:who_mobile_project/ui/idtm/maintenance_page.dart';
 import 'package:who_mobile_project/ui/idtm/dismantling_page.dart';
+import 'package:who_mobile_project/ui/dashboard/pages/what_is_idtm_page.dart';
 
 GoRouter baseNavRouterBuilder() {
   final homeGlobalKey = GlobalKey<NavigatorState>(debugLabel: "homeGlobalKey");
@@ -104,6 +105,14 @@ GoRouter baseNavRouterBuilder() {
         name: YRRoutes.adminPanel,
         pageBuilder: (context, state) =>
             const MaterialPage(child: AdminPanelPage()),
+      ),
+
+      // What is IDTM Route
+      GoRoute(
+        path: YRRoutes.whatIsIdtm,
+        name: YRRoutes.whatIsIdtm,
+        pageBuilder: (context, state) =>
+            const MaterialPage(child: WhatIsIdtmPage()),
       ),
 
       // Installation Guide Routes
