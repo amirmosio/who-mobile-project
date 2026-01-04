@@ -1,3 +1,5 @@
+import 'dismantling_image_model.dart';
+
 class DismantlingSubstepModel {
   final String id;
   final int stepNumber;
@@ -6,6 +8,7 @@ class DismantlingSubstepModel {
   final List<String> actions;
   final String? criticalWarning;
   final String? criticalNote;
+  final List<DismantlingImageModel>? images;
 
   DismantlingSubstepModel({
     required this.id,
@@ -15,6 +18,7 @@ class DismantlingSubstepModel {
     required this.actions,
     this.criticalWarning,
     this.criticalNote,
+    this.images,
   });
 
   factory DismantlingSubstepModel.fromJson(Map<String, dynamic> json) {
@@ -28,6 +32,11 @@ class DismantlingSubstepModel {
           .toList(),
       criticalWarning: json['criticalWarning'] as String?,
       criticalNote: json['criticalNote'] as String?,
+      images: (json['images'] as List<dynamic>?)
+          ?.map(
+            (e) => DismantlingImageModel.fromJson(e as Map<String, dynamic>),
+          )
+          .toList(),
     );
   }
 
@@ -40,6 +49,7 @@ class DismantlingSubstepModel {
       'actions': actions,
       if (criticalWarning != null) 'criticalWarning': criticalWarning,
       if (criticalNote != null) 'criticalNote': criticalNote,
+      if (images != null) 'images': images!.map((e) => e.toJson()).toList(),
     };
   }
 }

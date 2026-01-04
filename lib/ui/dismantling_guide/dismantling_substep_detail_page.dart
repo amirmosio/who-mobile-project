@@ -276,6 +276,87 @@ class _DismantlingSubstepDetailPageState
                     ),
                   ),
 
+                // Images
+                if (substep.images != null && substep.images!.isNotEmpty)
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 20),
+                        child: Text(
+                          'Images',
+                          style: Theme.of(context).textTheme.titleLarge
+                              ?.copyWith(fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      const SizedBox(height: 12),
+                      SizedBox(
+                        height: 220,
+                        child: ListView.builder(
+                          scrollDirection: Axis.horizontal,
+                          padding: const EdgeInsets.symmetric(horizontal: 16),
+                          itemCount: substep.images!.length,
+                          itemBuilder: (context, index) {
+                            final image = substep.images![index];
+                            final imagePath = ref
+                                .read(dismantlingDataProvider.notifier)
+                                .getImagePath(image.filename);
+
+                            return Card(
+                              margin: const EdgeInsets.only(right: 12),
+                              child: Container(
+                                width: 280,
+                                padding: const EdgeInsets.all(8),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Expanded(
+                                      child: Image.asset(
+                                        imagePath,
+                                        fit: BoxFit.contain,
+                                        errorBuilder:
+                                            (context, error, stackTrace) {
+                                          return Center(
+                                            child: Column(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                const Icon(
+                                                  Icons.broken_image,
+                                                  size: 48,
+                                                ),
+                                                const SizedBox(height: 8),
+                                                Text(
+                                                  'Image not found',
+                                                  style: Theme.of(
+                                                    context,
+                                                  ).textTheme.bodySmall,
+                                                ),
+                                              ],
+                                            ),
+                                          );
+                                        },
+                                      ),
+                                    ),
+                                    const SizedBox(height: 8),
+                                    Text(
+                                      image.description,
+                                      style:
+                                          Theme.of(context).textTheme.bodySmall,
+                                      maxLines: 2,
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            );
+                          },
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                    ],
+                  ),
+
                 // Critical Warning
                 if (substep.criticalWarning != null)
                   Padding(
