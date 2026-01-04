@@ -23,7 +23,8 @@ mixin InstallationStatusStorageMixin on BaseStorage {
   static const String _keyFacilityId = 'facility_id';
   static const String _keyFacilityName = 'facility_name';
   static const String _keyCompletedSteps = 'completed_installation_steps';
-  static const String _keyCompletedDismantlingSteps = 'completed_dismantling_steps';
+  static const String _keyCompletedDismantlingSteps =
+      'completed_dismantling_steps';
 
   // Phase management
 
@@ -93,6 +94,13 @@ mixin InstallationStatusStorageMixin on BaseStorage {
     required String facilityId,
     required String facilityName,
   }) async {
+    // Clear any previous progress before starting new installation
+    await clearCompletedSteps();
+    await clearCompletedDismantlingSteps();
+    await resetInstallationGuideProgress();
+    await resetDismantlingGuideProgress();
+
+    // Set new installation data
     await setInstallationId(installationId);
     await setFacilityId(facilityId);
     await setFacilityName(facilityName);
@@ -109,14 +117,24 @@ mixin InstallationStatusStorageMixin on BaseStorage {
     await setCurrentPhase(FacilityInstallationPhase.dismantling);
   }
 
-  /// Complete dismantling - reset to initial
+  /// Complete dismantling - transition to completed phase
   Future<void> completeDismantling() async {
+    await setCurrentPhase(FacilityInstallationPhase.completed);
+  }
+
+  /// Reset everything back to initial state
+  /// Use this when starting a completely new installation
+  Future<void> resetToInitial() async {
     await setCurrentPhase(FacilityInstallationPhase.initial);
     await setInstallationId(null);
     await setFacilityId(null);
     await setFacilityName(null);
+    // Clear IDTM installation step completion
     await clearCompletedSteps();
     await clearCompletedDismantlingSteps();
+    // Clear guide progress
+    await resetInstallationGuideProgress();
+    await resetDismantlingGuideProgress();
   }
 
   /// Reset all installation data
@@ -168,7 +186,9 @@ mixin InstallationStatusStorageMixin on BaseStorage {
 
   /// Get list of completed dismantling step IDs
   List<String> getCompletedDismantlingSteps() {
-    final stepsList = sharedPreferences.getStringList(_keyCompletedDismantlingSteps);
+    final stepsList = sharedPreferences.getStringList(
+      _keyCompletedDismantlingSteps,
+    );
     return stepsList ?? [];
   }
 
@@ -177,7 +197,10 @@ mixin InstallationStatusStorageMixin on BaseStorage {
     final completedSteps = getCompletedDismantlingSteps();
     if (!completedSteps.contains(stepId)) {
       completedSteps.add(stepId);
-      await sharedPreferences.setStringList(_keyCompletedDismantlingSteps, completedSteps);
+      await sharedPreferences.setStringList(
+        _keyCompletedDismantlingSteps,
+        completedSteps,
+      );
     }
   }
 
@@ -185,7 +208,10 @@ mixin InstallationStatusStorageMixin on BaseStorage {
   Future<void> markDismantlingStepIncomplete(String stepId) async {
     final completedSteps = getCompletedDismantlingSteps();
     completedSteps.remove(stepId);
-    await sharedPreferences.setStringList(_keyCompletedDismantlingSteps, completedSteps);
+    await sharedPreferences.setStringList(
+      _keyCompletedDismantlingSteps,
+      completedSteps,
+    );
   }
 
   /// Clear all completed dismantling steps
@@ -197,7 +223,8 @@ mixin InstallationStatusStorageMixin on BaseStorage {
   // Installation Guide Storage (Educational feature)
   // ============================================================================
 
-  static const _keyLastCompletedSubstepIndex = 'installation_last_completed_substep_index';
+  static const _keyLastCompletedSubstepIndex =
+      'installation_last_completed_substep_index';
 
   /// Get the last completed substep index (Installation Guide)
   /// Returns -1 if no substep has been completed yet
@@ -233,6 +260,54 @@ mixin InstallationStatusStorageMixin on BaseStorage {
   double getInstallationGuideProgress(int totalSubsteps) {
     if (totalSubsteps == 0) return 0.0;
     final completed = getCompletedSubstepsCount();
+    return (completed / totalSubsteps).clamp(0.0, 1.0);
+  }
+
+  // ============================================================================
+  // Dismantling Guide Storage (Educational feature)
+  // ============================================================================
+
+  static const _keyLastCompletedDismantlingSubstepIndex =
+      'dismantling_last_completed_substep_index';
+
+  /// Get the last completed substep index (Dismantling Guide)
+  /// Returns -1 if no substep has been completed yet
+  int getLastCompletedDismantlingSubstepIndex() {
+    return sharedPreferences.getInt(_keyLastCompletedDismantlingSubstepIndex) ??
+        -1;
+  }
+
+  /// Set the last completed substep index (Dismantling Guide)
+  /// This marks this substep and all previous substeps as completed
+  Future<void> setLastCompletedDismantlingSubstepIndex(int index) async {
+    await sharedPreferences.setInt(
+      _keyLastCompletedDismantlingSubstepIndex,
+      index,
+    );
+  }
+
+  /// Check if a substep is completed based on its index (Dismantling Guide)
+  /// A substep is completed if its index is <= last completed index
+  bool isDismantlingSubstepCompletedByIndex(int substepIndex) {
+    final lastCompleted = getLastCompletedDismantlingSubstepIndex();
+    return substepIndex <= lastCompleted;
+  }
+
+  /// Get count of completed substeps (Dismantling Guide)
+  int getCompletedDismantlingSubstepsCount() {
+    final lastCompleted = getLastCompletedDismantlingSubstepIndex();
+    return lastCompleted + 1; // +1 because index starts at 0
+  }
+
+  /// Reset all dismantling guide progress
+  Future<void> resetDismantlingGuideProgress() async {
+    await sharedPreferences.remove(_keyLastCompletedDismantlingSubstepIndex);
+  }
+
+  /// Get overall progress percentage for dismantling guide (0.0 to 1.0)
+  double getDismantlingGuideProgress(int totalSubsteps) {
+    if (totalSubsteps == 0) return 0.0;
+    final completed = getCompletedDismantlingSubstepsCount();
     return (completed / totalSubsteps).clamp(0.0, 1.0);
   }
 }

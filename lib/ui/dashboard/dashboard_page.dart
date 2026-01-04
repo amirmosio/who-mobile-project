@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:who_mobile_project/ui/dashboard/widgets/idtm_guide_card.dart';
-import 'package:who_mobile_project/ui/dashboard/widgets/installation_status_card.dart';
+import 'package:who_mobile_project/ui/dashboard/widgets/idtm_status_card.dart';
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({super.key});
@@ -11,7 +11,7 @@ class DashboardPage extends StatefulWidget {
 
 class _DashboardPageState extends State<DashboardPage>
     with WidgetsBindingObserver {
-  // Use a key to force rebuild of the installation status card
+  // Use a key to force rebuild of the IDTM status card
   Key _cardKey = UniqueKey();
 
   @override
@@ -55,8 +55,8 @@ class _DashboardPageState extends State<DashboardPage>
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Installation Status Card with unique key to force rebuild
-              InstallationStatusCard(
+              // IDTM Status Card with unique key to force rebuild
+              IdtmStatusCard(
                 key: _cardKey,
                 onStatusChanged: _refreshCard,
               ),

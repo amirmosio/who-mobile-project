@@ -75,7 +75,6 @@ dependencies:
   http_parser: ^4.1.2
   gif_view: ^1.0.2
   kalender: ^0.10.2
-  flutter_ringtone_player: ^4.0.0+4
   permission_handler: ^12.0.0+1
   #  flutter_webrtc: ^0.14.1
   #  flutter_ringtone_manager: ^1.1.2
@@ -165,6 +164,9 @@ flutter:
     # Installation Guide assets
     - assets/installation_description/
     - assets/installation_description/images/
+    # Dismantling Guide assets
+    - assets/dismantelling_description/
+    - assets/dismantelling_description/images/
     # - .env
   fonts:
     - family: BSIconFont

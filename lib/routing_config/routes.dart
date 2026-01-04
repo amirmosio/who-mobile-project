@@ -34,6 +34,12 @@ class YRRoutes {
   static const installationStepsList = "/installation-steps";
   static const installationStepDetail = "/installation-steps/:stepId";
   static const installationSubstepDetail = "/installation-steps/:stepId/substep/:substepId";
+
+  /// Dismantling Guide pages
+  static const dismantlingStepsList = "/dismantling-steps";
+  static const dismantlingStepDetail = "/dismantling-steps/:stepId";
+  static const dismantlingSubstepDetail = "/dismantling-steps/:stepId/substep/:substepId";
+
   /// Packing list pages
   static const idtmPackingList = "/idtm/packing-list";
   static const idtmMaintenance = "/idtm/maintenance/:installationId";

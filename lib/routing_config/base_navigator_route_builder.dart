@@ -14,6 +14,9 @@ import 'package:who_mobile_project/ui/auth_pages/reset_password/reset_password_s
 import 'package:who_mobile_project/ui/installation_guide/installation_steps_list_page.dart';
 import 'package:who_mobile_project/ui/installation_guide/installation_step_detail_page.dart';
 import 'package:who_mobile_project/ui/installation_guide/installation_substep_detail_page.dart';
+import 'package:who_mobile_project/ui/dismantling_guide/dismantling_steps_list_page.dart';
+import 'package:who_mobile_project/ui/dismantling_guide/dismantling_step_detail_page.dart';
+import 'package:who_mobile_project/ui/dismantling_guide/dismantling_substep_detail_page.dart';
 import 'routes.dart';
 import 'route_observer.dart';
 import 'package:who_mobile_project/services/navigation_tracker.dart';
@@ -120,20 +123,6 @@ GoRouter baseNavRouterBuilder() {
           );
         },
       ),
-      // IDTM Routes
-      GoRoute(
-        path: YRRoutes.idtmPackingList,
-        name: YRRoutes.idtmPackingList,
-        pageBuilder: (context, state) =>
-            const MaterialPage(child: PackingListPage()),
-      ),
-      GoRoute(
-        path: YRRoutes.idtmInstallationDetail,
-        name: YRRoutes.idtmInstallationDetail,
-        pageBuilder: (context, state) {
-          return const MaterialPage(child: InstallationStepsListPage());
-        },
-      ),
       GoRoute(
         path: YRRoutes.installationSubstepDetail,
         name: YRRoutes.installationSubstepDetail,
@@ -146,6 +135,53 @@ GoRouter baseNavRouterBuilder() {
               substepId: substepId,
             ),
           );
+        },
+      ),
+
+      // Dismantling Guide Routes
+      GoRoute(
+        path: YRRoutes.dismantlingStepsList,
+        name: YRRoutes.dismantlingStepsList,
+        pageBuilder: (context, state) =>
+            const MaterialPage(child: DismantlingStepsListPage()),
+      ),
+      GoRoute(
+        path: YRRoutes.dismantlingStepDetail,
+        name: YRRoutes.dismantlingStepDetail,
+        pageBuilder: (context, state) {
+          final stepId = state.pathParameters['stepId']!;
+          return MaterialPage(
+            child: DismantlingStepDetailPage(stepId: stepId),
+          );
+        },
+      ),
+      GoRoute(
+        path: YRRoutes.dismantlingSubstepDetail,
+        name: YRRoutes.dismantlingSubstepDetail,
+        pageBuilder: (context, state) {
+          final stepId = state.pathParameters['stepId']!;
+          final substepId = state.pathParameters['substepId']!;
+          return MaterialPage(
+            child: DismantlingSubstepDetailPage(
+              stepId: stepId,
+              substepId: substepId,
+            ),
+          );
+        },
+      ),
+
+      // IDTM Routes
+      GoRoute(
+        path: YRRoutes.idtmPackingList,
+        name: YRRoutes.idtmPackingList,
+        pageBuilder: (context, state) =>
+            const MaterialPage(child: PackingListPage()),
+      ),
+      GoRoute(
+        path: YRRoutes.idtmInstallationDetail,
+        name: YRRoutes.idtmInstallationDetail,
+        pageBuilder: (context, state) {
+          return const MaterialPage(child: InstallationStepsListPage());
         },
       ),
       GoRoute(
