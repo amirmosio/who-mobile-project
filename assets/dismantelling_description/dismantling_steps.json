@@ -1,0 +1,632 @@
+{
+  "title": "IDTM Dismantling Description",
+  "overview": "This document describes all dismantling steps for the IDTM (Infectious Disease Treatment Module) based on the AZF4-27 Inflatable Tent system. The IDTM consists of 3 tents (2 patient pods + 1 staff pod) with 6 vestibules, hard flooring, and sun shadowing nets. Dismantling consists of repeating the installation procedure in reverse order.",
+  "sourceDocument": "EN-MAN-AZF4-27-WFP_User_Manual_DRAFT01 (1).pdf",
+  "pdfReference": "Pages 34-38 | Section 3.11",
+  "totalImages": 47,
+  "imagePages": 9,
+  "requiredPersonnel": "2-3 persons minimum",
+  "estimatedTime": "Approximately 4 hours for complete system",
+  "sections": [
+    {
+      "id": "pre-dismantling",
+      "title": "Pre-Dismantling Requirements",
+      "pdfReference": "Page 34 | Section 3.11",
+      "description": "Required conditions and safety warnings before dismantling",
+      "images": [
+        {
+          "filename": "34_pre_dismantling_requirements_img1.png",
+          "description": "Pre-dismantling section header"
+        },
+        {
+          "filename": "34_pre_dismantling_requirements_img2.png",
+          "description": "Safety warning icon"
+        },
+        {
+          "filename": "34_pre_dismantling_requirements_img3.png",
+          "description": "Personnel requirements icon"
+        },
+        {
+          "filename": "34_pre_dismantling_requirements_img4.jpeg",
+          "description": "Weather conditions diagram"
+        },
+        {
+          "filename": "34_pre_dismantling_requirements_img5.png",
+          "description": "Safety checklist graphic"
+        },
+        {
+          "filename": "34_pre_dismantling_requirements_img6.png",
+          "description": "Preparation instructions graphic"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "personnel-requirements",
+          "title": "Personnel Requirements",
+          "content": [
+            "2-3 persons minimum for safe dismantling",
+            "Training recommended for all personnel"
+          ]
+        },
+        {
+          "id": "weather-requirements",
+          "title": "Weather Requirements",
+          "content": [
+            "Dismantling is strongly discouraged in case of strong winds or heavy rains",
+            "Wind: Maximum 40 km/h during dismantling"
+          ]
+        },
+        {
+          "id": "safety-warnings",
+          "title": "Safety and Preparation Warnings",
+          "content": [
+            "Ensure all accessories have been removed from inside the tent",
+            "Clean the groundsheet to ensure no sharp objects (stones, branches, etc.) are left inside",
+            "Sharp objects could damage the tent during storage",
+            "Do not drag tent covers over the ground - this may damage the tent skin",
+            "Roof covers are easy to fold - if you notice any resistance stop folding and check for blockages",
+            "Avoid packing the tent when it is wet, humid and/or dirty",
+            "If you pack the tent whilst still wet or humid, unpack, clean and dry it within 72 hours to avoid mildew",
+            "Collect, clean and pack all items, and run an inventory before loading onto the truck"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "electrical-removal",
+      "title": "Electrical System Removal",
+      "pdfReference": "Page 34 | Step 1.0",
+      "description": "Remove electrical system and lighting before dismantling",
+      "steps": [
+        {
+          "id": "electrical-step-1",
+          "stepNumber": 1,
+          "title": "Remove Electrical System",
+          "purpose": "Disconnect and pack all electrical components",
+          "actions": [
+            "Disconnect all LED stripe feeders",
+            "Remove master and slave dimmers",
+            "Disconnect LED strips from tent arches",
+            "Collect all extension cables",
+            "Remove splitters",
+            "Pack main distribution box",
+            "Store all electrical components in designated boxes"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cleaning",
+      "title": "Cleaning and Preparation",
+      "pdfReference": "Page 34 | Step 1.0",
+      "description": "Clean and dry all tents before dismantling",
+      "steps": [
+        {
+          "id": "cleaning-step-1",
+          "stepNumber": 1,
+          "title": "Clean and Dry Tents",
+          "purpose": "Prevent mildew and damage during storage",
+          "actions": [
+            "Remove all accessories from inside the tent",
+            "Clean the groundsheet thoroughly",
+            "Remove all sharp objects (stones, branches, debris)",
+            "Ensure tent is completely dry",
+            "If tent is wet when packing, must unpack and dry within 72 hours to avoid mildew"
+          ],
+          "criticalWarning": "All items should be cleaned and fully dried before being stored. Wet or humid tents packed for more than 72 hours will develop mildew."
+        }
+      ]
+    },
+    {
+      "id": "anchoring-removal",
+      "title": "Remove Anchoring System",
+      "pdfReference": "Page 34 | Step 2.0",
+      "description": "Remove all pegs and guy ropes",
+      "steps": [
+        {
+          "id": "anchoring-step-2",
+          "stepNumber": 2,
+          "title": "Remove Guy Ropes and Pegs",
+          "purpose": "Prepare tents for deflation",
+          "actions": [
+            "Remove all guy ropes from vestibules and main tents",
+            "Extract all 50cm T-pegs from ground",
+            "Extract all 30cm T-pegs from groundsheet loops",
+            "Clean all pegs",
+            "Place pegs and ropes in their corresponding bags",
+            "Total pegs to remove: approximately 84 pegs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "inner-cabins-removal",
+      "title": "Remove Inner Cabins",
+      "pdfReference": "Page 34 | Steps 3.0-4.0",
+      "description": "Disassemble and pack inner cabin structures",
+      "steps": [
+        {
+          "id": "inner-cabins-step-3",
+          "stepNumber": 3,
+          "title": "Disconnect Inner Cabins",
+          "purpose": "Remove internal partitions",
+          "actions": [
+            "Starting from one side, disconnect toggle buttons from plastic studs",
+            "Move along the arches removing all toggle buttons",
+            "Continue until all toggle buttons are disconnected",
+            "Remove inner cabin liners from tent"
+          ]
+        },
+        {
+          "id": "inner-cabins-step-4",
+          "stepNumber": 4,
+          "title": "Remove Support Bars",
+          "purpose": "Disassemble cabin framework",
+          "actions": [
+            "Remove all support bars from patient pods (4 bars each)",
+            "Remove all support bars from staff pod (2 bars)",
+            "Store bars appropriately"
+          ]
+        },
+        {
+          "id": "inner-cabins-step-5",
+          "stepNumber": 5,
+          "title": "Fold and Pack Inner Cabins",
+          "purpose": "Prepare inner cabins for storage",
+          "actions": [
+            "Fold inner cabins on a clean surface or over plastic sheeting",
+            "Ensure fabric is clean and dry",
+            "Place folded inner cabins in their corresponding bags",
+            "Secure bags properly"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vestibule-dismantling",
+      "title": "Vestibules Deflation and Disconnection",
+      "pdfReference": "Page 35 | Step 6.0",
+      "description": "Disconnect and deflate vestibule structures",
+      "images": [
+        {
+          "filename": "35_vestibule_sun_shadowing_removal_img1.png",
+          "description": "Vestibule disconnection header"
+        },
+        {
+          "filename": "35_vestibule_sun_shadowing_removal_img2.png",
+          "description": "Vestibule connection diagram"
+        },
+        {
+          "filename": "35_vestibule_sun_shadowing_removal_img3.png",
+          "description": "Locking pin removal illustration"
+        },
+        {
+          "filename": "35_vestibule_sun_shadowing_removal_img4.png",
+          "description": "Stud connection detail"
+        },
+        {
+          "filename": "35_vestibule_sun_shadowing_removal_img5.jpeg",
+          "description": "Vestibule separation photo"
+        },
+        {
+          "filename": "35_vestibule_sun_shadowing_removal_img6.jpeg",
+          "description": "Sun shadowing removal photo"
+        }
+      ],
+      "steps": [
+        {
+          "id": "vestibule-step-6",
+          "stepNumber": 6,
+          "title": "Disconnect Vestibules from Main Tents",
+          "purpose": "Separate vestibules from tent system",
+          "actions": [
+            "Disconnect all locking pins/bolts connecting vestibule spacers to tents",
+            "Remove double stud connections from single studs",
+            "Separate all 6 vestibules from main tent structures"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tent-deflation",
+      "title": "Tents and Vestibules Deflation",
+      "pdfReference": "Pages 36-37 | Steps 7.0-10.0",
+      "description": "Deflate all tent structures and prepare for folding",
+      "images": [
+        {
+          "filename": "36_tent_deflation_step_7-8_img1.png",
+          "description": "Deflation preparation header"
+        },
+        {
+          "filename": "36_tent_deflation_step_7-8_img2.png",
+          "description": "Valve opening diagram"
+        },
+        {
+          "filename": "36_tent_deflation_step_7-8_img3.png",
+          "description": "Door position illustration"
+        },
+        {
+          "filename": "36_tent_deflation_step_7-8_img4.png",
+          "description": "Pressure release diagram"
+        },
+        {
+          "filename": "36_tent_deflation_step_7-8_img5.jpeg",
+          "description": "Tent collapse photo step 7"
+        },
+        {
+          "filename": "36_tent_deflation_step_7-8_img6.jpeg",
+          "description": "Deflation process photo step 8"
+        },
+        {
+          "filename": "37_tent_deflation_step_9-10_img1.png",
+          "description": "Inflator connection diagram"
+        },
+        {
+          "filename": "37_tent_deflation_step_9-10_img2.png",
+          "description": "Deflation mode settings"
+        },
+        {
+          "filename": "37_tent_deflation_step_9-10_img3.jpeg",
+          "description": "Complete deflation photo step 9"
+        },
+        {
+          "filename": "37_tent_deflation_step_9-10_img4.jpeg",
+          "description": "Valve closure photo"
+        },
+        {
+          "filename": "37_tent_deflation_step_9-10_img5.jpeg",
+          "description": "Tent positioning photo step 10"
+        },
+        {
+          "filename": "37_tent_deflation_step_9-10_img6.jpeg",
+          "description": "Guy ropes placement photo"
+        },
+        {
+          "filename": "37_tent_deflation_step_9-10_img7.jpeg",
+          "description": "Final deflation position photo"
+        }
+      ],
+      "steps": [
+        {
+          "id": "deflation-step-7",
+          "stepNumber": 7,
+          "title": "Prepare for Deflation",
+          "purpose": "Ready tents for air removal",
+          "actions": [
+            "Close all windows on main tents and vestibules",
+            "Leave tent doors OPEN so air doesn't get trapped during deflation",
+            "Disconnect pressure monitoring system from inflator",
+            "Remove pressure feedback tube from inside tent",
+            "Open protective caps on inflation valves",
+            "Insert finger inside valve and turn central pin counterclockwise with nail",
+            "Open all inflation valves to let air out",
+            "Wait for tents to deflate naturally"
+          ],
+          "criticalNote": "Leave tent doors OPEN during deflation to prevent air from getting trapped inside and to prevent damage to air passage valves."
+        },
+        {
+          "id": "deflation-step-8",
+          "stepNumber": 8,
+          "title": "Facilitate Tent Collapse",
+          "purpose": "Help tent deflate properly for easier folding",
+          "actions": [
+            "Press on the arches at waist level to help tent collapse onto itself",
+            "Ensure roof falls on top of groundsheet (not sideways)",
+            "Take inflator from bag",
+            "Connect inflation hose manifold to INLET coupling (deflation mode)"
+          ],
+          "criticalNote": "To facilitate ensuing folding process, press on arches so roof falls on top of groundsheet and not sideways."
+        },
+        {
+          "id": "deflation-step-9",
+          "stepNumber": 9,
+          "title": "Complete Deflation with Inflator",
+          "purpose": "Empty tent frame completely for easier folding",
+          "actions": [
+            "Once tent is deflated, insert inflation hose taps in inflation valves",
+            "Fasten screw rings and open taps",
+            "Connect all inflation valves to hoses",
+            "Turn inflator ON in deflation mode (INLET)",
+            "Wait approximately 5 minutes for complete deflation",
+            "When tent frame is fully deflated, turn inflator OFF",
+            "Remove hose taps from valves",
+            "Close all inflation valves"
+          ],
+          "criticalNote": "Use of inflator in deflation mode (INLET) is very important as it helps empty the tent frame completely and greatly simplifies the ensuing folding procedure."
+        },
+        {
+          "id": "deflation-step-10",
+          "stepNumber": 10,
+          "title": "Position Deflated Tent",
+          "purpose": "Prepare tent for folding process",
+          "actions": [
+            "Adjust position of tent roof so it sits on top of groundsheet",
+            "Place guy ropes on top of tent roof",
+            "Ensure tent is properly positioned for folding"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sun-shadowing-removal",
+      "title": "Remove Sun Shadowing Nets",
+      "pdfReference": "Page 35 | Between steps",
+      "description": "Remove sun protection systems",
+      "steps": [
+        {
+          "id": "sun-shadowing-step",
+          "stepNumber": 11,
+          "title": "Remove Sun Shadowing Nets and Spacers",
+          "purpose": "Disassemble sun protection system",
+          "actions": [
+            "Remove all 3 sun shadowing nets from tents",
+            "Deflate pneumatic spacers",
+            "Disconnect spacers from tent couplings",
+            "Remove locking pins/bolts",
+            "Fold sun shadowing nets",
+            "Place nets in their corresponding bags"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tent-folding",
+      "title": "Tent Folding and Packing",
+      "pdfReference": "Pages 37-38 | Steps 11.0-16.0",
+      "description": "Fold and pack tents for storage and transport",
+      "images": [
+        {
+          "filename": "38_tent_folding_packing_img1.png",
+          "description": "Folding pattern header"
+        },
+        {
+          "filename": "38_tent_folding_packing_img2.png",
+          "description": "Folding sequence diagram"
+        },
+        {
+          "filename": "38_tent_folding_packing_img3.jpeg",
+          "description": "Step 1 folding photo"
+        },
+        {
+          "filename": "38_tent_folding_packing_img4.jpeg",
+          "description": "Step 2 folding photo"
+        },
+        {
+          "filename": "38_tent_folding_packing_img5.jpeg",
+          "description": "Step 3 rolling photo"
+        },
+        {
+          "filename": "38_tent_folding_packing_img6.jpeg",
+          "description": "Step 4 bag placement photo"
+        },
+        {
+          "filename": "38_tent_folding_packing_img7.jpeg",
+          "description": "Step 5 final packing photo"
+        },
+        {
+          "filename": "38_tent_folding_packing_img8.png",
+          "description": "Securing straps diagram"
+        }
+      ],
+      "steps": [
+        {
+          "id": "folding-step-11",
+          "stepNumber": 11,
+          "title": "Fold Tents According to Pattern",
+          "purpose": "Create compact bundle for storage",
+          "actions": [
+            "Follow folding pattern as shown in manual diagrams",
+            "Fold tent into rectangular bundle",
+            "Ensure width matches transport bag width"
+          ]
+        },
+        {
+          "id": "folding-step-12",
+          "stepNumber": 12,
+          "title": "Clean Tent During Folding",
+          "purpose": "Prevent damage during storage",
+          "actions": [
+            "Ensure tent is clean before packing",
+            "Remove gravels and stones beneath groundsheet while folding",
+            "Sharp objects will damage tent cover during storage"
+          ],
+          "criticalWarning": "Make sure tent is clean when you fold and pack it. Gravels and stones will damage the tent cover during storage."
+        },
+        {
+          "id": "folding-step-13",
+          "stepNumber": 13,
+          "title": "Verify Tent is Dry",
+          "purpose": "Prevent mildew formation",
+          "actions": [
+            "Ensure tent is completely dry when folding and packing",
+            "If tent is wet when packed, must install again later in warehouse to clean and dry",
+            "Prepare for proper storage only when fully dry"
+          ],
+          "criticalWarning": "Make sure the tent is dry when you fold and pack it. If wet when packed, you should install it again later in your warehouse to clean it and let it dry as preparation for storage."
+        },
+        {
+          "id": "folding-step-14",
+          "stepNumber": 14,
+          "title": "Roll Tent Bundle",
+          "purpose": "Create final packed form",
+          "actions": [
+            "Roll the resulting bundle starting from opposite side of transport bag",
+            "Fold one end of resulting bundle",
+            "Place tent transport bag beneath folded end",
+            "Fold bundle back onto the bag"
+          ]
+        },
+        {
+          "id": "folding-step-15",
+          "stepNumber": 15,
+          "title": "Verify Bundle Width",
+          "purpose": "Ensure proper fit in transport bag",
+          "actions": [
+            "Before starting to roll tent bundle, check width matches bag width",
+            "Adjust folding if necessary to match bag dimensions"
+          ]
+        },
+        {
+          "id": "folding-step-16",
+          "stepNumber": 16,
+          "title": "Secure Packed Tent",
+          "purpose": "Prepare for transport and storage",
+          "actions": [
+            "Ensure bundle is well centered in the bag",
+            "Close bag using provided straps",
+            "Tighten straps securely",
+            "Verify tent is properly packaged"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hard-floor-removal",
+      "title": "Hard Floor Dismantling",
+      "pdfReference": "Reverse of Page 16",
+      "description": "Remove and pack hard floor tiles",
+      "images": [
+        {
+          "filename": "16_hard_floor_installation_reverse_img1.png",
+          "description": "Hard floor header"
+        },
+        {
+          "filename": "16_hard_floor_installation_reverse_img2.png",
+          "description": "Floor tile removal pattern"
+        },
+        {
+          "filename": "16_hard_floor_installation_reverse_img3.png",
+          "description": "Tile disconnection diagram"
+        },
+        {
+          "filename": "16_hard_floor_installation_reverse_img4.jpeg",
+          "description": "Floor removal photo"
+        },
+        {
+          "filename": "16_hard_floor_installation_reverse_img5.png",
+          "description": "Pallet stacking diagram"
+        },
+        {
+          "filename": "16_hard_floor_installation_reverse_img6.jpeg",
+          "description": "Stacked tiles photo"
+        },
+        {
+          "filename": "16_hard_floor_installation_reverse_img7.png",
+          "description": "Pallet truck illustration"
+        },
+        {
+          "filename": "16_hard_floor_installation_reverse_img8.jpeg",
+          "description": "Floor transport photo"
+        }
+      ],
+      "steps": [
+        {
+          "id": "hard-floor-step-17",
+          "stepNumber": 17,
+          "title": "Disassemble Hard Floor",
+          "purpose": "Remove floor tiles for transport",
+          "actions": [
+            "Remove hard floor tiles in reverse order of installation",
+            "Stack tiles carefully on pallet",
+            "Use pallet truck to move tiles pallet to storage area",
+            "Weight per pallet: approximately 180 kg - use appropriate lifting equipment"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "final-packing",
+      "title": "Final Inventory and Packing",
+      "pdfReference": "Page 34 | General Instructions",
+      "description": "Complete dismantling process with inventory and organization",
+      "steps": [
+        {
+          "id": "final-step-18",
+          "stepNumber": 18,
+          "title": "Inventory and Organization",
+          "purpose": "Ensure all components are accounted for and properly stored",
+          "actions": [
+            "Collect all components and verify against packing list",
+            "Clean all items before packing",
+            "Check for packing labels and replace missing labels if needed",
+            "Ensure packaging units haven't been damaged during dismantling",
+            "Pack most sensitive items on top (e.g. lights)",
+            "Ensure no item can fall during transport or storage",
+            "Run complete inventory before loading onto truck",
+            "Verify all 3 main tents are packed",
+            "Verify all 6 vestibules are packed",
+            "Verify all inner cabins are packed",
+            "Verify all electrical components are packed",
+            "Verify hard floor tiles are on pallet",
+            "Verify all pegs, ropes, and accessories are in bags"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "storage-preparation",
+      "title": "Storage Preparation",
+      "pdfReference": "Pages 39-41 | Section 4.1 PMI 5-8",
+      "description": "Prepare components for proper storage",
+      "images": [
+        {
+          "filename": "39_storage_preparation_1_img1.png",
+          "description": "Storage preparation header"
+        },
+        {
+          "filename": "39_storage_preparation_1_img2.png",
+          "description": "Storage conditions diagram"
+        },
+        {
+          "filename": "40_storage_preparation_2_img1.png",
+          "description": "Maintenance checklist"
+        },
+        {
+          "filename": "40_storage_preparation_2_img2.png",
+          "description": "Inspection points diagram"
+        },
+        {
+          "filename": "41_storage_preparation_3_img1.png",
+          "description": "Cleaning instructions"
+        },
+        {
+          "filename": "41_storage_preparation_3_img2.png",
+          "description": "Storage layout diagram"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "storage-requirements",
+          "title": "Storage Requirements",
+          "content": [
+            "All items must be stored in adequate packaging, away from water and vermin",
+            "All items must be cleaned and fully dried before storage",
+            "Ideal storage temperature: 18-21°C",
+            "Air humidity: 60-65%",
+            "Storage area should have good air circulation",
+            "No vermin should enter storage area",
+            "Items should be stored away from water sources",
+            "Most sensitive items should be packed on top",
+            "Ensure no item can fall during transport or storage"
+          ]
+        },
+        {
+          "id": "maintenance-before-storage",
+          "title": "Maintenance Before Storage",
+          "content": [
+            "Clean all textile parts according to cleaning instructions",
+            "Clean special stains from grass, oil, ballpoint pens, etc.",
+            "Visually inspect all textile parts for cuts, holes, abrasions, tears",
+            "Check open seams or welded joints for damage",
+            "Identify broken parts that need replacement",
+            "Check all moving parts like zippers by opening and closing them",
+            "Look for broken or corroded parts",
+            "Check bags visually for any damage",
+            "Ensure all parts are dry before packing",
+            "Repack all clean, repaired and complete units on correct pallets"
+          ]
+        }
+      ]
+    }
+  ]
+}
