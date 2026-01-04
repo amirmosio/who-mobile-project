@@ -3,39 +3,38 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:who_mobile_project/app_core/theme/colors.dart';
 import 'package:who_mobile_project/app_core/theme/text_styles/app_text_styles.dart';
-import 'package:who_mobile_project/general/models/auth/admin_user.dart';
-import 'package:who_mobile_project/providers/auth/admin_users_provider.dart';
-import 'package:who_mobile_project/providers/auth/auth_provider.dart';
-import 'package:who_mobile_project/providers/auth/current_user_provider.dart';
+import 'package:who_mobile_project/general/models/maintenance/alert_template.dart';
 import 'package:who_mobile_project/providers/auth/role_access_provider.dart';
 import 'package:who_mobile_project/providers/base/base_api_state.dart';
+import 'package:who_mobile_project/providers/maintenance/alert_template_provider.dart';
 import 'package:who_mobile_project/routing_config/routes.dart';
-import 'package:who_mobile_project/ui/auth_pages/admin_panel/widgets/admin_list_item.dart';
-import 'package:who_mobile_project/ui/auth_pages/admin_panel/widgets/create_admin_dialog.dart';
+import 'package:who_mobile_project/ui/admin/widgets/alert_template_dialog.dart';
+import 'package:who_mobile_project/ui/admin/widgets/alert_template_list_item.dart';
 
-/// Admin panel page for managing admin users
-/// Only accessible by super admin
-class AdminPanelPage extends ConsumerStatefulWidget {
-  const AdminPanelPage({super.key});
+/// Alert templates management page for Super Admin
+/// Allows creating, editing, and deleting maintenance alert templates
+class AlertTemplatesPage extends ConsumerStatefulWidget {
+  const AlertTemplatesPage({super.key});
 
   @override
-  ConsumerState<AdminPanelPage> createState() => _AdminPanelPageState();
+  ConsumerState<AlertTemplatesPage> createState() => _AlertTemplatesPageState();
 }
 
-class _AdminPanelPageState extends ConsumerState<AdminPanelPage> {
+class _AlertTemplatesPageState extends ConsumerState<AlertTemplatesPage> {
+  String? _selectedFacilityFilter;
+
   @override
   Widget build(BuildContext context) {
     final isSuperAdmin = ref.watch(isSuperAdminProvider);
-    final currentUser = ref.watch(currentUserProvider);
-    final adminUsersAsync = ref.watch(adminUsersStreamProvider);
+    final templatesAsync = ref.watch(alertTemplatesStreamProvider);
 
     // Check access permission
     if (!isSuperAdmin) {
       return _buildAccessDenied();
     }
 
-    // Listen for auth state changes (logout, etc)
-    ref.listen(authProvider, (previous, next) {
+    // Listen for template operation results
+    ref.listen(alertTemplateProvider, (previous, next) {
       if (next is BaseApiError) {
         _showSnackBar(
           next.exception.message ?? 'An error occurred',
@@ -49,8 +48,8 @@ class _AdminPanelPageState extends ConsumerState<AdminPanelPage> {
     return Scaffold(
       backgroundColor: GVColors.white,
       appBar: _buildAppBar(),
-      body: adminUsersAsync.when(
-        data: (admins) => _buildAdminList(admins, currentUser.value?.uid),
+      body: templatesAsync.when(
+        data: (templates) => _buildTemplatesList(templates),
         loading: () => const Center(child: CircularProgressIndicator()),
         error: (error, _) => _buildError(error.toString()),
       ),
@@ -65,10 +64,10 @@ class _AdminPanelPageState extends ConsumerState<AdminPanelPage> {
       leading: IconButton(
         icon: const Icon(Icons.arrow_back_ios, size: 20),
         color: GVColors.black,
-        onPressed: () => context.go(YRRoutes.dashBoard),
+        onPressed: () => context.go(YRRoutes.adminPanel),
       ),
       title: Text(
-        'Admin Management',
+        'Alert Templates',
         style: AppTextStyles.headingH2.copyWith(
           color: GVColors.black,
           fontSize: 16,
@@ -76,17 +75,34 @@ class _AdminPanelPageState extends ConsumerState<AdminPanelPage> {
         ),
       ),
       actions: [
-        IconButton(
-          icon: const Icon(Icons.notifications_active, size: 24),
-          color: GVColors.black,
-          onPressed: () => context.push(YRRoutes.alertTemplates),
-          tooltip: 'Manage Alert Templates',
-        ),
-        IconButton(
-          icon: const Icon(Icons.logout, size: 24),
-          color: GVColors.black,
-          onPressed: _handleLogout,
-          tooltip: 'Logout',
+        PopupMenuButton<String?>(
+          icon: Icon(
+            Icons.filter_list,
+            color: _selectedFacilityFilter != null
+                ? GVColors.purpleAccent
+                : GVColors.black,
+          ),
+          tooltip: 'Filter by facility',
+          onSelected: (value) {
+            setState(() {
+              _selectedFacilityFilter = value;
+            });
+          },
+          itemBuilder: (context) => [
+            PopupMenuItem<String?>(
+              value: null,
+              child: Row(
+                children: [
+                  if (_selectedFacilityFilter == null)
+                    Icon(Icons.check, color: GVColors.purpleAccent, size: 20)
+                  else
+                    const SizedBox(width: 20),
+                  const SizedBox(width: 8),
+                  const Text('All Facilities'),
+                ],
+              ),
+            ),
+          ],
         ),
         const SizedBox(width: 8),
       ],
@@ -100,21 +116,54 @@ class _AdminPanelPageState extends ConsumerState<AdminPanelPage> {
     );
   }
 
-  Widget _buildAdminList(List<AdminUser> admins, String? currentUserId) {
-    if (admins.isEmpty) {
+  Widget _buildTemplatesList(List<AlertTemplate> templates) {
+    // Apply filter if set
+    final filteredTemplates = _selectedFacilityFilter != null
+        ? templates
+            .where((t) => t.facilityId == _selectedFacilityFilter)
+            .toList()
+        : templates;
+
+    if (filteredTemplates.isEmpty) {
       return _buildEmptyState();
+    }
+
+    // Group templates by facility
+    final grouped = <String, List<AlertTemplate>>{};
+    for (final template in filteredTemplates) {
+      grouped.putIfAbsent(template.facilityName, () => []).add(template);
     }
 
     return ListView.builder(
       padding: const EdgeInsets.only(top: 16, bottom: 100),
-      itemCount: admins.length,
+      itemCount: grouped.length,
       itemBuilder: (context, index) {
-        final admin = admins[index];
-        return AdminListItem(
-          admin: admin,
-          isCurrentUser: admin.uid == currentUserId,
-          onToggleStatus:
-              admin.isSuperAdmin ? null : () => _toggleAdminStatus(admin),
+        final facilityName = grouped.keys.elementAt(index);
+        final facilityTemplates = grouped[facilityName]!;
+
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+              child: Text(
+                facilityName,
+                style: AppTextStyles.headingH3.copyWith(
+                  color: GVColors.darkGrey,
+                  fontSize: 14,
+                ),
+              ),
+            ),
+            ...facilityTemplates.map(
+              (template) => AlertTemplateListItem(
+                template: template,
+                onEdit: () => _showEditDialog(template),
+                onDelete: () => _confirmDelete(template),
+                onToggleActive: () => _toggleActive(template),
+              ),
+            ),
+            const SizedBox(height: 8),
+          ],
         );
       },
     );
@@ -135,21 +184,21 @@ class _AdminPanelPageState extends ConsumerState<AdminPanelPage> {
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Icon(
-                Icons.people_outline,
+                Icons.notifications_none,
                 size: 40,
                 color: GVColors.darkGrey,
               ),
             ),
             const SizedBox(height: 24),
             Text(
-              'No Admin Users',
+              'No Alert Templates',
               style: AppTextStyles.headingH2.copyWith(
                 color: GVColors.black,
               ),
             ),
             const SizedBox(height: 8),
             Text(
-              'Tap the + button to add your first admin user',
+              'Tap the + button to create your first alert template for facility maintenance',
               style: AppTextStyles.bodyText.copyWith(
                 color: GVColors.darkGrey,
               ),
@@ -175,7 +224,7 @@ class _AdminPanelPageState extends ConsumerState<AdminPanelPage> {
             ),
             const SizedBox(height: 16),
             Text(
-              'Error Loading Admins',
+              'Error Loading Templates',
               style: AppTextStyles.headingH2.copyWith(
                 color: GVColors.black,
               ),
@@ -190,7 +239,7 @@ class _AdminPanelPageState extends ConsumerState<AdminPanelPage> {
             ),
             const SizedBox(height: 24),
             ElevatedButton(
-              onPressed: () => ref.invalidate(adminUsersStreamProvider),
+              onPressed: () => ref.invalidate(alertTemplatesStreamProvider),
               style: ElevatedButton.styleFrom(
                 backgroundColor: GVColors.purpleAccent,
                 foregroundColor: GVColors.white,
@@ -229,7 +278,7 @@ class _AdminPanelPageState extends ConsumerState<AdminPanelPage> {
               ),
               const SizedBox(height: 12),
               Text(
-                'Super Admin privileges are required to access this page.',
+                'Super Admin privileges are required to manage alert templates.',
                 style: AppTextStyles.bodyText.copyWith(
                   color: GVColors.darkGrey,
                 ),
@@ -263,34 +312,34 @@ class _AdminPanelPageState extends ConsumerState<AdminPanelPage> {
 
   Widget _buildFAB() {
     return FloatingActionButton.extended(
-      onPressed: _showCreateAdminDialog,
+      onPressed: _showCreateDialog,
       backgroundColor: GVColors.purpleAccent,
       foregroundColor: GVColors.white,
-      icon: const Icon(Icons.person_add),
-      label: const Text('Add Admin'),
+      icon: const Icon(Icons.add_alert),
+      label: const Text('Add Template'),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16),
       ),
     );
   }
 
-  Future<void> _showCreateAdminDialog() async {
+  Future<void> _showCreateDialog() async {
     await showDialog(
       context: context,
       barrierDismissible: false,
-      builder: (context) => const CreateAdminDialog(),
+      builder: (context) => const AlertTemplateDialog(),
     );
   }
 
-  Future<void> _toggleAdminStatus(AdminUser admin) async {
-    if (admin.isActive) {
-      await ref.read(authProvider.notifier).deactivateAdmin(admin.uid);
-    } else {
-      await ref.read(authProvider.notifier).reactivateAdmin(admin.uid);
-    }
+  Future<void> _showEditDialog(AlertTemplate template) async {
+    await showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (context) => AlertTemplateDialog(template: template),
+    );
   }
 
-  Future<void> _handleLogout() async {
+  Future<void> _confirmDelete(AlertTemplate template) async {
     final confirm = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
@@ -298,13 +347,13 @@ class _AdminPanelPageState extends ConsumerState<AdminPanelPage> {
           borderRadius: BorderRadius.circular(16),
         ),
         title: Text(
-          'Logout',
+          'Delete Template',
           style: AppTextStyles.headingH3.copyWith(
             color: GVColors.black,
           ),
         ),
         content: Text(
-          'Are you sure you want to logout?',
+          'Are you sure you want to delete "${template.title}"? This action cannot be undone.',
           style: AppTextStyles.bodyText.copyWith(
             color: GVColors.darkGrey,
           ),
@@ -328,18 +377,23 @@ class _AdminPanelPageState extends ConsumerState<AdminPanelPage> {
                 borderRadius: BorderRadius.circular(60),
               ),
             ),
-            child: const Text('Logout'),
+            child: const Text('Delete'),
           ),
         ],
       ),
     );
 
     if (confirm == true) {
-      await ref.read(authProvider.notifier).signOut();
-      if (mounted) {
-        context.go(YRRoutes.dashBoard);
-      }
+      await ref
+          .read(alertTemplateProvider.notifier)
+          .deleteTemplate(template.id);
     }
+  }
+
+  Future<void> _toggleActive(AlertTemplate template) async {
+    await ref
+        .read(alertTemplateProvider.notifier)
+        .toggleTemplateActive(template.id, !template.isActive);
   }
 
   void _showSnackBar(String message, {bool isError = false}) {

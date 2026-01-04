@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:who_mobile_project/app_core/theme/colors.dart';
+import 'package:who_mobile_project/providers/maintenance/scheduled_alerts_provider.dart';
 
 /// Page for maintenance mode - system is installed and operational
-class MaintenancePage extends StatelessWidget {
+class MaintenancePage extends ConsumerWidget {
   final String installationId;
 
   const MaintenancePage({
@@ -11,7 +13,11 @@ class MaintenancePage extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final scheduledAlertsState = ref.watch(scheduledAlertsProvider);
+    final hasAlerts = scheduledAlertsState.hasScheduledAlerts(installationId);
+    final alertCount = scheduledAlertsState.getScheduledCount(installationId);
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Maintenance Mode'),
@@ -58,6 +64,12 @@ class MaintenancePage extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 24),
+
+          // Scheduled Alerts Section
+          if (hasAlerts) ...[
+            _buildScheduledAlertsCard(context, alertCount),
+            const SizedBox(height: 24),
+          ],
 
           // Maintenance tasks section
           Text(
@@ -157,6 +169,60 @@ class MaintenancePage extends StatelessWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  Widget _buildScheduledAlertsCard(BuildContext context, int alertCount) {
+    return Card(
+      color: Colors.blue.withValues(alpha: 0.1),
+      child: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Row(
+          children: [
+            Container(
+              padding: const EdgeInsets.all(12),
+              decoration: BoxDecoration(
+                color: Colors.blue.withValues(alpha: 0.2),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: const Icon(
+                Icons.notifications_active,
+                size: 32,
+                color: Colors.blue,
+              ),
+            ),
+            const SizedBox(width: 16),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Maintenance Alerts Active',
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.blue.shade700,
+                        ),
+                  ),
+                  const SizedBox(height: 4),
+                  Text(
+                    '$alertCount scheduled reminder${alertCount == 1 ? '' : 's'}',
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                          color: Colors.blue.shade600,
+                        ),
+                  ),
+                  const SizedBox(height: 4),
+                  Text(
+                    'You will receive periodic notifications for maintenance tasks',
+                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                          color: Colors.grey[600],
+                        ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
