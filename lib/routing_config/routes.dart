@@ -13,6 +13,7 @@ class YRRoutes {
   /// Admin pages
   static const adminLogin = "/admin/login";
   static const adminPanel = "/admin/panel";
+  static const alertTemplates = "/admin/alert-templates";
 
   /// nav bar pages
   static const dashBoard = "/dashboard";

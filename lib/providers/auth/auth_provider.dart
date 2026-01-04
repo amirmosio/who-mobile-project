@@ -6,6 +6,7 @@ import 'package:who_mobile_project/providers/auth/auth_repository_provider.dart'
 import 'package:who_mobile_project/providers/auth/current_user_provider.dart';
 import 'package:who_mobile_project/providers/base/base_api_notifier.dart';
 import 'package:who_mobile_project/providers/base/base_api_state.dart';
+import 'package:who_mobile_project/providers/maintenance/scheduled_alerts_provider.dart';
 import 'package:who_mobile_project/repository/auth/firebase_auth_repository.dart';
 
 part 'auth_provider.g.dart';
@@ -46,12 +47,15 @@ class AuthNotifier extends BaseApiNotifier<BaseApiState> {
   }
 
   /// Sign out from Firebase Auth
-  /// Clears cached data and resets current user
+  /// Clears cached data, cancels alerts, and resets current user
   Future<bool> signOut() async {
     final success = await executeOperationAndSetState(
       () => _repository.signOut(),
       successMessage: 'Signed out successfully',
       onSuccess: () async {
+        // Cancel all scheduled maintenance alerts
+        await ref.read(scheduledAlertsProvider.notifier).cancelAllAlerts();
+
         // Clear cached user data
         await _storageManager.clearRoleCache();
 

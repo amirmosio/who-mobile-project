@@ -1,9 +1,11 @@
+import 'package:flutter/foundation.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:who_mobile_project/general/models/idtm/installation_phase.dart';
 import 'package:who_mobile_project/general/models/idtm/progress_tracker.dart';
 import 'package:who_mobile_project/providers/base/base_api_notifier.dart';
 import 'package:who_mobile_project/providers/base/base_api_state.dart';
 import 'package:who_mobile_project/providers/idtm/idtm_repository_provider.dart';
+import 'package:who_mobile_project/providers/maintenance/scheduled_alerts_provider.dart';
 import 'package:who_mobile_project/repository/idtm_repository.dart';
 import 'package:who_mobile_project/repository/repo_state.dart';
 
@@ -111,10 +113,27 @@ class InstallationState extends BaseApiNotifier<BaseApiState> {
   }
 
   /// Transition to next phase
+  /// Auto-schedules maintenance alerts when entering maintenance phase
   Future<bool> transitionToNextPhase(String installationId) async {
     return executeOperationAndSetState(
       () async {
         await _repository.transitionToNextPhase(installationId);
+
+        // Check if entering maintenance phase and schedule alerts
+        final progress = await _repository.getProgressTracker(installationId);
+        if (progress?.currentPhase == FacilityInstallationPhase.maintenance) {
+          debugPrint(
+            'Entering maintenance phase for facility: ${progress!.facilityId}',
+          );
+          // Schedule maintenance alerts for this facility
+          await ref
+              .read(scheduledAlertsProvider.notifier)
+              .scheduleAlertsForFacility(
+                installationId: installationId,
+                facilityId: progress.facilityId,
+              );
+        }
+
         return SuccessState(true, null);
       },
       successMessage: 'Transitioned to next phase',

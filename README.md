@@ -1,17 +1,18 @@
 # who-mobile-project
 
 Major features of the app:
-- Login (guest, admin) Firebase Authentication
+- ~~Login (guest, admin) Firebase Authentication~~
 - Packing list (automatic visual recognition of items) Kian
 - Step by step installation Amir
-- Maintenance instructions, automatic alert Amin
+- Maintenance instructions Amin
+- ~~automatic alert Amin~~
 - Furniture and equipment instruction Kian
 - Dismantling and repacking Amir
 - Facility use and functioning Amin
 - Every user can leave notes after use (document damages, reparations etc for future users)
 
 
-- Login (guest, admin) Firebase Authentication
+- ~~Login (guest, admin) Firebase Authentication~~
 - "Add comment" only authenticated users
 - "read comment" only authenticated users
 

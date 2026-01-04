@@ -7,6 +7,7 @@ import 'package:who_mobile_project/ui/base_template/nav_bar_base_page.dart';
 import 'package:who_mobile_project/ui/auth_pages/login/login_page.dart';
 import 'package:who_mobile_project/ui/auth_pages/login/admin_login_page.dart';
 import 'package:who_mobile_project/ui/auth_pages/admin_panel/admin_panel_page.dart';
+import 'package:who_mobile_project/ui/admin/alert_templates_page.dart';
 import 'package:who_mobile_project/ui/not_found/not_found.dart';
 import 'package:who_mobile_project/ui/auth_pages/register/registration_page.dart';
 import 'package:who_mobile_project/ui/auth_pages/reset_password/reset_password_page.dart';
@@ -105,6 +106,12 @@ GoRouter baseNavRouterBuilder() {
         name: YRRoutes.adminPanel,
         pageBuilder: (context, state) =>
             const MaterialPage(child: AdminPanelPage()),
+      ),
+      GoRoute(
+        path: YRRoutes.alertTemplates,
+        name: YRRoutes.alertTemplates,
+        pageBuilder: (context, state) =>
+            const MaterialPage(child: AlertTemplatesPage()),
       ),
 
       // What is IDTM Route
