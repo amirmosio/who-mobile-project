@@ -1,25 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:who_mobile_project/app_core/theme/colors.dart';
 import 'package:who_mobile_project/di/injector.dart';
 import 'package:who_mobile_project/general/models/idtm/installation_phase.dart';
 import 'package:who_mobile_project/general/services/storage/storage_manager.dart';
+import 'package:who_mobile_project/providers/installation/installation_provider.dart';
 import 'package:who_mobile_project/routing_config/routes.dart';
 
 /// Dashboard card showing installation status and action buttons
-class InstallationStatusCard extends StatefulWidget {
+class InstallationStatusCard extends ConsumerStatefulWidget {
   final VoidCallback? onStatusChanged;
 
-  const InstallationStatusCard({
-    super.key,
-    this.onStatusChanged,
-  });
+  const InstallationStatusCard({super.key, this.onStatusChanged});
 
   @override
-  State<InstallationStatusCard> createState() => _InstallationStatusCardState();
+  ConsumerState<InstallationStatusCard> createState() =>
+      _InstallationStatusCardState();
 }
 
-class _InstallationStatusCardState extends State<InstallationStatusCard> {
+class _InstallationStatusCardState
+    extends ConsumerState<InstallationStatusCard> {
   late final StorageManager _storageManager;
   late FacilityInstallationPhase _currentPhase;
 
@@ -29,7 +30,6 @@ class _InstallationStatusCardState extends State<InstallationStatusCard> {
     _storageManager = getIt<StorageManager>();
     _currentPhase = _storageManager.getCurrentPhase();
   }
-
 
   Color _getStatusColor() {
     switch (_currentPhase) {
@@ -89,7 +89,8 @@ class _InstallationStatusCardState extends State<InstallationStatusCard> {
             color: BZColors.bronzeDark,
             onPressed: () async {
               // Create a new installation
-              final installationId = 'installation_${DateTime.now().millisecondsSinceEpoch}';
+              final installationId =
+                  'installation_${DateTime.now().millisecondsSinceEpoch}';
               await _storageManager.startInstallation(
                 installationId: installationId,
                 facilityId: 'default',
@@ -98,10 +99,16 @@ class _InstallationStatusCardState extends State<InstallationStatusCard> {
 
               if (mounted) {
                 // Navigate to installation steps and refresh on return
-                context.push(YRRoutes.idtmInstallationDetail
-                    .replaceAll(':installationId', installationId)).then((_) {
-                  widget.onStatusChanged?.call();
-                });
+                context
+                    .push(
+                      YRRoutes.idtmInstallationDetail.replaceAll(
+                        ':installationId',
+                        installationId,
+                      ),
+                    )
+                    .then((_) {
+                      widget.onStatusChanged?.call();
+                    });
               }
             },
           ),
@@ -117,10 +124,16 @@ class _InstallationStatusCardState extends State<InstallationStatusCard> {
             onPressed: () {
               final installationId = _storageManager.getInstallationId();
               if (installationId != null) {
-                context.push(YRRoutes.idtmInstallationDetail
-                    .replaceAll(':installationId', installationId)).then((_) {
-                  widget.onStatusChanged?.call();
-                });
+                context
+                    .push(
+                      YRRoutes.idtmInstallationDetail.replaceAll(
+                        ':installationId',
+                        installationId,
+                      ),
+                    )
+                    .then((_) {
+                      widget.onStatusChanged?.call();
+                    });
               }
             },
           ),
@@ -136,10 +149,16 @@ class _InstallationStatusCardState extends State<InstallationStatusCard> {
             onPressed: () {
               final installationId = _storageManager.getInstallationId();
               if (installationId != null) {
-                context.push(YRRoutes.idtmMaintenance
-                    .replaceAll(':installationId', installationId)).then((_) {
-                  widget.onStatusChanged?.call();
-                });
+                context
+                    .push(
+                      YRRoutes.idtmMaintenance.replaceAll(
+                        ':installationId',
+                        installationId,
+                      ),
+                    )
+                    .then((_) {
+                      widget.onStatusChanged?.call();
+                    });
               }
             },
           ),
@@ -154,10 +173,16 @@ class _InstallationStatusCardState extends State<InstallationStatusCard> {
             onPressed: () {
               final installationId = _storageManager.getInstallationId();
               if (installationId != null) {
-                context.push(YRRoutes.idtmDismantling
-                    .replaceAll(':installationId', installationId)).then((_) {
-                  widget.onStatusChanged?.call();
-                });
+                context
+                    .push(
+                      YRRoutes.idtmDismantling.replaceAll(
+                        ':installationId',
+                        installationId,
+                      ),
+                    )
+                    .then((_) {
+                      widget.onStatusChanged?.call();
+                    });
               }
             },
           ),
@@ -173,10 +198,16 @@ class _InstallationStatusCardState extends State<InstallationStatusCard> {
             onPressed: () {
               final installationId = _storageManager.getInstallationId();
               if (installationId != null) {
-                context.push(YRRoutes.idtmDismantling
-                    .replaceAll(':installationId', installationId)).then((_) {
-                  widget.onStatusChanged?.call();
-                });
+                context
+                    .push(
+                      YRRoutes.idtmDismantling.replaceAll(
+                        ':installationId',
+                        installationId,
+                      ),
+                    )
+                    .then((_) {
+                      widget.onStatusChanged?.call();
+                    });
               }
             },
           ),
@@ -192,10 +223,16 @@ class _InstallationStatusCardState extends State<InstallationStatusCard> {
             onPressed: () {
               final installationId = _storageManager.getInstallationId();
               if (installationId != null) {
-                context.push(YRRoutes.idtmInstallationDetail
-                    .replaceAll(':installationId', installationId)).then((_) {
-                  widget.onStatusChanged?.call();
-                });
+                context
+                    .push(
+                      YRRoutes.idtmInstallationDetail.replaceAll(
+                        ':installationId',
+                        installationId,
+                      ),
+                    )
+                    .then((_) {
+                      widget.onStatusChanged?.call();
+                    });
               }
             },
           ),
@@ -222,6 +259,176 @@ class _InstallationStatusCardState extends State<InstallationStatusCard> {
     );
 
     return buttons;
+  }
+
+  Widget _buildInstallationGuideProgress() {
+    final installationDataAsync = ref.watch(installationDataProvider);
+    final lastCompletedIndex = ref.watch(installationProgressProvider);
+
+    return installationDataAsync.when(
+      loading: () => const SizedBox.shrink(),
+      error: (_, __) => const SizedBox.shrink(),
+      data: (installationData) {
+        final flattenedList = ref.watch(flattenedSubstepsProvider);
+        final totalSubsteps = flattenedList.length;
+
+        if (totalSubsteps == 0) return const SizedBox.shrink();
+
+        final progress = ((lastCompletedIndex + 1) / totalSubsteps).clamp(
+          0.0,
+          1.0,
+        );
+        final completedCount = lastCompletedIndex + 1;
+        final isComplete = progress >= 1.0;
+
+        return Container(
+          padding: const EdgeInsets.all(12),
+          decoration: BoxDecoration(
+            color: isComplete
+                ? Colors.green.shade50
+                : progress > 0
+                ? Colors.blue.shade50
+                : Colors.grey.shade50,
+            borderRadius: BorderRadius.circular(8),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    isComplete
+                        ? 'Installation Complete!'
+                        : 'Installation Guide Progress',
+                    style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                      fontWeight: FontWeight.bold,
+                      color: isComplete ? Colors.green : null,
+                    ),
+                  ),
+                  if (isComplete)
+                    const Icon(
+                      Icons.check_circle,
+                      color: Colors.green,
+                      size: 20,
+                    )
+                  else
+                    Text(
+                      '${(progress * 100).toStringAsFixed(0)}%',
+                      style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                        fontWeight: FontWeight.bold,
+                        color: progress > 0 ? Colors.blue : Colors.grey,
+                      ),
+                    ),
+                ],
+              ),
+              const SizedBox(height: 8),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(4),
+                child: LinearProgressIndicator(
+                  value: progress,
+                  minHeight: 6,
+                  backgroundColor: Colors.grey.shade200,
+                  valueColor: AlwaysStoppedAnimation<Color>(
+                    isComplete
+                        ? Colors.green
+                        : progress > 0.7
+                        ? Colors.lightGreen
+                        : progress > 0.3
+                        ? Colors.orange
+                        : Colors.blue,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 6),
+              Text(
+                '$completedCount of $totalSubsteps steps completed',
+                style: Theme.of(
+                  context,
+                ).textTheme.bodySmall?.copyWith(color: Colors.grey[600]),
+              ),
+
+              // Complete Installation Button
+              // Only show if installation is complete AND not already in maintenance/dismantling/completed phase
+              if (isComplete &&
+                  _currentPhase == FacilityInstallationPhase.installing) ...[
+                const SizedBox(height: 12),
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton.icon(
+                    onPressed: () async {
+                      // Update phase to maintenance
+                      await _storageManager.setCurrentPhase(
+                        FacilityInstallationPhase.maintenance,
+                      );
+
+                      if (mounted) {
+                        setState(() {
+                          _currentPhase = FacilityInstallationPhase.maintenance;
+                        });
+                        widget.onStatusChanged?.call();
+
+                        // Show success message
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            content: Row(
+                              children: [
+                                const Icon(
+                                  Icons.check_circle,
+                                  color: Colors.white,
+                                ),
+                                const SizedBox(width: 12),
+                                Expanded(
+                                  child: Text(
+                                    'Installation completed! Opening maintenance mode.',
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .bodyMedium
+                                        ?.copyWith(color: Colors.white),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            backgroundColor: Colors.green,
+                            duration: const Duration(seconds: 2),
+                          ),
+                        );
+
+                        // Navigate to maintenance page
+                        final installationId = _storageManager
+                            .getInstallationId();
+                        if (installationId != null) {
+                          context
+                              .push(
+                                YRRoutes.idtmMaintenance.replaceAll(
+                                  ':installationId',
+                                  installationId,
+                                ),
+                              )
+                              .then((_) {
+                                widget.onStatusChanged?.call();
+                              });
+                        }
+                      }
+                    },
+                    icon: const Icon(Icons.done_all, size: 18),
+                    label: const Text('Finish & Go to Maintenance'),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.green,
+                      foregroundColor: Colors.white,
+                      padding: const EdgeInsets.symmetric(vertical: 10),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ],
+          ),
+        );
+      },
+    );
   }
 
   @override
@@ -257,8 +464,8 @@ class _InstallationStatusCardState extends State<InstallationStatusCard> {
                       Text(
                         'IDTM Installation',
                         style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                              fontWeight: FontWeight.bold,
-                            ),
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                       const SizedBox(height: 4),
                       Row(
@@ -274,9 +481,7 @@ class _InstallationStatusCardState extends State<InstallationStatusCard> {
                             ),
                             child: Text(
                               _currentPhase.displayName,
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .bodySmall
+                              style: Theme.of(context).textTheme.bodySmall
                                   ?.copyWith(
                                     color: _getStatusColor(),
                                     fontWeight: FontWeight.bold,
@@ -295,10 +500,15 @@ class _InstallationStatusCardState extends State<InstallationStatusCard> {
             // Status description
             Text(
               _getStatusDescription(),
-              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                    color: Colors.grey[600],
-                  ),
+              style: Theme.of(
+                context,
+              ).textTheme.bodyMedium?.copyWith(color: Colors.grey[600]),
             ),
+
+            const SizedBox(height: 16),
+
+            // Installation Guide Progress
+            _buildInstallationGuideProgress(),
 
             const SizedBox(height: 16),
             const Divider(),
@@ -339,9 +549,7 @@ class _ActionButton extends StatelessWidget {
           foregroundColor: color,
           side: BorderSide(color: color),
           minimumSize: const Size(double.infinity, 44),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(8),
-          ),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
         ),
       );
     }
@@ -354,9 +562,7 @@ class _ActionButton extends StatelessWidget {
         backgroundColor: color,
         foregroundColor: Colors.white,
         minimumSize: const Size(double.infinity, 44),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(8),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
       ),
     );
   }

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:who_mobile_project/ui/dashboard/widgets/idtm_guide_card.dart';
-import 'package:who_mobile_project/ui/dashboard/widgets/installation_guide_card.dart';
 import 'package:who_mobile_project/ui/dashboard/widgets/installation_status_card.dart';
 
 class DashboardPage extends StatefulWidget {
@@ -61,9 +60,6 @@ class _DashboardPageState extends State<DashboardPage>
                 key: _cardKey,
                 onStatusChanged: _refreshCard,
               ),
-
-              // Installation Guide Card (with progress tracking)
-              const InstallationGuideCard(),
 
               // IDTM Guide Card
               const IdtmGuideCard(),
