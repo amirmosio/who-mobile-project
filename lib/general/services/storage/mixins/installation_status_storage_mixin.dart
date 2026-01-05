@@ -113,7 +113,9 @@ mixin InstallationStatusStorageMixin on BaseStorage {
   }
 
   /// Start dismantling
+  /// Also resets maintenance guide progress
   Future<void> startDismantling() async {
+    await resetMaintenanceGuideProgress();
     await setCurrentPhase(FacilityInstallationPhase.dismantling);
   }
 
@@ -308,6 +310,54 @@ mixin InstallationStatusStorageMixin on BaseStorage {
   double getDismantlingGuideProgress(int totalSubsteps) {
     if (totalSubsteps == 0) return 0.0;
     final completed = getCompletedDismantlingSubstepsCount();
+    return (completed / totalSubsteps).clamp(0.0, 1.0);
+  }
+
+  // ============================================================================
+  // Maintenance Guide Storage (Educational feature)
+  // ============================================================================
+
+  static const _keyLastCompletedMaintenanceSubstepIndex =
+      'maintenance_last_completed_substep_index';
+
+  /// Get the last completed substep index (Maintenance Guide)
+  /// Returns -1 if no substep has been completed yet
+  int getLastCompletedMaintenanceSubstepIndex() {
+    return sharedPreferences.getInt(_keyLastCompletedMaintenanceSubstepIndex) ??
+        -1;
+  }
+
+  /// Set the last completed substep index (Maintenance Guide)
+  /// This marks this substep and all previous substeps as completed
+  Future<void> setLastCompletedMaintenanceSubstepIndex(int index) async {
+    await sharedPreferences.setInt(
+      _keyLastCompletedMaintenanceSubstepIndex,
+      index,
+    );
+  }
+
+  /// Check if a substep is completed based on its index (Maintenance Guide)
+  /// A substep is completed if its index is <= last completed index
+  bool isMaintenanceSubstepCompletedByIndex(int substepIndex) {
+    final lastCompleted = getLastCompletedMaintenanceSubstepIndex();
+    return substepIndex <= lastCompleted;
+  }
+
+  /// Get count of completed substeps (Maintenance Guide)
+  int getCompletedMaintenanceSubstepsCount() {
+    final lastCompleted = getLastCompletedMaintenanceSubstepIndex();
+    return lastCompleted + 1; // +1 because index starts at 0
+  }
+
+  /// Reset all maintenance guide progress
+  Future<void> resetMaintenanceGuideProgress() async {
+    await sharedPreferences.remove(_keyLastCompletedMaintenanceSubstepIndex);
+  }
+
+  /// Get overall progress percentage for maintenance guide (0.0 to 1.0)
+  double getMaintenanceGuideProgress(int totalSubsteps) {
+    if (totalSubsteps == 0) return 0.0;
+    final completed = getCompletedMaintenanceSubstepsCount();
     return (completed / totalSubsteps).clamp(0.0, 1.0);
   }
 }

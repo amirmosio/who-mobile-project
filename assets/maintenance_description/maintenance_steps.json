@@ -1,0 +1,495 @@
+{
+  "title": "IDTM Maintenance Instructions",
+  "overview": "Complete guide for preventive and corrective maintenance of the IDTM (Infectious Disease Treatment Module) based on the AZF4-27 Inflatable Tent system. This guide covers maintenance during operations, before storage, during storage, and repair procedures.",
+  "sourceDocument": "EN-MAN-AZF4-27-WFP_User_Manual_DRAFT01.pdf",
+  "sections": [
+    {
+      "id": "preventive-maintenance",
+      "title": "Preventive Maintenance Instructions (PMIs)",
+      "description": "Scheduled maintenance tasks to prevent issues and extend tent lifespan",
+      "pdfReference": "Pages 39-41 | Section 4.1",
+      "steps": [
+        {
+          "id": "pmi-1-setup",
+          "title": "PMI 1: Set-up of the Tent",
+          "purpose": "Ensure proper setup to prevent damage during installation",
+          "pdfStepReference": "During set-up | Repair Level 1",
+          "content": [
+            "Follow the set-up instructions in the manual",
+            "Protect the tent skin from sharp objects in the set-up area",
+            "Avoid dragging the tent skin over the ground",
+            "Make sure internal objects like furniture do not have pointy or sharp-edged stands",
+            "Internal furnishings should not touch the walls and roof of the tent, especially during high winds",
+            "Do not leave the tent unattended for long periods of time, as high winds may occur"
+          ],
+          "actions": [
+            "Follow set-up instructions carefully",
+            "Inspect set-up area for sharp objects",
+            "Position furniture away from tent walls",
+            "Assign personnel to monitor tent during setup"
+          ],
+          "warnings": [
+            "Never drag tent components over the ground",
+            "Avoid leaving tent unattended in variable weather"
+          ]
+        },
+        {
+          "id": "pmi-2-daily-inspection",
+          "title": "PMI 2: Daily Inspection",
+          "purpose": "Maintain tent condition through regular inspection",
+          "pdfStepReference": "Daily | Repair Level 1",
+          "content": [
+            "Protect the tent skin from sharp objects inside",
+            "Sweep and/or vacuum-clean the groundsheet",
+            "Check whether the zippers are smooth running",
+            "Clean zippers from sand and apply dry soap or Teflon-based spray if needed",
+            "Check all pegs are solidly anchored and replace them if needed",
+            "Arrange for good ventilation to avoid mildew"
+          ],
+          "actions": [
+            "Sweep or vacuum the groundsheet daily",
+            "Test all zippers for smooth operation",
+            "Apply lubricant to sticky zippers",
+            "Inspect and tighten all pegs",
+            "Ensure proper ventilation"
+          ],
+          "warnings": [
+            "Mildew can develop in poorly ventilated tents",
+            "Damaged pegs must be replaced immediately"
+          ]
+        },
+        {
+          "id": "pmi-3-weather-conditions",
+          "title": "PMI 3: Outstanding Weather Conditions",
+          "purpose": "Protect tent during adverse weather conditions",
+          "pdfStepReference": "Windy days, rain, snow, temperature changes | Repair Level 1",
+          "content": [
+            "Wind: Close all openings when wind speed is above 40 km/h",
+            "During high winds, regularly check pegs are firmly anchored and guy ropes suitably tensioned",
+            "Outside the tent, store away all items that might fly around and damage the tent",
+            "Rain: Prevent water from running under tent by digging a small drainage trench",
+            "Fasten door threshold in upward position to prevent water from coming inside",
+            "Regularly check for water ponding and push away accumulations from inside at an early stage",
+            "Snow: Check regularly for snow and ice, remove immediately",
+            "Temperature changes: Check pressure of tent frame and reinflate if needed",
+            "Check for condensation inside tent and arrange for good ventilation or ACU",
+            "Check for ice assemblies on tent and remove immediately"
+          ],
+          "actions": [
+            "Close all openings above 40 km/h wind",
+            "Check peg anchoring during high winds",
+            "Dig drainage trench around tent",
+            "Remove snow and ice promptly",
+            "Monitor and maintain frame pressure"
+          ],
+          "warnings": [
+            "Never install tent in winds above 40 km/h",
+            "Ice and snow accumulation can damage structure",
+            "Water ponding can cause structural issues"
+          ]
+        },
+        {
+          "id": "pmi-4-dismantling",
+          "title": "PMI 4: Dismantling",
+          "purpose": "Properly dismantle tent to prevent damage",
+          "pdfStepReference": "During dismantling | Repair Level 1",
+          "content": [
+            "Follow the dismantling instructions in the manual",
+            "Remove all objects and dirt from inside and outside the tent to avoid damage",
+            "Do not drag tent covers over the ground - this may damage the tent skin",
+            "The roof covers are easy to fold - if you notice any resistance, stop folding and check for blockages",
+            "Avoid packing the tent when wet, humid and/or dirty",
+            "If packing wet tent, unpack, clean and dry within 72 hours to avoid mildew",
+            "Collect, clean and pack all items, run inventory before loading onto truck",
+            "Dismantling is strongly discouraged in case of strong winds or heavy rains"
+          ],
+          "actions": [
+            "Remove all objects from inside tent",
+            "Clean tent before packing",
+            "Follow proper folding procedure",
+            "Run inventory check before transport"
+          ],
+          "warnings": [
+            "Never drag tent covers over ground",
+            "Wet tents must be dried within 72 hours",
+            "Do not dismantle during strong winds or heavy rain"
+          ]
+        },
+        {
+          "id": "pmi-5-textile-maintenance",
+          "title": "PMI 5: Maintenance of Textile Parts",
+          "purpose": "Maintain textile components before storage",
+          "pdfStepReference": "Before storage | Repair Level 1",
+          "content": [
+            "Clean all textile parts according to the cleaning instructions (PMI 6)",
+            "Clean any special stains from grass, oil, ballpoint pens, etc.",
+            "Visually inspect all textile parts for cuts, holes, abrasions, tears, open seams or welded joints",
+            "Check whether the fabric needs any repair work",
+            "Check for sharp objects inside the tent and remove them",
+            "Check all moving parts like zippers by opening and closing them",
+            "Pay attention to broken or corroded parts",
+            "Check the bags visually for any damage",
+            "All parts should be dry before packing",
+            "Repack all clean, repaired and complete units on the correct pallets"
+          ],
+          "actions": [
+            "Clean all textile parts",
+            "Inspect for damage (cuts, holes, tears)",
+            "Test all zippers and moving parts",
+            "Ensure parts are completely dry",
+            "Repack on correct pallets"
+          ],
+          "warnings": [
+            "Never store wet or damp textiles",
+            "Damaged parts must be repaired before storage"
+          ]
+        },
+        {
+          "id": "pmi-6-cleaning",
+          "title": "PMI 6: Cleaning",
+          "purpose": "Proper cleaning procedures for tent components",
+          "pdfStepReference": "Before storage | Repair Level 1",
+          "content": [
+            "Use a soft brush (nylon) or sponge",
+            "Wash using a water-based detergent solution",
+            "For slight dirt: 5% concentration at 20°C",
+            "For medium dirt: 10% concentration at 20°C",
+            "For stubborn dirt: 10% concentration at 50°C",
+            "Rinse with clean water",
+            "Difficult deposits may include mineral origin (fats, tars, scale), plant origin (leaves, pollens, resins), or animal origin (bird droppings, crushed insects)",
+            "These deposits may require special techniques - contact Lanco for advice before attempting"
+          ],
+          "actions": [
+            "Use soft nylon brush or sponge",
+            "Prepare appropriate detergent solution",
+            "Apply correct concentration based on dirt level",
+            "Rinse thoroughly with clean water",
+            "Contact manufacturer for stubborn deposits"
+          ],
+          "warnings": [
+            "Do not use harsh chemicals without consulting Lanco",
+            "Improper cleaning may damage tent cover"
+          ]
+        },
+        {
+          "id": "pmi-7-storage-process",
+          "title": "PMI 7: Storage Process",
+          "purpose": "Proper storage procedures to maintain equipment condition",
+          "pdfStepReference": "Before storage | Repair Level 1",
+          "content": [
+            "All items should always be stored in adequate packaging, away from water and vermin",
+            "All items should be cleaned and fully dried before being stored",
+            "Check for packing labels and replace missing labels if needed",
+            "Make sure packaging units haven't been damaged during transport and/or stacking",
+            "The most sensitive items should always be packed on top (e.g., lights)",
+            "Make sure no item can fall down during transport or storage condition"
+          ],
+          "actions": [
+            "Ensure all items are clean and dry",
+            "Check and replace missing labels",
+            "Inspect packaging for damage",
+            "Stack with sensitive items on top",
+            "Secure items against falling"
+          ],
+          "warnings": [
+            "Never store wet or dirty items",
+            "Protect from water and vermin"
+          ]
+        },
+        {
+          "id": "pmi-8-storage-conditions",
+          "title": "PMI 8: Storage Conditions",
+          "purpose": "Maintain optimal storage environment",
+          "pdfStepReference": "Weekly | Repair Level 1",
+          "content": [
+            "Ideally storage temperature should be between 18 and 21°C",
+            "Air humidity should be between 60% and 65%",
+            "The storage area should have good air circulation",
+            "No vermin should come into the storage area"
+          ],
+          "actions": [
+            "Monitor temperature weekly (target 18-21°C)",
+            "Check humidity levels (target 60-65%)",
+            "Ensure adequate air circulation",
+            "Inspect for vermin regularly"
+          ],
+          "warnings": [
+            "Extreme temperatures can damage materials",
+            "High humidity promotes mold and mildew growth"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "corrective-maintenance",
+      "title": "Corrective Maintenance Instructions (CMIs)",
+      "description": "Repair procedures for damages and equipment issues",
+      "pdfReference": "Pages 42-43 | Section 4.2",
+      "steps": [
+        {
+          "id": "cmi-1-minor-repairs",
+          "title": "CMI 1: Minor Textile Repairs",
+          "purpose": "Repair damages smaller than 15cm that do not affect load-bearing parts",
+          "pdfStepReference": "In case of damage | Minor damages < 15cm",
+          "content": [
+            "Minor damages are damages smaller than 15 cm that do not affect load-bearing parts of the tent skin like attachment points of belts or ropes",
+            "Sweep away any dirt/humidity with MEK (methyl ethyl ketone) solvent or methylated spirit",
+            "Cut out a patch that overlaps the crack/hole by 3 cm on all sides",
+            "Round the corners of the patch",
+            "Lay the patch on top of the hole and mark the surrounding",
+            "Roughen the area where the patch will be applied using sand paper",
+            "Roughen the side of the patch where glue will be applied",
+            "Do not touch the clean area with your hands to avoid putting grease on it",
+            "Apply glue equally on both areas (patch and damaged area)",
+            "Follow the glue's instructions",
+            "Wait for the flash-off time",
+            "Accurately place the patch on the prepared tent fabric",
+            "Press on as hard as you can using a roll, scraper, etc.",
+            "Take special care of the rims of the patch",
+            "The quality of the gluing only depends on pressure at the beginning"
+          ],
+          "actions": [
+            "Clean damaged area with MEK or methylated spirit",
+            "Cut patch 3cm larger than damage on all sides",
+            "Round patch corners",
+            "Roughen both surfaces with sandpaper",
+            "Apply glue to both surfaces evenly",
+            "Wait for flash-off time",
+            "Position patch accurately",
+            "Apply firm pressure especially at edges"
+          ],
+          "warnings": [
+            "MEK and methylated spirits are highly flammable - keep away from naked flames",
+            "Do not touch cleaned surfaces with bare hands",
+            "Quality depends on initial pressure application"
+          ]
+        },
+        {
+          "id": "cmi-2-major-repairs",
+          "title": "CMI 2: Major Textile Repairs",
+          "purpose": "Handle damages larger than 15cm or affecting load-bearing parts",
+          "pdfStepReference": "In case of damage | Major damages > 15cm",
+          "content": [
+            "Major damages are damages bigger than 15 cm and/or that affect the load-bearing parts of the tent skin like attachment points of belts, ropes or kedders",
+            "Depending on the nature and severity of the damage, additional tools like a sewing machine, hot-air blower or rivet gun etc. might be necessary",
+            "Identify the materials needed for repair, contact Lanco for provision of spare parts and repair materials",
+            "Close holes and fissures with a repair patch according to CMI 1",
+            "If the damage is too important to repair yourself, send the damaged part to Lanco for repair"
+          ],
+          "actions": [
+            "Assess damage severity",
+            "Contact Lanco for spare parts if needed",
+            "Apply patch repair for holes/fissures (per CMI 1)",
+            "Send to factory for extensive damage"
+          ],
+          "warnings": [
+            "Both methylated spirits and MEK are highly flammable - keep away from naked flames",
+            "Observe all applicable safety rules when applying glue",
+            "Environmental conditions for glue repairs: Temperature > 5°C, Relative humidity < 60%",
+            "Major structural repairs should be performed by Lanco"
+          ]
+        },
+        {
+          "id": "cmi-3-frame-replacement",
+          "title": "CMI 3: Replacement of Frame Parts",
+          "purpose": "Replace damaged pneumatic frame components",
+          "pdfStepReference": "In case of damage",
+          "content": [
+            "Locate the source of the leak",
+            "In case of a small leak, please refer to CMI 1 for patch repair",
+            "In case of extensive damage, order a replacement part arch or beam",
+            "Remove the damaged beam from the tent cover, using the wing bolts",
+            "Install the new beam, using the wing bolts"
+          ],
+          "actions": [
+            "Locate leak source",
+            "Apply patch for small leaks (CMI 1)",
+            "Order replacement parts for extensive damage",
+            "Remove damaged beam using wing bolts",
+            "Install new beam with wing bolts"
+          ],
+          "warnings": [
+            "Ensure proper fit of replacement parts",
+            "Test for leaks after installation"
+          ]
+        },
+        {
+          "id": "cmi-4-missing-parts",
+          "title": "CMI 4: Replacement of Missing Parts",
+          "purpose": "Replace missing components",
+          "pdfStepReference": "In case of missing parts",
+          "content": [
+            "Identify the missing parts",
+            "Contact Lanco for the provision of replacement parts"
+          ],
+          "actions": [
+            "Inventory all components",
+            "Identify missing items",
+            "Contact Lanco with part numbers and descriptions"
+          ],
+          "warnings": [
+            "Always use genuine Lanco replacement parts"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "repair-kit",
+      "title": "Repair Kit Contents",
+      "description": "Reference list of repair kit items provided with each tent for 1st Level field maintenance",
+      "pdfReference": "Page 44 | Section 4.3",
+      "images": [
+        {
+          "filename": "repair_kit_contents.png",
+          "description": "Complete repair kit contents including patches, tools, adhesives, and documentation"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "kit-container",
+          "title": "Storage Container",
+          "content": [
+            "Plastic cage (1)"
+          ]
+        },
+        {
+          "id": "kit-tools",
+          "title": "Tools",
+          "content": [
+            "Scissor (1)",
+            "Valve spanner (1)",
+            "Sewing kit (1)",
+            "Brush (1)"
+          ]
+        },
+        {
+          "id": "kit-patches",
+          "title": "Fabric Patches (100 x 100 mm each)",
+          "content": [
+            "Pneumatic arch fabric patch (10)",
+            "Floor fabric patch (10)",
+            "Cover fabric patch (10)",
+            "Mid liner fabric patch (10)",
+            "Inner liner fabric patch (10)",
+            "Cabin fabric patch (10)"
+          ]
+        },
+        {
+          "id": "kit-valves",
+          "title": "Valve Components",
+          "content": [
+            "Inflation valve complete (1)",
+            "Overpressure valve complete (1)"
+          ]
+        },
+        {
+          "id": "kit-adhesives",
+          "title": "Adhesives & Solvents",
+          "content": [
+            "PVC glue / adhesive (1)",
+            "MEK (Methyl Ethyl Ketone) solvent (1)",
+            "Sandpaper for surface preparation"
+          ]
+        },
+        {
+          "id": "kit-hardware",
+          "title": "Hardware",
+          "content": [
+            "Nylon bolts with wings (4)"
+          ]
+        },
+        {
+          "id": "kit-documentation",
+          "title": "Documentation",
+          "content": [
+            "Manual (1)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "support-contacts",
+      "title": "Support & Contacts",
+      "description": "Contact information for spare parts and factory repairs",
+      "pdfReference": "Page 45 | Section 4.4",
+      "requirements": [
+        {
+          "id": "contact-italy",
+          "title": "LANCO Srl (Italy - Headquarters)",
+          "content": [
+            "Via Luca Gaurico 9/11",
+            "00143 Roma (RM), Italy",
+            "Phone: +39 654832915",
+            "Email: info@lanco.it",
+            "Web: www.lanco.it"
+          ]
+        },
+        {
+          "id": "contact-germany",
+          "title": "LANCO - Dr. Lange GmbH & Co. KG (Germany)",
+          "content": [
+            "Sure Wisch 6",
+            "30625 Hannover, Germany",
+            "Phone: +49 511367155-0",
+            "Email: info@lanco.eu",
+            "Web: www.lanco.eu"
+          ]
+        },
+        {
+          "id": "contact-romania",
+          "title": "SC LANCO SRL (Romania)",
+          "content": [
+            "Pta Textilistilor 17",
+            "555700, Talmaciu, Romania",
+            "Phone: +40 269206758",
+            "Email: info@lanco.ro",
+            "Web: www.lanco.ro"
+          ]
+        },
+        {
+          "id": "contact-france",
+          "title": "LANCO SAS (France)",
+          "content": [
+            "Regus Tour CB21, 16 Place de l'Iris",
+            "92400 Courbevoie, France",
+            "Phone: +33 185658221",
+            "Email: info@lanco-tentes.fr",
+            "Web: www.lanco-tentes.fr"
+          ]
+        },
+        {
+          "id": "contact-usa",
+          "title": "LANCO North America Corp (United States)",
+          "content": [
+            "101 N. Tryon St., Suite 112 and 6000",
+            "Charlotte, North Carolina, 28246, United States",
+            "Phone: +1 7049985670",
+            "Email: info@lanco-rds.com",
+            "Web: www.lanco-rds.com"
+          ]
+        },
+        {
+          "id": "contact-norway",
+          "title": "Rofi AS (Norway)",
+          "content": [
+            "Eikremsvingen 2C",
+            "6422 Molde, Norway",
+            "Phone: +47 71203333",
+            "Email: sales@rofi.com",
+            "Web: www.rofi.com"
+          ]
+        },
+        {
+          "id": "spare-parts-info",
+          "title": "Spare Parts Information",
+          "content": [
+            "When requesting spare parts, please provide:",
+            "- The part number (P/N) of the part, if available, with a short description",
+            "- Some pictures, if available",
+            "- The required amount"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -46,6 +46,12 @@ class AlertTemplate {
   final DateTime createdAt;
   final DateTime updatedAt;
 
+  /// Optional link to a specific maintenance task (e.g., "pmi-2-daily-inspection")
+  final String? maintenanceTaskId;
+
+  /// Display title of the linked maintenance task (e.g., "PMI 2: Daily Inspection")
+  final String? maintenanceTaskTitle;
+
   const AlertTemplate({
     required this.id,
     required this.facilityId,
@@ -58,6 +64,8 @@ class AlertTemplate {
     required this.createdBy,
     required this.createdAt,
     required this.updatedAt,
+    this.maintenanceTaskId,
+    this.maintenanceTaskTitle,
   });
 
   factory AlertTemplate.fromFirestore(DocumentSnapshot doc) {
@@ -75,6 +83,8 @@ class AlertTemplate {
       createdBy: data['createdBy'] as String? ?? '',
       createdAt: (data['createdAt'] as Timestamp?)?.toDate() ?? DateTime.now(),
       updatedAt: (data['updatedAt'] as Timestamp?)?.toDate() ?? DateTime.now(),
+      maintenanceTaskId: data['maintenanceTaskId'] as String?,
+      maintenanceTaskTitle: data['maintenanceTaskTitle'] as String?,
     );
   }
 
@@ -89,6 +99,9 @@ class AlertTemplate {
         'createdBy': createdBy,
         'createdAt': FieldValue.serverTimestamp(),
         'updatedAt': FieldValue.serverTimestamp(),
+        if (maintenanceTaskId != null) 'maintenanceTaskId': maintenanceTaskId,
+        if (maintenanceTaskTitle != null)
+          'maintenanceTaskTitle': maintenanceTaskTitle,
       };
 
   Map<String, dynamic> toFirestoreUpdate() => {
@@ -100,6 +113,9 @@ class AlertTemplate {
         'priority': priority.value,
         'isActive': isActive,
         'updatedAt': FieldValue.serverTimestamp(),
+        if (maintenanceTaskId != null) 'maintenanceTaskId': maintenanceTaskId,
+        if (maintenanceTaskTitle != null)
+          'maintenanceTaskTitle': maintenanceTaskTitle,
       };
 
   AlertTemplate copyWith({
@@ -114,6 +130,8 @@ class AlertTemplate {
     String? createdBy,
     DateTime? createdAt,
     DateTime? updatedAt,
+    String? maintenanceTaskId,
+    String? maintenanceTaskTitle,
   }) {
     return AlertTemplate(
       id: id ?? this.id,
@@ -127,6 +145,8 @@ class AlertTemplate {
       createdBy: createdBy ?? this.createdBy,
       createdAt: createdAt ?? this.createdAt,
       updatedAt: updatedAt ?? this.updatedAt,
+      maintenanceTaskId: maintenanceTaskId ?? this.maintenanceTaskId,
+      maintenanceTaskTitle: maintenanceTaskTitle ?? this.maintenanceTaskTitle,
     );
   }
 
