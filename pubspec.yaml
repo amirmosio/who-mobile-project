@@ -170,6 +170,9 @@ flutter:
     # Maintenance Guide assets
     - assets/maintenance_description/
     - assets/maintenance_description/images/
+    # Facility Use Guide assets
+    - assets/facility_use_description/
+    - assets/facility_use_description/images/
     # - .env
   fonts:
     - family: BSIconFont

@@ -48,6 +48,11 @@ class YRRoutes {
   static const maintenanceStepDetail = "/maintenance-steps/:stepId";
   static const maintenanceSubstepDetail = "/maintenance-steps/:stepId/substep/:substepId";
 
+  /// Facility Use Guide pages
+  static const facilityUseStepsList = "/facility-use-steps";
+  static const facilityUseStepDetail = "/facility-use-steps/:stepId";
+  static const facilityUseSubstepDetail = "/facility-use-steps/:stepId/substep/:substepId";
+
   /// Packing list pages
   static const idtmPackingList = "/idtm/packing-list";
   static const idtmMaintenance = "/idtm/maintenance/:installationId";

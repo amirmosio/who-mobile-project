@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:who_mobile_project/ui/dashboard/widgets/facility_use_card.dart';
 import 'package:who_mobile_project/ui/dashboard/widgets/idtm_guide_card.dart';
 import 'package:who_mobile_project/ui/dashboard/widgets/idtm_status_card.dart';
 import 'package:who_mobile_project/ui/dashboard/widgets/what_is_idtm_card.dart';
@@ -60,6 +61,9 @@ class _DashboardPageState extends State<DashboardPage>
               const WhatIsIdtmCard(),
               // IDTM Status Card with unique key to force rebuild
               IdtmStatusCard(key: _cardKey, onStatusChanged: _refreshCard),
+
+              // Facility Use & Functioning Card
+              const FacilityUseCard(),
 
               // IDTM Guide Card
               const IdtmGuideCard(),

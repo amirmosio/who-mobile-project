@@ -360,4 +360,52 @@ mixin InstallationStatusStorageMixin on BaseStorage {
     final completed = getCompletedMaintenanceSubstepsCount();
     return (completed / totalSubsteps).clamp(0.0, 1.0);
   }
+
+  // ============================================================================
+  // Facility Use Guide Storage (Educational feature)
+  // ============================================================================
+
+  static const _keyLastCompletedFacilityUseSubstepIndex =
+      'facility_use_last_completed_substep_index';
+
+  /// Get the last completed substep index (Facility Use Guide)
+  /// Returns -1 if no substep has been completed yet
+  int getLastCompletedFacilityUseSubstepIndex() {
+    return sharedPreferences.getInt(_keyLastCompletedFacilityUseSubstepIndex) ??
+        -1;
+  }
+
+  /// Set the last completed substep index (Facility Use Guide)
+  /// This marks this substep and all previous substeps as completed
+  Future<void> setLastCompletedFacilityUseSubstepIndex(int index) async {
+    await sharedPreferences.setInt(
+      _keyLastCompletedFacilityUseSubstepIndex,
+      index,
+    );
+  }
+
+  /// Check if a substep is completed based on its index (Facility Use Guide)
+  /// A substep is completed if its index is <= last completed index
+  bool isFacilityUseSubstepCompletedByIndex(int substepIndex) {
+    final lastCompleted = getLastCompletedFacilityUseSubstepIndex();
+    return substepIndex <= lastCompleted;
+  }
+
+  /// Get count of completed substeps (Facility Use Guide)
+  int getCompletedFacilityUseSubstepsCount() {
+    final lastCompleted = getLastCompletedFacilityUseSubstepIndex();
+    return lastCompleted + 1; // +1 because index starts at 0
+  }
+
+  /// Reset all facility use guide progress
+  Future<void> resetFacilityUseGuideProgress() async {
+    await sharedPreferences.remove(_keyLastCompletedFacilityUseSubstepIndex);
+  }
+
+  /// Get overall progress percentage for facility use guide (0.0 to 1.0)
+  double getFacilityUseGuideProgress(int totalSubsteps) {
+    if (totalSubsteps == 0) return 0.0;
+    final completed = getCompletedFacilityUseSubstepsCount();
+    return (completed / totalSubsteps).clamp(0.0, 1.0);
+  }
 }
