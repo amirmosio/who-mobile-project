@@ -228,10 +228,6 @@
               "description": "Step detail icon"
             },
             {
-              "filename": "17_tent_inflation_step_1-2_img7.png",
-              "description": "Additional instruction icon"
-            },
-            {
               "filename": "17_tent_inflation_step_1-2_img8.jpeg",
               "description": "Positioning bags on floor"
             },
@@ -254,10 +250,6 @@
           "pdfStepReference": "Page 17-18, Steps 3.0-6.0",
           "purpose": "Unroll and position tent structures",
           "images": [
-            {
-              "filename": "18_tent_inflation_step_3-7_img3.png",
-              "description": "Valve location on pneumatic arch"
-            },
             {
               "filename": "18_tent_inflation_step_3-7_img4.png",
               "description": "Close-up of inflation valve and over-pressure valve"
@@ -375,10 +367,6 @@
           },
           "images": [
             {
-              "filename": "20_tent_inflation_step_10-13_img6.png",
-              "description": "Valve states diagram (CLOSED vs OPEN)"
-            },
-            {
               "filename": "20_tent_inflation_step_10-13_img7.jpeg",
               "description": "Closing valve by turning clockwise"
             },
@@ -412,10 +400,6 @@
           "pdfStepReference": "Page 21, Steps 14.0-15.0",
           "purpose": "Erect tent structure to operating pressure",
           "images": [
-            {
-              "filename": "21_tent_inflation_step_14-15_img3.png",
-              "description": "Inflation warning icon"
-            },
             {
               "filename": "21_tent_inflation_step_14-15_img4.jpeg",
               "description": "Inflator ON, tent inflating"
@@ -458,10 +442,6 @@
             {
               "filename": "22_tent_inflation_step_16-18_img5.jpeg",
               "description": "Screwing protective caps back on"
-            },
-            {
-              "filename": "22_tent_inflation_step_16-18_img6.png",
-              "description": "PVC protective flap detail"
             },
             {
               "filename": "22_tent_inflation_step_16-18_img7.jpeg",
@@ -609,10 +589,6 @@
               "description": "Vestibule bags"
             },
             {
-              "filename": "25_vestibules_step_1-4_img6.png",
-              "description": "Placement diagram"
-            },
-            {
               "filename": "25_vestibules_step_1-4_img7.jpeg",
               "description": "Placing bags on hard floor"
             }
@@ -661,12 +637,7 @@
           "title": "Prepare Vestibule Valves",
           "pdfStepReference": "Page 26, Step 7.0",
           "purpose": "Ready vestibules for inflation",
-          "images": [
-            {
-              "filename": "26_vestibules_step_5-7_img5.png",
-              "description": "Removing valve protective caps"
-            }
-          ],
+          "images": [],
           "actions": [
             "Remove protective caps from inflation valves (turn counterclockwise)"
           ]
@@ -846,10 +817,6 @@
           "purpose": "Install internal partitions and climate control",
           "images": [
             {
-              "filename": "31_inner_cabins_step_2-4_img4.png",
-              "description": "Step icons"
-            },
-            {
               "filename": "31_inner_cabins_step_2-4_img5.png",
               "description": "Installation diagram"
             },
@@ -883,10 +850,6 @@
             {
               "filename": "32_inner_cabins_step_5-6_img4.jpeg",
               "description": "Toggle button connection close-up"
-            },
-            {
-              "filename": "32_inner_cabins_step_5-6_img5.png",
-              "description": "Connection detail"
             },
             {
               "filename": "32_inner_cabins_step_5-6_img6.jpeg",
