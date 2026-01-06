@@ -18,7 +18,8 @@
           "content": [
             "2-3 persons minimum for safe dismantling",
             "Training recommended for all personnel"
-          ]
+          ],
+          "images": []
         },
         {
           "id": "weather-requirements",
@@ -26,6 +27,12 @@
           "content": [
             "Dismantling is strongly discouraged in case of strong winds or heavy rains",
             "Wind: Maximum 40 km/h during dismantling"
+          ],
+          "images": [
+            {
+              "filename": "34_pre_dismantling_requirements_img4.jpeg",
+              "description": "Temperature changes and environmental considerations"
+            }
           ]
         },
         {
@@ -40,6 +47,16 @@
             "Avoid packing the tent when it is wet, humid and/or dirty",
             "If you pack the tent whilst still wet or humid, unpack, clean and dry it within 72 hours to avoid mildew",
             "Collect, clean and pack all items, and run an inventory before loading onto the truck"
+          ],
+          "images": [
+            {
+              "filename": "34_pre_dismantling_requirements_img5.png",
+              "description": "Site preparation and selection guidelines"
+            },
+            {
+              "filename": "34_pre_dismantling_requirements_img6.png",
+              "description": "Installation site preparation requirements"
+            }
           ]
         }
       ]
@@ -178,14 +195,6 @@
           ],
           "images": [
             {
-              "filename": "35_vestibule_sun_shadowing_removal_img1.png",
-              "description": "Vestibule disconnection header"
-            },
-            {
-              "filename": "35_vestibule_sun_shadowing_removal_img2.png",
-              "description": "Vestibule connection diagram"
-            },
-            {
               "filename": "35_vestibule_sun_shadowing_removal_img3.png",
               "description": "Locking pin removal illustration"
             },
@@ -228,14 +237,6 @@
           ],
           "criticalNote": "Leave tent doors OPEN during deflation to prevent air from getting trapped inside and to prevent damage to air passage valves.",
           "images": [
-            {
-              "filename": "36_tent_deflation_step_7-8_img1.png",
-              "description": "Deflation preparation header"
-            },
-            {
-              "filename": "36_tent_deflation_step_7-8_img2.png",
-              "description": "Valve opening diagram"
-            },
             {
               "filename": "36_tent_deflation_step_7-8_img3.png",
               "description": "Door position illustration"
@@ -287,14 +288,6 @@
           "criticalNote": "Use of inflator in deflation mode (INLET) is very important as it helps empty the tent frame completely and greatly simplifies the ensuing folding procedure.",
           "images": [
             {
-              "filename": "37_tent_deflation_step_9-10_img1.png",
-              "description": "Inflator connection diagram"
-            },
-            {
-              "filename": "37_tent_deflation_step_9-10_img2.png",
-              "description": "Deflation mode settings"
-            },
-            {
               "filename": "37_tent_deflation_step_9-10_img3.jpeg",
               "description": "Complete deflation photo step 9"
             },
@@ -334,7 +327,7 @@
     {
       "id": "sun-shadowing-removal",
       "title": "Remove Sun Shadowing Nets",
-      "pdfReference": "Page 35 | Between steps",
+      "pdfReference": "Page 35 | Step 6.0",
       "description": "Remove sun protection systems",
       "steps": [
         {
@@ -350,7 +343,24 @@
             "Fold sun shadowing nets",
             "Place nets in their corresponding bags"
           ],
-          "images": []
+          "images": [
+            {
+              "filename": "35_vestibule_sun_shadowing_removal_img3.png",
+              "description": "Locking pin removal illustration"
+            },
+            {
+              "filename": "35_vestibule_sun_shadowing_removal_img4.png",
+              "description": "Stud disconnection detail"
+            },
+            {
+              "filename": "35_vestibule_sun_shadowing_removal_img5.jpeg",
+              "description": "Spacer separation photo"
+            },
+            {
+              "filename": "35_vestibule_sun_shadowing_removal_img6.jpeg",
+              "description": "Sun shadowing net removal photo"
+            }
+          ]
         }
       ]
     },
@@ -370,16 +380,7 @@
             "Fold tent into rectangular bundle",
             "Ensure width matches transport bag width"
           ],
-          "images": [
-            {
-              "filename": "38_tent_folding_packing_img1.png",
-              "description": "Folding pattern header"
-            },
-            {
-              "filename": "38_tent_folding_packing_img2.png",
-              "description": "Folding sequence diagram"
-            }
-          ]
+          "images": []
         },
         {
           "id": "folding-step-12",
@@ -446,7 +447,16 @@
             "Before starting to roll tent bundle, check width matches bag width",
             "Adjust folding if necessary to match bag dimensions"
           ],
-          "images": []
+          "images": [
+            {
+              "filename": "38_tent_folding_packing_img3.jpeg",
+              "description": "Bundle width verification example"
+            },
+            {
+              "filename": "38_tent_folding_packing_img4.jpeg",
+              "description": "Checking bundle dimensions before rolling"
+            }
+          ]
         },
         {
           "id": "folding-step-16",
@@ -475,7 +485,7 @@
     {
       "id": "hard-floor-removal",
       "title": "Hard Floor Dismantling",
-      "pdfReference": "Reverse of Page 16",
+      "pdfReference": "Page 16 (reverse order)",
       "description": "Remove and pack hard floor tiles",
       "steps": [
         {
@@ -491,24 +501,8 @@
           ],
           "images": [
             {
-              "filename": "16_hard_floor_installation_reverse_img1.png",
-              "description": "Hard floor header"
-            },
-            {
-              "filename": "16_hard_floor_installation_reverse_img2.png",
-              "description": "Floor tile removal pattern"
-            },
-            {
-              "filename": "16_hard_floor_installation_reverse_img3.png",
-              "description": "Tile disconnection diagram"
-            },
-            {
               "filename": "16_hard_floor_installation_reverse_img4.jpeg",
               "description": "Floor removal photo"
-            },
-            {
-              "filename": "16_hard_floor_installation_reverse_img5.png",
-              "description": "Pallet stacking diagram"
             },
             {
               "filename": "16_hard_floor_installation_reverse_img6.jpeg",
@@ -575,7 +569,8 @@
             "Items should be stored away from water sources",
             "Most sensitive items should be packed on top",
             "Ensure no item can fall during transport or storage"
-          ]
+          ],
+          "images": []
         },
         {
           "id": "maintenance-before-storage",
@@ -591,7 +586,8 @@
             "Check bags visually for any damage",
             "Ensure all parts are dry before packing",
             "Repack all clean, repaired and complete units on correct pallets"
-          ]
+          ],
+          "images": []
         }
       ]
     }

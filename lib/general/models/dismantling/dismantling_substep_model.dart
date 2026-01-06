@@ -9,6 +9,7 @@ class DismantlingSubstepModel {
   final String? criticalWarning;
   final String? criticalNote;
   final List<DismantlingImageModel>? images;
+  final String? pdfStepReference;
 
   DismantlingSubstepModel({
     required this.id,
@@ -19,6 +20,7 @@ class DismantlingSubstepModel {
     this.criticalWarning,
     this.criticalNote,
     this.images,
+    this.pdfStepReference,
   });
 
   factory DismantlingSubstepModel.fromJson(Map<String, dynamic> json) {
@@ -37,6 +39,7 @@ class DismantlingSubstepModel {
             (e) => DismantlingImageModel.fromJson(e as Map<String, dynamic>),
           )
           .toList(),
+      pdfStepReference: json['pdfStepReference'] as String?,
     );
   }
 
@@ -50,6 +53,7 @@ class DismantlingSubstepModel {
       if (criticalWarning != null) 'criticalWarning': criticalWarning,
       if (criticalNote != null) 'criticalNote': criticalNote,
       if (images != null) 'images': images!.map((e) => e.toJson()).toList(),
+      if (pdfStepReference != null) 'pdfStepReference': pdfStepReference,
     };
   }
 }

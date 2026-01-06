@@ -71,10 +71,6 @@
           "title": "Climatic Conditions",
           "images": [
             {
-              "filename": "13_required_conditions_img7.png",
-              "description": "Climatic conditions icon"
-            },
-            {
               "filename": "13_required_conditions_img13.png",
               "description": "Climatic conditions diagram"
             }
@@ -110,18 +106,6 @@
             {
               "filename": "13_required_conditions_img10.png",
               "description": "Safety icon"
-            },
-            {
-              "filename": "14_safety_warnings_img1.png",
-              "description": "Safety warning symbols"
-            },
-            {
-              "filename": "14_safety_warnings_img2.png",
-              "description": "Visual inspection requirements"
-            },
-            {
-              "filename": "14_safety_warnings_img3.png",
-              "description": "Additional safety information"
             }
           ],
           "content": [
@@ -183,10 +167,6 @@
           "purpose": "Establish base foundation for tent structure",
           "images": [
             {
-              "filename": "16_hard_floor_installation_img3.png",
-              "description": "Floor installation icon"
-            },
-            {
               "filename": "16_hard_floor_installation_img4.jpeg",
               "description": "Pallet of floor tiles"
             },
@@ -208,10 +188,6 @@
           "layoutConfiguration": "[3 tiles] [9 tiles] [3 tiles] [8 tiles]\n[31 tiles] [10 tiles] [31 tiles]",
           "dimensions": "17m x 8m total area",
           "images": [
-            {
-              "filename": "16_hard_floor_installation_img5.png",
-              "description": "Floor layout configuration (17m x 8m)"
-            },
             {
               "filename": "16_hard_floor_installation_img7.png",
               "description": "Floor tile detail"
@@ -243,14 +219,6 @@
           "pdfStepReference": "Page 17, Steps 1.0-2.0",
           "purpose": "Prepare tents for deployment",
           "images": [
-            {
-              "filename": "17_tent_inflation_step_1-2_img3.png",
-              "description": "Step number icon"
-            },
-            {
-              "filename": "17_tent_inflation_step_1-2_img4.png",
-              "description": "Instruction icon"
-            },
             {
               "filename": "17_tent_inflation_step_1-2_img5.jpeg",
               "description": "Tent bags on pallet"
@@ -286,10 +254,6 @@
           "pdfStepReference": "Page 17-18, Steps 3.0-6.0",
           "purpose": "Unroll and position tent structures",
           "images": [
-            {
-              "filename": "18_tent_inflation_step_3-7_img2.png",
-              "description": "Step icons"
-            },
             {
               "filename": "18_tent_inflation_step_3-7_img3.png",
               "description": "Valve location on pneumatic arch"
@@ -346,14 +310,6 @@
           "purpose": "Provide additional sun protection",
           "images": [
             {
-              "filename": "19_tent_inflation_step_8-9_img1.png",
-              "description": "Sun shadowing nets"
-            },
-            {
-              "filename": "19_tent_inflation_step_8-9_img2.png",
-              "description": "Pneumatic spacers"
-            },
-            {
               "filename": "19_tent_inflation_step_8-9_img3.png",
               "description": "Coupling connection detail"
             },
@@ -389,18 +345,6 @@
             {
               "filename": "19_tent_inflation_step_8-9_img7.png",
               "description": "Electric inflator unit"
-            },
-            {
-              "filename": "20_tent_inflation_step_10-13_img1.png",
-              "description": "Inflator with manifold attached"
-            },
-            {
-              "filename": "20_tent_inflation_step_10-13_img2.png",
-              "description": "Connection diagram"
-            },
-            {
-              "filename": "20_tent_inflation_step_10-13_img3.png",
-              "description": "Fastening screw ring"
             },
             {
               "filename": "20_tent_inflation_step_10-13_img4.png",
@@ -469,20 +413,12 @@
           "purpose": "Erect tent structure to operating pressure",
           "images": [
             {
-              "filename": "21_tent_inflation_step_14-15_img2.png",
-              "description": "Step icons"
-            },
-            {
               "filename": "21_tent_inflation_step_14-15_img3.png",
               "description": "Inflation warning icon"
             },
             {
               "filename": "21_tent_inflation_step_14-15_img4.jpeg",
               "description": "Inflator ON, tent inflating"
-            },
-            {
-              "filename": "21_tent_inflation_step_14-15_img5.png",
-              "description": "Tent during inflation process"
             },
             {
               "filename": "21_tent_inflation_step_14-15_img6.jpeg",
@@ -516,20 +452,8 @@
           "purpose": "Seal tent frame after inflation",
           "images": [
             {
-              "filename": "22_tent_inflation_step_16-18_img1.png",
-              "description": "Pressure monitoring coupling on inflator"
-            },
-            {
-              "filename": "22_tent_inflation_step_16-18_img2.png",
-              "description": "Pressure feedback tube insertion"
-            },
-            {
               "filename": "22_tent_inflation_step_16-18_img3.jpeg",
               "description": "Disconnecting inflation hoses"
-            },
-            {
-              "filename": "22_tent_inflation_step_16-18_img4.png",
-              "description": "Valve protection diagram"
             },
             {
               "filename": "22_tent_inflation_step_16-18_img5.jpeg",
@@ -558,24 +482,12 @@
           "purpose": "Enable automatic pressure maintenance",
           "images": [
             {
-              "filename": "23_tent_inflation_step_19-23_img2.png",
-              "description": "Step icons"
-            },
-            {
-              "filename": "23_tent_inflation_step_19-23_img3.png",
-              "description": "Feedback tube routing into tent"
-            },
-            {
               "filename": "23_tent_inflation_step_19-23_img4.png",
               "description": "Pressure monitoring system diagram"
             },
             {
               "filename": "23_tent_inflation_step_19-23_img5.jpeg",
               "description": "Pressure feedback valve inside tent"
-            },
-            {
-              "filename": "23_tent_inflation_step_19-23_img6.png",
-              "description": "Connecting tap to feedback valve"
             },
             {
               "filename": "23_tent_inflation_step_19-23_img7.png",
@@ -630,14 +542,6 @@
           "pdfStepReference": "Page 24, Step 24.0",
           "purpose": "Ensure proper groundsheet alignment",
           "images": [
-            {
-              "filename": "24_tent_inflation_step_24_img2.png",
-              "description": "Step icon"
-            },
-            {
-              "filename": "24_tent_inflation_step_24_img3.png",
-              "description": "Aligned tent with no folds"
-            },
             {
               "filename": "24_tent_inflation_step_24_img4.jpeg",
               "description": "Pulling corners to straighten groundsheet"
@@ -697,10 +601,6 @@
           "purpose": "Prepare vestibule structures for deployment",
           "images": [
             {
-              "filename": "25_vestibules_step_1-4_img3.png",
-              "description": "Step icons"
-            },
-            {
               "filename": "25_vestibules_step_1-4_img4.png",
               "description": "Instruction icons"
             },
@@ -737,10 +637,6 @@
             {
               "filename": "25_vestibules_step_1-4_img9.png",
               "description": "Rolling out vestibule"
-            },
-            {
-              "filename": "26_vestibules_step_5-7_img2.png",
-              "description": "Step icons"
             },
             {
               "filename": "26_vestibules_step_5-7_img3.jpeg",
@@ -791,14 +687,6 @@
               "description": "Inflator ON"
             },
             {
-              "filename": "27_vestibules_step_8-10_img2.png",
-              "description": "Step icons"
-            },
-            {
-              "filename": "27_vestibules_step_8-10_img3.png",
-              "description": "Inflation diagram"
-            },
-            {
               "filename": "27_vestibules_step_8-10_img4.jpeg",
               "description": "Vestibule inflating"
             },
@@ -831,10 +719,6 @@
           "pdfStepReference": "Page 28, Step 11.0",
           "purpose": "Create integrated tent system",
           "images": [
-            {
-              "filename": "28_vestibules_step_11_img2.png",
-              "description": "Step icon"
-            },
             {
               "filename": "28_vestibules_step_11_img3.jpeg",
               "description": "Coupling system with double/single studs"
@@ -875,24 +759,12 @@
           "purpose": "Secure vestibules to ground",
           "images": [
             {
-              "filename": "29_vestibules_step_12-13_img2.png",
-              "description": "Step icons"
-            },
-            {
-              "filename": "29_vestibules_step_12-13_img3.png",
-              "description": "Pegging instructions"
-            },
-            {
               "filename": "29_vestibules_step_12-13_img4.jpeg",
               "description": "30cm T-pegs for groundsheet loops"
             },
             {
               "filename": "29_vestibules_step_12-13_img5.jpeg",
               "description": "50cm T-pegs for guy ropes"
-            },
-            {
-              "filename": "29_vestibules_step_12-13_img6.png",
-              "description": "Peg placement diagram showing distances"
             },
             {
               "filename": "29_vestibules_step_12-13_img7.jpeg",
@@ -974,14 +846,6 @@
           "purpose": "Install internal partitions and climate control",
           "images": [
             {
-              "filename": "31_inner_cabins_step_2-4_img1.png",
-              "description": "Toggle button attachment method"
-            },
-            {
-              "filename": "31_inner_cabins_step_2-4_img2.png",
-              "description": "Connecting toggle buttons to plastic studs"
-            },
-            {
               "filename": "31_inner_cabins_step_2-4_img4.png",
               "description": "Step icons"
             },
@@ -1012,10 +876,6 @@
           "pdfStepReference": "Page 31-32, Steps 4.0-6.0",
           "purpose": "Secure inner partitions to tent structure",
           "images": [
-            {
-              "filename": "32_inner_cabins_step_5-6_img2.png",
-              "description": "Step icons"
-            },
             {
               "filename": "32_inner_cabins_step_5-6_img3.png",
               "description": "Attachment sequence diagram"
@@ -1060,10 +920,6 @@
           "pdfStepReference": "Page 33, Electrical System Diagram",
           "purpose": "Provide power and lighting to IDTM facility",
           "images": [
-            {
-              "filename": "33_electrical_system_img2.png",
-              "description": "Complete electrical system diagram"
-            },
             {
               "filename": "33_electrical_system_img3.png",
               "description": "Component list and wiring layout"
