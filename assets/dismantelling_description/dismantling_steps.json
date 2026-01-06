@@ -253,10 +253,6 @@
               "description": "Door position illustration"
             },
             {
-              "filename": "36_tent_deflation_step_7-8_img4.png",
-              "description": "Pressure release diagram"
-            },
-            {
               "filename": "36_tent_deflation_step_7-8_img5.jpeg",
               "description": "Tent collapse photo step 7"
             }
@@ -324,11 +320,11 @@
           "images": [
             {
               "filename": "37_tent_deflation_step_9-10_img5.jpeg",
-              "description": "Tent positioning photo step 10"
+              "description": "Tent folding pattern diagram - flat panel"
             },
             {
               "filename": "37_tent_deflation_step_9-10_img6.jpeg",
-              "description": "Guy ropes placement photo"
+              "description": "Tent folding pattern diagram - wedge/edge piece"
             },
             {
               "filename": "37_tent_deflation_step_9-10_img7.jpeg",
