@@ -167,6 +167,9 @@ flutter:
     # Dismantling Guide assets
     - assets/dismantelling_description/
     - assets/dismantelling_description/images/
+    # Maintenance Guide assets
+    - assets/maintenance_description/
+    - assets/maintenance_description/images/
     # - .env
   fonts:
     - family: BSIconFont

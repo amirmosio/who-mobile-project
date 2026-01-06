@@ -14,6 +14,7 @@ class YRRoutes {
   static const adminLogin = "/admin/login";
   static const adminPanel = "/admin/panel";
   static const alertTemplates = "/admin/alert-templates";
+  static const initializeMaintenanceAlerts = "/admin/initialize-maintenance-alerts";
 
   /// nav bar pages
   static const dashBoard = "/dashboard";
@@ -41,6 +42,11 @@ class YRRoutes {
   static const dismantlingStepsList = "/dismantling-steps";
   static const dismantlingStepDetail = "/dismantling-steps/:stepId";
   static const dismantlingSubstepDetail = "/dismantling-steps/:stepId/substep/:substepId";
+
+  /// Maintenance Guide pages
+  static const maintenanceStepsList = "/maintenance-steps";
+  static const maintenanceStepDetail = "/maintenance-steps/:stepId";
+  static const maintenanceSubstepDetail = "/maintenance-steps/:stepId/substep/:substepId";
 
   /// Packing list pages
   static const idtmPackingList = "/idtm/packing-list";

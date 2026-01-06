@@ -4,10 +4,12 @@ import 'package:who_mobile_project/app_core/theme/colors.dart';
 import 'package:who_mobile_project/app_core/theme/text_styles/app_text_styles.dart';
 import 'package:who_mobile_project/general/models/idtm/idtm_facility.dart';
 import 'package:who_mobile_project/general/models/maintenance/alert_template.dart';
+import 'package:who_mobile_project/general/models/maintenance_guide/maintenance_substep_model.dart';
 import 'package:who_mobile_project/general/widgets/formfields/my_text_formfield.dart';
 import 'package:who_mobile_project/providers/base/base_api_state.dart';
 import 'package:who_mobile_project/providers/idtm/facilities_provider.dart';
 import 'package:who_mobile_project/providers/maintenance/alert_template_provider.dart';
+import 'package:who_mobile_project/providers/maintenance_guide/maintenance_provider.dart';
 
 /// Dialog for creating or editing alert templates
 class AlertTemplateDialog extends ConsumerStatefulWidget {
@@ -29,10 +31,12 @@ class _AlertTemplateDialogState extends ConsumerState<AlertTemplateDialog> {
   final _customIntervalController = TextEditingController();
 
   IdtmFacility? _selectedFacility;
+  MaintenanceSubstepModel? _selectedMaintenanceTask;
   int _intervalHours = 24;
   AlertPriority _priority = AlertPriority.medium;
   bool _isLoading = false;
   bool _isCustomInterval = false;
+  bool _hasInitializedMaintenanceTask = false;
 
   // Preset intervals + custom option (-1 represents custom)
   static const List<int> _intervalOptions = [1, 4, 8, 12, 24, 48, 168, 720, -1];
@@ -121,6 +125,8 @@ class _AlertTemplateDialogState extends ConsumerState<AlertTemplateDialog> {
         description: _descriptionController.text.trim(),
         intervalHours: _intervalHours,
         priority: _priority,
+        maintenanceTaskId: _selectedMaintenanceTask?.id,
+        maintenanceTaskTitle: _selectedMaintenanceTask?.title,
       );
       success = await ref
           .read(alertTemplateProvider.notifier)
@@ -136,6 +142,8 @@ class _AlertTemplateDialogState extends ConsumerState<AlertTemplateDialog> {
             description: _descriptionController.text.trim(),
             intervalHours: _intervalHours,
             priority: _priority,
+            maintenanceTaskId: _selectedMaintenanceTask?.id,
+            maintenanceTaskTitle: _selectedMaintenanceTask?.title,
           );
       success = templateId != null;
     }
@@ -167,6 +175,7 @@ class _AlertTemplateDialogState extends ConsumerState<AlertTemplateDialog> {
   @override
   Widget build(BuildContext context) {
     final facilitiesState = ref.watch(facilitiesProvider);
+    final maintenanceDataAsync = ref.watch(maintenanceDataProvider);
 
     // Listen for errors
     ref.listen(alertTemplateProvider, (previous, next) {
@@ -197,6 +206,10 @@ class _AlertTemplateDialogState extends ConsumerState<AlertTemplateDialog> {
                   _buildFacilitySelector(facilitiesState),
                   const SizedBox(height: 16),
                 ],
+
+                // Maintenance task selector (optional)
+                _buildMaintenanceTaskSelector(maintenanceDataAsync),
+                const SizedBox(height: 16),
 
                 // Title field
                 MyTextFormField(
@@ -355,6 +368,144 @@ class _AlertTemplateDialogState extends ConsumerState<AlertTemplateDialog> {
         ),
       ],
     );
+  }
+
+  Widget _buildMaintenanceTaskSelector(
+    AsyncValue<dynamic> maintenanceDataAsync,
+  ) {
+    // Extract all maintenance tasks from sections
+    List<MaintenanceSubstepModel> allTasks = [];
+    maintenanceDataAsync.whenData((data) {
+      for (final section in data.sections) {
+        if (section.steps != null) {
+          allTasks.addAll(section.steps!);
+        }
+      }
+
+      // Initialize selected task from template when editing (only once)
+      if (!_hasInitializedMaintenanceTask &&
+          widget.isEditing &&
+          widget.template?.maintenanceTaskId != null) {
+        _hasInitializedMaintenanceTask = true;
+        final taskId = widget.template!.maintenanceTaskId;
+        final matchingTask = allTasks.where((t) => t.id == taskId).firstOrNull;
+        if (matchingTask != null) {
+          // Use addPostFrameCallback to avoid setState during build
+          WidgetsBinding.instance.addPostFrameCallback((_) {
+            if (mounted) {
+              setState(() {
+                _selectedMaintenanceTask = matchingTask;
+              });
+            }
+          });
+        }
+      }
+    });
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Maintenance Task (Optional)',
+          style: AppTextStyles.bodyText.copyWith(
+            color: GVColors.black,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+        const SizedBox(height: 4),
+        Text(
+          'Link this alert to a specific maintenance task',
+          style: AppTextStyles.subtitleText.copyWith(
+            color: GVColors.darkGrey,
+            fontSize: 11,
+          ),
+        ),
+        const SizedBox(height: 8),
+        Container(
+          padding: const EdgeInsets.symmetric(horizontal: 12),
+          decoration: BoxDecoration(
+            border: Border.all(color: GVColors.lightBorderGrey),
+            borderRadius: BorderRadius.circular(8),
+          ),
+          child: DropdownButtonHideUnderline(
+            child: DropdownButton<MaintenanceSubstepModel?>(
+              value: _selectedMaintenanceTask,
+              hint: Text(
+                maintenanceDataAsync.isLoading
+                    ? 'Loading tasks...'
+                    : 'None (General Alert)',
+                style: AppTextStyles.bodyText.copyWith(
+                  color: GVColors.darkGrey,
+                ),
+              ),
+              isExpanded: true,
+              icon: maintenanceDataAsync.isLoading
+                  ? const SizedBox(
+                      width: 20,
+                      height: 20,
+                      child: CircularProgressIndicator(strokeWidth: 2),
+                    )
+                  : Icon(Icons.arrow_drop_down, color: GVColors.darkGrey),
+              items: [
+                // None option
+                DropdownMenuItem<MaintenanceSubstepModel?>(
+                  value: null,
+                  child: Text(
+                    'None (General Alert)',
+                    style: AppTextStyles.bodyText.copyWith(
+                      color: GVColors.darkGrey,
+                      fontStyle: FontStyle.italic,
+                    ),
+                  ),
+                ),
+                // All maintenance tasks
+                ...allTasks.map((task) {
+                  return DropdownMenuItem<MaintenanceSubstepModel>(
+                    value: task,
+                    child: Text(
+                      task.title,
+                      style: AppTextStyles.bodyText.copyWith(
+                        color: GVColors.black,
+                      ),
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  );
+                }),
+              ],
+              onChanged: maintenanceDataAsync.isLoading
+                  ? null
+                  : (task) {
+                      setState(() {
+                        _selectedMaintenanceTask = task;
+                        // Auto-fill title and description if task selected
+                        if (task != null) {
+                          _titleController.text = task.title;
+                          _descriptionController.text =
+                              task.purpose ?? task.content.firstOrNull ?? '';
+                          // Set recommended interval based on task
+                          _setRecommendedInterval(task.id);
+                        }
+                      });
+                    },
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  /// Set recommended interval based on task ID
+  void _setRecommendedInterval(String taskId) {
+    if (taskId.contains('daily')) {
+      _intervalHours = 24;
+      _isCustomInterval = false;
+    } else if (taskId.contains('storage-conditions')) {
+      _intervalHours = 168; // Weekly
+      _isCustomInterval = false;
+    } else if (taskId.contains('weather')) {
+      _intervalHours = 4; // Check frequently
+      _isCustomInterval = false;
+    }
   }
 
   Widget _buildIntervalSelector() {

@@ -75,6 +75,13 @@ class _AlertTemplatesPageState extends ConsumerState<AlertTemplatesPage> {
         ),
       ),
       actions: [
+        // Initialize maintenance alerts button
+        IconButton(
+          icon: const Icon(Icons.playlist_add_check),
+          color: GVColors.black,
+          tooltip: 'Initialize Maintenance Alerts',
+          onPressed: () => context.push(YRRoutes.initializeMaintenanceAlerts),
+        ),
         PopupMenuButton<String?>(
           icon: Icon(
             Icons.filter_list,

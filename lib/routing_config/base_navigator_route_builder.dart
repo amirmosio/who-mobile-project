@@ -8,6 +8,7 @@ import 'package:who_mobile_project/ui/auth_pages/login/login_page.dart';
 import 'package:who_mobile_project/ui/auth_pages/login/admin_login_page.dart';
 import 'package:who_mobile_project/ui/auth_pages/admin_panel/admin_panel_page.dart';
 import 'package:who_mobile_project/ui/admin/alert_templates_page.dart';
+import 'package:who_mobile_project/ui/admin/maintenance_alerts_initializer_page.dart';
 import 'package:who_mobile_project/ui/not_found/not_found.dart';
 import 'package:who_mobile_project/ui/auth_pages/register/registration_page.dart';
 import 'package:who_mobile_project/ui/auth_pages/reset_password/reset_password_page.dart';
@@ -18,6 +19,9 @@ import 'package:who_mobile_project/ui/installation_guide/installation_substep_de
 import 'package:who_mobile_project/ui/dismantling_guide/dismantling_steps_list_page.dart';
 import 'package:who_mobile_project/ui/dismantling_guide/dismantling_step_detail_page.dart';
 import 'package:who_mobile_project/ui/dismantling_guide/dismantling_substep_detail_page.dart';
+import 'package:who_mobile_project/ui/maintenance_guide/maintenance_steps_list_page.dart';
+import 'package:who_mobile_project/ui/maintenance_guide/maintenance_step_detail_page.dart';
+import 'package:who_mobile_project/ui/maintenance_guide/maintenance_substep_detail_page.dart';
 import 'routes.dart';
 import 'route_observer.dart';
 import 'package:who_mobile_project/services/navigation_tracker.dart';
@@ -113,6 +117,12 @@ GoRouter baseNavRouterBuilder() {
         pageBuilder: (context, state) =>
             const MaterialPage(child: AlertTemplatesPage()),
       ),
+      GoRoute(
+        path: YRRoutes.initializeMaintenanceAlerts,
+        name: YRRoutes.initializeMaintenanceAlerts,
+        pageBuilder: (context, state) =>
+            const MaterialPage(child: MaintenanceAlertsInitializerPage()),
+      ),
 
       // What is IDTM Route
       GoRoute(
@@ -179,6 +189,38 @@ GoRouter baseNavRouterBuilder() {
           final substepId = state.pathParameters['substepId']!;
           return MaterialPage(
             child: DismantlingSubstepDetailPage(
+              stepId: stepId,
+              substepId: substepId,
+            ),
+          );
+        },
+      ),
+
+      // Maintenance Guide Routes
+      GoRoute(
+        path: YRRoutes.maintenanceStepsList,
+        name: YRRoutes.maintenanceStepsList,
+        pageBuilder: (context, state) =>
+            const MaterialPage(child: MaintenanceStepsListPage()),
+      ),
+      GoRoute(
+        path: YRRoutes.maintenanceStepDetail,
+        name: YRRoutes.maintenanceStepDetail,
+        pageBuilder: (context, state) {
+          final stepId = state.pathParameters['stepId']!;
+          return MaterialPage(
+            child: MaintenanceStepDetailPage(stepId: stepId),
+          );
+        },
+      ),
+      GoRoute(
+        path: YRRoutes.maintenanceSubstepDetail,
+        name: YRRoutes.maintenanceSubstepDetail,
+        pageBuilder: (context, state) {
+          final stepId = state.pathParameters['stepId']!;
+          final substepId = state.pathParameters['substepId']!;
+          return MaterialPage(
+            child: MaintenanceSubstepDetailPage(
               stepId: stepId,
               substepId: substepId,
             ),

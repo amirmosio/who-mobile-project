@@ -4,7 +4,7 @@ Major features of the app:
 - ~~Login (guest, admin) Firebase Authentication~~
 - Packing list (automatic visual recognition of items) Kian
 - Step by step installation Amir
-- Maintenance instructions Amin
+- ~~Maintenance instructions Amin~~
 - ~~automatic alert Amin~~
 - Furniture and equipment instruction Kian
 - Dismantling and repacking Amir
