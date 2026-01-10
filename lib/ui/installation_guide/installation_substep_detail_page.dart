@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:who_mobile_project/general/models/installation/installation_substep_model.dart';
+import 'package:who_mobile_project/general/widgets/next_prev_navigation_widget.dart';
 import 'package:who_mobile_project/providers/installation/installation_provider.dart';
 
 class InstallationSubstepDetailPage extends ConsumerStatefulWidget {
@@ -23,7 +25,20 @@ class _InstallationSubstepDetailPageState
   @override
   void initState() {
     super.initState();
-    // Mark this substep as read when the page is opened
+    _markAsCompleted();
+  }
+
+  @override
+  void didUpdateWidget(InstallationSubstepDetailPage oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    // Mark as completed when substep changes (e.g., via next/previous navigation)
+    if (oldWidget.stepId != widget.stepId ||
+        oldWidget.substepId != widget.substepId) {
+      _markAsCompleted();
+    }
+  }
+
+  void _markAsCompleted() {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       final flattenedList = ref.read(flattenedSubstepsProvider);
       final currentItem = flattenedList.firstWhere(
@@ -49,6 +64,9 @@ class _InstallationSubstepDetailPageState
     final installationDataAsync = ref.watch(installationDataProvider);
     final flattenedList = ref.watch(flattenedSubstepsProvider);
     final lastCompletedIndex = ref.watch(installationProgressProvider);
+    final navigationInfo = ref.watch(
+      installationSubstepNavigationProvider(widget.stepId, widget.substepId),
+    );
 
     // Find the current substep in the flattened list
     final currentItem = flattenedList.firstWhere(
@@ -120,10 +138,13 @@ class _InstallationSubstepDetailPageState
             return const Center(child: Text('Substep not found'));
           }
 
-          return SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
+          return Column(
+            children: [
+              Expanded(
+                child: SingleChildScrollView(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
                 // Header with completion status
                 Container(
                   width: double.infinity,
@@ -155,12 +176,17 @@ class _InstallationSubstepDetailPageState
                       if (substep.pdfStepReference != null) ...[
                         const SizedBox(height: 8),
                         Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             const Icon(Icons.picture_as_pdf, size: 16),
                             const SizedBox(width: 4),
-                            Text(
-                              'Reference: ${substep.pdfStepReference}',
-                              style: Theme.of(context).textTheme.bodySmall,
+                            Expanded(
+                              child: Text(
+                                'Reference: ${substep.pdfStepReference}',
+                                style: Theme.of(context).textTheme.bodySmall,
+                                maxLines: 3,
+                                overflow: TextOverflow.ellipsis,
+                              ),
                             ),
                           ],
                         ),
@@ -460,8 +486,22 @@ class _InstallationSubstepDetailPageState
                   ),
 
                 const SizedBox(height: 40),
-              ],
-            ),
+                    ],
+                  ),
+                ),
+              ),
+              // Next/Prev Navigation Widget
+              NextPrevNavigationWidget(
+                previousLabel: 'Previous',
+                nextLabel: navigationInfo.nextLabel ?? 'Next',
+                onPrevious: navigationInfo.previousRoute != null
+                    ? () => context.pushReplacement(navigationInfo.previousRoute!)
+                    : null,
+                onNext: navigationInfo.nextRoute != null
+                    ? () => context.pushReplacement(navigationInfo.nextRoute!)
+                    : null,
+              ),
+            ],
           );
         },
       ),

@@ -15,22 +15,32 @@
         {
           "id": "personnel-requirements",
           "title": "Personnel Requirements",
+          "pdfReference": "Page 34 | Section 3.11",
           "content": [
             "2-3 persons minimum for safe dismantling",
             "Training recommended for all personnel"
-          ]
+          ],
+          "images": []
         },
         {
           "id": "weather-requirements",
           "title": "Weather Requirements",
+          "pdfReference": "Page 34 | Section 3.11",
           "content": [
             "Dismantling is strongly discouraged in case of strong winds or heavy rains",
             "Wind: Maximum 40 km/h during dismantling"
+          ],
+          "images": [
+            {
+              "filename": "34_pre_dismantling_requirements_img4.jpeg",
+              "description": "Temperature changes and environmental considerations"
+            }
           ]
         },
         {
           "id": "safety-warnings",
           "title": "Safety and Preparation Warnings",
+          "pdfReference": "Page 34 | Section 3.11",
           "content": [
             "Ensure all accessories have been removed from inside the tent",
             "Clean the groundsheet to ensure no sharp objects (stones, branches, etc.) are left inside",
@@ -40,6 +50,16 @@
             "Avoid packing the tent when it is wet, humid and/or dirty",
             "If you pack the tent whilst still wet or humid, unpack, clean and dry it within 72 hours to avoid mildew",
             "Collect, clean and pack all items, and run an inventory before loading onto the truck"
+          ],
+          "images": [
+            {
+              "filename": "34_pre_dismantling_requirements_img5.png",
+              "description": "Site preparation and selection guidelines"
+            },
+            {
+              "filename": "34_pre_dismantling_requirements_img6.png",
+              "description": "Installation site preparation requirements"
+            }
           ]
         }
       ]
@@ -54,6 +74,7 @@
           "id": "electrical-step-1",
           "stepNumber": 1,
           "title": "Remove Electrical System",
+          "pdfReference": "Page 34 | Step 1.0",
           "purpose": "Disconnect and pack all electrical components",
           "actions": [
             "Disconnect all LED stripe feeders",
@@ -78,6 +99,7 @@
           "id": "cleaning-step-1",
           "stepNumber": 1,
           "title": "Clean and Dry Tents",
+          "pdfReference": "Page 34 | Step 1.0",
           "purpose": "Prevent mildew and damage during storage",
           "actions": [
             "Remove all accessories from inside the tent",
@@ -101,6 +123,7 @@
           "id": "anchoring-step-2",
           "stepNumber": 2,
           "title": "Remove Guy Ropes and Pegs",
+          "pdfReference": "Page 34 | Step 2.0",
           "purpose": "Prepare tents for deflation",
           "actions": [
             "Remove all guy ropes from vestibules and main tents",
@@ -124,6 +147,7 @@
           "id": "inner-cabins-step-3",
           "stepNumber": 3,
           "title": "Disconnect Inner Cabins",
+          "pdfReference": "Page 34 | Step 3.0",
           "purpose": "Remove internal partitions",
           "actions": [
             "Starting from one side, disconnect toggle buttons from plastic studs",
@@ -137,6 +161,7 @@
           "id": "inner-cabins-step-4",
           "stepNumber": 4,
           "title": "Remove Support Bars",
+          "pdfReference": "Page 34 | Step 4.0",
           "purpose": "Disassemble cabin framework",
           "actions": [
             "Remove all support bars from patient pods (4 bars each)",
@@ -149,6 +174,7 @@
           "id": "inner-cabins-step-5",
           "stepNumber": 5,
           "title": "Fold and Pack Inner Cabins",
+          "pdfReference": "Page 35 | Step 5.0",
           "purpose": "Prepare inner cabins for storage",
           "actions": [
             "Fold inner cabins on a clean surface or over plastic sheeting",
@@ -170,6 +196,7 @@
           "id": "vestibule-step-6",
           "stepNumber": 6,
           "title": "Disconnect Vestibules from Main Tents",
+          "pdfReference": "Page 35 | Step 6.0",
           "purpose": "Separate vestibules from tent system",
           "actions": [
             "Disconnect all locking pins/bolts connecting vestibule spacers to tents",
@@ -177,14 +204,6 @@
             "Separate all 6 vestibules from main tent structures"
           ],
           "images": [
-            {
-              "filename": "35_vestibule_sun_shadowing_removal_img1.png",
-              "description": "Vestibule disconnection header"
-            },
-            {
-              "filename": "35_vestibule_sun_shadowing_removal_img2.png",
-              "description": "Vestibule connection diagram"
-            },
             {
               "filename": "35_vestibule_sun_shadowing_removal_img3.png",
               "description": "Locking pin removal illustration"
@@ -215,6 +234,7 @@
           "id": "deflation-step-7",
           "stepNumber": 7,
           "title": "Prepare for Deflation",
+          "pdfReference": "Page 36 | Step 7.0",
           "purpose": "Ready tents for air removal",
           "actions": [
             "Close all windows on main tents and vestibules",
@@ -229,20 +249,8 @@
           "criticalNote": "Leave tent doors OPEN during deflation to prevent air from getting trapped inside and to prevent damage to air passage valves.",
           "images": [
             {
-              "filename": "36_tent_deflation_step_7-8_img1.png",
-              "description": "Deflation preparation header"
-            },
-            {
-              "filename": "36_tent_deflation_step_7-8_img2.png",
-              "description": "Valve opening diagram"
-            },
-            {
               "filename": "36_tent_deflation_step_7-8_img3.png",
               "description": "Door position illustration"
-            },
-            {
-              "filename": "36_tent_deflation_step_7-8_img4.png",
-              "description": "Pressure release diagram"
             },
             {
               "filename": "36_tent_deflation_step_7-8_img5.jpeg",
@@ -254,6 +262,7 @@
           "id": "deflation-step-8",
           "stepNumber": 8,
           "title": "Facilitate Tent Collapse",
+          "pdfReference": "Page 36 | Step 8.0",
           "purpose": "Help tent deflate properly for easier folding",
           "actions": [
             "Press on the arches at waist level to help tent collapse onto itself",
@@ -273,6 +282,7 @@
           "id": "deflation-step-9",
           "stepNumber": 9,
           "title": "Complete Deflation with Inflator",
+          "pdfReference": "Page 37 | Step 9.0",
           "purpose": "Empty tent frame completely for easier folding",
           "actions": [
             "Once tent is deflated, insert inflation hose taps in inflation valves",
@@ -287,14 +297,6 @@
           "criticalNote": "Use of inflator in deflation mode (INLET) is very important as it helps empty the tent frame completely and greatly simplifies the ensuing folding procedure.",
           "images": [
             {
-              "filename": "37_tent_deflation_step_9-10_img1.png",
-              "description": "Inflator connection diagram"
-            },
-            {
-              "filename": "37_tent_deflation_step_9-10_img2.png",
-              "description": "Deflation mode settings"
-            },
-            {
               "filename": "37_tent_deflation_step_9-10_img3.jpeg",
               "description": "Complete deflation photo step 9"
             },
@@ -308,6 +310,7 @@
           "id": "deflation-step-10",
           "stepNumber": 10,
           "title": "Position Deflated Tent",
+          "pdfReference": "Page 37 | Step 10.0",
           "purpose": "Prepare tent for folding process",
           "actions": [
             "Adjust position of tent roof so it sits on top of groundsheet",
@@ -317,11 +320,11 @@
           "images": [
             {
               "filename": "37_tent_deflation_step_9-10_img5.jpeg",
-              "description": "Tent positioning photo step 10"
+              "description": "Tent folding pattern diagram - flat panel"
             },
             {
               "filename": "37_tent_deflation_step_9-10_img6.jpeg",
-              "description": "Guy ropes placement photo"
+              "description": "Tent folding pattern diagram - wedge/edge piece"
             },
             {
               "filename": "37_tent_deflation_step_9-10_img7.jpeg",
@@ -334,13 +337,14 @@
     {
       "id": "sun-shadowing-removal",
       "title": "Remove Sun Shadowing Nets",
-      "pdfReference": "Page 35 | Between steps",
+      "pdfReference": "Page 35 | Step 6.0",
       "description": "Remove sun protection systems",
       "steps": [
         {
           "id": "sun-shadowing-step",
           "stepNumber": 11,
           "title": "Remove Sun Shadowing Nets and Spacers",
+          "pdfReference": "Page 35 | Step 6.0",
           "purpose": "Disassemble sun protection system",
           "actions": [
             "Remove all 3 sun shadowing nets from tents",
@@ -350,7 +354,24 @@
             "Fold sun shadowing nets",
             "Place nets in their corresponding bags"
           ],
-          "images": []
+          "images": [
+            {
+              "filename": "35_vestibule_sun_shadowing_removal_img3.png",
+              "description": "Locking pin removal illustration"
+            },
+            {
+              "filename": "35_vestibule_sun_shadowing_removal_img4.png",
+              "description": "Stud disconnection detail"
+            },
+            {
+              "filename": "35_vestibule_sun_shadowing_removal_img5.jpeg",
+              "description": "Spacer separation photo"
+            },
+            {
+              "filename": "35_vestibule_sun_shadowing_removal_img6.jpeg",
+              "description": "Sun shadowing net removal photo"
+            }
+          ]
         }
       ]
     },
@@ -364,27 +385,20 @@
           "id": "folding-step-11",
           "stepNumber": 11,
           "title": "Fold Tents According to Pattern",
+          "pdfReference": "Page 37 | Step 11.0",
           "purpose": "Create compact bundle for storage",
           "actions": [
             "Follow folding pattern as shown in manual diagrams",
             "Fold tent into rectangular bundle",
             "Ensure width matches transport bag width"
           ],
-          "images": [
-            {
-              "filename": "38_tent_folding_packing_img1.png",
-              "description": "Folding pattern header"
-            },
-            {
-              "filename": "38_tent_folding_packing_img2.png",
-              "description": "Folding sequence diagram"
-            }
-          ]
+          "images": []
         },
         {
           "id": "folding-step-12",
           "stepNumber": 12,
           "title": "Clean Tent During Folding",
+          "pdfReference": "Page 37 | Step 12.0",
           "purpose": "Prevent damage during storage",
           "actions": [
             "Ensure tent is clean before packing",
@@ -398,6 +412,7 @@
           "id": "folding-step-13",
           "stepNumber": 13,
           "title": "Verify Tent is Dry",
+          "pdfReference": "Page 37 | Step 13.0",
           "purpose": "Prevent mildew formation",
           "actions": [
             "Ensure tent is completely dry when folding and packing",
@@ -411,6 +426,7 @@
           "id": "folding-step-14",
           "stepNumber": 14,
           "title": "Roll Tent Bundle",
+          "pdfReference": "Page 38 | Step 14.0",
           "purpose": "Create final packed form",
           "actions": [
             "Roll the resulting bundle starting from opposite side of transport bag",
@@ -441,17 +457,28 @@
           "id": "folding-step-15",
           "stepNumber": 15,
           "title": "Verify Bundle Width",
+          "pdfReference": "Page 38 | Step 15.0",
           "purpose": "Ensure proper fit in transport bag",
           "actions": [
             "Before starting to roll tent bundle, check width matches bag width",
             "Adjust folding if necessary to match bag dimensions"
           ],
-          "images": []
+          "images": [
+            {
+              "filename": "38_tent_folding_packing_img3.jpeg",
+              "description": "Bundle width verification example"
+            },
+            {
+              "filename": "38_tent_folding_packing_img4.jpeg",
+              "description": "Checking bundle dimensions before rolling"
+            }
+          ]
         },
         {
           "id": "folding-step-16",
           "stepNumber": 16,
           "title": "Secure Packed Tent",
+          "pdfReference": "Page 38 | Step 16.0",
           "purpose": "Prepare for transport and storage",
           "actions": [
             "Ensure bundle is well centered in the bag",
@@ -475,13 +502,14 @@
     {
       "id": "hard-floor-removal",
       "title": "Hard Floor Dismantling",
-      "pdfReference": "Reverse of Page 16",
+      "pdfReference": "Page 16 (reverse order)",
       "description": "Remove and pack hard floor tiles",
       "steps": [
         {
           "id": "hard-floor-step-17",
           "stepNumber": 17,
           "title": "Disassemble Hard Floor",
+          "pdfReference": "Page 16 | Reverse order of installation",
           "purpose": "Remove floor tiles for transport",
           "actions": [
             "Remove hard floor tiles in reverse order of installation",
@@ -491,24 +519,8 @@
           ],
           "images": [
             {
-              "filename": "16_hard_floor_installation_reverse_img1.png",
-              "description": "Hard floor header"
-            },
-            {
-              "filename": "16_hard_floor_installation_reverse_img2.png",
-              "description": "Floor tile removal pattern"
-            },
-            {
-              "filename": "16_hard_floor_installation_reverse_img3.png",
-              "description": "Tile disconnection diagram"
-            },
-            {
               "filename": "16_hard_floor_installation_reverse_img4.jpeg",
               "description": "Floor removal photo"
-            },
-            {
-              "filename": "16_hard_floor_installation_reverse_img5.png",
-              "description": "Pallet stacking diagram"
             },
             {
               "filename": "16_hard_floor_installation_reverse_img6.jpeg",
@@ -536,6 +548,7 @@
           "id": "final-step-18",
           "stepNumber": 18,
           "title": "Inventory and Organization",
+          "pdfReference": "Page 34 | General Instructions",
           "purpose": "Ensure all components are accounted for and properly stored",
           "actions": [
             "Collect all components and verify against packing list",
@@ -565,6 +578,7 @@
         {
           "id": "storage-requirements",
           "title": "Storage Requirements",
+          "pdfReference": "Pages 39-41 | PMI 7-8",
           "content": [
             "All items must be stored in adequate packaging, away from water and vermin",
             "All items must be cleaned and fully dried before storage",
@@ -575,11 +589,13 @@
             "Items should be stored away from water sources",
             "Most sensitive items should be packed on top",
             "Ensure no item can fall during transport or storage"
-          ]
+          ],
+          "images": []
         },
         {
           "id": "maintenance-before-storage",
           "title": "Maintenance Before Storage",
+          "pdfReference": "Pages 39-41 | PMI 5-6",
           "content": [
             "Clean all textile parts according to cleaning instructions",
             "Clean special stains from grass, oil, ballpoint pens, etc.",
@@ -591,7 +607,8 @@
             "Check bags visually for any damage",
             "Ensure all parts are dry before packing",
             "Repack all clean, repaired and complete units on correct pallets"
-          ]
+          ],
+          "images": []
         }
       ]
     }

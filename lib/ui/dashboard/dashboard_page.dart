@@ -63,10 +63,7 @@ class _DashboardPageState extends State<DashboardPage>
               IdtmStatusCard(key: _cardKey, onStatusChanged: _refreshCard),
 
               // Facility Use & Functioning Card
-              const FacilityUseCard(),
-
-              // IDTM Guide Card
-              const IdtmGuideCard(),
+              const FacilityUseCard()
 
               // Add other dashboard cards here in the future
               const SizedBox(height: 16),

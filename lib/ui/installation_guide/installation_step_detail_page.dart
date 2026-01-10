@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:who_mobile_project/general/models/installation/installation_step_model.dart';
+import 'package:who_mobile_project/general/widgets/next_prev_navigation_widget.dart';
 import 'package:who_mobile_project/providers/installation/installation_provider.dart';
 import 'package:who_mobile_project/routing_config/routes.dart';
 
@@ -15,6 +16,7 @@ class InstallationStepDetailPage extends ConsumerWidget {
     final installationDataAsync = ref.watch(installationDataProvider);
     final flattenedList = ref.watch(flattenedSubstepsProvider);
     final lastCompletedIndex = ref.watch(installationProgressProvider);
+    final navigationInfo = ref.watch(installationSectionNavigationProvider(stepId));
 
     return Scaffold(
       appBar: AppBar(title: const Text('Step Detail')),
@@ -52,10 +54,13 @@ class InstallationStepDetailPage extends ConsumerWidget {
               .where((item) => item.globalIndex <= lastCompletedIndex)
               .length;
 
-          return SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
+          return Column(
+            children: [
+              Expanded(
+                child: SingleChildScrollView(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
                 // Header with title and progress
                 Container(
                   width: double.infinity,
@@ -72,12 +77,17 @@ class InstallationStepDetailPage extends ConsumerWidget {
                       if (step.pdfReference != null) ...[
                         const SizedBox(height: 8),
                         Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             const Icon(Icons.picture_as_pdf, size: 16),
                             const SizedBox(width: 4),
-                            Text(
-                              'Reference: ${step.pdfReference}',
-                              style: Theme.of(context).textTheme.bodySmall,
+                            Expanded(
+                              child: Text(
+                                'Reference: ${step.pdfReference}',
+                                style: Theme.of(context).textTheme.bodySmall,
+                                maxLines: 3,
+                                overflow: TextOverflow.ellipsis,
+                              ),
                             ),
                           ],
                         ),
@@ -421,8 +431,22 @@ class InstallationStepDetailPage extends ConsumerWidget {
                       const SizedBox(height: 20),
                     ],
                   ),
-              ],
-            ),
+                    ],
+                  ),
+                ),
+              ),
+              // Next/Prev Navigation Widget
+              NextPrevNavigationWidget(
+                previousLabel: 'Previous',
+                nextLabel: navigationInfo.nextLabel ?? 'Next',
+                onPrevious: navigationInfo.previousRoute != null
+                    ? () => context.pushReplacement(navigationInfo.previousRoute!)
+                    : null,
+                onNext: navigationInfo.nextRoute != null
+                    ? () => context.pushReplacement(navigationInfo.nextRoute!)
+                    : null,
+              ),
+            ],
           );
         },
       ),

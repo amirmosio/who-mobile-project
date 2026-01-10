@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:who_mobile_project/general/models/dismantling/dismantling_substep_model.dart';
+import 'package:who_mobile_project/general/widgets/next_prev_navigation_widget.dart';
 import 'package:who_mobile_project/providers/dismantling/dismantling_provider.dart';
 
 class DismantlingSubstepDetailPage extends ConsumerStatefulWidget {
@@ -23,7 +25,20 @@ class _DismantlingSubstepDetailPageState
   @override
   void initState() {
     super.initState();
-    // Mark this substep as read when the page is opened
+    _markAsCompleted();
+  }
+
+  @override
+  void didUpdateWidget(DismantlingSubstepDetailPage oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    // Mark as completed when substep changes (e.g., via next/previous navigation)
+    if (oldWidget.stepId != widget.stepId ||
+        oldWidget.substepId != widget.substepId) {
+      _markAsCompleted();
+    }
+  }
+
+  void _markAsCompleted() {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       final flattenedList = ref.read(flattenedDismantlingSubstepsProvider);
       final currentItem = flattenedList.firstWhere(
@@ -49,6 +64,9 @@ class _DismantlingSubstepDetailPageState
     final dismantlingDataAsync = ref.watch(dismantlingDataProvider);
     final flattenedList = ref.watch(flattenedDismantlingSubstepsProvider);
     final lastCompletedIndex = ref.watch(dismantlingProgressProvider);
+    final navigationInfo = ref.watch(
+      dismantlingSubstepNavigationProvider(widget.stepId, widget.substepId),
+    );
 
     // Find the current substep in the flattened list
     final currentItem = flattenedList.firstWhere(
@@ -122,10 +140,13 @@ class _DismantlingSubstepDetailPageState
             return const Center(child: Text('Substep not found'));
           }
 
-          return SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
+          return Column(
+            children: [
+              Expanded(
+                child: SingleChildScrollView(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
                 // Header with completion status
                 Container(
                   width: double.infinity,
@@ -154,6 +175,24 @@ class _DismantlingSubstepDetailPageState
                           ),
                         ],
                       ),
+                      if (substep.pdfStepReference != null) ...[
+                        const SizedBox(height: 8),
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Icon(Icons.picture_as_pdf, size: 16),
+                            const SizedBox(width: 4),
+                            Expanded(
+                              child: Text(
+                                'Reference: ${substep.pdfStepReference}',
+                                style: Theme.of(context).textTheme.bodySmall,
+                                maxLines: 3,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
                       if (isCompleted) ...[
                         const SizedBox(height: 8),
                         Container(
@@ -454,8 +493,22 @@ class _DismantlingSubstepDetailPageState
                   ),
 
                 const SizedBox(height: 40),
-              ],
-            ),
+                    ],
+                  ),
+                ),
+              ),
+              // Next/Prev Navigation Widget
+              NextPrevNavigationWidget(
+                previousLabel: 'Previous',
+                nextLabel: navigationInfo.nextLabel ?? 'Next',
+                onPrevious: navigationInfo.previousRoute != null
+                    ? () => context.pushReplacement(navigationInfo.previousRoute!)
+                    : null,
+                onNext: navigationInfo.nextRoute != null
+                    ? () => context.pushReplacement(navigationInfo.nextRoute!)
+                    : null,
+              ),
+            ],
           );
         },
       ),
