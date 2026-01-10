@@ -57,17 +57,20 @@
           "purpose": "Understand the environmental operating limits of the IDTM",
           "pdfStepReference": "Section 2.2",
           "content": [
-            "Operating temperature range: -30°C to +50°C",
+            "Operating temperature range: -32°C to +45°C",
+            "Storage/transit temperature range: -33°C to +58°C",
             "Maximum wind speed during inflation: 40 km/h",
-            "Maximum operational wind speed: 72 km/h (with proper anchoring)",
+            "Maximum operational wind speed: 100 km/h steady, 120 km/h gusts (with proper anchoring)",
+            "Maximum snow load: 15 kg/m²",
             "Rain resistance: Fully waterproof when properly set up",
-            "Snow load: Requires regular removal to prevent damage",
+            "Terrain: Can be installed on almost all compact, levelled ground surfaces",
             "UV resistance: Protected by sun shadow nets"
           ],
           "warnings": [
             "Do not inflate or deflate in wind speeds exceeding 40 km/h",
-            "Fabric becomes brittle below -30°C - handle with care",
-            "Remove snow accumulation regularly to prevent structural damage"
+            "Fabric becomes brittle below -32°C - handle with care",
+            "Remove snow accumulation regularly to prevent structural damage",
+            "All wind protection measures must be implemented when wind speeds reach 40 km/h"
           ]
         },
         {
@@ -83,11 +86,15 @@
           ],
           "content": [
             "Total footprint: 276 m² (23m x 12m including clearance)",
-            "Main tent width: 4.70m",
-            "Main tent length: 5.70m",
-            "Main tent height: 3.00m (internal)",
+            "Main tent external width: 4.70m",
+            "Main tent external length: 5.70m",
+            "Main tent internal width: 4.00m (min clear width with ⌀35cm legs)",
+            "Main tent internal length: 5.00m",
+            "Eaves height (external): 2.65m | (internal): 2.40m",
+            "Ridge height (external): 3.35m | (internal): 3.00m",
+            "Single tent footprint: 26.79 m² (external) | 20.00 m² (internal)",
             "Side clearance required: 1.50m minimum",
-            "Hard flooring area: 17m x 12m"
+            "Hard flooring area: 17m x 8m"
           ]
         },
         {
@@ -257,7 +264,7 @@
           "pdfStepReference": "Section 3.2",
           "content": [
             "Maximum safe wind speed for inflation/deflation: 40 km/h",
-            "Maximum operational wind speed: 72 km/h (with full anchoring)",
+            "Maximum operational wind speed: 100 km/h steady, 120 km/h gusts (with full anchoring)",
             "Wind causes significant lateral pressure on tent structure",
             "Unsecured tents can become airborne in high winds"
           ],
@@ -288,8 +295,9 @@
           ],
           "warnings": [
             "Remove snow accumulation regularly - do not let it build up",
-            "Never allow more than 5cm of snow to accumulate",
-            "Use soft brushes only - avoid sharp tools that may damage fabric"
+            "Maximum snow load capacity: 15 kg/m² - remove before exceeding",
+            "Use soft brushes only - avoid sharp tools that may damage fabric",
+            "Heating the tent helps reduce snow accumulation on roof"
           ],
           "actions": [
             "Monitor weather for snowfall predictions",
