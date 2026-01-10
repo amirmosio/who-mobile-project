@@ -1,0 +1,462 @@
+{
+  "title": "IDTM Facility Use and Functioning Guide",
+  "overview": "Operational guide for the Infectious Disease Treatment Module (IDTM) - covering facility description, operating requirements, safety warnings, and site selection guidelines.",
+  "sourceDocument": "EN-MAN-AZF4-27-WFP_User_Manual_DRAFT01.pdf",
+  "sections": [
+    {
+      "id": "idtm-overview",
+      "title": "IDTM Overview",
+      "description": "General description and specifications of the Infectious Disease Treatment Module facility",
+      "pdfReference": "Section 2",
+      "images": [
+        {"filename": "idtm_general_view.png", "description": "Complete IDTM facility overview showing three interconnected tents"}
+      ],
+      "steps": [
+        {
+          "id": "general-description",
+          "title": "General Description",
+          "purpose": "Understand the basic structure and components of the IDTM facility",
+          "pdfStepReference": "Section 2.1",
+          "images": [
+            {"filename": "idtm_general_view.png", "description": "3D isometric view of complete IDTM facility"},
+            {"filename": "idtm_exploded_view.png", "description": "Exploded view showing component breakdown"}
+          ],
+          "content": [
+            "The IDTM consists of three pneumatic tents interconnected by four vestibules",
+            "Main structure uses PVC coated polyester fabric for durability and weather resistance",
+            "Operating pressure: 0.30 bar (maintained by electric blower)",
+            "Two patient pods provide isolated treatment areas",
+            "One staff pod serves as the central operations area",
+            "Sun shadowing nets provide UV protection and temperature regulation",
+            "Lightweight flooring system provides stable, cleanable surface"
+          ]
+        },
+        {
+          "id": "system-components",
+          "title": "System Components",
+          "purpose": "Learn about the individual components that make up the IDTM",
+          "pdfStepReference": "Section 2.1",
+          "images": [
+            {"filename": "idtm_exploded_view.png", "description": "Exploded component diagram"}
+          ],
+          "content": [
+            "Sun shadow net - provides UV protection and reduces internal temperature",
+            "Pneumatic spacers - maintain proper tent inflation and shape",
+            "Vestibule roof support - structural support for connecting passages",
+            "Vestibule pneumatic structure - inflatable connecting corridors",
+            "Vestibule inner liner - internal surface for vestibules",
+            "Main tent insulation liner - thermal insulation layer",
+            "Main tent pneumatic structure - primary inflatable framework",
+            "Main tent external cover - outer weatherproof layer",
+            "Lightweight flooring - modular floor system"
+          ]
+        },
+        {
+          "id": "climatic-resistance",
+          "title": "Climatic Resistance",
+          "purpose": "Understand the environmental operating limits of the IDTM",
+          "pdfStepReference": "Section 2.2",
+          "content": [
+            "Operating temperature range: -32°C to +45°C",
+            "Storage/transit temperature range: -33°C to +58°C",
+            "Maximum wind speed during inflation: 40 km/h",
+            "Maximum operational wind speed: 100 km/h steady, 120 km/h gusts (with proper anchoring)",
+            "Maximum snow load: 15 kg/m²",
+            "Rain resistance: Fully waterproof when properly set up",
+            "Terrain: Can be installed on almost all compact, levelled ground surfaces",
+            "UV resistance: Protected by sun shadow nets"
+          ],
+          "warnings": [
+            "Do not inflate or deflate in wind speeds exceeding 40 km/h",
+            "Fabric becomes brittle below -32°C - handle with care",
+            "Remove snow accumulation regularly to prevent structural damage",
+            "All wind protection measures must be implemented when wind speeds reach 40 km/h"
+          ]
+        },
+        {
+          "id": "dimensions-specs",
+          "title": "Dimensions & Specifications",
+          "purpose": "Know the exact dimensions for site planning and logistics",
+          "pdfStepReference": "Section 2.3",
+          "images": [
+            {"filename": "idtm_dimensions_front.png", "description": "Front elevation with dimensions"},
+            {"filename": "idtm_dimensions_side.png", "description": "Side elevation with dimensions"},
+            {"filename": "idtm_dimensions_linear.png", "description": "Linear arrangement with overall dimensions"},
+            {"filename": "idtm_dimensions_overhead.png", "description": "Overhead plan view (23m x 12m footprint)"}
+          ],
+          "content": [
+            "Total footprint: 276 m² (23m x 12m including clearance)",
+            "Main tent external width: 4.70m",
+            "Main tent external length: 5.70m",
+            "Main tent internal width: 4.00m (min clear width with ⌀35cm legs)",
+            "Main tent internal length: 5.00m",
+            "Eaves height (external): 2.65m | (internal): 2.40m",
+            "Ridge height (external): 3.35m | (internal): 3.00m",
+            "Single tent footprint: 26.79 m² (external) | 20.00 m² (internal)",
+            "Side clearance required: 1.50m minimum",
+            "Hard flooring area: 17m x 8m"
+          ]
+        },
+        {
+          "id": "pod-layouts",
+          "title": "Pod Layouts",
+          "purpose": "Understand the internal layout of each pod type",
+          "pdfStepReference": "Section 2.3",
+          "images": [
+            {"filename": "idtm_dimensions_front.png", "description": "Front view with dimensions (7.70m width)"},
+            {"filename": "idtm_dimensions_left_view.png", "description": "Left/side view with dimensions (5.90m)"},
+            {"filename": "idtm_dimensions_patient.png", "description": "Patient pod layout (4.71m width)"},
+            {"filename": "idtm_dimensions_family_porch.png", "description": "Family porch area (5.70m width)"},
+            {"filename": "idtm_dimensions_services.png", "description": "Services/staff pod layout"},
+            {"filename": "idtm_dimensions_transfer.png", "description": "Transfer screen area"}
+          ],
+          "content": [
+            "Patient pods: Include mesh return openings for ventilation",
+            "Staff pod: Central location with access to both patient areas",
+            "Family porch: External interaction area for patient family communication",
+            "Transfer screen: Isolation barrier between infection zones"
+          ]
+        },
+        {
+          "id": "tent-features",
+          "title": "Technical Specifications",
+          "purpose": "Reference table for tent material and component specifications",
+          "pdfStepReference": "Section 2.4",
+          "specifications": [
+            {"specification": "Cover material", "unit": "-", "value": "PVC coated Polyester Fabric"},
+            {"specification": "Cover weight", "unit": "g/m²", "value": "750"},
+            {"specification": "Inflatable frame material", "unit": "-", "value": "PVC coated Polyester Fabric"},
+            {"specification": "Inflatable frame thickness", "unit": "g/m²", "value": "1100"},
+            {"specification": "Inflatable beams diameter", "unit": "cm", "value": "35"},
+            {"specification": "Operating pressure", "unit": "bar", "value": "0.30"},
+            {"specification": "Groundsheet material", "unit": "-", "value": "PVC coated Polyester Fabric"},
+            {"specification": "Groundsheet thickness", "unit": "g/m²", "value": "700"},
+            {"specification": "Inflation Valve", "unit": "-", "value": "Three (3)"},
+            {"specification": "Overpressure Valve", "unit": "-", "value": "One (1)"},
+            {"specification": "HVAC duct sleeves", "unit": "-", "value": "Three (3) pairs, adjustable diameter"},
+            {"specification": "Cable sleeves", "unit": "-", "value": "One (1) on each gable, adjustable diameter"},
+            {"specification": "Fire classification", "unit": "-", "value": "B s2 d0 (EN 13501-1:2007+A1)"},
+            {"specification": "Standard colours", "unit": "-", "value": "White"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operating-requirements",
+      "title": "Operating Requirements",
+      "description": "Personnel, tools, and conditions required for IDTM operation",
+      "pdfReference": "Section 3.1",
+      "requirements": [
+        {
+          "id": "personnel-req",
+          "title": "Personnel",
+          "content": [
+            "Minimum 4 trained workers for installation",
+            "Workers should be familiar with pneumatic structures",
+            "At least one supervisor with complete system knowledge"
+          ]
+        },
+        {
+          "id": "tools-req",
+          "title": "Required Tools",
+          "content": [
+            "Power source (generator or mains supply)",
+            "Electric inflator/blower",
+            "Inflation hose manifold",
+            "Hammer for ground anchors",
+            "Pressure gauge for monitoring"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "id": "personnel-requirements",
+          "title": "Personnel Requirements",
+          "purpose": "Ensure adequate trained staff for safe operation",
+          "pdfStepReference": "Section 3.1",
+          "content": [
+            "Minimum 4 trained personnel required for installation",
+            "All workers must be familiar with installation procedures",
+            "Designate one person as safety coordinator",
+            "Personnel should be trained in emergency deflation procedures"
+          ],
+          "actions": [
+            "Verify all team members have completed training",
+            "Assign specific roles before starting work",
+            "Brief team on safety procedures",
+            "Ensure communication devices are available"
+          ]
+        },
+        {
+          "id": "tools-equipment",
+          "title": "Tools and Equipment",
+          "purpose": "Prepare all necessary tools before starting work",
+          "pdfStepReference": "Section 3.1",
+          "images": [
+            {"filename": "equipment_inflator.png", "description": "Electric inflator/blower system"},
+            {"filename": "equipment_hose_manifold.png", "description": "Inflation hose manifold"}
+          ],
+          "content": [
+            "Power source: Minimum 2kW generator or mains connection",
+            "Electric inflator: Pressure-regulated blower system",
+            "Inflation hose manifold: Connects blower to tent valves",
+            "Ground anchors and hammer: For securing tent to ground",
+            "Pressure gauge: For monitoring internal pressure"
+          ],
+          "actions": [
+            "Check all equipment is present and functional",
+            "Test power source before deployment",
+            "Verify inflation system pressure settings",
+            "Inspect hoses for damage or leaks"
+          ]
+        },
+        {
+          "id": "weather-conditions",
+          "title": "Weather Conditions",
+          "purpose": "Understand safe weather limits for operation",
+          "pdfStepReference": "Section 3.1",
+          "content": [
+            "Maximum wind speed for inflation: 40 km/h",
+            "Minimum temperature for installation: +5°C",
+            "No installation during heavy rain or storms",
+            "Check weather forecast before starting work"
+          ],
+          "warnings": [
+            "Do not inflate in wind speeds exceeding 40 km/h",
+            "Stop work immediately if conditions deteriorate",
+            "Allow extra time for installation in cold conditions"
+          ],
+          "actions": [
+            "Check current wind speed before starting",
+            "Monitor weather throughout installation",
+            "Have contingency plan for sudden weather changes"
+          ]
+        },
+        {
+          "id": "time-requirements",
+          "title": "Time Requirements",
+          "purpose": "Plan adequate time for safe installation",
+          "pdfStepReference": "Section 3.1",
+          "content": [
+            "Individual tent inflation: Approximately 5 minutes",
+            "Complete system setup: Approximately 4 hours",
+            "Allow additional time for site preparation",
+            "Factor in weather delays when planning"
+          ],
+          "actions": [
+            "Schedule installation with adequate daylight hours",
+            "Plan breaks for personnel during extended work",
+            "Allow buffer time for unexpected issues"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "safety-warnings",
+      "title": "Safety Warnings",
+      "description": "Critical safety information for operating the IDTM facility",
+      "pdfReference": "Section 3.2",
+      "steps": [
+        {
+          "id": "wind-safety",
+          "title": "Wind Load Precautions",
+          "purpose": "Prevent damage and injury from wind-related incidents",
+          "pdfStepReference": "Section 3.2",
+          "content": [
+            "Maximum safe wind speed for inflation/deflation: 40 km/h",
+            "Maximum operational wind speed: 100 km/h steady, 120 km/h gusts (with full anchoring)",
+            "Wind causes significant lateral pressure on tent structure",
+            "Unsecured tents can become airborne in high winds"
+          ],
+          "warnings": [
+            "NEVER inflate or deflate when wind exceeds 40 km/h",
+            "Secure ALL anchor points before inflation begins",
+            "Monitor wind conditions continuously during operation",
+            "Evacuate immediately if wind speed increases rapidly"
+          ],
+          "actions": [
+            "Check weather forecast and current conditions",
+            "Use anemometer to measure wind speed",
+            "Install all ground anchors securely",
+            "Have deflation plan ready for emergency",
+            "Position tent with smallest profile to prevailing wind"
+          ]
+        },
+        {
+          "id": "snow-load",
+          "title": "Snow Load Management",
+          "purpose": "Prevent structural damage from snow accumulation",
+          "pdfStepReference": "Section 3.2",
+          "content": [
+            "Snow accumulation adds significant weight to tent roof",
+            "Pneumatic structures can collapse under excessive snow load",
+            "Wet snow is heavier and more dangerous than dry snow",
+            "Regular monitoring required during snowfall events"
+          ],
+          "warnings": [
+            "Remove snow accumulation regularly - do not let it build up",
+            "Maximum snow load capacity: 15 kg/m² - remove before exceeding",
+            "Use soft brushes only - avoid sharp tools that may damage fabric",
+            "Heating the tent helps reduce snow accumulation on roof"
+          ],
+          "actions": [
+            "Monitor weather for snowfall predictions",
+            "Establish snow removal schedule during winter operations",
+            "Clear snow from all roof sections including vestibules",
+            "Check pressure levels after snow removal"
+          ]
+        },
+        {
+          "id": "rain-precautions",
+          "title": "Rain Precautions",
+          "purpose": "Manage water drainage and prevent flooding",
+          "pdfStepReference": "Section 3.2",
+          "content": [
+            "IDTM is fully waterproof when properly erected",
+            "Water pooling around base can cause seepage",
+            "Drainage trenches direct water away from tent",
+            "Ground saturation affects anchor holding strength"
+          ],
+          "warnings": [
+            "Ensure drainage trenches are clear before rain events",
+            "Check anchor security after heavy rain",
+            "Monitor for water ingress at vestibule connections"
+          ],
+          "actions": [
+            "Dig perimeter drainage trench in wet conditions",
+            "Direct water flow away from tent foundations",
+            "Check and clear drainage channels daily during rainy periods",
+            "Verify tent seams and connections remain watertight"
+          ]
+        },
+        {
+          "id": "temperature-effects",
+          "title": "Temperature Effects",
+          "purpose": "Manage pressure changes due to temperature variations",
+          "pdfStepReference": "Section 3.2",
+          "content": [
+            "Air pressure inside tent varies with temperature",
+            "Daytime heating increases internal pressure",
+            "Nighttime cooling decreases internal pressure",
+            "Temperature changes can cause condensation",
+            "Extreme cold makes fabric brittle and prone to damage"
+          ],
+          "warnings": [
+            "Fabric becomes brittle below -30°C - handle with extreme care",
+            "Do not fold or manipulate fabric in extreme cold",
+            "Monitor pressure during significant temperature changes",
+            "Expect condensation during rapid temperature drops"
+          ],
+          "actions": [
+            "Monitor pressure gauge during day/night transitions",
+            "Adjust blower settings to maintain optimal pressure",
+            "Provide ventilation to reduce condensation",
+            "Allow fabric to warm before handling in cold conditions"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "site-selection",
+      "title": "Site Selection Guidelines",
+      "description": "Requirements for selecting and preparing the installation site",
+      "pdfReference": "Section 3.3",
+      "steps": [
+        {
+          "id": "terrain-requirements",
+          "title": "Terrain Requirements",
+          "purpose": "Select appropriate ground conditions for installation",
+          "pdfStepReference": "Section 3.3",
+          "content": [
+            "Maximum ground slope: 5%",
+            "Minimum clear area: 276 m² (23m x 12m)",
+            "Ground should be firm and stable",
+            "Avoid areas prone to flooding or water accumulation"
+          ],
+          "requirements": [
+            {
+              "id": "ground-conditions",
+              "title": "Ground Conditions",
+              "content": [
+                "Surface should be relatively flat (max 5% slope)",
+                "Ground must support anchor loads",
+                "No underground utilities in anchor zones",
+                "Soil type suitable for ground anchors"
+              ]
+            }
+          ],
+          "actions": [
+            "Survey site for slope and obstructions",
+            "Check for underground utilities before anchoring",
+            "Test soil for anchor holding capacity",
+            "Mark installation footprint before setup"
+          ]
+        },
+        {
+          "id": "clearance-requirements",
+          "title": "Clearance Requirements",
+          "purpose": "Ensure adequate space around the installation",
+          "pdfStepReference": "Section 3.3",
+          "content": [
+            "Minimum 2m clearance from trees and buildings",
+            "Clear overhead obstructions (power lines, branches)",
+            "Allow access space for emergency vehicles",
+            "Consider wind shadow effects from nearby structures"
+          ],
+          "warnings": [
+            "Falling branches can puncture pneumatic structure",
+            "Nearby buildings can create dangerous wind turbulence",
+            "Power lines pose electrocution risk during installation"
+          ],
+          "actions": [
+            "Measure clearance from all nearby objects",
+            "Trim overhanging branches before installation",
+            "Verify emergency vehicle access routes",
+            "Note prevailing wind direction relative to structures"
+          ]
+        },
+        {
+          "id": "ground-preparation",
+          "title": "Ground Preparation",
+          "purpose": "Prepare the site surface for safe installation",
+          "pdfStepReference": "Section 3.3",
+          "content": [
+            "Remove all sharp objects (stones, debris, stumps)",
+            "Level ground as much as practically possible",
+            "Compact loose soil to prevent settling",
+            "Mark anchor positions before installation"
+          ],
+          "actions": [
+            "Walk entire site checking for hazards",
+            "Remove or cover sharp objects",
+            "Fill holes and depressions",
+            "Rake surface smooth before laying flooring"
+          ]
+        },
+        {
+          "id": "drainage-planning",
+          "title": "Drainage Planning",
+          "purpose": "Prevent water problems during wet weather",
+          "pdfStepReference": "Section 3.3",
+          "content": [
+            "Plan drainage before installation in wet climates",
+            "Dig perimeter trench to direct water away",
+            "Ensure water flows away from tent, not toward it",
+            "Consider seasonal water patterns"
+          ],
+          "actions": [
+            "Identify natural drainage direction",
+            "Dig trench around tent perimeter",
+            "Create outflow channel to direct water away",
+            "Test drainage system before rainy season"
+          ],
+          "warnings": [
+            "Standing water weakens ground anchors",
+            "Saturated ground may not support structure weight",
+            "Water under flooring can cause slip hazards"
+          ]
+        }
+      ]
+    }
+  ]
+}

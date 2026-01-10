@@ -22,6 +22,9 @@ import 'package:who_mobile_project/ui/dismantling_guide/dismantling_substep_deta
 import 'package:who_mobile_project/ui/maintenance_guide/maintenance_steps_list_page.dart';
 import 'package:who_mobile_project/ui/maintenance_guide/maintenance_step_detail_page.dart';
 import 'package:who_mobile_project/ui/maintenance_guide/maintenance_substep_detail_page.dart';
+import 'package:who_mobile_project/ui/facility_use_guide/facility_use_steps_list_page.dart';
+import 'package:who_mobile_project/ui/facility_use_guide/facility_use_step_detail_page.dart';
+import 'package:who_mobile_project/ui/facility_use_guide/facility_use_substep_detail_page.dart';
 import 'routes.dart';
 import 'route_observer.dart';
 import 'package:who_mobile_project/services/navigation_tracker.dart';
@@ -221,6 +224,38 @@ GoRouter baseNavRouterBuilder() {
           final substepId = state.pathParameters['substepId']!;
           return MaterialPage(
             child: MaintenanceSubstepDetailPage(
+              stepId: stepId,
+              substepId: substepId,
+            ),
+          );
+        },
+      ),
+
+      // Facility Use Guide Routes
+      GoRoute(
+        path: YRRoutes.facilityUseStepsList,
+        name: YRRoutes.facilityUseStepsList,
+        pageBuilder: (context, state) =>
+            const MaterialPage(child: FacilityUseStepsListPage()),
+      ),
+      GoRoute(
+        path: YRRoutes.facilityUseStepDetail,
+        name: YRRoutes.facilityUseStepDetail,
+        pageBuilder: (context, state) {
+          final stepId = state.pathParameters['stepId']!;
+          return MaterialPage(
+            child: FacilityUseStepDetailPage(stepId: stepId),
+          );
+        },
+      ),
+      GoRoute(
+        path: YRRoutes.facilityUseSubstepDetail,
+        name: YRRoutes.facilityUseSubstepDetail,
+        pageBuilder: (context, state) {
+          final stepId = state.pathParameters['stepId']!;
+          final substepId = state.pathParameters['substepId']!;
+          return MaterialPage(
+            child: FacilityUseSubstepDetailPage(
               stepId: stepId,
               substepId: substepId,
             ),
