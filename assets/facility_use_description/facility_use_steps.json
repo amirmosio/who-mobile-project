@@ -78,7 +78,8 @@
           "images": [
             {"filename": "idtm_dimensions_front.png", "description": "Front elevation with dimensions"},
             {"filename": "idtm_dimensions_side.png", "description": "Side elevation with dimensions"},
-            {"filename": "idtm_dimensions_overhead.png", "description": "Overhead plan view (17m x 12m footprint)"}
+            {"filename": "idtm_dimensions_linear.png", "description": "Linear arrangement with overall dimensions"},
+            {"filename": "idtm_dimensions_overhead.png", "description": "Overhead plan view (23m x 12m footprint)"}
           ],
           "content": [
             "Total footprint: 276 m² (23m x 12m including clearance)",
@@ -95,16 +96,40 @@
           "purpose": "Understand the internal layout of each pod type",
           "pdfStepReference": "Section 2.3",
           "images": [
-            {"filename": "idtm_dimensions_patient.png", "description": "Patient pod internal layout"},
-            {"filename": "idtm_dimensions_services.png", "description": "Staff/services pod layout"},
-            {"filename": "idtm_dimensions_family_porch.png", "description": "Family porch access area"},
-            {"filename": "idtm_dimensions_transfer.png", "description": "Transfer/isolation area"}
+            {"filename": "idtm_dimensions_front.png", "description": "Front view with dimensions (7.70m width)"},
+            {"filename": "idtm_dimensions_left_view.png", "description": "Left/side view with dimensions (5.90m)"},
+            {"filename": "idtm_dimensions_patient.png", "description": "Patient pod layout (4.71m width)"},
+            {"filename": "idtm_dimensions_family_porch.png", "description": "Family porch area (5.70m width)"},
+            {"filename": "idtm_dimensions_services.png", "description": "Services/staff pod layout"},
+            {"filename": "idtm_dimensions_transfer.png", "description": "Transfer screen area"}
           ],
           "content": [
             "Patient pods: Include mesh return openings for ventilation",
             "Staff pod: Central location with access to both patient areas",
             "Family porch: External interaction area for patient family communication",
             "Transfer screen: Isolation barrier between infection zones"
+          ]
+        },
+        {
+          "id": "tent-features",
+          "title": "Technical Specifications",
+          "purpose": "Reference table for tent material and component specifications",
+          "pdfStepReference": "Section 2.4",
+          "specifications": [
+            {"specification": "Cover material", "unit": "-", "value": "PVC coated Polyester Fabric"},
+            {"specification": "Cover weight", "unit": "g/m²", "value": "750"},
+            {"specification": "Inflatable frame material", "unit": "-", "value": "PVC coated Polyester Fabric"},
+            {"specification": "Inflatable frame thickness", "unit": "g/m²", "value": "1100"},
+            {"specification": "Inflatable beams diameter", "unit": "cm", "value": "35"},
+            {"specification": "Operating pressure", "unit": "bar", "value": "0.30"},
+            {"specification": "Groundsheet material", "unit": "-", "value": "PVC coated Polyester Fabric"},
+            {"specification": "Groundsheet thickness", "unit": "g/m²", "value": "700"},
+            {"specification": "Inflation Valve", "unit": "-", "value": "Three (3)"},
+            {"specification": "Overpressure Valve", "unit": "-", "value": "One (1)"},
+            {"specification": "HVAC duct sleeves", "unit": "-", "value": "Three (3) pairs, adjustable diameter"},
+            {"specification": "Cable sleeves", "unit": "-", "value": "One (1) on each gable, adjustable diameter"},
+            {"specification": "Fire classification", "unit": "-", "value": "B s2 d0 (EN 13501-1:2007+A1)"},
+            {"specification": "Standard colours", "unit": "-", "value": "White"}
           ]
         }
       ]
@@ -114,9 +139,6 @@
       "title": "Operating Requirements",
       "description": "Personnel, tools, and conditions required for IDTM operation",
       "pdfReference": "Section 3.1",
-      "images": [
-        {"filename": "required_conditions_matrix.png", "description": "Requirements overview matrix"}
-      ],
       "requirements": [
         {
           "id": "personnel-req",
@@ -145,9 +167,6 @@
           "title": "Personnel Requirements",
           "purpose": "Ensure adequate trained staff for safe operation",
           "pdfStepReference": "Section 3.1",
-          "images": [
-            {"filename": "required_conditions_matrix.png", "description": "Personnel requirements icon"}
-          ],
           "content": [
             "Minimum 4 trained personnel required for installation",
             "All workers must be familiar with installation procedures",
@@ -166,6 +185,10 @@
           "title": "Tools and Equipment",
           "purpose": "Prepare all necessary tools before starting work",
           "pdfStepReference": "Section 3.1",
+          "images": [
+            {"filename": "equipment_inflator.png", "description": "Electric inflator/blower system"},
+            {"filename": "equipment_hose_manifold.png", "description": "Inflation hose manifold"}
+          ],
           "content": [
             "Power source: Minimum 2kW generator or mains connection",
             "Electric inflator: Pressure-regulated blower system",
@@ -232,10 +255,6 @@
           "title": "Wind Load Precautions",
           "purpose": "Prevent damage and injury from wind-related incidents",
           "pdfStepReference": "Section 3.2",
-          "images": [
-            {"filename": "safety_wind_limit.png", "description": "Wind speed limit indicator (40 km/h)"},
-            {"filename": "safety_wind_loading.png", "description": "Wind pressure effects on tent structure"}
-          ],
           "content": [
             "Maximum safe wind speed for inflation/deflation: 40 km/h",
             "Maximum operational wind speed: 72 km/h (with full anchoring)",
@@ -261,9 +280,6 @@
           "title": "Snow Load Management",
           "purpose": "Prevent structural damage from snow accumulation",
           "pdfStepReference": "Section 3.2",
-          "images": [
-            {"filename": "safety_snow_load.png", "description": "Snow accumulation warning diagram"}
-          ],
           "content": [
             "Snow accumulation adds significant weight to tent roof",
             "Pneumatic structures can collapse under excessive snow load",
@@ -287,9 +303,6 @@
           "title": "Rain Precautions",
           "purpose": "Manage water drainage and prevent flooding",
           "pdfStepReference": "Section 3.2",
-          "images": [
-            {"filename": "safety_rain_drainage.png", "description": "Drainage requirements and water flow"}
-          ],
           "content": [
             "IDTM is fully waterproof when properly erected",
             "Water pooling around base can cause seepage",
@@ -313,10 +326,6 @@
           "title": "Temperature Effects",
           "purpose": "Manage pressure changes due to temperature variations",
           "pdfStepReference": "Section 3.2",
-          "images": [
-            {"filename": "safety_temperature.png", "description": "Temperature limits indicator"},
-            {"filename": "safety_temperature_cycle.png", "description": "Day/night temperature cycle effects"}
-          ],
           "content": [
             "Air pressure inside tent varies with temperature",
             "Daytime heating increases internal pressure",
@@ -344,18 +353,12 @@
       "title": "Site Selection Guidelines",
       "description": "Requirements for selecting and preparing the installation site",
       "pdfReference": "Section 3.3",
-      "images": [
-        {"filename": "site_requirements.png", "description": "Site requirements overview"}
-      ],
       "steps": [
         {
           "id": "terrain-requirements",
           "title": "Terrain Requirements",
           "purpose": "Select appropriate ground conditions for installation",
           "pdfStepReference": "Section 3.3",
-          "images": [
-            {"filename": "site_requirements.png", "description": "Slope and area requirements diagram"}
-          ],
           "content": [
             "Maximum ground slope: 5%",
             "Minimum clear area: 276 m² (23m x 12m)",
@@ -409,9 +412,6 @@
           "title": "Ground Preparation",
           "purpose": "Prepare the site surface for safe installation",
           "pdfStepReference": "Section 3.3",
-          "images": [
-            {"filename": "site_ground_prep.png", "description": "Ground preparation cross-section"}
-          ],
           "content": [
             "Remove all sharp objects (stones, debris, stumps)",
             "Level ground as much as practically possible",
@@ -430,9 +430,6 @@
           "title": "Drainage Planning",
           "purpose": "Prevent water problems during wet weather",
           "pdfStepReference": "Section 3.3",
-          "images": [
-            {"filename": "site_drainage_trench.png", "description": "Perimeter drainage trench layout"}
-          ],
           "content": [
             "Plan drainage before installation in wet climates",
             "Dig perimeter trench to direct water away",
