@@ -5,9 +5,6 @@ class InstallationStep {
   /// Unique identifier for the step
   final String id;
 
-  /// Step number in sequence
-  final int stepNumber;
-
   /// Title of the step
   final String title;
 
@@ -37,7 +34,6 @@ class InstallationStep {
 
   const InstallationStep({
     required this.id,
-    required this.stepNumber,
     required this.title,
     required this.description,
     required this.phase,
@@ -52,7 +48,6 @@ class InstallationStep {
   factory InstallationStep.fromJson(Map<String, dynamic> json) {
     return InstallationStep(
       id: json['id'] as String,
-      stepNumber: json['stepNumber'] as int,
       title: json['title'] as String,
       description: json['description'] as String,
       phase: FacilityInstallationPhase.fromString(json['phase'] as String),
@@ -80,7 +75,6 @@ class InstallationStep {
   Map<String, dynamic> toJson() {
     return {
       'id': id,
-      'stepNumber': stepNumber,
       'title': title,
       'description': description,
       'phase': phase.value,
@@ -95,7 +89,6 @@ class InstallationStep {
 
   InstallationStep copyWith({
     String? id,
-    int? stepNumber,
     String? title,
     String? description,
     FacilityInstallationPhase? phase,
@@ -108,7 +101,6 @@ class InstallationStep {
   }) {
     return InstallationStep(
       id: id ?? this.id,
-      stepNumber: stepNumber ?? this.stepNumber,
       title: title ?? this.title,
       description: description ?? this.description,
       phase: phase ?? this.phase,

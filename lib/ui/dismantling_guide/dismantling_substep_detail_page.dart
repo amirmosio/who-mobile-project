@@ -132,7 +132,6 @@ class _DismantlingSubstepDetailPageState
               title: 'Not Found',
               actions: [],
               purpose: '',
-              stepNumber: 0,
             ),
           );
 
