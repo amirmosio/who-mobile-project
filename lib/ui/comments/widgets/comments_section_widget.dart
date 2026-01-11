@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
 import 'package:who_mobile_project/general/constants/comment_categories.dart';
 import 'package:who_mobile_project/general/models/comments/comment.dart';
+import 'package:who_mobile_project/generated/i18n/app_localizations.dart';
 import 'package:who_mobile_project/providers/auth/role_access_provider.dart';
 import 'package:who_mobile_project/providers/comments/comments_provider.dart';
 import 'package:who_mobile_project/routing_config/routes.dart';
@@ -47,6 +48,7 @@ class CommentsSectionWidget extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
     final hasAdminAccess = ref.watch(hasAdminAccessProvider);
 
     // Only show to admins
@@ -92,7 +94,7 @@ class CommentsSectionWidget extends ConsumerWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              _buildHeader(context, ref, title, category, 0, showAddButton),
+              _buildHeader(context, ref, l10n, title, category, 0, showAddButton),
               const SizedBox(height: 16),
               const Center(
                 child: Padding(
@@ -110,13 +112,13 @@ class CommentsSectionWidget extends ConsumerWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              _buildHeader(context, ref, title, category, 0, showAddButton),
+              _buildHeader(context, ref, l10n, title, category, 0, showAddButton),
               const SizedBox(height: 16),
               Center(
                 child: Padding(
                   padding: const EdgeInsets.all(16),
                   child: Text(
-                    'Failed to load comments',
+                    l10n.error_loading_comments,
                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                           color: Colors.red,
                         ),
@@ -133,12 +135,13 @@ class CommentsSectionWidget extends ConsumerWidget {
   Widget _buildHeader(
     BuildContext context,
     WidgetRef ref,
+    AppLocalizations l10n,
     String? title,
     CommentCategory category,
     int commentCount,
     bool showAddButton,
   ) {
-    final sectionTitle = title ?? '${category.displayName} Comments';
+    final sectionTitle = title ?? '${category.displayName} ${l10n.comments}';
 
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -180,7 +183,7 @@ class CommentsSectionWidget extends ConsumerWidget {
           IconButton(
             icon: const Icon(Icons.add_comment_outlined),
             onPressed: () => _showAddCommentDialog(context, ref, category),
-            tooltip: 'Add Comment',
+            tooltip: l10n.add_comment,
           ),
       ],
     );
@@ -219,7 +222,8 @@ class _CommentsSection extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final sectionTitle = title ?? '${category.displayName} Comments';
+    final l10n = AppLocalizations.of(context)!;
+    final sectionTitle = title ?? '${category.displayName} ${l10n.comments}';
 
     return Card(
       child: Padding(
@@ -275,7 +279,7 @@ class _CommentsSection extends ConsumerWidget {
                   IconButton(
                     icon: const Icon(Icons.add_comment_outlined),
                     onPressed: () => _showAddCommentDialog(context, ref),
-                    tooltip: 'Add Comment',
+                    tooltip: l10n.add_comment,
                   ),
               ],
             ),
@@ -287,7 +291,7 @@ class _CommentsSection extends ConsumerWidget {
                 padding: const EdgeInsets.symmetric(vertical: 16),
                 child: Center(
                   child: Text(
-                    'No comments yet',
+                    l10n.no_comments,
                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                           color: Colors.grey[600],
                         ),
@@ -309,7 +313,7 @@ class _CommentsSection extends ConsumerWidget {
                         .selectCategory(category);
                     context.go(YRRoutes.comments);
                   },
-                  child: Text('View all $commentCount comments'),
+                  child: Text(l10n.view_all_comments(commentCount)),
                 ),
               ),
           ],
@@ -364,8 +368,9 @@ class _CollapsibleCommentsSectionState
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     final sectionTitle =
-        widget.title ?? '${widget.category.displayName} Comments';
+        widget.title ?? '${widget.category.displayName} ${l10n.comments}';
 
     return Card(
       child: Column(
@@ -418,7 +423,7 @@ class _CollapsibleCommentsSectionState
                     IconButton(
                       icon: const Icon(Icons.add_comment_outlined),
                       onPressed: () => _showAddCommentDialog(context),
-                      tooltip: 'Add Comment',
+                      tooltip: l10n.add_comment,
                     ),
                   Icon(
                     _isCollapsed
@@ -444,7 +449,7 @@ class _CollapsibleCommentsSectionState
                       padding: const EdgeInsets.symmetric(vertical: 16),
                       child: Center(
                         child: Text(
-                          'No comments yet',
+                          l10n.no_comments,
                           style:
                               Theme.of(context).textTheme.bodyMedium?.copyWith(
                                     color: Colors.grey[600],
@@ -468,7 +473,7 @@ class _CollapsibleCommentsSectionState
                           context.go(YRRoutes.comments);
                         },
                         child:
-                            Text('View all ${widget.commentCount} comments'),
+                            Text(l10n.view_all_comments(widget.commentCount)),
                       ),
                     ),
                 ],

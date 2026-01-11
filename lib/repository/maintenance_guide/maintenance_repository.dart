@@ -5,20 +5,23 @@ import 'package:who_mobile_project/general/models/maintenance_guide/maintenance_
 
 @injectable
 class MaintenanceRepository {
-  MaintenanceDataModel? _cachedData;
+  final Map<String, MaintenanceDataModel> _cachedData = {};
 
-  Future<MaintenanceDataModel> loadMaintenanceData() async {
-    if (_cachedData != null) {
-      return _cachedData!;
+  Future<MaintenanceDataModel> loadMaintenanceData({
+    String localeCode = 'en',
+  }) async {
+    if (_cachedData.containsKey(localeCode)) {
+      return _cachedData[localeCode]!;
     }
 
     try {
+      final suffix = localeCode == 'en' ? '' : '_$localeCode';
       final String jsonString = await rootBundle.loadString(
-        'assets/maintenance_description/maintenance_steps.json',
+        'assets/maintenance_description/maintenance_steps$suffix.json',
       );
       final Map<String, dynamic> jsonData = json.decode(jsonString);
-      _cachedData = MaintenanceDataModel.fromJson(jsonData);
-      return _cachedData!;
+      _cachedData[localeCode] = MaintenanceDataModel.fromJson(jsonData);
+      return _cachedData[localeCode]!;
     } catch (e) {
       throw Exception('Failed to load maintenance data: $e');
     }
@@ -29,6 +32,6 @@ class MaintenanceRepository {
   }
 
   void clearCache() {
-    _cachedData = null;
+    _cachedData.clear();
   }
 }

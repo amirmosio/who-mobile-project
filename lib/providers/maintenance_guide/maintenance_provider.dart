@@ -3,6 +3,7 @@ import 'package:who_mobile_project/di/injector.dart';
 import 'package:who_mobile_project/general/models/maintenance_guide/flattened_maintenance_substep_model.dart';
 import 'package:who_mobile_project/general/models/maintenance_guide/maintenance_data_model.dart';
 import 'package:who_mobile_project/general/services/storage/storage_manager.dart';
+import 'package:who_mobile_project/providers/app_locale/app_locale_provider.dart';
 import 'package:who_mobile_project/repository/maintenance_guide/maintenance_repository.dart';
 
 part 'maintenance_provider.g.dart';
@@ -11,15 +12,21 @@ part 'maintenance_provider.g.dart';
 class MaintenanceData extends _$MaintenanceData {
   @override
   Future<MaintenanceDataModel> build() async {
-    return getIt<MaintenanceRepository>().loadMaintenanceData();
+    final locale = ref.watch(appLocaleProvider);
+    return getIt<MaintenanceRepository>().loadMaintenanceData(
+      localeCode: locale.languageCode,
+    );
   }
 
   Future<void> refresh() async {
     state = const AsyncLoading();
+    final locale = ref.read(appLocaleProvider);
     state = await AsyncValue.guard(() async {
       final repository = getIt<MaintenanceRepository>();
       repository.clearCache();
-      return repository.loadMaintenanceData();
+      return repository.loadMaintenanceData(
+        localeCode: locale.languageCode,
+      );
     });
   }
 

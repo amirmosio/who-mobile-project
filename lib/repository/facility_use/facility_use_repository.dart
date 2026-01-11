@@ -5,20 +5,23 @@ import 'package:who_mobile_project/general/models/facility_use/facility_use_data
 
 @injectable
 class FacilityUseRepository {
-  FacilityUseDataModel? _cachedData;
+  final Map<String, FacilityUseDataModel> _cachedData = {};
 
-  Future<FacilityUseDataModel> loadFacilityUseData() async {
-    if (_cachedData != null) {
-      return _cachedData!;
+  Future<FacilityUseDataModel> loadFacilityUseData({
+    String localeCode = 'en',
+  }) async {
+    if (_cachedData.containsKey(localeCode)) {
+      return _cachedData[localeCode]!;
     }
 
     try {
+      final suffix = localeCode == 'en' ? '' : '_$localeCode';
       final String jsonString = await rootBundle.loadString(
-        'assets/facility_use_description/facility_use_steps.json',
+        'assets/facility_use_description/facility_use_steps$suffix.json',
       );
       final Map<String, dynamic> jsonData = json.decode(jsonString);
-      _cachedData = FacilityUseDataModel.fromJson(jsonData);
-      return _cachedData!;
+      _cachedData[localeCode] = FacilityUseDataModel.fromJson(jsonData);
+      return _cachedData[localeCode]!;
     } catch (e) {
       throw Exception('Failed to load facility use data: $e');
     }
@@ -29,6 +32,6 @@ class FacilityUseRepository {
   }
 
   void clearCache() {
-    _cachedData = null;
+    _cachedData.clear();
   }
 }

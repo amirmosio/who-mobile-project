@@ -6,6 +6,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:who_mobile_project/app_core/theme/colors.dart';
 import 'package:who_mobile_project/data/idtm_packing_list_data.dart';
 import 'package:who_mobile_project/general/constants/comment_categories.dart';
+import 'package:who_mobile_project/generated/i18n/app_localizations.dart';
 import 'package:who_mobile_project/models/packing_list_item.dart';
 import 'package:who_mobile_project/ui/comments/widgets/comments_section_widget.dart';
 
@@ -20,16 +21,24 @@ class PackingListPage extends StatefulWidget {
 class _PackingListPageState extends State<PackingListPage> {
   final Map<String, bool> _checkedItems = {};
   final Map<String, bool> _expandedItems = {};
-  late List<PackingListItem> _packingList;
+  List<PackingListItem> _packingList = [];
   bool _isLoading = true;
   bool _isScanning = false;
   final ImagePicker _picker = ImagePicker();
+  AppLocalizations? _l10n;
 
   @override
-  void initState() {
-    super.initState();
-    _packingList = IdtmPackingListData.getPackingList();
-    _loadSavedState();
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    final l10n = AppLocalizations.of(context)!;
+    // Reload packing list if locale changed
+    if (_l10n != l10n) {
+      _l10n = l10n;
+      _packingList = IdtmPackingListData.getLocalizedPackingList(l10n);
+      if (_checkedItems.isEmpty) {
+        _loadSavedState();
+      }
+    }
   }
 
   /// Load saved checkbox states from SharedPreferences
@@ -62,12 +71,24 @@ class _PackingListPageState extends State<PackingListPage> {
   }
 
   /// Count only main items (Level 1) that are checked
-  int get _totalItems => IdtmPackingListData.getMainItems().length;
+  int get _totalItems => _packingList.where((item) => item.level == 1).length;
 
   int get _checkedCount {
-    return IdtmPackingListData.getMainItems()
-        .where((item) => _checkedItems[item.id] == true)
+    return _packingList
+        .where((item) => item.level == 1 && _checkedItems[item.id] == true)
         .length;
+  }
+
+  /// Get sub-items for a specific parent
+  List<PackingListItem> _getSubItems(String parentId) {
+    return _packingList
+        .where((item) => item.level == 2 && item.parentId == parentId)
+        .toList();
+  }
+
+  /// Get main items (Level 1)
+  List<PackingListItem> _getMainItems() {
+    return _packingList.where((item) => item.level == 1).toList();
   }
 
   /// Handle parent checkbox change - also checks/unchecks all children
@@ -76,7 +97,7 @@ class _PackingListPageState extends State<PackingListPage> {
       _checkedItems[parentId] = value ?? false;
 
       // Also check/uncheck all sub-items
-      final subItems = IdtmPackingListData.getSubItems(parentId);
+      final subItems = _getSubItems(parentId);
       for (var subItem in subItems) {
         _checkedItems[subItem.id] = value ?? false;
         _saveCheckedState(subItem.id, value ?? false);
@@ -92,7 +113,7 @@ class _PackingListPageState extends State<PackingListPage> {
       _checkedItems[subItemId] = value ?? false;
 
       // Check if all sub-items are checked
-      final subItems = IdtmPackingListData.getSubItems(parentId);
+      final subItems = _getSubItems(parentId);
       final allSubItemsChecked = subItems.every((item) => _checkedItems[item.id] == true);
 
       // Update parent checkbox state
@@ -110,13 +131,13 @@ class _PackingListPageState extends State<PackingListPage> {
   }
 
   /// Show dialog to select which item to scan
-  Future<PackingListItem?> _showItemSelectionDialog() async {
-    final mainItems = IdtmPackingListData.getMainItems();
+  Future<PackingListItem?> _showItemSelectionDialog(AppLocalizations l10n) async {
+    final mainItems = _getMainItems();
 
     return showDialog<PackingListItem>(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Select Item to Scan'),
+        title: Text(l10n.select_item_to_scan),
         content: SizedBox(
           width: double.maxFinite,
           child: ListView.builder(
@@ -159,7 +180,7 @@ class _PackingListPageState extends State<PackingListPage> {
         actions: [
           TextButton(
             onPressed: () => Navigator.of(context).pop(),
-            child: const Text('Cancel'),
+            child: Text(l10n.cancel),
           ),
         ],
       ),
@@ -168,13 +189,14 @@ class _PackingListPageState extends State<PackingListPage> {
 
   /// Scan item with camera and verify with API (mocked for now)
   Future<void> _scanItemWithCamera() async {
+    final l10n = AppLocalizations.of(context)!;
     try {
       setState(() {
         _isScanning = true;
       });
 
       // Step 1: Let user select which item they're scanning
-      final selectedItem = await _showItemSelectionDialog();
+      final selectedItem = await _showItemSelectionDialog(l10n);
 
       if (selectedItem == null) {
         setState(() {
@@ -188,22 +210,22 @@ class _PackingListPageState extends State<PackingListPage> {
       final ImageSource? source = await showDialog<ImageSource>(
         context: context,
         builder: (context) => AlertDialog(
-          title: Text('Scan ${selectedItem.name}'),
-          content: const Text('Choose image source:'),
+          title: Text(l10n.scan_item(selectedItem.name)),
+          content: Text(l10n.choose_image_source),
           actions: [
             TextButton.icon(
               onPressed: () => Navigator.of(context).pop(ImageSource.camera),
               icon: const Icon(Icons.camera_alt),
-              label: const Text('Camera'),
+              label: Text(l10n.camera),
             ),
             TextButton.icon(
               onPressed: () => Navigator.of(context).pop(ImageSource.gallery),
               icon: const Icon(Icons.photo_library),
-              label: const Text('Gallery'),
+              label: Text(l10n.gallery),
             ),
             TextButton(
               onPressed: () => Navigator.of(context).pop(),
-              child: const Text('Cancel'),
+              child: Text(l10n.cancel),
             ),
           ],
         ),
@@ -238,13 +260,13 @@ class _PackingListPageState extends State<PackingListPage> {
         showDialog(
           context: context,
           barrierDismissible: false,
-          builder: (context) => const AlertDialog(
+          builder: (context) => AlertDialog(
             content: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                CircularProgressIndicator(),
-                SizedBox(height: 16),
-                Text('Analyzing image...'),
+                const CircularProgressIndicator(),
+                const SizedBox(height: 16),
+                Text(l10n.analyzing_image),
               ],
             ),
           ),
@@ -261,14 +283,14 @@ class _PackingListPageState extends State<PackingListPage> {
 
       // Show result dialog and handle auto-checking
       if (mounted) {
-        await _showScanResultDialog(result, image.path, selectedItem);
+        await _showScanResultDialog(result, image.path, selectedItem, l10n);
       }
     } catch (e) {
       // Handle errors
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text('Error scanning item: $e'),
+            content: Text(l10n.error_scanning_item(e.toString())),
             backgroundColor: Colors.red,
           ),
         );
@@ -303,6 +325,7 @@ class _PackingListPageState extends State<PackingListPage> {
     bool verified,
     String imagePath,
     PackingListItem selectedItem,
+    AppLocalizations l10n,
   ) async {
     await showDialog(
       context: context,
@@ -317,7 +340,7 @@ class _PackingListPageState extends State<PackingListPage> {
             const SizedBox(width: 12),
             Expanded(
               child: Text(
-                verified ? 'Item Verified!' : 'Item Not Found',
+                verified ? l10n.item_verified : l10n.item_not_found,
                 style: const TextStyle(fontSize: 20),
               ),
             ),
@@ -384,8 +407,8 @@ class _PackingListPageState extends State<PackingListPage> {
               const SizedBox(height: 16),
               Text(
                 verified
-                    ? 'The item has been successfully verified and matched with the packing list.'
-                    : 'The item could not be verified. Please try again or check manually.',
+                    ? l10n.item_verified_message
+                    : l10n.item_not_found_message,
                 style: TextStyle(
                   color: Colors.grey[700],
                 ),
@@ -398,14 +421,14 @@ class _PackingListPageState extends State<PackingListPage> {
                     color: Colors.green[50],
                     borderRadius: BorderRadius.circular(8),
                   ),
-                  child: const Row(
+                  child: Row(
                     children: [
-                      Icon(Icons.check_circle_outline, color: Colors.green, size: 20),
-                      SizedBox(width: 8),
+                      const Icon(Icons.check_circle_outline, color: Colors.green, size: 20),
+                      const SizedBox(width: 8),
                       Expanded(
                         child: Text(
-                          'This item will be automatically checked off.',
-                          style: TextStyle(fontSize: 12),
+                          l10n.item_auto_checked,
+                          style: const TextStyle(fontSize: 12),
                         ),
                       ),
                     ],
@@ -418,7 +441,7 @@ class _PackingListPageState extends State<PackingListPage> {
         actions: [
           TextButton(
             onPressed: () => Navigator.of(context).pop(),
-            child: const Text('Close'),
+            child: Text(l10n.close),
           ),
           if (verified)
             ElevatedButton(
@@ -430,7 +453,7 @@ class _PackingListPageState extends State<PackingListPage> {
                 if (mounted) {
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
-                      content: Text('✓ ${selectedItem.name} verified and checked!'),
+                      content: Text(l10n.item_verified_checked(selectedItem.name)),
                       backgroundColor: Colors.green,
                       duration: const Duration(seconds: 2),
                     ),
@@ -441,7 +464,7 @@ class _PackingListPageState extends State<PackingListPage> {
                 backgroundColor: Colors.green,
                 foregroundColor: Colors.white,
               ),
-              child: const Text('Check Item'),
+              child: Text(l10n.check_item),
             ),
         ],
       ),
@@ -450,10 +473,12 @@ class _PackingListPageState extends State<PackingListPage> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+
     if (_isLoading) {
       return Scaffold(
         appBar: AppBar(
-          title: const Text('IDTM Packing List'),
+          title: Text(l10n.idtm_packing_list),
           backgroundColor: BZColors.bronzeDark,
           foregroundColor: Colors.white,
         ),
@@ -463,11 +488,11 @@ class _PackingListPageState extends State<PackingListPage> {
       );
     }
 
-    final mainItems = IdtmPackingListData.getMainItems();
+    final mainItems = _getMainItems();
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('IDTM Packing List'),
+        title: Text(l10n.idtm_packing_list),
         backgroundColor: BZColors.bronzeDark,
         foregroundColor: Colors.white,
         actions: [
@@ -509,7 +534,7 @@ class _PackingListPageState extends State<PackingListPage> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'Equipment Checklist',
+                              l10n.equipment_checklist,
                               style: Theme.of(context)
                                   .textTheme
                                   .titleLarge
@@ -519,7 +544,7 @@ class _PackingListPageState extends State<PackingListPage> {
                             ),
                             const SizedBox(height: 4),
                             Text(
-                              'Verify all items before installation',
+                              l10n.verify_all_items,
                               style: Theme.of(context).textTheme.bodyMedium,
                             ),
                           ],
@@ -542,7 +567,7 @@ class _PackingListPageState extends State<PackingListPage> {
                   ),
                   const SizedBox(height: 8),
                   Text(
-                    'Total Weight: ${IdtmPackingListData.getTotalWeight().toStringAsFixed(0)} kg',
+                    l10n.total_weight(IdtmPackingListData.getTotalWeight().toStringAsFixed(0)),
                     style: Theme.of(context).textTheme.bodySmall?.copyWith(
                           color: Colors.grey[700],
                         ),
@@ -560,14 +585,14 @@ class _PackingListPageState extends State<PackingListPage> {
               itemBuilder: (context, index) {
                 // Show comments section at the end
                 if (index == mainItems.length) {
-                  return const Padding(
-                    padding: EdgeInsets.only(top: 8, bottom: 16),
+                  return Padding(
+                    padding: const EdgeInsets.only(top: 8, bottom: 16),
                     child: CommentsSectionWidget(
                       category: CommentCategory.install,
                       maxComments: 3,
                       showAddButton: true,
                       showViewAll: true,
-                      title: 'Installation Notes',
+                      title: l10n.installation_notes,
                       collapsible: true,
                       initiallyCollapsed: true,
                     ),
@@ -575,7 +600,7 @@ class _PackingListPageState extends State<PackingListPage> {
                 }
 
                 final item = mainItems[index];
-                final subItems = IdtmPackingListData.getSubItems(item.id);
+                final subItems = _getSubItems(item.id);
                 final isExpanded = _expandedItems[item.id] ?? false;
 
                 return _PackingListCard(
@@ -630,7 +655,7 @@ class _PackingListPageState extends State<PackingListPage> {
                           ),
                         )
                       : const Icon(Icons.camera_alt),
-                  label: Text(_isScanning ? 'Scanning...' : 'Scan with Camera'),
+                  label: Text(_isScanning ? l10n.scanning : l10n.scan_with_camera),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: BZColors.bronzeDark,
                     foregroundColor: Colors.white,
@@ -644,18 +669,16 @@ class _PackingListPageState extends State<PackingListPage> {
                     final confirmed = await showDialog<bool>(
                       context: context,
                       builder: (context) => AlertDialog(
-                        title: const Text('Reset Checklist'),
-                        content: const Text(
-                          'Are you sure you want to reset all checkboxes? This cannot be undone.',
-                        ),
+                        title: Text(l10n.reset_checklist),
+                        content: Text(l10n.reset_checklist_confirmation),
                         actions: [
                           TextButton(
                             onPressed: () => Navigator.of(context).pop(false),
-                            child: const Text('Cancel'),
+                            child: Text(l10n.cancel),
                           ),
                           TextButton(
                             onPressed: () => Navigator.of(context).pop(true),
-                            child: const Text('Reset'),
+                            child: Text(l10n.reset),
                           ),
                         ],
                       ),
@@ -673,16 +696,16 @@ class _PackingListPageState extends State<PackingListPage> {
 
                       if (mounted) {
                         ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
-                            content: Text('Checklist reset successfully'),
-                            duration: Duration(seconds: 2),
+                          SnackBar(
+                            content: Text(l10n.checklist_reset_success),
+                            duration: const Duration(seconds: 2),
                           ),
                         );
                       }
                     }
                   },
                   icon: const Icon(Icons.refresh),
-                  label: const Text('Reset Checklist'),
+                  label: Text(l10n.reset_checklist),
                   style: OutlinedButton.styleFrom(
                     foregroundColor: BZColors.bronzeDark,
                     minimumSize: const Size(double.infinity, 48),

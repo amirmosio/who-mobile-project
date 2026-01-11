@@ -3,6 +3,7 @@ import 'package:who_mobile_project/di/injector.dart';
 import 'package:who_mobile_project/general/models/installation/flattened_substep_model.dart';
 import 'package:who_mobile_project/general/models/installation/installation_data_model.dart';
 import 'package:who_mobile_project/general/services/storage/storage_manager.dart';
+import 'package:who_mobile_project/providers/app_locale/app_locale_provider.dart';
 import 'package:who_mobile_project/repository/installation/installation_repository.dart';
 import 'package:who_mobile_project/routing_config/routes.dart';
 
@@ -12,15 +13,21 @@ part 'installation_provider.g.dart';
 class InstallationData extends _$InstallationData {
   @override
   Future<InstallationDataModel> build() async {
-    return getIt<InstallationRepository>().loadInstallationData();
+    final locale = ref.watch(appLocaleProvider);
+    return getIt<InstallationRepository>().loadInstallationData(
+      localeCode: locale.languageCode,
+    );
   }
 
   Future<void> refresh() async {
     state = const AsyncLoading();
+    final locale = ref.read(appLocaleProvider);
     state = await AsyncValue.guard(() async {
       final repository = getIt<InstallationRepository>();
       repository.clearCache();
-      return repository.loadInstallationData();
+      return repository.loadInstallationData(
+        localeCode: locale.languageCode,
+      );
     });
   }
 

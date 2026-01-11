@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:who_mobile_project/generated/i18n/app_localizations.dart';
 import 'package:who_mobile_project/ui/dashboard/widgets/facility_use_card.dart';
 import 'package:who_mobile_project/ui/dashboard/widgets/idtm_status_card.dart';
 import 'package:who_mobile_project/ui/dashboard/widgets/what_is_idtm_card.dart';
@@ -45,8 +46,10 @@ class _DashboardPageState extends State<DashboardPage>
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+
     return Scaffold(
-      appBar: AppBar(title: const Text('Dashboard')),
+      appBar: AppBar(title: Text(l10n.dashboard)),
       body: RefreshIndicator(
         onRefresh: () async {
           _refreshCard();

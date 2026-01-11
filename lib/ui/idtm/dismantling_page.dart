@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:who_mobile_project/di/injector.dart';
 import 'package:who_mobile_project/general/constants/comment_categories.dart';
 import 'package:who_mobile_project/general/services/storage/storage_manager.dart';
+import 'package:who_mobile_project/generated/i18n/app_localizations.dart';
 import 'package:who_mobile_project/ui/comments/widgets/comments_section_widget.dart';
 
 /// Page for managing dismantling/repacking steps
@@ -105,17 +106,16 @@ class _DismantlingPageState extends State<DismantlingPage> {
   }
 
   void _showCompletionDialog() {
+    final l10n = AppLocalizations.of(context)!;
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Dismantling Complete'),
-        content: const Text(
-          'All dismantling steps have been completed. This will reset the installation status.',
-        ),
+        title: Text(l10n.dismantling_complete),
+        content: Text(l10n.dismantling_complete_message),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: const Text('Not Yet'),
+            child: Text(l10n.not_yet),
           ),
           ElevatedButton(
             onPressed: () async {
@@ -129,7 +129,7 @@ class _DismantlingPageState extends State<DismantlingPage> {
               backgroundColor: Colors.red,
               foregroundColor: Colors.white,
             ),
-            child: const Text('Complete Dismantling'),
+            child: Text(l10n.complete_dismantling),
           ),
         ],
       ),
@@ -138,9 +138,11 @@ class _DismantlingPageState extends State<DismantlingPage> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Dismantling'),
+        title: Text(l10n.dismantling),
         backgroundColor: Colors.red,
         foregroundColor: Colors.white,
       ),
@@ -163,7 +165,7 @@ class _DismantlingPageState extends State<DismantlingPage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Dismantling in Progress',
+                        l10n.dismantling_in_progress,
                         style: Theme.of(context).textTheme.titleMedium?.copyWith(
                               fontWeight: FontWeight.bold,
                               color: Colors.red,
@@ -171,7 +173,7 @@ class _DismantlingPageState extends State<DismantlingPage> {
                       ),
                       const SizedBox(height: 4),
                       Text(
-                        'Follow each step carefully to ensure safe removal',
+                        l10n.dismantling_follow_steps,
                         style: Theme.of(context).textTheme.bodySmall,
                       ),
                     ],
@@ -191,7 +193,7 @@ class _DismantlingPageState extends State<DismantlingPage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      'Progress',
+                      l10n.progress,
                       style: Theme.of(context).textTheme.titleMedium?.copyWith(
                             fontWeight: FontWeight.bold,
                           ),
@@ -224,14 +226,14 @@ class _DismantlingPageState extends State<DismantlingPage> {
               itemBuilder: (context, index) {
                 // Show comments section at the end
                 if (index == _steps.length) {
-                  return const Padding(
-                    padding: EdgeInsets.only(top: 8, bottom: 16),
+                  return Padding(
+                    padding: const EdgeInsets.only(top: 8, bottom: 16),
                     child: CommentsSectionWidget(
                       category: CommentCategory.disassemble,
                       maxComments: 3,
                       showAddButton: true,
                       showViewAll: true,
-                      title: 'Dismantling Notes',
+                      title: l10n.dismantling_notes,
                       collapsible: true,
                       initiallyCollapsed: true,
                     ),

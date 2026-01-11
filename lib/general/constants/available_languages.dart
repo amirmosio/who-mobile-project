@@ -3,10 +3,7 @@ import 'package:who_mobile_project/generated/i18n/app_localizations.dart';
 
 enum AvailableLanguage {
   italian(code: 'it', flagCode: 'it', locale: Locale('it', 'IT')),
-  english(code: 'en', flagCode: 'gb', locale: Locale('en', 'US')),
-  spanish(code: 'es', flagCode: 'es', locale: Locale('es', 'ES')),
-  french(code: 'fr', flagCode: 'fr', locale: Locale('fr', 'FR')),
-  german(code: 'de', flagCode: 'de', locale: Locale('de', 'DE'));
+  english(code: 'en', flagCode: 'gb', locale: Locale('en', 'US'));
 
   /// Short language code (e.g., 'it', 'en', 'es')
   final String code;
@@ -36,12 +33,6 @@ enum AvailableLanguage {
         return l10n.italian;
       case AvailableLanguage.english:
         return l10n.english;
-      case AvailableLanguage.spanish:
-        return l10n.spanish;
-      case AvailableLanguage.french:
-        return l10n.french;
-      case AvailableLanguage.german:
-        return l10n.german;
     }
   }
 

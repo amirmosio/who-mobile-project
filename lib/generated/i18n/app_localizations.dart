@@ -5,10 +5,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/intl.dart' as intl;
 
-import 'app_localizations_de.dart';
 import 'app_localizations_en.dart';
-import 'app_localizations_es.dart';
-import 'app_localizations_fr.dart';
 import 'app_localizations_it.dart';
 
 // ignore_for_file: type=lint
@@ -97,10 +94,7 @@ abstract class AppLocalizations {
 
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
-    Locale('de'),
     Locale('en'),
-    Locale('es'),
-    Locale('fr'),
     Locale('it'),
   ];
 
@@ -1490,10 +1484,10 @@ abstract class AppLocalizations {
   /// **'Privacy and conditions'**
   String get privacy_conditions;
 
-  /// Terms of service option
+  /// Terms of service menu item
   ///
   /// In en, this message translates to:
-  /// **'Terms of service'**
+  /// **'Terms of Service'**
   String get terms_of_service;
 
   /// Terms and Conditions document name
@@ -1502,7 +1496,7 @@ abstract class AppLocalizations {
   /// **'Terms and Conditions'**
   String get terms_and_conditions;
 
-  /// Privacy Policy document name
+  /// Privacy policy menu item
   ///
   /// In en, this message translates to:
   /// **'Privacy Policy'**
@@ -3974,7 +3968,7 @@ abstract class AppLocalizations {
   /// **'out of'**
   String get out_of;
 
-  /// Progress label
+  /// Progress section heading
   ///
   /// In en, this message translates to:
   /// **'Progress'**
@@ -5840,7 +5834,7 @@ abstract class AppLocalizations {
   /// **'Failed to scan QR codes'**
   String get failed_to_scan_qr_codes;
 
-  /// Comments navigation tab label
+  /// Comments page title
   ///
   /// In en, this message translates to:
   /// **'Comments'**
@@ -5971,6 +5965,1302 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Delete'**
   String get delete;
+
+  /// Profile settings page title
+  ///
+  /// In en, this message translates to:
+  /// **'Profile & Settings'**
+  String get profile_settings_title;
+
+  /// Account section title
+  ///
+  /// In en, this message translates to:
+  /// **'Account'**
+  String get section_account;
+
+  /// Admin login button
+  ///
+  /// In en, this message translates to:
+  /// **'Login as Admin'**
+  String get login_as_admin;
+
+  /// Admin login subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Sign in to access admin features'**
+  String get login_as_admin_subtitle;
+
+  /// Logout button
+  ///
+  /// In en, this message translates to:
+  /// **'Logout'**
+  String get logout_button;
+
+  /// Logout subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Sign out from your account'**
+  String get logout_subtitle;
+
+  /// Logout confirmation dialog message
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to logout?'**
+  String get logout_confirmation;
+
+  /// Administration section title
+  ///
+  /// In en, this message translates to:
+  /// **'Administration'**
+  String get section_administration;
+
+  /// Admin panel menu item
+  ///
+  /// In en, this message translates to:
+  /// **'Admin Panel'**
+  String get admin_panel;
+
+  /// Admin panel subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Manage admin users'**
+  String get admin_panel_subtitle;
+
+  /// Analytics menu item
+  ///
+  /// In en, this message translates to:
+  /// **'Analytics'**
+  String get analytics_menu;
+
+  /// Analytics subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'View app statistics'**
+  String get analytics_subtitle;
+
+  /// App configuration menu item
+  ///
+  /// In en, this message translates to:
+  /// **'App Configuration'**
+  String get app_configuration;
+
+  /// App configuration subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Manage app settings'**
+  String get app_configuration_subtitle;
+
+  /// Settings section title
+  ///
+  /// In en, this message translates to:
+  /// **'Settings'**
+  String get section_settings;
+
+  /// Notifications menu item
+  ///
+  /// In en, this message translates to:
+  /// **'Notifications'**
+  String get notifications_menu;
+
+  /// Notifications subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Manage notification preferences'**
+  String get notifications_subtitle;
+
+  /// Language menu item
+  ///
+  /// In en, this message translates to:
+  /// **'Language'**
+  String get language_setting;
+
+  /// Language subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Change app language'**
+  String get language_subtitle;
+
+  /// Appearance menu item
+  ///
+  /// In en, this message translates to:
+  /// **'Appearance'**
+  String get appearance_menu;
+
+  /// Appearance subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Light/Dark mode settings'**
+  String get appearance_subtitle;
+
+  /// About section title
+  ///
+  /// In en, this message translates to:
+  /// **'About'**
+  String get section_about;
+
+  /// About app menu item
+  ///
+  /// In en, this message translates to:
+  /// **'About WHO Mobile'**
+  String get about_app;
+
+  /// About app subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'App information and version'**
+  String get about_app_subtitle;
+
+  /// Privacy policy subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Read our privacy policy'**
+  String get privacy_policy_subtitle;
+
+  /// Terms of service subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Read our terms of service'**
+  String get terms_of_service_subtitle;
+
+  /// Coming soon message
+  ///
+  /// In en, this message translates to:
+  /// **'Coming soon!'**
+  String get coming_soon;
+
+  /// Error loading profile message
+  ///
+  /// In en, this message translates to:
+  /// **'Error loading profile'**
+  String get error_loading_profile;
+
+  /// Language picker dialog title
+  ///
+  /// In en, this message translates to:
+  /// **'Select Language'**
+  String get select_language;
+
+  /// Language change success message
+  ///
+  /// In en, this message translates to:
+  /// **'Language changed successfully'**
+  String get language_changed;
+
+  /// Generic error message
+  ///
+  /// In en, this message translates to:
+  /// **'An error occurred'**
+  String get an_error_occurred;
+
+  /// Dashboard page title
+  ///
+  /// In en, this message translates to:
+  /// **'Dashboard'**
+  String get dashboard;
+
+  /// No comments empty state title
+  ///
+  /// In en, this message translates to:
+  /// **'No Comments'**
+  String get no_comments;
+
+  /// Empty comments message
+  ///
+  /// In en, this message translates to:
+  /// **'Be the first to add a comment'**
+  String get be_first_to_comment;
+
+  /// No comments in category
+  ///
+  /// In en, this message translates to:
+  /// **'No comments in {category} category'**
+  String no_comments_in_category(String category);
+
+  /// Error loading comments title
+  ///
+  /// In en, this message translates to:
+  /// **'Error Loading Comments'**
+  String get error_loading_comments;
+
+  /// Add comment button
+  ///
+  /// In en, this message translates to:
+  /// **'Add Comment'**
+  String get add_comment;
+
+  /// Delete comment dialog title
+  ///
+  /// In en, this message translates to:
+  /// **'Delete Comment'**
+  String get delete_comment;
+
+  /// Delete comment confirmation
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to delete this comment? This action cannot be undone.'**
+  String get delete_comment_confirmation;
+
+  /// Delete comment error
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to delete comment'**
+  String get failed_to_delete_comment;
+
+  /// Comment deleted success
+  ///
+  /// In en, this message translates to:
+  /// **'Comment deleted'**
+  String get comment_deleted;
+
+  /// Load comments error
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to load comments'**
+  String get failed_to_load_comments;
+
+  /// No comments yet message
+  ///
+  /// In en, this message translates to:
+  /// **'No comments yet'**
+  String get no_comments_yet;
+
+  /// View all comments link
+  ///
+  /// In en, this message translates to:
+  /// **'View all {count} comments'**
+  String view_all_comments(int count);
+
+  /// Access denied title
+  ///
+  /// In en, this message translates to:
+  /// **'Access Denied'**
+  String get access_denied;
+
+  /// Admin required message
+  ///
+  /// In en, this message translates to:
+  /// **'Admin privileges are required to access comments.'**
+  String get admin_required_for_comments;
+
+  /// Dismantling page title
+  ///
+  /// In en, this message translates to:
+  /// **'Dismantling'**
+  String get dismantling;
+
+  /// Dismantling banner title
+  ///
+  /// In en, this message translates to:
+  /// **'Dismantling in Progress'**
+  String get dismantling_in_progress;
+
+  /// Dismantling banner subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Follow each step carefully to ensure safe removal'**
+  String get dismantling_follow_steps;
+
+  /// Dismantling complete dialog title
+  ///
+  /// In en, this message translates to:
+  /// **'Dismantling Complete'**
+  String get dismantling_complete;
+
+  /// Dismantling complete message
+  ///
+  /// In en, this message translates to:
+  /// **'All dismantling steps have been completed. This will reset the installation status.'**
+  String get dismantling_complete_message;
+
+  /// Not yet button
+  ///
+  /// In en, this message translates to:
+  /// **'Not Yet'**
+  String get not_yet;
+
+  /// Complete dismantling button
+  ///
+  /// In en, this message translates to:
+  /// **'Complete Dismantling'**
+  String get complete_dismantling;
+
+  /// Select item dialog title
+  ///
+  /// In en, this message translates to:
+  /// **'Select Item to Scan'**
+  String get select_item_to_scan;
+
+  /// Scan item dialog title
+  ///
+  /// In en, this message translates to:
+  /// **'Scan {item}'**
+  String scan_item(String item);
+
+  /// Image source dialog message
+  ///
+  /// In en, this message translates to:
+  /// **'Choose image source:'**
+  String get choose_image_source;
+
+  /// Camera option
+  ///
+  /// In en, this message translates to:
+  /// **'Camera'**
+  String get camera;
+
+  /// Gallery option
+  ///
+  /// In en, this message translates to:
+  /// **'Gallery'**
+  String get gallery;
+
+  /// Analyzing image message
+  ///
+  /// In en, this message translates to:
+  /// **'Analyzing image...'**
+  String get analyzing_image;
+
+  /// Item verified title
+  ///
+  /// In en, this message translates to:
+  /// **'Item Verified!'**
+  String get item_verified;
+
+  /// Item not found title
+  ///
+  /// In en, this message translates to:
+  /// **'Item Not Found'**
+  String get item_not_found;
+
+  /// Item verified message
+  ///
+  /// In en, this message translates to:
+  /// **'The item has been successfully verified and matched with the packing list.'**
+  String get item_verified_message;
+
+  /// Item not found message
+  ///
+  /// In en, this message translates to:
+  /// **'The item could not be verified. Please try again or check manually.'**
+  String get item_not_found_message;
+
+  /// Auto check message
+  ///
+  /// In en, this message translates to:
+  /// **'This item will be automatically checked off.'**
+  String get item_auto_checked;
+
+  /// Check item button
+  ///
+  /// In en, this message translates to:
+  /// **'Check Item'**
+  String get check_item;
+
+  /// Packing list page title
+  ///
+  /// In en, this message translates to:
+  /// **'IDTM Packing List'**
+  String get idtm_packing_list;
+
+  /// Equipment checklist card title
+  ///
+  /// In en, this message translates to:
+  /// **'Equipment Checklist'**
+  String get equipment_checklist;
+
+  /// Verify items subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Verify all items before installation'**
+  String get verify_all_items;
+
+  /// Total weight display
+  ///
+  /// In en, this message translates to:
+  /// **'Total Weight: {weight} kg'**
+  String total_weight(String weight);
+
+  /// Scanning button state
+  ///
+  /// In en, this message translates to:
+  /// **'Scanning...'**
+  String get scanning;
+
+  /// Scan with camera button
+  ///
+  /// In en, this message translates to:
+  /// **'Scan with Camera'**
+  String get scan_with_camera;
+
+  /// Reset checklist dialog title
+  ///
+  /// In en, this message translates to:
+  /// **'Reset Checklist'**
+  String get reset_checklist;
+
+  /// Reset checklist confirmation
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to reset all checkboxes? This cannot be undone.'**
+  String get reset_checklist_confirmation;
+
+  /// Reset button
+  ///
+  /// In en, this message translates to:
+  /// **'Reset'**
+  String get reset;
+
+  /// Checklist reset success message
+  ///
+  /// In en, this message translates to:
+  /// **'Checklist reset successfully'**
+  String get checklist_reset_success;
+
+  /// Maintenance mode page title
+  ///
+  /// In en, this message translates to:
+  /// **'Maintenance Mode'**
+  String get maintenance_mode;
+
+  /// System operational card title
+  ///
+  /// In en, this message translates to:
+  /// **'System Operational'**
+  String get system_operational;
+
+  /// Installation success subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Installation completed successfully'**
+  String get installation_completed_successfully;
+
+  /// Maintenance tasks section
+  ///
+  /// In en, this message translates to:
+  /// **'Maintenance Tasks'**
+  String get maintenance_tasks;
+
+  /// View maintenance guide card title
+  ///
+  /// In en, this message translates to:
+  /// **'View Maintenance Guide'**
+  String get view_maintenance_guide;
+
+  /// Maintenance guide description
+  ///
+  /// In en, this message translates to:
+  /// **'Complete maintenance instructions and procedures'**
+  String get maintenance_guide_description;
+
+  /// Daily inspection card title
+  ///
+  /// In en, this message translates to:
+  /// **'Daily Inspection'**
+  String get daily_inspection;
+
+  /// Daily inspection description
+  ///
+  /// In en, this message translates to:
+  /// **'Check system status and connections'**
+  String get daily_inspection_description;
+
+  /// Weekly maintenance card title
+  ///
+  /// In en, this message translates to:
+  /// **'Weekly Maintenance'**
+  String get weekly_maintenance;
+
+  /// Weekly maintenance description
+  ///
+  /// In en, this message translates to:
+  /// **'Perform routine maintenance checks'**
+  String get weekly_maintenance_description;
+
+  /// Monthly review card title
+  ///
+  /// In en, this message translates to:
+  /// **'Monthly Review'**
+  String get monthly_review;
+
+  /// Monthly review description
+  ///
+  /// In en, this message translates to:
+  /// **'Complete monthly system review'**
+  String get monthly_review_description;
+
+  /// Maintenance notes section
+  ///
+  /// In en, this message translates to:
+  /// **'Maintenance Notes'**
+  String get maintenance_notes;
+
+  /// Quick actions section
+  ///
+  /// In en, this message translates to:
+  /// **'Quick Actions'**
+  String get quick_actions;
+
+  /// View documentation button
+  ///
+  /// In en, this message translates to:
+  /// **'View Documentation'**
+  String get view_documentation;
+
+  /// Export maintenance log button
+  ///
+  /// In en, this message translates to:
+  /// **'Export Maintenance Log'**
+  String get export_maintenance_log;
+
+  /// Maintenance alerts card title
+  ///
+  /// In en, this message translates to:
+  /// **'Maintenance Alerts Active'**
+  String get maintenance_alerts_active;
+
+  /// Scheduled reminders count
+  ///
+  /// In en, this message translates to:
+  /// **'{count} scheduled reminder{count, plural, =1{} other{s}}'**
+  String scheduled_reminders_count(int count);
+
+  /// Maintenance notifications info
+  ///
+  /// In en, this message translates to:
+  /// **'You will receive periodic notifications for maintenance tasks'**
+  String get maintenance_notifications_info;
+
+  /// Scheduled reminders dialog title
+  ///
+  /// In en, this message translates to:
+  /// **'Scheduled Reminders'**
+  String get scheduled_reminders;
+
+  /// Facility use guide page title
+  ///
+  /// In en, this message translates to:
+  /// **'Facility Use Guide'**
+  String get facility_use_guide;
+
+  /// IDTM facility use header title
+  ///
+  /// In en, this message translates to:
+  /// **'IDTM Facility Use & Functioning'**
+  String get idtm_facility_use_title;
+
+  /// Facility use guide description
+  ///
+  /// In en, this message translates to:
+  /// **'Browse sections for operational guidance, safety warnings, and site selection requirements.'**
+  String get facility_use_description;
+
+  /// Installation guide page title
+  ///
+  /// In en, this message translates to:
+  /// **'Installation Guide'**
+  String get installation_guide;
+
+  /// Maintenance guide page title
+  ///
+  /// In en, this message translates to:
+  /// **'Maintenance Guide'**
+  String get maintenance_guide;
+
+  /// Overall progress label
+  ///
+  /// In en, this message translates to:
+  /// **'Overall Progress'**
+  String get overall_progress;
+
+  /// Steps completed progress text
+  ///
+  /// In en, this message translates to:
+  /// **'{completed} of {total} steps completed'**
+  String steps_completed(int completed, int total);
+
+  /// Error with message
+  ///
+  /// In en, this message translates to:
+  /// **'Error: {error}'**
+  String error_with_message(String error);
+
+  /// Ready status description
+  ///
+  /// In en, this message translates to:
+  /// **'Ready to begin installation process'**
+  String get ready_to_begin_installation;
+
+  /// Installing status description
+  ///
+  /// In en, this message translates to:
+  /// **'Installation in progress'**
+  String get installation_in_progress;
+
+  /// Installed status description
+  ///
+  /// In en, this message translates to:
+  /// **'System installed and operational'**
+  String get system_installed_operational;
+
+  /// Dismantling status description
+  ///
+  /// In en, this message translates to:
+  /// **'Dismantling in progress'**
+  String get dismantling_in_progress_status;
+
+  /// Completed status description
+  ///
+  /// In en, this message translates to:
+  /// **'Installation completed'**
+  String get installation_completed;
+
+  /// Start installation button
+  ///
+  /// In en, this message translates to:
+  /// **'Start Installation'**
+  String get start_installation;
+
+  /// Continue installation button
+  ///
+  /// In en, this message translates to:
+  /// **'Continue Installation'**
+  String get continue_installation;
+
+  /// Start dismantling button
+  ///
+  /// In en, this message translates to:
+  /// **'Start Dismantling'**
+  String get start_dismantling;
+
+  /// Continue dismantling button
+  ///
+  /// In en, this message translates to:
+  /// **'Continue Dismantling'**
+  String get continue_dismantling;
+
+  /// Start new installation button
+  ///
+  /// In en, this message translates to:
+  /// **'Start New Installation'**
+  String get start_new_installation;
+
+  /// System reset success message
+  ///
+  /// In en, this message translates to:
+  /// **'System reset. Ready for new installation.'**
+  String get system_reset_ready;
+
+  /// Show packing list button
+  ///
+  /// In en, this message translates to:
+  /// **'Show Packing List'**
+  String get show_packing_list;
+
+  /// Start dismantling confirmation title
+  ///
+  /// In en, this message translates to:
+  /// **'Start Dismantling?'**
+  String get start_dismantling_question;
+
+  /// Dismantling confirmation message
+  ///
+  /// In en, this message translates to:
+  /// **'You are about to start the dismantling process. This will:'**
+  String get dismantling_confirmation_message;
+
+  /// Exit maintenance mode action
+  ///
+  /// In en, this message translates to:
+  /// **'Exit maintenance mode'**
+  String get exit_maintenance_mode;
+
+  /// Begin dismantling phase action
+  ///
+  /// In en, this message translates to:
+  /// **'Begin dismantling phase'**
+  String get begin_dismantling_phase;
+
+  /// Open dismantling guide action
+  ///
+  /// In en, this message translates to:
+  /// **'Open dismantling guide'**
+  String get open_dismantling_guide;
+
+  /// Maintenance complete warning
+  ///
+  /// In en, this message translates to:
+  /// **'Make sure all maintenance tasks are completed before proceeding.'**
+  String get maintenance_complete_before_dismantling;
+
+  /// Dismantling started message
+  ///
+  /// In en, this message translates to:
+  /// **'Dismantling phase started. Opening dismantling guide.'**
+  String get dismantling_started_message;
+
+  /// Installation guide progress card title
+  ///
+  /// In en, this message translates to:
+  /// **'Installation Guide Progress'**
+  String get installation_guide_progress;
+
+  /// Installation complete title
+  ///
+  /// In en, this message translates to:
+  /// **'Installation Complete!'**
+  String get installation_complete_title;
+
+  /// Installation complete message
+  ///
+  /// In en, this message translates to:
+  /// **'Installation completed! Opening maintenance mode.'**
+  String get installation_complete_maintenance;
+
+  /// Finish and go to maintenance button
+  ///
+  /// In en, this message translates to:
+  /// **'Finish & Go to Maintenance'**
+  String get finish_go_to_maintenance;
+
+  /// Dismantling guide progress card title
+  ///
+  /// In en, this message translates to:
+  /// **'Dismantling Guide Progress'**
+  String get dismantling_guide_progress;
+
+  /// Dismantling complete title
+  ///
+  /// In en, this message translates to:
+  /// **'Dismantling Complete!'**
+  String get dismantling_complete_title;
+
+  /// Dismantling lifecycle complete message
+  ///
+  /// In en, this message translates to:
+  /// **'Dismantling completed! IDTM lifecycle finished.'**
+  String get dismantling_lifecycle_complete;
+
+  /// IDTM lifecycle completed title
+  ///
+  /// In en, this message translates to:
+  /// **'IDTM Lifecycle Completed!'**
+  String get idtm_lifecycle_completed;
+
+  /// Lifecycle completed description
+  ///
+  /// In en, this message translates to:
+  /// **'Installation, maintenance, and dismantling phases have been successfully completed.'**
+  String get lifecycle_completed_description;
+
+  /// Installed badge label
+  ///
+  /// In en, this message translates to:
+  /// **'Installed'**
+  String get installed;
+
+  /// Maintained badge label
+  ///
+  /// In en, this message translates to:
+  /// **'Maintained'**
+  String get maintained;
+
+  /// Dismantled badge label
+  ///
+  /// In en, this message translates to:
+  /// **'Dismantled'**
+  String get dismantled;
+
+  /// IDTM installation card title
+  ///
+  /// In en, this message translates to:
+  /// **'IDTM Installation'**
+  String get idtm_installation;
+
+  /// What is IDTM page title
+  ///
+  /// In en, this message translates to:
+  /// **'What is IDTM'**
+  String get what_is_idtm;
+
+  /// IDTM overview card title
+  ///
+  /// In en, this message translates to:
+  /// **'IDTM Overview'**
+  String get idtm_overview;
+
+  /// Page indicator
+  ///
+  /// In en, this message translates to:
+  /// **'Page {current} of {total}'**
+  String page_indicator(int current, int total);
+
+  /// Failed to load PDF error
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to load PDF: {error}'**
+  String failed_to_load_pdf(String error);
+
+  /// 404 not found text
+  ///
+  /// In en, this message translates to:
+  /// **'404 Not Found'**
+  String get not_found_404;
+
+  /// Address label
+  ///
+  /// In en, this message translates to:
+  /// **'Address: {address}'**
+  String address_label(String address);
+
+  /// Alert templates page title
+  ///
+  /// In en, this message translates to:
+  /// **'Alert Templates'**
+  String get alert_templates;
+
+  /// Initialize alerts tooltip
+  ///
+  /// In en, this message translates to:
+  /// **'Initialize Maintenance Alerts'**
+  String get initialize_maintenance_alerts;
+
+  /// All facilities menu item
+  ///
+  /// In en, this message translates to:
+  /// **'All Facilities'**
+  String get all_facilities;
+
+  /// No alert templates empty state
+  ///
+  /// In en, this message translates to:
+  /// **'No Alert Templates'**
+  String get no_alert_templates;
+
+  /// No alert templates message
+  ///
+  /// In en, this message translates to:
+  /// **'Tap the + button to create your first alert template for facility maintenance'**
+  String get no_alert_templates_message;
+
+  /// Error loading templates title
+  ///
+  /// In en, this message translates to:
+  /// **'Error Loading Templates'**
+  String get error_loading_templates;
+
+  /// Super admin required for templates
+  ///
+  /// In en, this message translates to:
+  /// **'Super Admin privileges are required to manage alert templates.'**
+  String get super_admin_required_templates;
+
+  /// Go to dashboard button
+  ///
+  /// In en, this message translates to:
+  /// **'Go to Dashboard'**
+  String get go_to_dashboard;
+
+  /// Add template FAB label
+  ///
+  /// In en, this message translates to:
+  /// **'Add Template'**
+  String get add_template;
+
+  /// Delete template dialog title
+  ///
+  /// In en, this message translates to:
+  /// **'Delete Template'**
+  String get delete_template;
+
+  /// Delete template confirmation
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to delete \"{title}\"? This action cannot be undone.'**
+  String delete_template_confirmation(String title);
+
+  /// Admin management page title
+  ///
+  /// In en, this message translates to:
+  /// **'Admin Management'**
+  String get admin_management;
+
+  /// Manage alert templates tooltip
+  ///
+  /// In en, this message translates to:
+  /// **'Manage Alert Templates'**
+  String get manage_alert_templates;
+
+  /// No admin users empty state
+  ///
+  /// In en, this message translates to:
+  /// **'No Admin Users'**
+  String get no_admin_users;
+
+  /// No admin users message
+  ///
+  /// In en, this message translates to:
+  /// **'Tap the + button to add your first admin user'**
+  String get no_admin_users_message;
+
+  /// Error loading admins title
+  ///
+  /// In en, this message translates to:
+  /// **'Error Loading Admins'**
+  String get error_loading_admins;
+
+  /// Super admin required for page
+  ///
+  /// In en, this message translates to:
+  /// **'Super Admin privileges are required to access this page.'**
+  String get super_admin_required_page;
+
+  /// Add admin FAB label
+  ///
+  /// In en, this message translates to:
+  /// **'Add Admin'**
+  String get add_admin;
+
+  /// Login removed placeholder
+  ///
+  /// In en, this message translates to:
+  /// **'Login functionality has been removed'**
+  String get login_removed;
+
+  /// Address collection dialog title
+  ///
+  /// In en, this message translates to:
+  /// **'Address Collection'**
+  String get address_collection;
+
+  /// Address collection removed message
+  ///
+  /// In en, this message translates to:
+  /// **'Address collection functionality has been removed'**
+  String get address_collection_removed;
+
+  /// Feedback available message
+  ///
+  /// In en, this message translates to:
+  /// **'Feedback feature available in main button'**
+  String get feedback_available;
+
+  /// Installation notes section title
+  ///
+  /// In en, this message translates to:
+  /// **'Installation Notes'**
+  String get installation_notes;
+
+  /// Error scanning item message
+  ///
+  /// In en, this message translates to:
+  /// **'Error scanning item: {error}'**
+  String error_scanning_item(String error);
+
+  /// Item verified and checked message
+  ///
+  /// In en, this message translates to:
+  /// **'✓ {item} verified and checked!'**
+  String item_verified_checked(String item);
+
+  /// Quantity label
+  ///
+  /// In en, this message translates to:
+  /// **'Qty: {quantity}'**
+  String qty_label(int quantity);
+
+  /// Quantity and dimensions
+  ///
+  /// In en, this message translates to:
+  /// **'Qty: {quantity} • {dimensions}'**
+  String qty_dimensions(int quantity, String dimensions);
+
+  /// Weight label
+  ///
+  /// In en, this message translates to:
+  /// **'Weight: {weight}'**
+  String weight_label(String weight);
+
+  /// Dismantling notes section title
+  ///
+  /// In en, this message translates to:
+  /// **'Dismantling Notes'**
+  String get dismantling_notes;
+
+  /// Europallet 1 name
+  ///
+  /// In en, this message translates to:
+  /// **'EUROPALLET 1'**
+  String get packing_europallet_1;
+
+  /// Europallet 1 description
+  ///
+  /// In en, this message translates to:
+  /// **'First europallet containing main tent and accessories'**
+  String get packing_europallet_1_desc;
+
+  /// Europallet 2 name
+  ///
+  /// In en, this message translates to:
+  /// **'EUROPALLET 2'**
+  String get packing_europallet_2;
+
+  /// Europallet 2 description
+  ///
+  /// In en, this message translates to:
+  /// **'Second europallet containing main tent and sun net'**
+  String get packing_europallet_2_desc;
+
+  /// Europallet 3 name
+  ///
+  /// In en, this message translates to:
+  /// **'EUROPALLET 3'**
+  String get packing_europallet_3;
+
+  /// Europallet 3 description
+  ///
+  /// In en, this message translates to:
+  /// **'Third europallet containing main tent and sun net'**
+  String get packing_europallet_3_desc;
+
+  /// Main tent structure name
+  ///
+  /// In en, this message translates to:
+  /// **'AZF4 27 WFP'**
+  String get packing_azf4_27_wfp;
+
+  /// Main tent structure description
+  ///
+  /// In en, this message translates to:
+  /// **'Main tent structure'**
+  String get packing_azf4_27_wfp_desc;
+
+  /// Bag for inner cabins name
+  ///
+  /// In en, this message translates to:
+  /// **'BAG FOR INNER CABINS'**
+  String get packing_bag_inner_cabins;
+
+  /// Bag for inner cabins description
+  ///
+  /// In en, this message translates to:
+  /// **'Inner cabin partitions'**
+  String get packing_bag_inner_cabins_desc;
+
+  /// Bag for sun shadowing net name
+  ///
+  /// In en, this message translates to:
+  /// **'BAG FOR SUN SHADOWING NET'**
+  String get packing_bag_sun_net;
+
+  /// Bag for sun shadowing net description
+  ///
+  /// In en, this message translates to:
+  /// **'Sun protection net'**
+  String get packing_bag_sun_net_desc;
+
+  /// Logistic box 1 name
+  ///
+  /// In en, this message translates to:
+  /// **'LOGISTIC BOX 1'**
+  String get packing_logistic_box_1;
+
+  /// Logistic box 1 description
+  ///
+  /// In en, this message translates to:
+  /// **'Logistics box with sun shadowing net'**
+  String get packing_logistic_box_1_desc;
+
+  /// Sun shadowing net name
+  ///
+  /// In en, this message translates to:
+  /// **'SUN SHADOWING NET'**
+  String get packing_sun_shadowing_net;
+
+  /// Sun shadowing net description
+  ///
+  /// In en, this message translates to:
+  /// **'Additional sun protection net'**
+  String get packing_sun_shadowing_net_desc;
+
+  /// Logistic box 2 name
+  ///
+  /// In en, this message translates to:
+  /// **'LOGISTIC BOX 2'**
+  String get packing_logistic_box_2;
+
+  /// Logistic box 2 description
+  ///
+  /// In en, this message translates to:
+  /// **'Logistics box with mid and inner liners'**
+  String get packing_logistic_box_2_desc;
+
+  /// Mid liner name
+  ///
+  /// In en, this message translates to:
+  /// **'MID LINER'**
+  String get packing_mid_liner;
+
+  /// Mid liner description
+  ///
+  /// In en, this message translates to:
+  /// **'Mid layer insulation liner'**
+  String get packing_mid_liner_desc;
+
+  /// Inner liner name
+  ///
+  /// In en, this message translates to:
+  /// **'INNER LINER'**
+  String get packing_inner_liner;
+
+  /// Inner liner description
+  ///
+  /// In en, this message translates to:
+  /// **'Inner insulation liner'**
+  String get packing_inner_liner_desc;
+
+  /// Logistic box 3 name
+  ///
+  /// In en, this message translates to:
+  /// **'LOGISTIC BOX 3'**
+  String get packing_logistic_box_3;
+
+  /// Logistic box 3 description
+  ///
+  /// In en, this message translates to:
+  /// **'Logistics box with vestibules'**
+  String get packing_logistic_box_3_desc;
+
+  /// Vestibule name
+  ///
+  /// In en, this message translates to:
+  /// **'VESTIBULE'**
+  String get packing_vestibule;
+
+  /// Vestibule description
+  ///
+  /// In en, this message translates to:
+  /// **'Entry vestibules'**
+  String get packing_vestibule_desc;
+
+  /// Logistic box 4 name
+  ///
+  /// In en, this message translates to:
+  /// **'LOGISTIC BOX 4'**
+  String get packing_logistic_box_4;
+
+  /// Logistic box 4 description
+  ///
+  /// In en, this message translates to:
+  /// **'Logistics box with staking kit, inflator, and repair kit'**
+  String get packing_logistic_box_4_desc;
+
+  /// Staking kit name
+  ///
+  /// In en, this message translates to:
+  /// **'AZF4 27 & VESTIBULE STAKING KIT'**
+  String get packing_staking_kit;
+
+  /// Staking kit description
+  ///
+  /// In en, this message translates to:
+  /// **'Ground anchoring stakes and ropes'**
+  String get packing_staking_kit_desc;
+
+  /// Manual inflator name
+  ///
+  /// In en, this message translates to:
+  /// **'MANUAL INFLATOR'**
+  String get packing_manual_inflator;
+
+  /// Manual inflator description
+  ///
+  /// In en, this message translates to:
+  /// **'Manual pump for tent inflation'**
+  String get packing_manual_inflator_desc;
+
+  /// Repair kit name
+  ///
+  /// In en, this message translates to:
+  /// **'REPAIR KIT'**
+  String get packing_repair_kit;
+
+  /// Repair kit description
+  ///
+  /// In en, this message translates to:
+  /// **'Emergency repair materials and tools'**
+  String get packing_repair_kit_desc;
+
+  /// Logistic box 5 name
+  ///
+  /// In en, this message translates to:
+  /// **'LOGISTIC BOX 5'**
+  String get packing_logistic_box_5;
+
+  /// Logistic box 5 description
+  ///
+  /// In en, this message translates to:
+  /// **'Additional logistics box'**
+  String get packing_logistic_box_5_desc;
+
+  /// Logistic box 6 name
+  ///
+  /// In en, this message translates to:
+  /// **'LOGISTIC BOX 6'**
+  String get packing_logistic_box_6;
+
+  /// Logistic box 6 description
+  ///
+  /// In en, this message translates to:
+  /// **'Additional logistics box'**
+  String get packing_logistic_box_6_desc;
+
+  /// Logistic box 7 name
+  ///
+  /// In en, this message translates to:
+  /// **'LOGISTIC BOX 7'**
+  String get packing_logistic_box_7;
+
+  /// Logistic box 7 description
+  ///
+  /// In en, this message translates to:
+  /// **'Additional logistics box'**
+  String get packing_logistic_box_7_desc;
+
+  /// Logistic box 8 name
+  ///
+  /// In en, this message translates to:
+  /// **'LOGISTIC BOX 8'**
+  String get packing_logistic_box_8;
+
+  /// Logistic box 8 description
+  ///
+  /// In en, this message translates to:
+  /// **'Additional logistics box'**
+  String get packing_logistic_box_8_desc;
+
+  /// Logistic box 9 name
+  ///
+  /// In en, this message translates to:
+  /// **'LOGISTIC BOX 9'**
+  String get packing_logistic_box_9;
+
+  /// Logistic box 9 description
+  ///
+  /// In en, this message translates to:
+  /// **'Additional logistics box'**
+  String get packing_logistic_box_9_desc;
+
+  /// Tiles pallet name
+  ///
+  /// In en, this message translates to:
+  /// **'TILES PALLET'**
+  String get packing_tiles_pallet;
+
+  /// Tiles pallet description
+  ///
+  /// In en, this message translates to:
+  /// **'Hard flooring tiles for tent base'**
+  String get packing_tiles_pallet_desc;
 }
 
 class _AppLocalizationsDelegate
@@ -5984,7 +7274,7 @@ class _AppLocalizationsDelegate
 
   @override
   bool isSupported(Locale locale) =>
-      <String>['de', 'en', 'es', 'fr', 'it'].contains(locale.languageCode);
+      <String>['en', 'it'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_AppLocalizationsDelegate old) => false;
@@ -5993,14 +7283,8 @@ class _AppLocalizationsDelegate
 AppLocalizations lookupAppLocalizations(Locale locale) {
   // Lookup logic when only language code is specified.
   switch (locale.languageCode) {
-    case 'de':
-      return AppLocalizationsDe();
     case 'en':
       return AppLocalizationsEn();
-    case 'es':
-      return AppLocalizationsEs();
-    case 'fr':
-      return AppLocalizationsFr();
     case 'it':
       return AppLocalizationsIt();
   }
