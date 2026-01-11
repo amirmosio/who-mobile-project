@@ -1,10 +1,13 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:who_mobile_project/app_core/theme/colors.dart';
 import 'package:who_mobile_project/data/idtm_packing_list_data.dart';
+import 'package:who_mobile_project/general/constants/comment_categories.dart';
 import 'package:who_mobile_project/models/packing_list_item.dart';
-import 'dart:io';
+import 'package:who_mobile_project/ui/comments/widgets/comments_section_widget.dart';
 
 /// Page displaying the IDTM packing list with visual recognition
 class PackingListPage extends StatefulWidget {
@@ -553,8 +556,24 @@ class _PackingListPageState extends State<PackingListPage> {
           Expanded(
             child: ListView.builder(
               padding: const EdgeInsets.symmetric(horizontal: 16),
-              itemCount: mainItems.length,
+              itemCount: mainItems.length + 1, // +1 for comments section
               itemBuilder: (context, index) {
+                // Show comments section at the end
+                if (index == mainItems.length) {
+                  return const Padding(
+                    padding: EdgeInsets.only(top: 8, bottom: 16),
+                    child: CommentsSectionWidget(
+                      category: CommentCategory.install,
+                      maxComments: 3,
+                      showAddButton: true,
+                      showViewAll: true,
+                      title: 'Installation Notes',
+                      collapsible: true,
+                      initiallyCollapsed: true,
+                    ),
+                  );
+                }
+
                 final item = mainItems[index];
                 final subItems = IdtmPackingListData.getSubItems(item.id);
                 final isExpanded = _expandedItems[item.id] ?? false;

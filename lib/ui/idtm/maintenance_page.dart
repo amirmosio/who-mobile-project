@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:who_mobile_project/app_core/theme/colors.dart';
+import 'package:who_mobile_project/general/constants/comment_categories.dart';
 import 'package:who_mobile_project/general/models/maintenance/alert_template.dart';
 import 'package:who_mobile_project/providers/maintenance/alert_template_provider.dart';
 import 'package:who_mobile_project/providers/maintenance/scheduled_alerts_provider.dart';
 import 'package:who_mobile_project/routing_config/routes.dart';
+import 'package:who_mobile_project/ui/comments/widgets/comments_section_widget.dart';
 
 /// Page for maintenance mode - system is installed and operational
 class MaintenancePage extends ConsumerWidget {
@@ -132,27 +134,18 @@ class MaintenancePage extends ConsumerWidget {
             },
           ),
 
-          // TODO: Uncomment when installation notes feature is implemented
-          // _MaintenanceTaskCard(
-          //   title: 'View Installation Notes',
-          //   description: 'Review notes from installation',
-          //   icon: Icons.note,
-          //   color: BZColors.bronzeDark,
-          //   onTap: () {
-          //     // TODO: Navigate to notes
-          //   },
-          // ),
+          const SizedBox(height: 24),
 
-          // TODO: Uncomment when add comment feature is implemented
-          // _MaintenanceTaskCard(
-          //   title: 'Add Comment',
-          //   description: 'Leave notes for future reference',
-          //   icon: Icons.comment,
-          //   color: Colors.teal,
-          //   onTap: () {
-          //     // TODO: Navigate to add comment
-          //   },
-          // ),
+          // Maintenance Comments Section (Admin only)
+          const CommentsSectionWidget(
+            category: CommentCategory.maintenance,
+            maxComments: 3,
+            showAddButton: true,
+            showViewAll: true,
+            title: 'Maintenance Notes',
+            collapsible: true,
+            initiallyCollapsed: false,
+          ),
 
           const SizedBox(height: 24),
 

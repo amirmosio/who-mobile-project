@@ -3,7 +3,7 @@ import 'package:who_mobile_project/general/models/comments/comment.dart';
 import 'package:who_mobile_project/repository/repo_state.dart';
 import 'package:who_mobile_project/services/firebase/firebase_comments_service.dart';
 
-/// Repository for comments operations
+/// Repository for comments operations with caching support
 /// Provides consistent error handling and returns RepositoryState
 /// Registered via FirebaseModule in DI
 class CommentsRepository {
@@ -13,11 +13,12 @@ class CommentsRepository {
 
   /// Get stream of comments filtered by category (optional)
   /// Returns non-deleted comments ordered by creation date (newest first)
+  /// Uses internal caching to reduce Firestore reads
   Stream<List<Comment>> getCommentsStream({CommentCategory? category}) {
     return _commentsService.getCommentsStream(category: category);
   }
 
-  /// Get all comments once
+  /// Get all comments once with caching
   /// Optionally filter by category
   Future<RepositoryState> getComments({CommentCategory? category}) async {
     try {
@@ -26,6 +27,31 @@ class CommentsRepository {
     } catch (e) {
       return ErrorState(RepositoryException(
         message: 'Failed to load comments.',
+        error: null,
+      ));
+    }
+  }
+
+  /// Get cached comments without hitting Firestore
+  /// Returns null if cache is expired or missing
+  List<Comment>? getCachedComments({CommentCategory? category}) {
+    return _commentsService.getCachedComments(category: category);
+  }
+
+  /// Check if cache is valid for a category
+  bool isCacheValid({CommentCategory? category}) {
+    return _commentsService.isCacheValid(category: category);
+  }
+
+  /// Force refresh comments for a category
+  Future<RepositoryState> refreshComments({CommentCategory? category}) async {
+    try {
+      final comments =
+          await _commentsService.refreshComments(category: category);
+      return SuccessState(comments, null);
+    } catch (e) {
+      return ErrorState(RepositoryException(
+        message: 'Failed to refresh comments.',
         error: null,
       ));
     }
@@ -93,7 +119,8 @@ class CommentsRepository {
         ));
       }
 
-      if (text != null && text.length > FirebaseCommentsService.maxCommentLength) {
+      if (text != null &&
+          text.length > FirebaseCommentsService.maxCommentLength) {
         return ErrorState(RepositoryException(
           message:
               'Comment exceeds maximum length of ${FirebaseCommentsService.maxCommentLength} characters.',
@@ -164,5 +191,10 @@ class CommentsRepository {
         error: null,
       ));
     }
+  }
+
+  /// Clear all caches (useful for logout or force refresh)
+  void clearAllCaches() {
+    _commentsService.clearAllCaches();
   }
 }

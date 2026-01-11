@@ -10,8 +10,13 @@ import 'package:who_mobile_project/repository/repo_state.dart';
 part 'comments_provider.g.dart';
 
 /// Stream provider for comments list with optional category filter
-/// Uses Firestore real-time updates for live comment feed
+/// Uses Firestore real-time updates for live comment feed with caching
 /// Only admins should access this provider
+///
+/// Caching features:
+/// - 5-minute TTL cache
+/// - Immediate cache emission before Firestore listener kicks in
+/// - Shared stream controllers to prevent duplicate listeners
 ///
 /// Example usage:
 /// ```dart
@@ -55,6 +60,15 @@ class SelectedCommentCategory extends _$SelectedCommentCategory {
 AsyncValue<List<Comment>> filteredComments(Ref ref) {
   final selectedCategory = ref.watch(selectedCommentCategoryProvider);
   return ref.watch(commentsStreamProvider(selectedCategory));
+}
+
+/// Provider for comments filtered by a specific category
+/// Useful for showing comments in context pages (installation, maintenance, etc.)
+/// Uses caching to reduce API calls
+@Riverpod(keepAlive: true)
+Stream<List<Comment>> commentsByCategory(Ref ref, CommentCategory category) {
+  final repository = ref.watch(commentsRepositoryProvider);
+  return repository.getCommentsStream(category: category);
 }
 
 /// Provider for creating new comments
@@ -237,4 +251,42 @@ int totalCommentCount(Ref ref) {
     loading: () => 0,
     error: (_, __) => 0,
   );
+}
+
+/// Provider to refresh comments cache
+/// Forces a fresh fetch from Firestore
+@riverpod
+class RefreshComments extends _$RefreshComments {
+  @override
+  BaseApiState build() {
+    return const BaseApiInitial();
+  }
+
+  /// Force refresh comments for a category
+  Future<void> refresh({CommentCategory? category}) async {
+    state = const BaseApiLoading();
+
+    final repository = ref.read(commentsRepositoryProvider);
+    final response = await repository.refreshComments(category: category);
+
+    if (response is SuccessState) {
+      state = const BaseApiOperationSuccess(true, 'Comments refreshed');
+    } else if (response is ErrorState) {
+      state = BaseApiError(response.exception);
+    }
+  }
+
+  /// Clear all comments cache
+  void clearCache() {
+    final repository = ref.read(commentsRepositoryProvider);
+    repository.clearAllCaches();
+    state = const BaseApiInitial();
+  }
+}
+
+/// Check if cache is valid for a category
+@riverpod
+bool isCacheValid(Ref ref, CommentCategory? category) {
+  final repository = ref.watch(commentsRepositoryProvider);
+  return repository.isCacheValid(category: category);
 }

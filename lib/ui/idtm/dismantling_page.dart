@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:who_mobile_project/di/injector.dart';
+import 'package:who_mobile_project/general/constants/comment_categories.dart';
 import 'package:who_mobile_project/general/services/storage/storage_manager.dart';
+import 'package:who_mobile_project/ui/comments/widgets/comments_section_widget.dart';
 
 /// Page for managing dismantling/repacking steps
 class DismantlingPage extends StatefulWidget {
@@ -218,8 +220,24 @@ class _DismantlingPageState extends State<DismantlingPage> {
           Expanded(
             child: ListView.builder(
               padding: const EdgeInsets.all(16),
-              itemCount: _steps.length,
+              itemCount: _steps.length + 1, // +1 for comments section
               itemBuilder: (context, index) {
+                // Show comments section at the end
+                if (index == _steps.length) {
+                  return const Padding(
+                    padding: EdgeInsets.only(top: 8, bottom: 16),
+                    child: CommentsSectionWidget(
+                      category: CommentCategory.disassemble,
+                      maxComments: 3,
+                      showAddButton: true,
+                      showViewAll: true,
+                      title: 'Dismantling Notes',
+                      collapsible: true,
+                      initiallyCollapsed: true,
+                    ),
+                  );
+                }
+
                 final step = _steps[index];
                 return _StepCard(
                   step: step,

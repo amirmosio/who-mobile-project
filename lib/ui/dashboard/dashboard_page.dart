@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:who_mobile_project/ui/dashboard/widgets/facility_use_card.dart';
-import 'package:who_mobile_project/ui/dashboard/widgets/idtm_guide_card.dart';
 import 'package:who_mobile_project/ui/dashboard/widgets/idtm_status_card.dart';
 import 'package:who_mobile_project/ui/dashboard/widgets/what_is_idtm_card.dart';
 
