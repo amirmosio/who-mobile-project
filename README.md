@@ -8,13 +8,13 @@ Major features of the app:
 - ~~automatic alert Amin~~
 - Furniture and equipment instruction Kian
 - Dismantling and repacking Amir
-- Facility use and functioning Amin
+- ~~Facility use and functioning Amin~~
 - Every user can leave notes after use (document damages, reparations etc for future users)
 
 
 - ~~Login (guest, admin) Firebase Authentication~~
-- "Add comment" only authenticated users
-- "read comment" only authenticated users
+- ~~"Add comment" only authenticated users~~
+- ~~"read comment" only authenticated users~~
 
 
 Dashboard (Main Page):
