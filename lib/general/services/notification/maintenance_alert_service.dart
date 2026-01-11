@@ -102,7 +102,7 @@ class MaintenanceAlertService {
         intervalHours: template.intervalHours,
         priority: template.priority,
         startTime: startTime,
-        payload: '${installationId}|${template.id}',
+        payload: '$installationId|${template.id}',
       );
 
       if (success) {
