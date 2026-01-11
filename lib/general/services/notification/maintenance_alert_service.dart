@@ -388,4 +388,65 @@ class MaintenanceAlertService {
         .where((n) => n.id >= _notificationIdBase)
         .toList();
   }
+
+  /// Show a test notification immediately to verify notifications are working
+  /// Useful for testing on emulator or device
+  Future<bool> showTestNotification({
+    String? title,
+    String? body,
+  }) async {
+    final permissionsGranted =
+        await YRPermissionHandler.ensureReminderPermissions();
+    if (!permissionsGranted) {
+      debugPrint('Notification permissions not granted');
+      return false;
+    }
+
+    if (DeviceUtils.getInstance().isAndroid) {
+      try {
+        final result = await _androidAlertChannel.invokeMethod<bool>(
+          'showTestNotification',
+          {
+            'title': title ?? 'Maintenance Alert Test',
+            'body': body ?? 'This is a test notification',
+          },
+        );
+        debugPrint('Android test notification result: $result');
+        return result ?? false;
+      } catch (e) {
+        debugPrint('Error showing Android test notification: $e');
+        // Fall through to flutter_local_notifications
+      }
+    }
+
+    // Use flutter_local_notifications for iOS or as fallback
+    try {
+      const notificationDetails = NotificationDetails(
+        android: AndroidNotificationDetails(
+          'maintenance_alerts',
+          'Maintenance Alerts',
+          channelDescription: 'Notifications for facility maintenance tasks',
+          importance: Importance.high,
+          priority: Priority.high,
+        ),
+        iOS: DarwinNotificationDetails(
+          presentAlert: true,
+          presentBadge: true,
+          presentSound: true,
+        ),
+      );
+
+      await _localNotifications.show(
+        _notificationIdBase + 1, // Test notification ID
+        title ?? 'Maintenance Alert Test',
+        body ?? 'This is a test notification',
+        notificationDetails,
+      );
+      debugPrint('Test notification shown via flutter_local_notifications');
+      return true;
+    } catch (e) {
+      debugPrint('Error showing test notification: $e');
+      return false;
+    }
+  }
 }

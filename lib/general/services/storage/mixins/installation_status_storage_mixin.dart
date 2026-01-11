@@ -113,9 +113,11 @@ mixin InstallationStatusStorageMixin on BaseStorage {
   }
 
   /// Start dismantling
-  /// Also resets maintenance guide progress
+  /// Also resets maintenance guide progress and dismantling guide progress
   Future<void> startDismantling() async {
     await resetMaintenanceGuideProgress();
+    await resetDismantlingGuideProgress();
+    await clearCompletedDismantlingSteps();
     await setCurrentPhase(FacilityInstallationPhase.dismantling);
   }
 

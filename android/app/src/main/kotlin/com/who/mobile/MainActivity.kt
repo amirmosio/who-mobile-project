@@ -1,5 +1,6 @@
 package com.who.mobile
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.annotation.NonNull
@@ -11,12 +12,14 @@ class MainActivity : FlutterActivity() {
 
     companion object {
         private const val QUIZ_REMINDER_CHANNEL = "com.who.mobile/quizReminder"
+        private const val MAINTENANCE_ALERT_CHANNEL = "com.who.mobile/maintenanceAlert"
         private const val REALM_MIGRATION_CHANNEL = "com.who.mobile/realm_migration"
         private const val AUTH_MIGRATION_CHANNEL = "com.who.mobile/auth_migration"
         private const val TAG = "MainActivity"
     }
 
     private var reminderChannel: MethodChannel? = null
+    private var maintenanceAlertChannel: MethodChannel? = null
     private lateinit var realmHelper: RealmMigrationHelper
     private lateinit var authMigrationHelper: SharedPreferencesMigrationHelper
 
@@ -36,6 +39,7 @@ class MainActivity : FlutterActivity() {
 
         // Setup all channels
         setupReminderChannel(flutterEngine)
+        setupMaintenanceAlertChannel(flutterEngine)
         setupRealmMigrationChannel(flutterEngine)
         setupAuthMigrationChannel(flutterEngine)
 
@@ -142,6 +146,112 @@ class MainActivity : FlutterActivity() {
             Log.i(TAG, "Quiz reminder channel registered successfully")
         } catch (e: Exception) {
             Log.e(TAG, "ERROR registering quiz reminder channel: ${e.message}", e)
+        }
+    }
+
+    private fun setupMaintenanceAlertChannel(engine: FlutterEngine?) {
+        if (engine == null) {
+            Log.w(TAG, "FlutterEngine is null; delaying maintenance alert channel setup")
+            return
+        }
+        if (maintenanceAlertChannel != null) {
+            Log.d(TAG, "Maintenance alert channel already initialized")
+            return
+        }
+
+        Log.i(TAG, "Setting up maintenance alert method channel")
+
+        try {
+            maintenanceAlertChannel = MethodChannel(
+                engine.dartExecutor.binaryMessenger,
+                MAINTENANCE_ALERT_CHANNEL
+            ).apply {
+                setMethodCallHandler { call, result ->
+                    when (call.method) {
+                        "scheduleMaintenanceAlert" -> {
+                            val notificationId = call.argument<Int>("notificationId")
+                            val title = call.argument<String>("title")
+                            val body = call.argument<String>("body")
+                            val intervalHours = call.argument<Int>("intervalHours")
+                            val triggerAtMillis = call.argument<Long>("triggerAtMillis")
+                                ?: call.argument<Number>("triggerAtMillis")?.toLong()
+                            val payload = call.argument<String>("payload")
+
+                            if (notificationId == null || title.isNullOrBlank() ||
+                                body.isNullOrBlank() || intervalHours == null ||
+                                triggerAtMillis == null
+                            ) {
+                                result.error(
+                                    "invalid_arguments",
+                                    "Missing maintenance alert scheduling arguments",
+                                    null
+                                )
+                                return@setMethodCallHandler
+                            }
+
+                            val success = MaintenanceAlertScheduler.scheduleAlert(
+                                applicationContext,
+                                notificationId,
+                                title,
+                                body,
+                                intervalHours,
+                                triggerAtMillis,
+                                payload
+                            )
+                            result.success(success)
+                        }
+
+                        "cancelMaintenanceAlert" -> {
+                            val notificationId = call.argument<Int>("notificationId")
+                            if (notificationId == null) {
+                                result.error(
+                                    "invalid_arguments",
+                                    "Missing notificationId argument",
+                                    null
+                                )
+                                return@setMethodCallHandler
+                            }
+                            MaintenanceAlertScheduler.cancelAlert(applicationContext, notificationId)
+                            result.success(null)
+                        }
+
+                        "cancelAllMaintenanceAlerts" -> {
+                            MaintenanceAlertScheduler.cancelAllAlerts(applicationContext)
+                            result.success(null)
+                        }
+
+                        "showTestNotification" -> {
+                            val title = call.argument<String>("title")
+                            val body = call.argument<String>("body")
+                            val success = MaintenanceAlertScheduler.showTestNotification(
+                                applicationContext,
+                                title,
+                                body
+                            )
+                            result.success(success)
+                        }
+
+                        "openNotificationSettings" -> {
+                            try {
+                                val intent = Intent().apply {
+                                    action = android.provider.Settings.ACTION_APP_NOTIFICATION_SETTINGS
+                                    putExtra(android.provider.Settings.EXTRA_APP_PACKAGE, packageName)
+                                }
+                                startActivity(intent)
+                                result.success(true)
+                            } catch (e: Exception) {
+                                Log.e(TAG, "Error opening notification settings: ${e.message}", e)
+                                result.success(false)
+                            }
+                        }
+
+                        else -> result.notImplemented()
+                    }
+                }
+            }
+            Log.i(TAG, "Maintenance alert channel registered successfully")
+        } catch (e: Exception) {
+            Log.e(TAG, "ERROR registering maintenance alert channel: ${e.message}", e)
         }
     }
 

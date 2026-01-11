@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:who_mobile_project/providers/auth/current_user_provider.dart';
 import 'package:who_mobile_project/generated/i18n/app_localizations.dart';
 import 'package:who_mobile_project/ui/dashboard/widgets/facility_use_card.dart';
 import 'package:who_mobile_project/ui/dashboard/widgets/idtm_status_card.dart';
 import 'package:who_mobile_project/ui/dashboard/widgets/what_is_idtm_card.dart';
 
-class DashboardPage extends StatefulWidget {
+class DashboardPage extends ConsumerStatefulWidget {
   const DashboardPage({super.key});
 
   @override
-  State<DashboardPage> createState() => _DashboardPageState();
+  ConsumerState<DashboardPage> createState() => _DashboardPageState();
 }
 
-class _DashboardPageState extends State<DashboardPage>
+class _DashboardPageState extends ConsumerState<DashboardPage>
     with WidgetsBindingObserver {
   // Use a key to force rebuild of the IDTM status card
   Key _cardKey = UniqueKey();
@@ -46,6 +48,11 @@ class _DashboardPageState extends State<DashboardPage>
 
   @override
   Widget build(BuildContext context) {
+    final currentUserAsync = ref.watch(currentUserProvider);
+    final isAuthenticated = switch (currentUserAsync) {
+      AsyncData(:final value) => value.isAuthenticated,
+      _ => false,
+    };
     final l10n = AppLocalizations.of(context)!;
 
     return Scaffold(
@@ -59,15 +66,16 @@ class _DashboardPageState extends State<DashboardPage>
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // What is IDTM Card
+              // What is IDTM Card - shown to everyone
               const WhatIsIdtmCard(),
-              // IDTM Status Card with unique key to force rebuild
-              IdtmStatusCard(key: _cardKey, onStatusChanged: _refreshCard),
 
-              // Facility Use & Functioning Card
-              const FacilityUseCard(),
+              // IDTM Status Card - only for authenticated users
+              if (isAuthenticated)
+                IdtmStatusCard(key: _cardKey, onStatusChanged: _refreshCard),
 
-              // Add other dashboard cards here in the future
+              // Facility Use & Functioning Card - only for authenticated users
+              if (isAuthenticated) const FacilityUseCard(),
+
               const SizedBox(height: 16),
             ],
           ),
