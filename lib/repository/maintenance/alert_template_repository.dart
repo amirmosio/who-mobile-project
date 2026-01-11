@@ -12,6 +12,9 @@ class AlertTemplateRepository {
 
   static const String _collection = 'alert_templates';
 
+  /// Special facilityId value for general alerts that apply to all users
+  static const String generalFacilityId = 'general';
+
   AlertTemplateRepository(this._alertService)
       : _firestore = FirebaseFirestore.instance;
 
@@ -135,10 +138,41 @@ class AlertTemplateRepository {
   }
 
   /// Get templates for a specific facility (for scheduling)
+  /// Also includes general alerts that apply to all facilities
   Future<List<AlertTemplate>> getTemplatesForFacility(String facilityId) async {
     try {
-      final snapshot = await _templatesRef
+      // Fetch facility-specific templates
+      final facilitySnapshot = await _templatesRef
           .where('facilityId', isEqualTo: facilityId)
+          .where('isActive', isEqualTo: true)
+          .get();
+
+      // Fetch general templates (apply to all facilities)
+      final generalSnapshot = await _templatesRef
+          .where('facilityId', isEqualTo: generalFacilityId)
+          .where('isActive', isEqualTo: true)
+          .get();
+
+      final templates = <AlertTemplate>[];
+      templates.addAll(
+        facilitySnapshot.docs.map((doc) => AlertTemplate.fromFirestore(doc)),
+      );
+      templates.addAll(
+        generalSnapshot.docs.map((doc) => AlertTemplate.fromFirestore(doc)),
+      );
+
+      return templates;
+    } catch (e) {
+      return [];
+    }
+  }
+
+  /// Get only general templates (for all users)
+  /// Used to schedule alerts for logged-in users regardless of facility
+  Future<List<AlertTemplate>> getGeneralTemplates() async {
+    try {
+      final snapshot = await _templatesRef
+          .where('facilityId', isEqualTo: generalFacilityId)
           .where('isActive', isEqualTo: true)
           .get();
 
@@ -270,6 +304,42 @@ class AlertTemplateRepository {
       return ErrorState(
         RepositoryException(
           message: 'Failed to schedule alerts: $e',
+          error: null,
+        ),
+      );
+    }
+  }
+
+  /// Schedule general alerts for a logged-in user
+  /// These are alerts that apply to all users regardless of facility
+  /// Called on login to schedule recurring notifications
+  Future<RepositoryState> scheduleGeneralAlerts({
+    required String userId,
+  }) async {
+    try {
+      final templates = await getGeneralTemplates();
+
+      if (templates.isEmpty) {
+        return SuccessState(
+          <int>[],
+          'No general alert templates found',
+        );
+      }
+
+      // Use 'general_<userId>' as installation ID for tracking
+      final installationId = 'general_$userId';
+
+      final scheduledIds = await _alertService.scheduleAlertsForFacility(
+        installationId: installationId,
+        templates: templates,
+        startTime: DateTime.now(),
+      );
+
+      return SuccessState(scheduledIds, null);
+    } catch (e) {
+      return ErrorState(
+        RepositoryException(
+          message: 'Failed to schedule general alerts: $e',
           error: null,
         ),
       );

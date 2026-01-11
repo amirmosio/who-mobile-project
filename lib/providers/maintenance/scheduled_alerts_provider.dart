@@ -115,4 +115,41 @@ class ScheduledAlertsNotifier extends _$ScheduledAlertsNotifier {
     state = const ScheduledAlertsState();
     debugPrint('Cancelled all maintenance alerts');
   }
+
+  /// Schedule general alerts for a logged-in user
+  /// Called on login to schedule alerts that apply to all users
+  Future<bool> scheduleGeneralAlerts({required String userId}) async {
+    state = state.copyWith(isScheduling: true, error: null);
+
+    try {
+      final result = await _repository.scheduleGeneralAlerts(userId: userId);
+
+      if (result is repo.SuccessState) {
+        final scheduledIds = result.data as List<int>? ?? [];
+        final installationId = 'general_$userId';
+        final newMap = Map<String, List<int>>.from(state.scheduledByInstallation);
+        newMap[installationId] = scheduledIds;
+
+        state = state.copyWith(
+          scheduledByInstallation: newMap,
+          isScheduling: false,
+        );
+
+        debugPrint('Scheduled ${scheduledIds.length} general alerts for user: $userId');
+        return true;
+      } else {
+        state = state.copyWith(
+          isScheduling: false,
+          error: 'Failed to schedule general alerts',
+        );
+        return false;
+      }
+    } catch (e) {
+      state = state.copyWith(
+        isScheduling: false,
+        error: 'Error scheduling general alerts: $e',
+      );
+      return false;
+    }
+  }
 }
