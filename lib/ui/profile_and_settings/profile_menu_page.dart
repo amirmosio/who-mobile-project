@@ -267,24 +267,21 @@ class ProfileMenuPage extends ConsumerWidget {
           title: l10n.about_app,
           subtitle: l10n.about_app_subtitle,
           iconColor: GVColors.darkGrey,
-          showComingSoon: true,
-          onTap: () => _showComingSoon(context, l10n),
+          onTap: () => _showAboutDialog(context, l10n),
         ),
         ProfileMenuItem(
           icon: Icons.privacy_tip_outlined,
           title: l10n.privacy_policy,
           subtitle: l10n.privacy_policy_subtitle,
           iconColor: GVColors.darkGrey,
-          showComingSoon: true,
-          onTap: () => _showComingSoon(context, l10n),
+          onTap: () => _showPrivacyPolicyDialog(context, l10n),
         ),
         ProfileMenuItem(
           icon: Icons.description_outlined,
           title: l10n.terms_of_service,
           subtitle: l10n.terms_of_service_subtitle,
           iconColor: GVColors.darkGrey,
-          showComingSoon: true,
-          onTap: () => _showComingSoon(context, l10n),
+          onTap: () => _showTermsOfServiceDialog(context, l10n),
         ),
       ],
     );
@@ -607,6 +604,371 @@ class ProfileMenuPage extends ConsumerWidget {
           borderRadius: BorderRadius.circular(8),
         ),
         duration: const Duration(seconds: 1),
+      ),
+    );
+  }
+
+  void _showAboutDialog(BuildContext context, AppLocalizations l10n) {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16),
+        ),
+        title: Row(
+          children: [
+            Container(
+              padding: const EdgeInsets.all(8),
+              decoration: BoxDecoration(
+                color: GVColors.blueInfo.withOpacity(0.1),
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: const Icon(
+                Icons.info_outline,
+                color: GVColors.blueInfo,
+                size: 24,
+              ),
+            ),
+            const SizedBox(width: 12),
+            Expanded(
+              child: Text(
+                l10n.about_app,
+                style: AppTextStyles.headingH3.copyWith(
+                  color: GVColors.black,
+                ),
+              ),
+            ),
+          ],
+        ),
+        content: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                'WHO IDTM Mobile Application',
+                style: AppTextStyles.bodyTextStrong.copyWith(
+                  fontSize: 16,
+                  color: GVColors.black,
+                ),
+              ),
+              const SizedBox(height: 8),
+              Text(
+                'Version 9.8.76',
+                style: AppTextStyles.bodyText.copyWith(
+                  color: GVColors.darkGrey,
+                  fontSize: 14,
+                ),
+              ),
+              const SizedBox(height: 16),
+              const Divider(),
+              const SizedBox(height: 16),
+              Text(
+                'About',
+                style: AppTextStyles.bodyTextStrong.copyWith(
+                  fontSize: 14,
+                  color: GVColors.black,
+                ),
+              ),
+              const SizedBox(height: 8),
+              Text(
+                'The WHO IDTM (Infectious Disease Treatment Module) Mobile Application is designed to support healthcare workers and field teams in deploying WHO\'s Infectious Disease Treatment Modules during outbreak responses.',
+                style: AppTextStyles.bodyText.copyWith(
+                  color: GVColors.darkGrey,
+                  fontSize: 14,
+                  height: 1.5,
+                ),
+              ),
+              const SizedBox(height: 16),
+              Text(
+                'Key Features',
+                style: AppTextStyles.bodyTextStrong.copyWith(
+                  fontSize: 14,
+                  color: GVColors.black,
+                ),
+              ),
+              const SizedBox(height: 8),
+              _buildFeatureItem('📦 Packing List with Visual Recognition'),
+              _buildFeatureItem('🔧 Step-by-Step Installation Guide'),
+              _buildFeatureItem('🛠️ Maintenance Scheduling & Alerts'),
+              _buildFeatureItem('📋 Facility Use Documentation'),
+              _buildFeatureItem('📱 Offline-First Functionality'),
+              const SizedBox(height: 16),
+              Text(
+                'Developed for WHO by the Mobile Health Team',
+                style: AppTextStyles.bodyText.copyWith(
+                  color: GVColors.darkGrey,
+                  fontSize: 12,
+                  fontStyle: FontStyle.italic,
+                ),
+              ),
+            ],
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(),
+            child: Text(
+              l10n.close,
+              style: AppTextStyles.bodyText.copyWith(
+                color: GVColors.blueInfo,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  void _showPrivacyPolicyDialog(BuildContext context, AppLocalizations l10n) {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16),
+        ),
+        title: Row(
+          children: [
+            Container(
+              padding: const EdgeInsets.all(8),
+              decoration: BoxDecoration(
+                color: GVColors.greenSuccess.withOpacity(0.1),
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: const Icon(
+                Icons.privacy_tip_outlined,
+                color: GVColors.greenSuccess,
+                size: 24,
+              ),
+            ),
+            const SizedBox(width: 12),
+            Expanded(
+              child: Text(
+                l10n.privacy_policy,
+                style: AppTextStyles.headingH3.copyWith(
+                  color: GVColors.black,
+                ),
+              ),
+            ),
+          ],
+        ),
+        content: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                'Last Updated: January 11, 2026',
+                style: AppTextStyles.bodyText.copyWith(
+                  color: GVColors.darkGrey,
+                  fontSize: 12,
+                  fontStyle: FontStyle.italic,
+                ),
+              ),
+              const SizedBox(height: 16),
+              const Divider(),
+              const SizedBox(height: 16),
+              _buildPolicySection(
+                'Data Collection',
+                'We collect minimal data necessary for app functionality:\n\n'
+                '• User account information (email, name)\n'
+                '• Installation progress and maintenance records\n'
+                '• Device information for technical support\n'
+                '• Usage analytics to improve the app',
+              ),
+              _buildPolicySection(
+                'Data Storage',
+                'Your data is stored securely:\n\n'
+                '• Local data encrypted on your device\n'
+                '• Cloud data stored in Firebase with encryption\n'
+                '• Automatic data backup for recovery\n'
+                '• Data retained as per WHO policies',
+              ),
+              _buildPolicySection(
+                'Data Sharing',
+                'We do not share your personal data with third parties except:\n\n'
+                '• When required by law or WHO regulations\n'
+                '• For technical support with your consent\n'
+                '• Anonymized analytics for app improvement',
+              ),
+              _buildPolicySection(
+                'Your Rights',
+                'You have the right to:\n\n'
+                '• Access your data\n'
+                '• Request data deletion\n'
+                '• Opt out of analytics\n'
+                '• Export your data',
+              ),
+              const SizedBox(height: 8),
+              Text(
+                'For privacy concerns, contact: privacy@who.int',
+                style: AppTextStyles.bodyText.copyWith(
+                  color: GVColors.blueInfo,
+                  fontSize: 12,
+                ),
+              ),
+            ],
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(),
+            child: Text(
+              l10n.close,
+              style: AppTextStyles.bodyText.copyWith(
+                color: GVColors.greenSuccess,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  void _showTermsOfServiceDialog(BuildContext context, AppLocalizations l10n) {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16),
+        ),
+        title: Row(
+          children: [
+            Container(
+              padding: const EdgeInsets.all(8),
+              decoration: BoxDecoration(
+                color: GVColors.purpleAccent.withOpacity(0.1),
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: const Icon(
+                Icons.description_outlined,
+                color: GVColors.purpleAccent,
+                size: 24,
+              ),
+            ),
+            const SizedBox(width: 12),
+            Expanded(
+              child: Text(
+                l10n.terms_of_service,
+                style: AppTextStyles.headingH3.copyWith(
+                  color: GVColors.black,
+                ),
+              ),
+            ),
+          ],
+        ),
+        content: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                'Effective Date: January 11, 2026',
+                style: AppTextStyles.bodyText.copyWith(
+                  color: GVColors.darkGrey,
+                  fontSize: 12,
+                  fontStyle: FontStyle.italic,
+                ),
+              ),
+              const SizedBox(height: 16),
+              const Divider(),
+              const SizedBox(height: 16),
+              _buildPolicySection(
+                '1. Acceptance of Terms',
+                'By accessing and using this application, you accept and agree to be bound by these Terms of Service. This app is provided by the World Health Organization (WHO) for emergency response purposes.',
+              ),
+              _buildPolicySection(
+                '2. Use License',
+                'Permission is granted to use this application for:\n\n'
+                '• WHO-authorized emergency response operations\n'
+                '• IDTM facility deployment and maintenance\n'
+                '• Healthcare worker training and support\n\n'
+                'This license is non-transferable and may be revoked by WHO at any time.',
+              ),
+              _buildPolicySection(
+                '3. User Responsibilities',
+                'You agree to:\n\n'
+                '• Provide accurate information\n'
+                '• Follow installation and maintenance procedures correctly\n'
+                '• Report any safety concerns immediately\n'
+                '• Keep login credentials secure\n'
+                '• Use the app only for authorized purposes',
+              ),
+              _buildPolicySection(
+                '4. Disclaimer',
+                'This application is provided "as is" without warranties. WHO is not liable for:\n\n'
+                '• Errors or omissions in content\n'
+                '• Technical failures or data loss\n'
+                '• Improper use of installation guides\n'
+                '• Third-party services (Firebase, etc.)',
+              ),
+              _buildPolicySection(
+                '5. Modifications',
+                'WHO reserves the right to modify these terms at any time. Continued use of the app constitutes acceptance of updated terms.',
+              ),
+              const SizedBox(height: 8),
+              Text(
+                'For questions, contact: support@who.int',
+                style: AppTextStyles.bodyText.copyWith(
+                  color: GVColors.blueInfo,
+                  fontSize: 12,
+                ),
+              ),
+            ],
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(),
+            child: Text(
+              l10n.close,
+              style: AppTextStyles.bodyText.copyWith(
+                color: GVColors.purpleAccent,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildFeatureItem(String text) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 4),
+      child: Text(
+        text,
+        style: AppTextStyles.bodyText.copyWith(
+          color: GVColors.darkGrey,
+          fontSize: 14,
+          height: 1.5,
+        ),
+      ),
+    );
+  }
+
+  Widget _buildPolicySection(String title, String content) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 16),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            title,
+            style: AppTextStyles.bodyTextStrong.copyWith(
+              fontSize: 14,
+              color: GVColors.black,
+            ),
+          ),
+          const SizedBox(height: 8),
+          Text(
+            content,
+            style: AppTextStyles.bodyText.copyWith(
+              color: GVColors.darkGrey,
+              fontSize: 13,
+              height: 1.6,
+            ),
+          ),
+        ],
       ),
     );
   }
