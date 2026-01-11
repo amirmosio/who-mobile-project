@@ -3117,4 +3117,73 @@ class AppLocalizationsDe extends AppLocalizations {
   @override
   String get failed_to_scan_qr_codes =>
       'QR-Codes konnten nicht gescannt werden';
+
+  @override
+  String get comments => 'Kommentare';
+
+  @override
+  String get addComment => 'Kommentar hinzufügen';
+
+  @override
+  String get commentText => 'Kommentar';
+
+  @override
+  String get enterYourComment => 'Geben Sie Ihren Kommentar ein...';
+
+  @override
+  String get commentRequired => 'Bitte geben Sie einen Kommentar ein';
+
+  @override
+  String get category => 'Kategorie';
+
+  @override
+  String get commentCategoryInstall => 'Installation';
+
+  @override
+  String get commentCategoryMaintenance => 'Wartung';
+
+  @override
+  String get commentCategoryDisassemble => 'Demontage';
+
+  @override
+  String get commentCategoryGeneral => 'Allgemein';
+
+  @override
+  String get noComments => 'Keine Kommentare';
+
+  @override
+  String get noCommentsDescription =>
+      'Seien Sie der Erste, der einen Kommentar hinzufügt';
+
+  @override
+  String get errorLoadingComments => 'Fehler beim Laden der Kommentare';
+
+  @override
+  String get deleteComment => 'Kommentar löschen';
+
+  @override
+  String get deleteCommentConfirmation =>
+      'Sind Sie sicher, dass Sie diesen Kommentar löschen möchten? Diese Aktion kann nicht rückgängig gemacht werden.';
+
+  @override
+  String get commentAddedSuccess => 'Kommentar erfolgreich hinzugefügt';
+
+  @override
+  String get commentDeletedSuccess => 'Kommentar gelöscht';
+
+  @override
+  String get commentError => 'Fehler bei der Verarbeitung des Kommentars';
+
+  @override
+  String get accessDenied => 'Zugriff verweigert';
+
+  @override
+  String get adminRequiredForComments =>
+      'Für den Zugriff auf Kommentare sind Administratorrechte erforderlich.';
+
+  @override
+  String get all => 'Alle';
+
+  @override
+  String get delete => 'Löschen';
 }

@@ -3073,4 +3073,72 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get failed_to_scan_qr_codes => 'Failed to scan QR codes';
+
+  @override
+  String get comments => 'Comments';
+
+  @override
+  String get addComment => 'Add Comment';
+
+  @override
+  String get commentText => 'Comment';
+
+  @override
+  String get enterYourComment => 'Enter your comment...';
+
+  @override
+  String get commentRequired => 'Please enter a comment';
+
+  @override
+  String get category => 'Category';
+
+  @override
+  String get commentCategoryInstall => 'Installation';
+
+  @override
+  String get commentCategoryMaintenance => 'Maintenance';
+
+  @override
+  String get commentCategoryDisassemble => 'Disassembly';
+
+  @override
+  String get commentCategoryGeneral => 'General';
+
+  @override
+  String get noComments => 'No Comments';
+
+  @override
+  String get noCommentsDescription => 'Be the first to add a comment';
+
+  @override
+  String get errorLoadingComments => 'Error Loading Comments';
+
+  @override
+  String get deleteComment => 'Delete Comment';
+
+  @override
+  String get deleteCommentConfirmation =>
+      'Are you sure you want to delete this comment? This action cannot be undone.';
+
+  @override
+  String get commentAddedSuccess => 'Comment added successfully';
+
+  @override
+  String get commentDeletedSuccess => 'Comment deleted';
+
+  @override
+  String get commentError => 'Failed to process comment';
+
+  @override
+  String get accessDenied => 'Access Denied';
+
+  @override
+  String get adminRequiredForComments =>
+      'Admin privileges are required to access comments.';
+
+  @override
+  String get all => 'All';
+
+  @override
+  String get delete => 'Delete';
 }

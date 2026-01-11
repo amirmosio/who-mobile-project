@@ -18,6 +18,7 @@ class YRRoutes {
 
   /// nav bar pages
   static const dashBoard = "/dashboard";
+  static const comments = "/comments";
   static const blog = "/blog";
   static const profileMenu = "/menu-and-settings";
 

@@ -36,11 +36,15 @@ import 'package:who_mobile_project/ui/idtm/packing_list_page.dart';
 import 'package:who_mobile_project/ui/idtm/maintenance_page.dart';
 import 'package:who_mobile_project/ui/idtm/dismantling_page.dart';
 import 'package:who_mobile_project/ui/dashboard/pages/what_is_idtm_page.dart';
+import 'package:who_mobile_project/ui/comments/comments_page.dart';
 
 GoRouter baseNavRouterBuilder() {
   final homeGlobalKey = GlobalKey<NavigatorState>(debugLabel: "homeGlobalKey");
   // TODO: Re-enable when Store feature is ready
   // final callGlobalKey = GlobalKey<NavigatorState>(debugLabel: 'callGlobalKey');
+  final commentsGlobalKey = GlobalKey<NavigatorState>(
+    debugLabel: 'commentsGlobalKey',
+  );
   final blogGlobalKey = GlobalKey<NavigatorState>(debugLabel: 'blogGlobalKey');
   final settingsGlobalKey = GlobalKey<NavigatorState>(
     debugLabel: 'settingsGlobalKey',
@@ -317,6 +321,19 @@ GoRouter baseNavRouterBuilder() {
                 name: YRRoutes.dashBoard,
                 pageBuilder: (context, state) =>
                     MaterialPage(child: DashboardPage()),
+              ),
+            ],
+          ),
+          // Comments tab (admin only)
+          StatefulShellBranch(
+            navigatorKey: commentsGlobalKey,
+            routes: <RouteBase>[
+              GoRoute(
+                path: YRRoutes.comments,
+                name: YRRoutes.comments,
+                pageBuilder: (context, state) => const MaterialPage(
+                  child: CommentsPage(),
+                ),
               ),
             ],
           ),

@@ -3093,4 +3093,72 @@ class AppLocalizationsIt extends AppLocalizations {
 
   @override
   String get failed_to_scan_qr_codes => 'Scansione codici QR non riuscita';
+
+  @override
+  String get comments => 'Commenti';
+
+  @override
+  String get addComment => 'Aggiungi Commento';
+
+  @override
+  String get commentText => 'Commento';
+
+  @override
+  String get enterYourComment => 'Inserisci il tuo commento...';
+
+  @override
+  String get commentRequired => 'Inserisci un commento';
+
+  @override
+  String get category => 'Categoria';
+
+  @override
+  String get commentCategoryInstall => 'Installazione';
+
+  @override
+  String get commentCategoryMaintenance => 'Manutenzione';
+
+  @override
+  String get commentCategoryDisassemble => 'Smontaggio';
+
+  @override
+  String get commentCategoryGeneral => 'Generale';
+
+  @override
+  String get noComments => 'Nessun Commento';
+
+  @override
+  String get noCommentsDescription => 'Sii il primo ad aggiungere un commento';
+
+  @override
+  String get errorLoadingComments => 'Errore nel Caricamento dei Commenti';
+
+  @override
+  String get deleteComment => 'Elimina Commento';
+
+  @override
+  String get deleteCommentConfirmation =>
+      'Sei sicuro di voler eliminare questo commento? Questa azione non può essere annullata.';
+
+  @override
+  String get commentAddedSuccess => 'Commento aggiunto con successo';
+
+  @override
+  String get commentDeletedSuccess => 'Commento eliminato';
+
+  @override
+  String get commentError => 'Errore nell\'elaborazione del commento';
+
+  @override
+  String get accessDenied => 'Accesso Negato';
+
+  @override
+  String get adminRequiredForComments =>
+      'Sono necessari i privilegi di amministratore per accedere ai commenti.';
+
+  @override
+  String get all => 'Tutti';
+
+  @override
+  String get delete => 'Elimina';
 }

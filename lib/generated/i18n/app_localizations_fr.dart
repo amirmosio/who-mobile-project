@@ -1543,7 +1543,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get phoneNumber => 'Numéro de téléphone';
 
   @override
-  String get submit => 'Envoyer';
+  String get submit => 'Soumettre';
 
   @override
   String get thankYouForInterest =>
@@ -3117,4 +3117,73 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get failed_to_scan_qr_codes => 'Échec de la numérisation des codes QR';
+
+  @override
+  String get comments => 'Commentaires';
+
+  @override
+  String get addComment => 'Ajouter un Commentaire';
+
+  @override
+  String get commentText => 'Commentaire';
+
+  @override
+  String get enterYourComment => 'Entrez votre commentaire...';
+
+  @override
+  String get commentRequired => 'Veuillez entrer un commentaire';
+
+  @override
+  String get category => 'Catégorie';
+
+  @override
+  String get commentCategoryInstall => 'Installation';
+
+  @override
+  String get commentCategoryMaintenance => 'Maintenance';
+
+  @override
+  String get commentCategoryDisassemble => 'Démontage';
+
+  @override
+  String get commentCategoryGeneral => 'Général';
+
+  @override
+  String get noComments => 'Aucun Commentaire';
+
+  @override
+  String get noCommentsDescription =>
+      'Soyez le premier à ajouter un commentaire';
+
+  @override
+  String get errorLoadingComments => 'Erreur de Chargement des Commentaires';
+
+  @override
+  String get deleteComment => 'Supprimer le Commentaire';
+
+  @override
+  String get deleteCommentConfirmation =>
+      'Êtes-vous sûr de vouloir supprimer ce commentaire ? Cette action est irréversible.';
+
+  @override
+  String get commentAddedSuccess => 'Commentaire ajouté avec succès';
+
+  @override
+  String get commentDeletedSuccess => 'Commentaire supprimé';
+
+  @override
+  String get commentError => 'Erreur lors du traitement du commentaire';
+
+  @override
+  String get accessDenied => 'Accès Refusé';
+
+  @override
+  String get adminRequiredForComments =>
+      'Des privilèges d\'administrateur sont requis pour accéder aux commentaires.';
+
+  @override
+  String get all => 'Tous';
+
+  @override
+  String get delete => 'Supprimer';
 }

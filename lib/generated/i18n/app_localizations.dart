@@ -4652,7 +4652,7 @@ abstract class AppLocalizations {
   /// **'Refresh'**
   String get refresh;
 
-  /// Retry button label
+  /// Retry button text
   ///
   /// In en, this message translates to:
   /// **'Retry'**
@@ -5839,6 +5839,138 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Failed to scan QR codes'**
   String get failed_to_scan_qr_codes;
+
+  /// Comments navigation tab label
+  ///
+  /// In en, this message translates to:
+  /// **'Comments'**
+  String get comments;
+
+  /// Add comment button text
+  ///
+  /// In en, this message translates to:
+  /// **'Add Comment'**
+  String get addComment;
+
+  /// Comment text field label
+  ///
+  /// In en, this message translates to:
+  /// **'Comment'**
+  String get commentText;
+
+  /// Comment text field placeholder
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your comment...'**
+  String get enterYourComment;
+
+  /// Validation message when comment is empty
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter a comment'**
+  String get commentRequired;
+
+  /// Category label
+  ///
+  /// In en, this message translates to:
+  /// **'Category'**
+  String get category;
+
+  /// Installation category name
+  ///
+  /// In en, this message translates to:
+  /// **'Installation'**
+  String get commentCategoryInstall;
+
+  /// Maintenance category name
+  ///
+  /// In en, this message translates to:
+  /// **'Maintenance'**
+  String get commentCategoryMaintenance;
+
+  /// Disassembly category name
+  ///
+  /// In en, this message translates to:
+  /// **'Disassembly'**
+  String get commentCategoryDisassemble;
+
+  /// General category name
+  ///
+  /// In en, this message translates to:
+  /// **'General'**
+  String get commentCategoryGeneral;
+
+  /// Title when no comments exist
+  ///
+  /// In en, this message translates to:
+  /// **'No Comments'**
+  String get noComments;
+
+  /// Description when no comments exist
+  ///
+  /// In en, this message translates to:
+  /// **'Be the first to add a comment'**
+  String get noCommentsDescription;
+
+  /// Error title when comments fail to load
+  ///
+  /// In en, this message translates to:
+  /// **'Error Loading Comments'**
+  String get errorLoadingComments;
+
+  /// Delete comment dialog title
+  ///
+  /// In en, this message translates to:
+  /// **'Delete Comment'**
+  String get deleteComment;
+
+  /// Delete comment confirmation message
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to delete this comment? This action cannot be undone.'**
+  String get deleteCommentConfirmation;
+
+  /// Success message when comment is added
+  ///
+  /// In en, this message translates to:
+  /// **'Comment added successfully'**
+  String get commentAddedSuccess;
+
+  /// Success message when comment is deleted
+  ///
+  /// In en, this message translates to:
+  /// **'Comment deleted'**
+  String get commentDeletedSuccess;
+
+  /// Error message for comment operations
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to process comment'**
+  String get commentError;
+
+  /// Access denied title
+  ///
+  /// In en, this message translates to:
+  /// **'Access Denied'**
+  String get accessDenied;
+
+  /// Message when user lacks admin access for comments
+  ///
+  /// In en, this message translates to:
+  /// **'Admin privileges are required to access comments.'**
+  String get adminRequiredForComments;
+
+  /// All filter option
+  ///
+  /// In en, this message translates to:
+  /// **'All'**
+  String get all;
+
+  /// Delete button text
+  ///
+  /// In en, this message translates to:
+  /// **'Delete'**
+  String get delete;
 }
 
 class _AppLocalizationsDelegate

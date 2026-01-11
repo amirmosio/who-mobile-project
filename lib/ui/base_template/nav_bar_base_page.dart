@@ -36,15 +36,18 @@ class _BasePageWithNavBarState extends ConsumerState<BasePageWithNavBar>
         case 0: // Home tab
           context.go(YRRoutes.dashBoard);
           break;
+        case 1: // Comments tab
+          context.go(YRRoutes.comments);
+          break;
         // TODO: Re-enable when Store feature is ready
-        // case 1: // Store tab
+        // case 2: // Store tab
         //   context.go(YRRoutes.recentCallList);
         //   break;
-        case 1: // Blog tab
-          context.go(YRRoutes.dashBoard);
+        case 2: // Blog tab
+          context.go(YRRoutes.blog);
           break;
-        case 2: // Profile tab
-          context.go(YRRoutes.dashBoard);
+        case 3: // Profile tab
+          context.go(YRRoutes.profileMenu);
           break;
       }
     } else {
@@ -110,21 +113,26 @@ class _BasePageWithNavBarState extends ConsumerState<BasePageWithNavBar>
                           AppLocalizations.of(context)!.home,
                           0,
                         ),
+                        (
+                          'assets/images/figma_designs/icon_nav_comments.svg',
+                          AppLocalizations.of(context)!.comments,
+                          1,
+                        ),
                         // TODO: Re-enable when Store feature is ready
                         // (
                         //   'assets/images/figma_designs/icon_nav_store.svg',
                         //   AppLocalizations.of(context)!.store,
-                        //   1
+                        //   2
                         // ),
                         (
                           'assets/images/figma_designs/icon_nav_blog.svg',
                           AppLocalizations.of(context)!.news,
-                          1,
+                          2,
                         ),
                         (
                           'assets/images/figma_designs/icon_nav_profile.svg',
                           AppLocalizations.of(context)!.profile,
-                          2,
+                          3,
                         ),
                       ],
                     ),
