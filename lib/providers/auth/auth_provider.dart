@@ -48,6 +48,11 @@ class AuthNotifier extends BaseApiNotifier<BaseApiState> {
 
       // Restore installation state from Firebase
       await _restoreInstallationStateFromFirebase(user.uid!);
+
+      // Schedule general alerts for this user (applies to all logged-in users)
+      await ref.read(scheduledAlertsProvider.notifier).scheduleGeneralAlerts(
+        userId: user.uid!,
+      );
     }
 
     return user;
