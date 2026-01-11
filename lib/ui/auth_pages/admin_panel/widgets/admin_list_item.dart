@@ -192,7 +192,7 @@ class AdminListItem extends StatelessWidget {
         Switch(
           value: admin.isActive,
           onChanged: onToggleStatus != null ? (_) => onToggleStatus!() : null,
-          activeColor: GVColors.greenSuccess,
+          activeThumbColor: GVColors.greenSuccess,
           inactiveThumbColor: GVColors.darkGrey,
           inactiveTrackColor: GVColors.lightGrey,
         ),
