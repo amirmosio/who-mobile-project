@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:who_mobile_project/providers/auth/current_user_provider.dart';
+import 'package:who_mobile_project/generated/i18n/app_localizations.dart';
 import 'package:who_mobile_project/ui/dashboard/widgets/facility_use_card.dart';
 import 'package:who_mobile_project/ui/dashboard/widgets/idtm_status_card.dart';
 import 'package:who_mobile_project/ui/dashboard/widgets/what_is_idtm_card.dart';
@@ -52,9 +53,10 @@ class _DashboardPageState extends ConsumerState<DashboardPage>
       AsyncData(:final value) => value.isAuthenticated,
       _ => false,
     };
+    final l10n = AppLocalizations.of(context)!;
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Dashboard')),
+      appBar: AppBar(title: Text(l10n.dashboard)),
       body: RefreshIndicator(
         onRefresh: () async {
           _refreshCard();

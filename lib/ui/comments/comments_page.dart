@@ -4,6 +4,7 @@ import 'package:who_mobile_project/app_core/theme/colors.dart';
 import 'package:who_mobile_project/app_core/theme/text_styles/app_text_styles.dart';
 import 'package:who_mobile_project/general/constants/comment_categories.dart';
 import 'package:who_mobile_project/general/models/comments/comment.dart';
+import 'package:who_mobile_project/generated/i18n/app_localizations.dart';
 import 'package:who_mobile_project/providers/auth/current_user_provider.dart';
 import 'package:who_mobile_project/providers/auth/role_access_provider.dart';
 import 'package:who_mobile_project/providers/base/base_api_state.dart';
@@ -24,6 +25,7 @@ class CommentsPage extends ConsumerStatefulWidget {
 class _CommentsPageState extends ConsumerState<CommentsPage> {
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     final hasAdminAccess = ref.watch(hasAdminAccessProvider);
     final currentUser = ref.watch(currentUserProvider);
     final selectedCategory = ref.watch(selectedCommentCategoryProvider);
@@ -31,24 +33,24 @@ class _CommentsPageState extends ConsumerState<CommentsPage> {
 
     // Check access permission
     if (!hasAdminAccess) {
-      return _buildAccessDenied();
+      return _buildAccessDenied(l10n);
     }
 
     // Listen for delete state changes
     ref.listen(deleteCommentProvider, (previous, next) {
       if (next is BaseApiError) {
         _showSnackBar(
-          next.exception.message ?? 'Failed to delete comment',
+          next.exception.message ?? l10n.failed_to_delete_comment,
           isError: true,
         );
       } else if (next is BaseApiOperationSuccess) {
-        _showSnackBar('Comment deleted');
+        _showSnackBar(l10n.comment_deleted);
       }
     });
 
     return Scaffold(
       backgroundColor: GVColors.white,
-      appBar: _buildAppBar(),
+      appBar: _buildAppBar(l10n),
       body: Column(
         children: [
           // Category filter chips
@@ -76,24 +78,25 @@ class _CommentsPageState extends ConsumerState<CommentsPage> {
               data: (comments) => _buildCommentsList(
                 comments,
                 currentUser.value?.uid,
+                l10n,
               ),
               loading: () => const Center(child: CircularProgressIndicator()),
-              error: (error, _) => _buildError(error.toString()),
+              error: (error, _) => _buildError(error.toString(), l10n),
             ),
           ),
         ],
       ),
-      floatingActionButton: _buildFAB(selectedCategory),
+      floatingActionButton: _buildFAB(selectedCategory, l10n),
     );
   }
 
-  PreferredSizeWidget _buildAppBar() {
+  PreferredSizeWidget _buildAppBar(AppLocalizations l10n) {
     return AppBar(
       backgroundColor: GVColors.white,
       elevation: 0,
       automaticallyImplyLeading: false,
       title: Text(
-        'Comments',
+        l10n.comments,
         style: AppTextStyles.headingH2.copyWith(
           color: GVColors.black,
           fontSize: 18,
@@ -110,9 +113,13 @@ class _CommentsPageState extends ConsumerState<CommentsPage> {
     );
   }
 
-  Widget _buildCommentsList(List<Comment> comments, String? currentUserId) {
+  Widget _buildCommentsList(
+    List<Comment> comments,
+    String? currentUserId,
+    AppLocalizations l10n,
+  ) {
     if (comments.isEmpty) {
-      return _buildEmptyState();
+      return _buildEmptyState(l10n);
     }
 
     return RefreshIndicator(
@@ -133,7 +140,7 @@ class _CommentsPageState extends ConsumerState<CommentsPage> {
             comment: comment,
             isCurrentUserComment: isCurrentUserComment,
             onDelete: (isCurrentUserComment || isSuperAdmin)
-                ? () => _showDeleteConfirmation(comment)
+                ? () => _showDeleteConfirmation(comment, l10n)
                 : null,
           );
         },
@@ -141,10 +148,10 @@ class _CommentsPageState extends ConsumerState<CommentsPage> {
     );
   }
 
-  Widget _buildEmptyState() {
+  Widget _buildEmptyState(AppLocalizations l10n) {
     final selectedCategory = ref.watch(selectedCommentCategoryProvider);
     final categoryName =
-        selectedCategory?.displayName.toLowerCase() ?? 'any category';
+        selectedCategory?.displayName.toLowerCase() ?? '';
 
     return Center(
       child: Padding(
@@ -167,7 +174,7 @@ class _CommentsPageState extends ConsumerState<CommentsPage> {
             ),
             const SizedBox(height: 24),
             Text(
-              'No Comments',
+              l10n.no_comments,
               style: AppTextStyles.headingH2.copyWith(
                 color: GVColors.black,
               ),
@@ -175,8 +182,8 @@ class _CommentsPageState extends ConsumerState<CommentsPage> {
             const SizedBox(height: 8),
             Text(
               selectedCategory == null
-                  ? 'Be the first to add a comment'
-                  : 'No comments in $categoryName category',
+                  ? l10n.be_first_to_comment
+                  : l10n.no_comments_in_category(categoryName),
               style: AppTextStyles.bodyText.copyWith(
                 color: GVColors.darkGrey,
               ),
@@ -188,7 +195,7 @@ class _CommentsPageState extends ConsumerState<CommentsPage> {
     );
   }
 
-  Widget _buildError(String error) {
+  Widget _buildError(String error, AppLocalizations l10n) {
     return Center(
       child: Padding(
         padding: const EdgeInsets.all(32),
@@ -202,7 +209,7 @@ class _CommentsPageState extends ConsumerState<CommentsPage> {
             ),
             const SizedBox(height: 16),
             Text(
-              'Error Loading Comments',
+              l10n.error_loading_comments,
               style: AppTextStyles.headingH2.copyWith(
                 color: GVColors.black,
               ),
@@ -229,7 +236,7 @@ class _CommentsPageState extends ConsumerState<CommentsPage> {
                   borderRadius: BorderRadius.circular(60),
                 ),
               ),
-              child: const Text('Retry'),
+              child: Text(l10n.retry),
             ),
           ],
         ),
@@ -237,7 +244,7 @@ class _CommentsPageState extends ConsumerState<CommentsPage> {
     );
   }
 
-  Widget _buildAccessDenied() {
+  Widget _buildAccessDenied(AppLocalizations l10n) {
     return Scaffold(
       backgroundColor: GVColors.white,
       body: Center(
@@ -253,14 +260,14 @@ class _CommentsPageState extends ConsumerState<CommentsPage> {
               ),
               const SizedBox(height: 24),
               Text(
-                'Access Denied',
+                l10n.access_denied,
                 style: AppTextStyles.headingH1.copyWith(
                   color: GVColors.black,
                 ),
               ),
               const SizedBox(height: 12),
               Text(
-                'Admin privileges are required to access comments.',
+                l10n.admin_required_for_comments,
                 style: AppTextStyles.bodyText.copyWith(
                   color: GVColors.darkGrey,
                 ),
@@ -273,13 +280,13 @@ class _CommentsPageState extends ConsumerState<CommentsPage> {
     );
   }
 
-  Widget _buildFAB(CommentCategory? selectedCategory) {
+  Widget _buildFAB(CommentCategory? selectedCategory, AppLocalizations l10n) {
     return FloatingActionButton.extended(
       onPressed: () => _showAddCommentDialog(selectedCategory),
       backgroundColor: GVColors.purpleAccent,
       foregroundColor: GVColors.white,
       icon: const Icon(Icons.add_comment),
-      label: const Text('Add Comment'),
+      label: Text(l10n.add_comment),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16),
       ),
@@ -296,7 +303,7 @@ class _CommentsPageState extends ConsumerState<CommentsPage> {
     );
   }
 
-  Future<void> _showDeleteConfirmation(Comment comment) async {
+  Future<void> _showDeleteConfirmation(Comment comment, AppLocalizations l10n) async {
     final confirm = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
@@ -304,13 +311,13 @@ class _CommentsPageState extends ConsumerState<CommentsPage> {
           borderRadius: BorderRadius.circular(16),
         ),
         title: Text(
-          'Delete Comment',
+          l10n.delete_comment,
           style: AppTextStyles.headingH3.copyWith(
             color: GVColors.black,
           ),
         ),
         content: Text(
-          'Are you sure you want to delete this comment? This action cannot be undone.',
+          l10n.delete_comment_confirmation,
           style: AppTextStyles.bodyText.copyWith(
             color: GVColors.darkGrey,
           ),
@@ -319,7 +326,7 @@ class _CommentsPageState extends ConsumerState<CommentsPage> {
           TextButton(
             onPressed: () => Navigator.of(context).pop(false),
             child: Text(
-              'Cancel',
+              l10n.cancel,
               style: AppTextStyles.bodyText.copyWith(
                 color: GVColors.darkGrey,
               ),
@@ -334,7 +341,7 @@ class _CommentsPageState extends ConsumerState<CommentsPage> {
                 borderRadius: BorderRadius.circular(60),
               ),
             ),
-            child: const Text('Delete'),
+            child: Text(l10n.delete),
           ),
         ],
       ),

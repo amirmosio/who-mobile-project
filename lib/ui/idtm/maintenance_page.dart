@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:who_mobile_project/app_core/theme/colors.dart';
 import 'package:who_mobile_project/general/constants/comment_categories.dart';
 import 'package:who_mobile_project/general/models/maintenance/alert_template.dart';
+import 'package:who_mobile_project/generated/i18n/app_localizations.dart';
 import 'package:who_mobile_project/providers/maintenance/alert_template_provider.dart';
 import 'package:who_mobile_project/providers/maintenance/scheduled_alerts_provider.dart';
 import 'package:who_mobile_project/routing_config/routes.dart';
@@ -20,6 +21,7 @@ class MaintenancePage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
     final scheduledAlertsState = ref.watch(scheduledAlertsProvider);
     final hasAlerts = scheduledAlertsState.hasScheduledAlerts(installationId);
     final alertCount = scheduledAlertsState.getScheduledCount(installationId);
@@ -31,7 +33,7 @@ class MaintenancePage extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Maintenance Mode'),
+        title: Text(l10n.maintenance_mode),
         backgroundColor: Colors.green,
         foregroundColor: Colors.white,
       ),
@@ -56,7 +58,7 @@ class MaintenancePage extends ConsumerWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'System Operational',
+                          l10n.system_operational,
                           style:
                               Theme.of(context).textTheme.titleLarge?.copyWith(
                                     fontWeight: FontWeight.bold,
@@ -64,7 +66,7 @@ class MaintenancePage extends ConsumerWidget {
                         ),
                         const SizedBox(height: 4),
                         Text(
-                          'Installation completed successfully',
+                          l10n.installation_completed_successfully,
                           style: Theme.of(context).textTheme.bodyMedium,
                         ),
                       ],
@@ -78,13 +80,13 @@ class MaintenancePage extends ConsumerWidget {
 
           // Scheduled Alerts Section
           if (hasAlerts) ...[
-            _buildScheduledAlertsCard(context, alertCount),
+            _buildScheduledAlertsCard(context, l10n, alertCount),
             const SizedBox(height: 24),
           ],
 
           // Maintenance tasks section
           Text(
-            'Maintenance Tasks',
+            l10n.maintenance_tasks,
             style: Theme.of(context).textTheme.titleLarge?.copyWith(
                   fontWeight: FontWeight.bold,
                 ),
@@ -92,8 +94,8 @@ class MaintenancePage extends ConsumerWidget {
           const SizedBox(height: 12),
 
           _MaintenanceTaskCard(
-            title: 'View Maintenance Guide',
-            description: 'Complete maintenance instructions and procedures',
+            title: l10n.view_maintenance_guide,
+            description: l10n.maintenance_guide_description,
             icon: Icons.menu_book,
             color: Colors.green,
             onTap: () {
@@ -102,8 +104,8 @@ class MaintenancePage extends ConsumerWidget {
           ),
 
           _MaintenanceTaskCard(
-            title: 'Daily Inspection',
-            description: 'Check system status and connections',
+            title: l10n.daily_inspection,
+            description: l10n.daily_inspection_description,
             icon: Icons.today,
             color: Colors.blue,
             alerts: dailyAlerts,
@@ -113,8 +115,8 @@ class MaintenancePage extends ConsumerWidget {
           ),
 
           _MaintenanceTaskCard(
-            title: 'Weekly Maintenance',
-            description: 'Perform routine maintenance checks',
+            title: l10n.weekly_maintenance,
+            description: l10n.weekly_maintenance_description,
             icon: Icons.calendar_today,
             color: Colors.orange,
             alerts: weeklyAlerts,
@@ -124,8 +126,8 @@ class MaintenancePage extends ConsumerWidget {
           ),
 
           _MaintenanceTaskCard(
-            title: 'Monthly Review',
-            description: 'Complete monthly system review',
+            title: l10n.monthly_review,
+            description: l10n.monthly_review_description,
             icon: Icons.calendar_month,
             color: Colors.purple,
             alerts: monthlyAlerts,
@@ -137,12 +139,12 @@ class MaintenancePage extends ConsumerWidget {
           const SizedBox(height: 24),
 
           // Maintenance Comments Section (Admin only)
-          const CommentsSectionWidget(
+          CommentsSectionWidget(
             category: CommentCategory.maintenance,
             maxComments: 3,
             showAddButton: true,
             showViewAll: true,
-            title: 'Maintenance Notes',
+            title: l10n.maintenance_notes,
             collapsible: true,
             initiallyCollapsed: false,
           ),
@@ -151,7 +153,7 @@ class MaintenancePage extends ConsumerWidget {
 
           // Quick actions
           Text(
-            'Quick Actions',
+            l10n.quick_actions,
             style: Theme.of(context).textTheme.titleLarge?.copyWith(
                   fontWeight: FontWeight.bold,
                 ),
@@ -163,7 +165,7 @@ class MaintenancePage extends ConsumerWidget {
               // TODO: View full documentation
             },
             icon: const Icon(Icons.book),
-            label: const Text('View Documentation'),
+            label: Text(l10n.view_documentation),
             style: ElevatedButton.styleFrom(
               backgroundColor: BZColors.bronzeDark,
               foregroundColor: Colors.white,
@@ -178,7 +180,7 @@ class MaintenancePage extends ConsumerWidget {
               // TODO: Export maintenance log
             },
             icon: const Icon(Icons.download),
-            label: const Text('Export Maintenance Log'),
+            label: Text(l10n.export_maintenance_log),
             style: OutlinedButton.styleFrom(
               foregroundColor: BZColors.bronzeDark,
               side: const BorderSide(color: BZColors.bronzeDark),
@@ -190,7 +192,7 @@ class MaintenancePage extends ConsumerWidget {
     );
   }
 
-  Widget _buildScheduledAlertsCard(BuildContext context, int alertCount) {
+  Widget _buildScheduledAlertsCard(BuildContext context, AppLocalizations l10n, int alertCount) {
     return Card(
       color: Colors.blue.withValues(alpha: 0.1),
       child: Padding(
@@ -215,7 +217,7 @@ class MaintenancePage extends ConsumerWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Maintenance Alerts Active',
+                    l10n.maintenance_alerts_active,
                     style: Theme.of(context).textTheme.titleMedium?.copyWith(
                           fontWeight: FontWeight.bold,
                           color: Colors.blue.shade700,
@@ -223,14 +225,14 @@ class MaintenancePage extends ConsumerWidget {
                   ),
                   const SizedBox(height: 4),
                   Text(
-                    '$alertCount scheduled reminder${alertCount == 1 ? '' : 's'}',
+                    l10n.scheduled_reminders_count(alertCount),
                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                           color: Colors.blue.shade600,
                         ),
                   ),
                   const SizedBox(height: 4),
                   Text(
-                    'You will receive periodic notifications for maintenance tasks',
+                    l10n.maintenance_notifications_info,
                     style: Theme.of(context).textTheme.bodySmall?.copyWith(
                           color: Colors.grey[600],
                         ),
@@ -399,6 +401,7 @@ class _MaintenanceTaskCard extends StatelessWidget {
 
   void _showAlertsDialog(BuildContext context) {
     if (alerts == null || alerts!.isEmpty) return;
+    final l10n = AppLocalizations.of(context)!;
 
     showDialog(
       context: context,
@@ -412,7 +415,7 @@ class _MaintenanceTaskCard extends StatelessWidget {
             ),
             const SizedBox(width: 12),
             Text(
-              'Scheduled Reminders',
+              l10n.scheduled_reminders,
               style: Theme.of(context).textTheme.titleLarge?.copyWith(
                     fontWeight: FontWeight.bold,
                   ),
@@ -434,7 +437,7 @@ class _MaintenanceTaskCard extends StatelessWidget {
         actions: [
           TextButton(
             onPressed: () => Navigator.of(context).pop(),
-            child: const Text('Close'),
+            child: Text(l10n.close),
           ),
         ],
       ),

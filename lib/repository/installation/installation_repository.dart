@@ -5,20 +5,23 @@ import 'package:who_mobile_project/general/models/installation/installation_data
 
 @injectable
 class InstallationRepository {
-  InstallationDataModel? _cachedData;
+  final Map<String, InstallationDataModel> _cachedData = {};
 
-  Future<InstallationDataModel> loadInstallationData() async {
-    if (_cachedData != null) {
-      return _cachedData!;
+  Future<InstallationDataModel> loadInstallationData({
+    String localeCode = 'en',
+  }) async {
+    if (_cachedData.containsKey(localeCode)) {
+      return _cachedData[localeCode]!;
     }
 
     try {
+      final suffix = localeCode == 'en' ? '' : '_$localeCode';
       final String jsonString = await rootBundle.loadString(
-        'assets/installation_description/installation_steps.json',
+        'assets/installation_description/installation_steps$suffix.json',
       );
       final Map<String, dynamic> jsonData = json.decode(jsonString);
-      _cachedData = InstallationDataModel.fromJson(jsonData);
-      return _cachedData!;
+      _cachedData[localeCode] = InstallationDataModel.fromJson(jsonData);
+      return _cachedData[localeCode]!;
     } catch (e) {
       throw Exception('Failed to load installation data: $e');
     }
@@ -29,6 +32,6 @@ class InstallationRepository {
   }
 
   void clearCache() {
-    _cachedData = null;
+    _cachedData.clear();
   }
 }

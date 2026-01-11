@@ -7,6 +7,7 @@ import 'package:who_mobile_project/general/models/idtm/installation_phase.dart';
 import 'package:who_mobile_project/general/services/storage/storage_manager.dart';
 import 'package:who_mobile_project/general/widgets/progress_card_widget.dart';
 import 'package:who_mobile_project/providers/auth/current_user_provider.dart';
+import 'package:who_mobile_project/generated/i18n/app_localizations.dart';
 import 'package:who_mobile_project/providers/dismantling/dismantling_provider.dart';
 import 'package:who_mobile_project/providers/installation/installation_provider.dart';
 import 'package:who_mobile_project/routing_config/routes.dart';
@@ -101,22 +102,22 @@ class _IdtmStatusCardState extends ConsumerState<IdtmStatusCard> {
     }
   }
 
-  String _getStatusDescription() {
+  String _getStatusDescription(AppLocalizations l10n) {
     switch (_currentPhase) {
       case FacilityInstallationPhase.initial:
-        return 'Ready to begin installation process';
+        return l10n.ready_to_begin_installation;
       case FacilityInstallationPhase.installing:
-        return 'Installation in progress';
+        return l10n.installation_in_progress;
       case FacilityInstallationPhase.maintenance:
-        return 'System installed and operational';
+        return l10n.system_operational;
       case FacilityInstallationPhase.dismantling:
-        return 'Dismantling in progress';
+        return l10n.dismantling_in_progress_status;
       case FacilityInstallationPhase.completed:
-        return 'Installation completed';
+        return l10n.installation_completed;
     }
   }
 
-  List<Widget> _buildActionButtons() {
+  List<Widget> _buildActionButtons(AppLocalizations l10n) {
     final buttons = <Widget>[];
 
     // Primary action based on status
@@ -124,7 +125,7 @@ class _IdtmStatusCardState extends ConsumerState<IdtmStatusCard> {
       case FacilityInstallationPhase.initial:
         buttons.add(
           _ActionButton(
-            label: 'Start Installation',
+            label: l10n.start_installation,
             icon: Icons.play_arrow,
             color: BZColors.bronzeDark,
             onPressed: () async {
@@ -161,7 +162,7 @@ class _IdtmStatusCardState extends ConsumerState<IdtmStatusCard> {
       case FacilityInstallationPhase.installing:
         buttons.add(
           _ActionButton(
-            label: 'Continue Installation',
+            label: l10n.continue_installation,
             icon: Icons.build,
             color: Colors.orange,
             onPressed: () {
@@ -186,7 +187,7 @@ class _IdtmStatusCardState extends ConsumerState<IdtmStatusCard> {
       case FacilityInstallationPhase.maintenance:
         buttons.add(
           _ActionButton(
-            label: 'Maintenance Mode',
+            label: l10n.maintenance_mode,
             icon: Icons.settings,
             color: Colors.green,
             onPressed: () {
@@ -209,11 +210,11 @@ class _IdtmStatusCardState extends ConsumerState<IdtmStatusCard> {
         buttons.add(const SizedBox(height: 8));
         buttons.add(
           _ActionButton(
-            label: 'Start Dismantling',
+            label: l10n.start_dismantling,
             icon: Icons.delete,
             color: Colors.red,
             outlined: true,
-            onPressed: () => _showDismantlingConfirmation(context),
+            onPressed: () => _showDismantlingConfirmation(context, l10n),
           ),
         );
         break;
@@ -221,7 +222,7 @@ class _IdtmStatusCardState extends ConsumerState<IdtmStatusCard> {
       case FacilityInstallationPhase.dismantling:
         buttons.add(
           _ActionButton(
-            label: 'Continue Dismantling',
+            label: l10n.continue_dismantling,
             icon: Icons.delete,
             color: Colors.red,
             onPressed: () {
@@ -236,7 +237,7 @@ class _IdtmStatusCardState extends ConsumerState<IdtmStatusCard> {
       case FacilityInstallationPhase.completed:
         buttons.add(
           _ActionButton(
-            label: 'Start New Installation',
+            label: l10n.start_new_installation,
             icon: Icons.refresh,
             color: BZColors.bronzeDark,
             onPressed: () async {
@@ -265,7 +266,7 @@ class _IdtmStatusCardState extends ConsumerState<IdtmStatusCard> {
                         const SizedBox(width: 12),
                         Expanded(
                           child: Text(
-                            'System reset. Ready for new installation.',
+                            l10n.system_reset_ready,
                             style: Theme.of(context).textTheme.bodyMedium
                                 ?.copyWith(color: Colors.white),
                           ),
@@ -289,7 +290,7 @@ class _IdtmStatusCardState extends ConsumerState<IdtmStatusCard> {
     }
     buttons.add(
       _ActionButton(
-        label: 'Show Packing List',
+        label: l10n.show_packing_list,
         icon: Icons.inventory_2_outlined,
         color: BZColors.bronzeDark,
         outlined: true,
@@ -304,7 +305,10 @@ class _IdtmStatusCardState extends ConsumerState<IdtmStatusCard> {
     return buttons;
   }
 
-  Future<void> _showDismantlingConfirmation(BuildContext context) async {
+  Future<void> _showDismantlingConfirmation(
+    BuildContext context,
+    AppLocalizations l10n,
+  ) async {
     final confirmed = await showDialog<bool>(
       context: context,
       barrierDismissible: false,
@@ -314,29 +318,29 @@ class _IdtmStatusCardState extends ConsumerState<IdtmStatusCard> {
             children: [
               Icon(Icons.warning, color: Colors.orange, size: 28),
               const SizedBox(width: 12),
-              const Text('Start Dismantling?'),
+              Text(l10n.start_dismantling_question),
             ],
           ),
           content: Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text(
-                'You are about to start the dismantling process. This will:',
-                style: TextStyle(fontWeight: FontWeight.w500),
+              Text(
+                l10n.dismantling_confirmation_message,
+                style: const TextStyle(fontWeight: FontWeight.w500),
               ),
               const SizedBox(height: 12),
               _ConfirmationItem(
                 icon: Icons.exit_to_app,
-                text: 'Exit maintenance mode',
+                text: l10n.exit_maintenance_mode,
               ),
               _ConfirmationItem(
                 icon: Icons.delete_outline,
-                text: 'Begin dismantling phase',
+                text: l10n.begin_dismantling_phase,
               ),
               _ConfirmationItem(
                 icon: Icons.checklist,
-                text: 'Open dismantling guide',
+                text: l10n.open_dismantling_guide,
               ),
               const SizedBox(height: 16),
               Container(
@@ -356,7 +360,7 @@ class _IdtmStatusCardState extends ConsumerState<IdtmStatusCard> {
                     const SizedBox(width: 8),
                     Expanded(
                       child: Text(
-                        'Make sure all maintenance tasks are completed before proceeding.',
+                        l10n.maintenance_complete_before_dismantling,
                         style: TextStyle(
                           fontSize: 12,
                           color: Colors.orange.shade900,
@@ -371,12 +375,12 @@ class _IdtmStatusCardState extends ConsumerState<IdtmStatusCard> {
           actions: [
             TextButton(
               onPressed: () => Navigator.of(dialogContext).pop(false),
-              child: const Text('Cancel'),
+              child: Text(l10n.cancel),
             ),
             ElevatedButton.icon(
               onPressed: () => Navigator.of(dialogContext).pop(true),
               icon: const Icon(Icons.check, size: 18),
-              label: const Text('Start Dismantling'),
+              label: Text(l10n.start_dismantling),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.red,
                 foregroundColor: Colors.white,
@@ -412,7 +416,7 @@ class _IdtmStatusCardState extends ConsumerState<IdtmStatusCard> {
                 const SizedBox(width: 12),
                 Expanded(
                   child: Text(
-                    'Dismantling phase started. Opening dismantling guide.',
+                    l10n.dismantling_started_message,
                     style: Theme.of(
                       context,
                     ).textTheme.bodyMedium?.copyWith(color: Colors.white),
@@ -433,7 +437,7 @@ class _IdtmStatusCardState extends ConsumerState<IdtmStatusCard> {
     }
   }
 
-  Widget _buildInstallationGuideProgress() {
+  Widget _buildInstallationGuideProgress(AppLocalizations l10n) {
     final installationDataAsync = ref.watch(installationDataProvider);
     final lastCompletedIndex = ref.watch(installationProgressProvider);
 
@@ -454,8 +458,8 @@ class _IdtmStatusCardState extends ConsumerState<IdtmStatusCard> {
         final isComplete = progress >= 1.0;
 
         return ProgressCardWidget(
-          title: 'Installation Guide Progress',
-          completeTitle: 'Installation Complete!',
+          title: l10n.installation_guide_progress,
+          completeTitle: l10n.installation_complete_title,
           completedCount: completedCount,
           totalCount: totalSubsteps,
           progress: progress,
@@ -498,7 +502,7 @@ class _IdtmStatusCardState extends ConsumerState<IdtmStatusCard> {
                               const SizedBox(width: 12),
                               Expanded(
                                 child: Text(
-                                  'Installation completed! Opening maintenance mode.',
+                                  l10n.installation_complete_maintenance,
                                   style: Theme.of(context).textTheme.bodyMedium
                                       ?.copyWith(color: Colors.white),
                                 ),
@@ -528,7 +532,7 @@ class _IdtmStatusCardState extends ConsumerState<IdtmStatusCard> {
                     }
                   },
                   icon: const Icon(Icons.done_all, size: 18),
-                  label: const Text('Finish & Go to Maintenance'),
+                  label: Text(l10n.finish_go_to_maintenance),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.green,
                     foregroundColor: Colors.white,
@@ -544,7 +548,7 @@ class _IdtmStatusCardState extends ConsumerState<IdtmStatusCard> {
     );
   }
 
-  Widget _buildDismantlingGuideProgress() {
+  Widget _buildDismantlingGuideProgress(AppLocalizations l10n) {
     final dismantlingDataAsync = ref.watch(dismantlingDataProvider);
     final lastCompletedIndex = ref.watch(dismantlingProgressProvider);
 
@@ -565,8 +569,8 @@ class _IdtmStatusCardState extends ConsumerState<IdtmStatusCard> {
         final isComplete = progress >= 1.0;
 
         return ProgressCardWidget(
-          title: 'Dismantling Guide Progress',
-          completeTitle: 'Dismantling Complete!',
+          title: l10n.dismantling_guide_progress,
+          completeTitle: l10n.dismantling_complete_title,
           completedCount: completedCount,
           totalCount: totalSubsteps,
           progress: progress,
@@ -607,7 +611,7 @@ class _IdtmStatusCardState extends ConsumerState<IdtmStatusCard> {
                               const SizedBox(width: 12),
                               Expanded(
                                 child: Text(
-                                  'Dismantling completed! IDTM lifecycle finished.',
+                                  l10n.dismantling_lifecycle_complete,
                                   style: Theme.of(context).textTheme.bodyMedium
                                       ?.copyWith(color: Colors.white),
                                 ),
@@ -621,7 +625,7 @@ class _IdtmStatusCardState extends ConsumerState<IdtmStatusCard> {
                     }
                   },
                   icon: const Icon(Icons.done_all, size: 18),
-                  label: const Text('Complete Dismantling'),
+                  label: Text(l10n.complete_dismantling),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.blue,
                     foregroundColor: Colors.white,
@@ -637,7 +641,7 @@ class _IdtmStatusCardState extends ConsumerState<IdtmStatusCard> {
     );
   }
 
-  Widget _buildCompletedSummary() {
+  Widget _buildCompletedSummary(AppLocalizations l10n) {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
@@ -671,7 +675,7 @@ class _IdtmStatusCardState extends ConsumerState<IdtmStatusCard> {
 
           // Title
           Text(
-            'IDTM Lifecycle Completed!',
+            l10n.idtm_lifecycle_completed,
             style: Theme.of(context).textTheme.titleLarge?.copyWith(
               fontWeight: FontWeight.bold,
               color: Colors.blue.shade900,
@@ -682,7 +686,7 @@ class _IdtmStatusCardState extends ConsumerState<IdtmStatusCard> {
 
           // Description
           Text(
-            'Installation, maintenance, and dismantling phases have been successfully completed.',
+            l10n.lifecycle_completed_description,
             style: Theme.of(
               context,
             ).textTheme.bodyMedium?.copyWith(color: Colors.grey.shade700),
@@ -696,17 +700,17 @@ class _IdtmStatusCardState extends ConsumerState<IdtmStatusCard> {
             children: [
               _CompletionBadge(
                 icon: Icons.build_circle,
-                label: 'Installed',
+                label: l10n.installed,
                 color: Colors.green,
               ),
               _CompletionBadge(
                 icon: Icons.settings,
-                label: 'Maintained',
+                label: l10n.maintained,
                 color: Colors.blue,
               ),
               _CompletionBadge(
                 icon: Icons.inventory_2,
-                label: 'Dismantled',
+                label: l10n.dismantled,
                 color: Colors.orange,
               ),
             ],
@@ -718,6 +722,8 @@ class _IdtmStatusCardState extends ConsumerState<IdtmStatusCard> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+
     return Card(
       elevation: 2,
       margin: const EdgeInsets.all(16),
@@ -747,7 +753,7 @@ class _IdtmStatusCardState extends ConsumerState<IdtmStatusCard> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'IDTM Installation',
+                        l10n.idtm_installation,
                         style: Theme.of(context).textTheme.titleLarge?.copyWith(
                           fontWeight: FontWeight.bold,
                         ),
@@ -784,7 +790,7 @@ class _IdtmStatusCardState extends ConsumerState<IdtmStatusCard> {
 
             // Status description
             Text(
-              _getStatusDescription(),
+              _getStatusDescription(l10n),
               style: Theme.of(
                 context,
               ).textTheme.bodyMedium?.copyWith(color: Colors.grey[600]),
@@ -795,18 +801,18 @@ class _IdtmStatusCardState extends ConsumerState<IdtmStatusCard> {
             // Show progress based on current phase
             if (_currentPhase == FacilityInstallationPhase.installing ||
                 _currentPhase == FacilityInstallationPhase.maintenance)
-              _buildInstallationGuideProgress()
+              _buildInstallationGuideProgress(l10n)
             else if (_currentPhase == FacilityInstallationPhase.dismantling)
-              _buildDismantlingGuideProgress()
+              _buildDismantlingGuideProgress(l10n)
             else if (_currentPhase == FacilityInstallationPhase.completed)
-              _buildCompletedSummary(),
+              _buildCompletedSummary(l10n),
 
             const SizedBox(height: 16),
             const Divider(),
             const SizedBox(height: 16),
 
             // Action buttons
-            ..._buildActionButtons(),
+            ..._buildActionButtons(l10n),
           ],
         ),
       ),

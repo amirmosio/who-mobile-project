@@ -5,20 +5,23 @@ import 'package:who_mobile_project/general/models/dismantling/dismantling_data_m
 
 @injectable
 class DismantlingRepository {
-  DismantlingDataModel? _cachedData;
+  final Map<String, DismantlingDataModel> _cachedData = {};
 
-  Future<DismantlingDataModel> loadDismantlingData() async {
-    if (_cachedData != null) {
-      return _cachedData!;
+  Future<DismantlingDataModel> loadDismantlingData({
+    String localeCode = 'en',
+  }) async {
+    if (_cachedData.containsKey(localeCode)) {
+      return _cachedData[localeCode]!;
     }
 
     try {
+      final suffix = localeCode == 'en' ? '' : '_$localeCode';
       final String jsonString = await rootBundle.loadString(
-        'assets/dismantelling_description/dismantling_steps.json',
+        'assets/dismantelling_description/dismantling_steps$suffix.json',
       );
       final Map<String, dynamic> jsonData = json.decode(jsonString);
-      _cachedData = DismantlingDataModel.fromJson(jsonData);
-      return _cachedData!;
+      _cachedData[localeCode] = DismantlingDataModel.fromJson(jsonData);
+      return _cachedData[localeCode]!;
     } catch (e) {
       throw Exception('Failed to load dismantling data: $e');
     }
@@ -29,6 +32,6 @@ class DismantlingRepository {
   }
 
   void clearCache() {
-    _cachedData = null;
+    _cachedData.clear();
   }
 }

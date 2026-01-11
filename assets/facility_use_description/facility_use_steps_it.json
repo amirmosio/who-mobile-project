@@ -1,0 +1,462 @@
+{
+  "title": "Guida all'Uso e Funzionamento della Struttura IDTM",
+  "overview": "Guida operativa per il Modulo di Trattamento Malattie Infettive (IDTM) - che copre la descrizione della struttura, i requisiti operativi, le avvertenze di sicurezza e le linee guida per la selezione del sito.",
+  "sourceDocument": "EN-MAN-AZF4-27-WFP_User_Manual_DRAFT01.pdf",
+  "sections": [
+    {
+      "id": "idtm-overview",
+      "title": "Panoramica IDTM",
+      "description": "Descrizione generale e specifiche del Modulo di Trattamento Malattie Infettive",
+      "pdfReference": "Sezione 2",
+      "images": [
+        {"filename": "idtm_general_view.png", "description": "Panoramica completa della struttura IDTM che mostra tre tende interconnesse"}
+      ],
+      "steps": [
+        {
+          "id": "general-description",
+          "title": "Descrizione Generale",
+          "purpose": "Comprendere la struttura base e i componenti della struttura IDTM",
+          "pdfStepReference": "Sezione 2.1",
+          "images": [
+            {"filename": "idtm_general_view.png", "description": "Vista isometrica 3D della struttura IDTM completa"},
+            {"filename": "idtm_exploded_view.png", "description": "Vista esplosa che mostra la scomposizione dei componenti"}
+          ],
+          "content": [
+            "L'IDTM è composto da tre tende pneumatiche interconnesse da quattro vestiboli",
+            "La struttura principale utilizza tessuto in poliestere rivestito in PVC per durabilità e resistenza alle intemperie",
+            "Pressione operativa: 0,30 bar (mantenuta dal soffiatore elettrico)",
+            "Due moduli pazienti forniscono aree di trattamento isolate",
+            "Un modulo staff funge da area operativa centrale",
+            "Le reti parasole forniscono protezione UV e regolazione della temperatura",
+            "Il sistema di pavimentazione leggero fornisce una superficie stabile e pulibile"
+          ]
+        },
+        {
+          "id": "system-components",
+          "title": "Componenti del Sistema",
+          "purpose": "Conoscere i singoli componenti che compongono l'IDTM",
+          "pdfStepReference": "Sezione 2.1",
+          "images": [
+            {"filename": "idtm_exploded_view.png", "description": "Diagramma esploso dei componenti"}
+          ],
+          "content": [
+            "Rete parasole - fornisce protezione UV e riduce la temperatura interna",
+            "Distanziatori pneumatici - mantengono il corretto gonfiaggio e la forma della tenda",
+            "Supporto tetto vestibolo - supporto strutturale per i corridoi di collegamento",
+            "Struttura pneumatica vestibolo - corridoi di collegamento gonfiabili",
+            "Rivestimento interno vestibolo - superficie interna per i vestiboli",
+            "Rivestimento isolante tenda principale - strato di isolamento termico",
+            "Struttura pneumatica tenda principale - telaio gonfiabile primario",
+            "Telo esterno tenda principale - strato esterno impermeabile",
+            "Pavimentazione leggera - sistema di pavimento modulare"
+          ]
+        },
+        {
+          "id": "climatic-resistance",
+          "title": "Resistenza Climatica",
+          "purpose": "Comprendere i limiti operativi ambientali dell'IDTM",
+          "pdfStepReference": "Sezione 2.2",
+          "content": [
+            "Range temperatura operativa: da -32°C a +45°C",
+            "Range temperatura stoccaggio/transito: da -33°C a +58°C",
+            "Velocità massima del vento durante il gonfiaggio: 40 km/h",
+            "Velocità massima del vento operativa: 100 km/h costante, 120 km/h raffiche (con ancoraggio adeguato)",
+            "Carico neve massimo: 15 kg/m²",
+            "Resistenza alla pioggia: Completamente impermeabile se montato correttamente",
+            "Terreno: Può essere installato su quasi tutte le superfici compatte e livellate",
+            "Resistenza UV: Protetto dalle reti parasole"
+          ],
+          "warnings": [
+            "Non gonfiare o sgonfiare con velocità del vento superiori a 40 km/h",
+            "Il tessuto diventa fragile sotto i -32°C - maneggiare con cura",
+            "Rimuovere regolarmente l'accumulo di neve per prevenire danni strutturali",
+            "Tutte le misure di protezione dal vento devono essere implementate quando la velocità del vento raggiunge i 40 km/h"
+          ]
+        },
+        {
+          "id": "dimensions-specs",
+          "title": "Dimensioni e Specifiche",
+          "purpose": "Conoscere le dimensioni esatte per la pianificazione del sito e la logistica",
+          "pdfStepReference": "Sezione 2.3",
+          "images": [
+            {"filename": "idtm_dimensions_front.png", "description": "Prospetto frontale con dimensioni"},
+            {"filename": "idtm_dimensions_side.png", "description": "Prospetto laterale con dimensioni"},
+            {"filename": "idtm_dimensions_linear.png", "description": "Disposizione lineare con dimensioni complessive"},
+            {"filename": "idtm_dimensions_overhead.png", "description": "Vista in pianta dall'alto (ingombro 23m x 12m)"}
+          ],
+          "content": [
+            "Ingombro totale: 276 m² (23m x 12m incluso spazio di sicurezza)",
+            "Larghezza esterna tenda principale: 4,70m",
+            "Lunghezza esterna tenda principale: 5,70m",
+            "Larghezza interna tenda principale: 4,00m (larghezza minima libera con gambe ⌀35cm)",
+            "Lunghezza interna tenda principale: 5,00m",
+            "Altezza gronda (esterna): 2,65m | (interna): 2,40m",
+            "Altezza colmo (esterna): 3,35m | (interna): 3,00m",
+            "Superficie singola tenda: 26,79 m² (esterna) | 20,00 m² (interna)",
+            "Spazio laterale richiesto: minimo 1,50m",
+            "Area pavimentazione rigida: 17m x 8m"
+          ]
+        },
+        {
+          "id": "pod-layouts",
+          "title": "Layout dei Moduli",
+          "purpose": "Comprendere la disposizione interna di ogni tipo di modulo",
+          "pdfStepReference": "Sezione 2.3",
+          "images": [
+            {"filename": "idtm_dimensions_front.png", "description": "Vista frontale con dimensioni (larghezza 7,70m)"},
+            {"filename": "idtm_dimensions_left_view.png", "description": "Vista laterale sinistra con dimensioni (5,90m)"},
+            {"filename": "idtm_dimensions_patient.png", "description": "Layout modulo paziente (larghezza 4,71m)"},
+            {"filename": "idtm_dimensions_family_porch.png", "description": "Area portico famiglie (larghezza 5,70m)"},
+            {"filename": "idtm_dimensions_services.png", "description": "Layout modulo servizi/staff"},
+            {"filename": "idtm_dimensions_transfer.png", "description": "Area schermo di trasferimento"}
+          ],
+          "content": [
+            "Moduli pazienti: Includono aperture a rete per la ventilazione di ritorno",
+            "Modulo staff: Posizione centrale con accesso a entrambe le aree pazienti",
+            "Portico famiglie: Area esterna per la comunicazione con i familiari dei pazienti",
+            "Schermo di trasferimento: Barriera di isolamento tra zone infettive"
+          ]
+        },
+        {
+          "id": "tent-features",
+          "title": "Specifiche Tecniche",
+          "purpose": "Tabella di riferimento per le specifiche dei materiali e componenti della tenda",
+          "pdfStepReference": "Sezione 2.4",
+          "specifications": [
+            {"specification": "Materiale telo", "unit": "-", "value": "Tessuto Poliestere rivestito PVC"},
+            {"specification": "Peso telo", "unit": "g/m²", "value": "750"},
+            {"specification": "Materiale telaio gonfiabile", "unit": "-", "value": "Tessuto Poliestere rivestito PVC"},
+            {"specification": "Spessore telaio gonfiabile", "unit": "g/m²", "value": "1100"},
+            {"specification": "Diametro travi gonfiabili", "unit": "cm", "value": "35"},
+            {"specification": "Pressione operativa", "unit": "bar", "value": "0,30"},
+            {"specification": "Materiale telo di fondo", "unit": "-", "value": "Tessuto Poliestere rivestito PVC"},
+            {"specification": "Spessore telo di fondo", "unit": "g/m²", "value": "700"},
+            {"specification": "Valvola di gonfiaggio", "unit": "-", "value": "Tre (3)"},
+            {"specification": "Valvola di sovrappressione", "unit": "-", "value": "Una (1)"},
+            {"specification": "Manicotti condotto HVAC", "unit": "-", "value": "Tre (3) paia, diametro regolabile"},
+            {"specification": "Manicotti cavi", "unit": "-", "value": "Uno (1) su ogni frontone, diametro regolabile"},
+            {"specification": "Classificazione fuoco", "unit": "-", "value": "B s2 d0 (EN 13501-1:2007+A1)"},
+            {"specification": "Colori standard", "unit": "-", "value": "Bianco"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operating-requirements",
+      "title": "Requisiti Operativi",
+      "description": "Personale, strumenti e condizioni richiesti per il funzionamento dell'IDTM",
+      "pdfReference": "Sezione 3.1",
+      "requirements": [
+        {
+          "id": "personnel-req",
+          "title": "Personale",
+          "content": [
+            "Minimo 4 lavoratori formati per l'installazione",
+            "I lavoratori devono avere familiarità con le strutture pneumatiche",
+            "Almeno un supervisore con conoscenza completa del sistema"
+          ]
+        },
+        {
+          "id": "tools-req",
+          "title": "Strumenti Richiesti",
+          "content": [
+            "Fonte di alimentazione (generatore o alimentazione di rete)",
+            "Gonfiatore/soffiatore elettrico",
+            "Collettore tubi di gonfiaggio",
+            "Martello per ancoraggi a terra",
+            "Manometro per il monitoraggio"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "id": "personnel-requirements",
+          "title": "Requisiti del Personale",
+          "purpose": "Garantire personale adeguatamente formato per un funzionamento sicuro",
+          "pdfStepReference": "Sezione 3.1",
+          "content": [
+            "Minimo 4 persone formate richieste per l'installazione",
+            "Tutti i lavoratori devono avere familiarità con le procedure di installazione",
+            "Designare una persona come coordinatore della sicurezza",
+            "Il personale deve essere formato sulle procedure di sgonfiaggio di emergenza"
+          ],
+          "actions": [
+            "Verificare che tutti i membri del team abbiano completato la formazione",
+            "Assegnare ruoli specifici prima di iniziare il lavoro",
+            "Informare il team sulle procedure di sicurezza",
+            "Assicurarsi che siano disponibili dispositivi di comunicazione"
+          ]
+        },
+        {
+          "id": "tools-equipment",
+          "title": "Strumenti e Attrezzature",
+          "purpose": "Preparare tutti gli strumenti necessari prima di iniziare il lavoro",
+          "pdfStepReference": "Sezione 3.1",
+          "images": [
+            {"filename": "equipment_inflator.png", "description": "Sistema gonfiatore/soffiatore elettrico"},
+            {"filename": "equipment_hose_manifold.png", "description": "Collettore tubi di gonfiaggio"}
+          ],
+          "content": [
+            "Fonte di alimentazione: Generatore minimo 2kW o connessione di rete",
+            "Gonfiatore elettrico: Sistema soffiatore a pressione regolata",
+            "Collettore tubi di gonfiaggio: Collega il soffiatore alle valvole della tenda",
+            "Ancoraggi a terra e martello: Per fissare la tenda al terreno",
+            "Manometro: Per monitorare la pressione interna"
+          ],
+          "actions": [
+            "Verificare che tutte le attrezzature siano presenti e funzionanti",
+            "Testare la fonte di alimentazione prima del dispiegamento",
+            "Verificare le impostazioni di pressione del sistema di gonfiaggio",
+            "Ispezionare i tubi per danni o perdite"
+          ]
+        },
+        {
+          "id": "weather-conditions",
+          "title": "Condizioni Meteo",
+          "purpose": "Comprendere i limiti meteo sicuri per il funzionamento",
+          "pdfStepReference": "Sezione 3.1",
+          "content": [
+            "Velocità massima del vento per il gonfiaggio: 40 km/h",
+            "Temperatura minima per l'installazione: +5°C",
+            "Nessuna installazione durante piogge intense o temporali",
+            "Controllare le previsioni meteo prima di iniziare il lavoro"
+          ],
+          "warnings": [
+            "Non gonfiare con velocità del vento superiori a 40 km/h",
+            "Interrompere immediatamente il lavoro se le condizioni peggiorano",
+            "Prevedere tempo extra per l'installazione in condizioni di freddo"
+          ],
+          "actions": [
+            "Controllare la velocità del vento attuale prima di iniziare",
+            "Monitorare il meteo durante tutta l'installazione",
+            "Avere un piano di emergenza per cambiamenti meteo improvvisi"
+          ]
+        },
+        {
+          "id": "time-requirements",
+          "title": "Requisiti di Tempo",
+          "purpose": "Pianificare tempo adeguato per un'installazione sicura",
+          "pdfStepReference": "Sezione 3.1",
+          "content": [
+            "Gonfiaggio singola tenda: Circa 5 minuti",
+            "Montaggio sistema completo: Circa 4 ore",
+            "Prevedere tempo aggiuntivo per la preparazione del sito",
+            "Considerare i ritardi meteo nella pianificazione"
+          ],
+          "actions": [
+            "Programmare l'installazione con ore di luce diurna adeguate",
+            "Pianificare pause per il personale durante lavori prolungati",
+            "Prevedere tempo buffer per imprevisti"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "safety-warnings",
+      "title": "Avvertenze di Sicurezza",
+      "description": "Informazioni critiche sulla sicurezza per il funzionamento della struttura IDTM",
+      "pdfReference": "Sezione 3.2",
+      "steps": [
+        {
+          "id": "wind-safety",
+          "title": "Precauzioni per il Carico del Vento",
+          "purpose": "Prevenire danni e infortuni da incidenti legati al vento",
+          "pdfStepReference": "Sezione 3.2",
+          "content": [
+            "Velocità massima sicura del vento per gonfiaggio/sgonfiaggio: 40 km/h",
+            "Velocità massima operativa del vento: 100 km/h costante, 120 km/h raffiche (con ancoraggio completo)",
+            "Il vento causa una pressione laterale significativa sulla struttura della tenda",
+            "Le tende non ancorate possono sollevarsi in aria con venti forti"
+          ],
+          "warnings": [
+            "NON gonfiare o sgonfiare MAI quando il vento supera i 40 km/h",
+            "Fissare TUTTI i punti di ancoraggio prima dell'inizio del gonfiaggio",
+            "Monitorare le condizioni del vento continuamente durante il funzionamento",
+            "Evacuare immediatamente se la velocità del vento aumenta rapidamente"
+          ],
+          "actions": [
+            "Controllare previsioni meteo e condizioni attuali",
+            "Usare anemometro per misurare la velocità del vento",
+            "Installare tutti gli ancoraggi a terra in modo sicuro",
+            "Avere pronto un piano di sgonfiaggio per emergenze",
+            "Posizionare la tenda con il profilo più piccolo verso il vento prevalente"
+          ]
+        },
+        {
+          "id": "snow-load",
+          "title": "Gestione del Carico Neve",
+          "purpose": "Prevenire danni strutturali dall'accumulo di neve",
+          "pdfStepReference": "Sezione 3.2",
+          "content": [
+            "L'accumulo di neve aggiunge peso significativo al tetto della tenda",
+            "Le strutture pneumatiche possono collassare sotto carico neve eccessivo",
+            "La neve bagnata è più pesante e pericolosa della neve asciutta",
+            "È richiesto monitoraggio regolare durante eventi nevosi"
+          ],
+          "warnings": [
+            "Rimuovere regolarmente l'accumulo di neve - non lasciarlo accumulare",
+            "Capacità massima carico neve: 15 kg/m² - rimuovere prima di superare",
+            "Usare solo spazzole morbide - evitare strumenti appuntiti che potrebbero danneggiare il tessuto",
+            "Riscaldare la tenda aiuta a ridurre l'accumulo di neve sul tetto"
+          ],
+          "actions": [
+            "Monitorare il meteo per previsioni di nevicate",
+            "Stabilire programma di rimozione neve durante operazioni invernali",
+            "Rimuovere la neve da tutte le sezioni del tetto inclusi i vestiboli",
+            "Controllare i livelli di pressione dopo la rimozione della neve"
+          ]
+        },
+        {
+          "id": "rain-precautions",
+          "title": "Precauzioni per la Pioggia",
+          "purpose": "Gestire il drenaggio dell'acqua e prevenire allagamenti",
+          "pdfStepReference": "Sezione 3.2",
+          "content": [
+            "L'IDTM è completamente impermeabile quando montato correttamente",
+            "L'acqua stagnante attorno alla base può causare infiltrazioni",
+            "Le trincee di drenaggio dirigono l'acqua lontano dalla tenda",
+            "La saturazione del terreno influisce sulla capacità di tenuta degli ancoraggi"
+          ],
+          "warnings": [
+            "Assicurarsi che le trincee di drenaggio siano libere prima di eventi piovosi",
+            "Controllare la sicurezza degli ancoraggi dopo forti piogge",
+            "Monitorare infiltrazioni d'acqua alle connessioni dei vestiboli"
+          ],
+          "actions": [
+            "Scavare trincea di drenaggio perimetrale in condizioni umide",
+            "Dirigere il flusso d'acqua lontano dalle fondamenta della tenda",
+            "Controllare e liberare i canali di drenaggio giornalmente durante periodi piovosi",
+            "Verificare che cuciture e connessioni della tenda rimangano impermeabili"
+          ]
+        },
+        {
+          "id": "temperature-effects",
+          "title": "Effetti della Temperatura",
+          "purpose": "Gestire le variazioni di pressione dovute ai cambiamenti di temperatura",
+          "pdfStepReference": "Sezione 3.2",
+          "content": [
+            "La pressione dell'aria all'interno della tenda varia con la temperatura",
+            "Il riscaldamento diurno aumenta la pressione interna",
+            "Il raffreddamento notturno diminuisce la pressione interna",
+            "I cambiamenti di temperatura possono causare condensazione",
+            "Il freddo estremo rende il tessuto fragile e soggetto a danni"
+          ],
+          "warnings": [
+            "Il tessuto diventa fragile sotto i -30°C - maneggiare con estrema cura",
+            "Non piegare o manipolare il tessuto con freddo estremo",
+            "Monitorare la pressione durante cambiamenti significativi di temperatura",
+            "Aspettarsi condensazione durante cali rapidi di temperatura"
+          ],
+          "actions": [
+            "Monitorare il manometro durante le transizioni giorno/notte",
+            "Regolare le impostazioni del soffiatore per mantenere la pressione ottimale",
+            "Fornire ventilazione per ridurre la condensazione",
+            "Permettere al tessuto di scaldarsi prima di maneggiarlo in condizioni di freddo"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "site-selection",
+      "title": "Linee Guida per la Selezione del Sito",
+      "description": "Requisiti per la selezione e preparazione del sito di installazione",
+      "pdfReference": "Sezione 3.3",
+      "steps": [
+        {
+          "id": "terrain-requirements",
+          "title": "Requisiti del Terreno",
+          "purpose": "Selezionare condizioni del terreno appropriate per l'installazione",
+          "pdfStepReference": "Sezione 3.3",
+          "content": [
+            "Pendenza massima del terreno: 5%",
+            "Area libera minima: 276 m² (23m x 12m)",
+            "Il terreno deve essere compatto e stabile",
+            "Evitare aree soggette ad allagamenti o accumulo d'acqua"
+          ],
+          "requirements": [
+            {
+              "id": "ground-conditions",
+              "title": "Condizioni del Terreno",
+              "content": [
+                "La superficie deve essere relativamente piana (pendenza max 5%)",
+                "Il terreno deve supportare i carichi degli ancoraggi",
+                "Nessuna utenza sotterranea nelle zone di ancoraggio",
+                "Tipo di suolo adatto per ancoraggi a terra"
+              ]
+            }
+          ],
+          "actions": [
+            "Verificare il sito per pendenza e ostacoli",
+            "Controllare utenze sotterranee prima dell'ancoraggio",
+            "Testare il suolo per la capacità di tenuta degli ancoraggi",
+            "Segnare l'ingombro dell'installazione prima del montaggio"
+          ]
+        },
+        {
+          "id": "clearance-requirements",
+          "title": "Requisiti di Spazio Libero",
+          "purpose": "Garantire spazio adeguato attorno all'installazione",
+          "pdfStepReference": "Sezione 3.3",
+          "content": [
+            "Minimo 2m di distanza da alberi ed edifici",
+            "Eliminare ostacoli aerei (linee elettriche, rami)",
+            "Permettere spazio di accesso per veicoli di emergenza",
+            "Considerare gli effetti dell'ombra del vento da strutture vicine"
+          ],
+          "warnings": [
+            "La caduta di rami può forare la struttura pneumatica",
+            "Gli edifici vicini possono creare turbolenze del vento pericolose",
+            "Le linee elettriche rappresentano un rischio di elettrocuzione durante l'installazione"
+          ],
+          "actions": [
+            "Misurare lo spazio libero da tutti gli oggetti vicini",
+            "Tagliare i rami sporgenti prima dell'installazione",
+            "Verificare i percorsi di accesso per veicoli di emergenza",
+            "Notare la direzione del vento prevalente rispetto alle strutture"
+          ]
+        },
+        {
+          "id": "ground-preparation",
+          "title": "Preparazione del Terreno",
+          "purpose": "Preparare la superficie del sito per un'installazione sicura",
+          "pdfStepReference": "Sezione 3.3",
+          "content": [
+            "Rimuovere tutti gli oggetti appuntiti (pietre, detriti, ceppi)",
+            "Livellare il terreno il più possibile praticamente",
+            "Compattare il terreno sciolto per prevenire assestamenti",
+            "Segnare le posizioni degli ancoraggi prima dell'installazione"
+          ],
+          "actions": [
+            "Percorrere l'intero sito controllando i pericoli",
+            "Rimuovere o coprire oggetti appuntiti",
+            "Riempire buche e depressioni",
+            "Rastrellare la superficie liscia prima di posare la pavimentazione"
+          ]
+        },
+        {
+          "id": "drainage-planning",
+          "title": "Pianificazione del Drenaggio",
+          "purpose": "Prevenire problemi d'acqua durante il maltempo",
+          "pdfStepReference": "Sezione 3.3",
+          "content": [
+            "Pianificare il drenaggio prima dell'installazione in climi umidi",
+            "Scavare trincea perimetrale per dirigere l'acqua lontano",
+            "Assicurarsi che l'acqua scorra via dalla tenda, non verso di essa",
+            "Considerare i modelli stagionali dell'acqua"
+          ],
+          "actions": [
+            "Identificare la direzione naturale del drenaggio",
+            "Scavare trincea attorno al perimetro della tenda",
+            "Creare canale di deflusso per dirigere l'acqua lontano",
+            "Testare il sistema di drenaggio prima della stagione piovosa"
+          ],
+          "warnings": [
+            "L'acqua stagnante indebolisce gli ancoraggi a terra",
+            "Il terreno saturo potrebbe non supportare il peso della struttura",
+            "L'acqua sotto la pavimentazione può causare rischi di scivolamento"
+          ]
+        }
+      ]
+    }
+  ]
+}
