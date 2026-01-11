@@ -1,0 +1,616 @@
+{
+  "title": "Descrizione Smontaggio IDTM",
+  "overview": "Questo documento descrive tutte le fasi di smontaggio per l'IDTM (Modulo di Trattamento Malattie Infettive) basato sul sistema di Tenda Gonfiabile AZF4-27. L'IDTM è composto da 3 tende (2 moduli pazienti + 1 modulo staff) con 6 vestiboli, pavimentazione rigida e reti parasole. Lo smontaggio consiste nel ripetere la procedura di installazione in ordine inverso.",
+  "sourceDocument": "EN-MAN-AZF4-27-WFP_User_Manual_DRAFT01 (1).pdf",
+  "pdfReference": "Pagine 34-38 | Sezione 3.11",
+  "requiredPersonnel": "Minimo 2-3 persone",
+  "estimatedTime": "Circa 4 ore per il sistema completo",
+  "sections": [
+    {
+      "id": "pre-dismantling",
+      "title": "Requisiti Pre-Smontaggio",
+      "pdfReference": "Pagina 34 | Sezione 3.11",
+      "description": "Condizioni richieste e avvertenze di sicurezza prima dello smontaggio",
+      "requirements": [
+        {
+          "id": "personnel-requirements",
+          "title": "Requisiti Personale",
+          "pdfReference": "Pagina 34 | Sezione 3.11",
+          "content": [
+            "Minimo 2-3 persone per uno smontaggio sicuro",
+            "Formazione raccomandata per tutto il personale"
+          ],
+          "images": []
+        },
+        {
+          "id": "weather-requirements",
+          "title": "Requisiti Meteo",
+          "pdfReference": "Pagina 34 | Sezione 3.11",
+          "content": [
+            "Lo smontaggio è fortemente sconsigliato in caso di venti forti o piogge intense",
+            "Vento: Massimo 40 km/h durante lo smontaggio"
+          ],
+          "images": [
+            {
+              "filename": "34_pre_dismantling_requirements_img4.jpeg",
+              "description": "Variazioni di temperatura e considerazioni ambientali"
+            }
+          ]
+        },
+        {
+          "id": "safety-warnings",
+          "title": "Avvertenze di Sicurezza e Preparazione",
+          "pdfReference": "Pagina 34 | Sezione 3.11",
+          "content": [
+            "Assicurarsi che tutti gli accessori siano stati rimossi dall'interno della tenda",
+            "Pulire il telo di fondo per assicurarsi che non rimangano oggetti appuntiti (pietre, rami, ecc.)",
+            "Gli oggetti appuntiti potrebbero danneggiare la tenda durante lo stoccaggio",
+            "Non trascinare i teli della tenda sul terreno - questo potrebbe danneggiare la pelle della tenda",
+            "I teli del tetto sono facili da piegare - se noti resistenza, smetti di piegare e controlla eventuali ostacoli",
+            "Evitare di imballare la tenda quando è bagnata, umida e/o sporca",
+            "Se impacchi la tenda mentre è ancora bagnata o umida, disimballa, pulisci e asciuga entro 72 ore per evitare la muffa",
+            "Raccogli, pulisci e imballa tutti gli articoli, e fai un inventario prima del carico sul camion"
+          ],
+          "images": [
+            {
+              "filename": "34_pre_dismantling_requirements_img5.png",
+              "description": "Linee guida per la preparazione e selezione del sito"
+            },
+            {
+              "filename": "34_pre_dismantling_requirements_img6.png",
+              "description": "Requisiti di preparazione del sito di installazione"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "electrical-removal",
+      "title": "Rimozione Sistema Elettrico",
+      "pdfReference": "Pagina 34 | Passo 1.0",
+      "description": "Rimuovere il sistema elettrico e l'illuminazione prima dello smontaggio",
+      "steps": [
+        {
+          "id": "electrical-step-1",
+          "stepNumber": 1,
+          "title": "Rimuovere il Sistema Elettrico",
+          "pdfReference": "Pagina 34 | Passo 1.0",
+          "purpose": "Scollegare e imballare tutti i componenti elettrici",
+          "actions": [
+            "Scollegare tutti gli alimentatori strisce LED",
+            "Rimuovere dimmer master e slave",
+            "Scollegare le strisce LED dagli archi della tenda",
+            "Raccogliere tutti i cavi di prolunga",
+            "Rimuovere gli splitter",
+            "Imballare il quadro di distribuzione principale",
+            "Riporre tutti i componenti elettrici nelle scatole designate"
+          ],
+          "images": []
+        }
+      ]
+    },
+    {
+      "id": "cleaning",
+      "title": "Pulizia e Preparazione",
+      "pdfReference": "Pagina 34 | Passo 1.0",
+      "description": "Pulire e asciugare tutte le tende prima dello smontaggio",
+      "steps": [
+        {
+          "id": "cleaning-step-1",
+          "stepNumber": 1,
+          "title": "Pulire e Asciugare le Tende",
+          "pdfReference": "Pagina 34 | Passo 1.0",
+          "purpose": "Prevenire muffa e danni durante lo stoccaggio",
+          "actions": [
+            "Rimuovere tutti gli accessori dall'interno della tenda",
+            "Pulire accuratamente il telo di fondo",
+            "Rimuovere tutti gli oggetti appuntiti (pietre, rami, detriti)",
+            "Assicurarsi che la tenda sia completamente asciutta",
+            "Se la tenda è bagnata quando imballata, deve essere disimballata e asciugata entro 72 ore per evitare la muffa"
+          ],
+          "criticalWarning": "Tutti gli articoli devono essere puliti e completamente asciugati prima di essere stoccati. Le tende bagnate o umide imballate per più di 72 ore svilupperanno muffa.",
+          "images": []
+        }
+      ]
+    },
+    {
+      "id": "anchoring-removal",
+      "title": "Rimozione Sistema di Ancoraggio",
+      "pdfReference": "Pagina 34 | Passo 2.0",
+      "description": "Rimuovere tutti i picchetti e le funi di ancoraggio",
+      "steps": [
+        {
+          "id": "anchoring-step-2",
+          "stepNumber": 2,
+          "title": "Rimuovere Funi di Ancoraggio e Picchetti",
+          "pdfReference": "Pagina 34 | Passo 2.0",
+          "purpose": "Preparare le tende per lo sgonfiaggio",
+          "actions": [
+            "Rimuovere tutte le funi di ancoraggio da vestiboli e tende principali",
+            "Estrarre tutti i picchetti a T da 50cm dal terreno",
+            "Estrarre tutti i picchetti a T da 30cm dalle asole del telo di fondo",
+            "Pulire tutti i picchetti",
+            "Riporre picchetti e corde nelle rispettive borse",
+            "Totale picchetti da rimuovere: circa 84 picchetti"
+          ],
+          "images": []
+        }
+      ]
+    },
+    {
+      "id": "inner-cabins-removal",
+      "title": "Rimozione Cabine Interne",
+      "pdfReference": "Pagina 34 | Passi 3.0-4.0",
+      "description": "Smontare e imballare le strutture delle cabine interne",
+      "steps": [
+        {
+          "id": "inner-cabins-step-3",
+          "stepNumber": 3,
+          "title": "Scollegare le Cabine Interne",
+          "pdfReference": "Pagina 34 | Passo 3.0",
+          "purpose": "Rimuovere le partizioni interne",
+          "actions": [
+            "Partendo da un lato, scollegare i bottoni a levetta dai perni plastici",
+            "Procedere lungo gli archi rimuovendo tutti i bottoni a levetta",
+            "Continuare fino a quando tutti i bottoni a levetta sono scollegati",
+            "Rimuovere i rivestimenti delle cabine interne dalla tenda"
+          ],
+          "images": []
+        },
+        {
+          "id": "inner-cabins-step-4",
+          "stepNumber": 4,
+          "title": "Rimuovere le Barre di Supporto",
+          "pdfReference": "Pagina 34 | Passo 4.0",
+          "purpose": "Smontare la struttura portante delle cabine",
+          "actions": [
+            "Rimuovere tutte le barre di supporto dai moduli pazienti (4 barre ciascuno)",
+            "Rimuovere tutte le barre di supporto dal modulo staff (2 barre)",
+            "Riporre le barre in modo appropriato"
+          ],
+          "images": []
+        },
+        {
+          "id": "inner-cabins-step-5",
+          "stepNumber": 5,
+          "title": "Piegare e Imballare le Cabine Interne",
+          "pdfReference": "Pagina 35 | Passo 5.0",
+          "purpose": "Preparare le cabine interne per lo stoccaggio",
+          "actions": [
+            "Piegare le cabine interne su una superficie pulita o sopra un telo di plastica",
+            "Assicurarsi che il tessuto sia pulito e asciutto",
+            "Riporre le cabine interne piegate nelle rispettive borse",
+            "Chiudere correttamente le borse"
+          ],
+          "images": []
+        }
+      ]
+    },
+    {
+      "id": "vestibule-dismantling",
+      "title": "Sgonfiaggio e Scollegamento Vestiboli",
+      "pdfReference": "Pagina 35 | Passo 6.0",
+      "description": "Scollegare e sgonfiare le strutture dei vestiboli",
+      "steps": [
+        {
+          "id": "vestibule-step-6",
+          "stepNumber": 6,
+          "title": "Scollegare i Vestiboli dalle Tende Principali",
+          "pdfReference": "Pagina 35 | Passo 6.0",
+          "purpose": "Separare i vestiboli dal sistema tenda",
+          "actions": [
+            "Scollegare tutti i perni/bulloni di bloccaggio che collegano i distanziatori dei vestiboli alle tende",
+            "Rimuovere le connessioni a doppio perno dai perni singoli",
+            "Separare tutti e 6 i vestiboli dalle strutture delle tende principali"
+          ],
+          "images": [
+            {
+              "filename": "35_vestibule_sun_shadowing_removal_img3.png",
+              "description": "Illustrazione rimozione perno di bloccaggio"
+            },
+            {
+              "filename": "35_vestibule_sun_shadowing_removal_img4.png",
+              "description": "Dettaglio connessione perno"
+            },
+            {
+              "filename": "35_vestibule_sun_shadowing_removal_img5.jpeg",
+              "description": "Foto separazione vestibolo"
+            },
+            {
+              "filename": "35_vestibule_sun_shadowing_removal_img6.jpeg",
+              "description": "Foto rimozione rete parasole"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tent-deflation",
+      "title": "Sgonfiaggio Tende e Vestiboli",
+      "pdfReference": "Pagine 36-37 | Passi 7.0-10.0",
+      "description": "Sgonfiare tutte le strutture delle tende e preparare per la piegatura",
+      "steps": [
+        {
+          "id": "deflation-step-7",
+          "stepNumber": 7,
+          "title": "Preparare per lo Sgonfiaggio",
+          "pdfReference": "Pagina 36 | Passo 7.0",
+          "purpose": "Preparare le tende per la rimozione dell'aria",
+          "actions": [
+            "Chiudere tutte le finestre sulle tende principali e sui vestiboli",
+            "Lasciare le porte delle tende APERTE in modo che l'aria non rimanga intrappolata durante lo sgonfiaggio",
+            "Scollegare il sistema di monitoraggio pressione dal gonfiatore",
+            "Rimuovere il tubo di feedback pressione dall'interno della tenda",
+            "Aprire i tappi protettivi sulle valvole di gonfiaggio",
+            "Inserire il dito all'interno della valvola e ruotare il perno centrale in senso antiorario con l'unghia",
+            "Aprire tutte le valvole di gonfiaggio per far uscire l'aria",
+            "Attendere che le tende si sgonfino naturalmente"
+          ],
+          "criticalNote": "Lasciare le porte delle tende APERTE durante lo sgonfiaggio per evitare che l'aria rimanga intrappolata all'interno e per prevenire danni alle valvole di passaggio aria.",
+          "images": [
+            {
+              "filename": "36_tent_deflation_step_7-8_img3.png",
+              "description": "Illustrazione posizione porta"
+            },
+            {
+              "filename": "36_tent_deflation_step_7-8_img5.jpeg",
+              "description": "Foto collasso tenda passo 7"
+            }
+          ]
+        },
+        {
+          "id": "deflation-step-8",
+          "stepNumber": 8,
+          "title": "Facilitare il Collasso della Tenda",
+          "pdfReference": "Pagina 36 | Passo 8.0",
+          "purpose": "Aiutare la tenda a sgonfiarsi correttamente per una piegatura più facile",
+          "actions": [
+            "Premere sugli archi all'altezza della vita per aiutare la tenda a collassare su se stessa",
+            "Assicurarsi che il tetto cada sopra il telo di fondo (non lateralmente)",
+            "Prendere il gonfiatore dalla borsa",
+            "Collegare il collettore tubi di gonfiaggio all'accoppiamento INLET (modalità sgonfiaggio)"
+          ],
+          "criticalNote": "Per facilitare il successivo processo di piegatura, premere sugli archi in modo che il tetto cada sopra il telo di fondo e non lateralmente.",
+          "images": [
+            {
+              "filename": "36_tent_deflation_step_7-8_img6.jpeg",
+              "description": "Foto processo di sgonfiaggio passo 8"
+            }
+          ]
+        },
+        {
+          "id": "deflation-step-9",
+          "stepNumber": 9,
+          "title": "Completare lo Sgonfiaggio con il Gonfiatore",
+          "pdfReference": "Pagina 37 | Passo 9.0",
+          "purpose": "Svuotare completamente il telaio della tenda per una piegatura più facile",
+          "actions": [
+            "Una volta sgonfiata la tenda, inserire i rubinetti dei tubi di gonfiaggio nelle valvole di gonfiaggio",
+            "Fissare gli anelli a vite e aprire i rubinetti",
+            "Collegare tutte le valvole di gonfiaggio ai tubi",
+            "Accendere il gonfiatore in modalità sgonfiaggio (INLET)",
+            "Attendere circa 5 minuti per lo sgonfiaggio completo",
+            "Quando il telaio della tenda è completamente sgonfiato, spegnere il gonfiatore",
+            "Rimuovere i rubinetti dei tubi dalle valvole",
+            "Chiudere tutte le valvole di gonfiaggio"
+          ],
+          "criticalNote": "L'uso del gonfiatore in modalità sgonfiaggio (INLET) è molto importante poiché aiuta a svuotare completamente il telaio della tenda e semplifica notevolmente la successiva procedura di piegatura.",
+          "images": [
+            {
+              "filename": "37_tent_deflation_step_9-10_img3.jpeg",
+              "description": "Foto sgonfiaggio completo passo 9"
+            },
+            {
+              "filename": "37_tent_deflation_step_9-10_img4.jpeg",
+              "description": "Foto chiusura valvola"
+            }
+          ]
+        },
+        {
+          "id": "deflation-step-10",
+          "stepNumber": 10,
+          "title": "Posizionare la Tenda Sgonfiata",
+          "pdfReference": "Pagina 37 | Passo 10.0",
+          "purpose": "Preparare la tenda per il processo di piegatura",
+          "actions": [
+            "Regolare la posizione del tetto della tenda in modo che sia sopra il telo di fondo",
+            "Posizionare le funi di ancoraggio sopra il tetto della tenda",
+            "Assicurarsi che la tenda sia correttamente posizionata per la piegatura"
+          ],
+          "images": [
+            {
+              "filename": "37_tent_deflation_step_9-10_img5.jpeg",
+              "description": "Schema piegatura tenda - pannello piatto"
+            },
+            {
+              "filename": "37_tent_deflation_step_9-10_img6.jpeg",
+              "description": "Schema piegatura tenda - pezzo a cuneo/bordo"
+            },
+            {
+              "filename": "37_tent_deflation_step_9-10_img7.jpeg",
+              "description": "Foto posizione finale sgonfiaggio"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sun-shadowing-removal",
+      "title": "Rimozione Reti Parasole",
+      "pdfReference": "Pagina 35 | Passo 6.0",
+      "description": "Rimuovere i sistemi di protezione solare",
+      "steps": [
+        {
+          "id": "sun-shadowing-step",
+          "stepNumber": 11,
+          "title": "Rimuovere Reti Parasole e Distanziatori",
+          "pdfReference": "Pagina 35 | Passo 6.0",
+          "purpose": "Smontare il sistema di protezione solare",
+          "actions": [
+            "Rimuovere tutte e 3 le reti parasole dalle tende",
+            "Sgonfiare i distanziatori pneumatici",
+            "Scollegare i distanziatori dagli accoppiamenti della tenda",
+            "Rimuovere i perni/bulloni di bloccaggio",
+            "Piegare le reti parasole",
+            "Riporre le reti nelle rispettive borse"
+          ],
+          "images": [
+            {
+              "filename": "35_vestibule_sun_shadowing_removal_img3.png",
+              "description": "Illustrazione rimozione perno di bloccaggio"
+            },
+            {
+              "filename": "35_vestibule_sun_shadowing_removal_img4.png",
+              "description": "Dettaglio scollegamento perno"
+            },
+            {
+              "filename": "35_vestibule_sun_shadowing_removal_img5.jpeg",
+              "description": "Foto separazione distanziatore"
+            },
+            {
+              "filename": "35_vestibule_sun_shadowing_removal_img6.jpeg",
+              "description": "Foto rimozione rete parasole"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tent-folding",
+      "title": "Piegatura e Imballaggio Tenda",
+      "pdfReference": "Pagine 37-38 | Passi 11.0-16.0",
+      "description": "Piegare e imballare le tende per stoccaggio e trasporto",
+      "steps": [
+        {
+          "id": "folding-step-11",
+          "stepNumber": 11,
+          "title": "Piegare le Tende Secondo lo Schema",
+          "pdfReference": "Pagina 37 | Passo 11.0",
+          "purpose": "Creare un pacco compatto per lo stoccaggio",
+          "actions": [
+            "Seguire lo schema di piegatura come mostrato nei diagrammi del manuale",
+            "Piegare la tenda in un pacco rettangolare",
+            "Assicurarsi che la larghezza corrisponda alla larghezza della borsa di trasporto"
+          ],
+          "images": []
+        },
+        {
+          "id": "folding-step-12",
+          "stepNumber": 12,
+          "title": "Pulire la Tenda Durante la Piegatura",
+          "pdfReference": "Pagina 37 | Passo 12.0",
+          "purpose": "Prevenire danni durante lo stoccaggio",
+          "actions": [
+            "Assicurarsi che la tenda sia pulita prima dell'imballaggio",
+            "Rimuovere ghiaia e pietre sotto il telo di fondo durante la piegatura",
+            "Gli oggetti appuntiti danneggeranno il telo della tenda durante lo stoccaggio"
+          ],
+          "criticalWarning": "Assicurarsi che la tenda sia pulita quando la pieghi e la imballi. Ghiaia e pietre danneggeranno il telo della tenda durante lo stoccaggio.",
+          "images": []
+        },
+        {
+          "id": "folding-step-13",
+          "stepNumber": 13,
+          "title": "Verificare che la Tenda sia Asciutta",
+          "pdfReference": "Pagina 37 | Passo 13.0",
+          "purpose": "Prevenire la formazione di muffa",
+          "actions": [
+            "Assicurarsi che la tenda sia completamente asciutta durante la piegatura e l'imballaggio",
+            "Se la tenda è bagnata quando imballata, deve essere installata nuovamente in seguito nel magazzino per pulirla e asciugarla",
+            "Preparare per uno stoccaggio adeguato solo quando completamente asciutta"
+          ],
+          "criticalWarning": "Assicurarsi che la tenda sia asciutta quando la pieghi e la imballi. Se è bagnata quando imballata, dovresti installarla nuovamente in seguito nel tuo magazzino per pulirla e farla asciugare come preparazione per lo stoccaggio.",
+          "images": []
+        },
+        {
+          "id": "folding-step-14",
+          "stepNumber": 14,
+          "title": "Arrotolare il Pacco della Tenda",
+          "pdfReference": "Pagina 38 | Passo 14.0",
+          "purpose": "Creare la forma imballata finale",
+          "actions": [
+            "Arrotolare il pacco risultante partendo dal lato opposto della borsa di trasporto",
+            "Piegare un'estremità del pacco risultante",
+            "Posizionare la borsa di trasporto della tenda sotto l'estremità piegata",
+            "Ripiegare il pacco sulla borsa"
+          ],
+          "images": [
+            {
+              "filename": "38_tent_folding_packing_img3.jpeg",
+              "description": "Foto piegatura passo 1"
+            },
+            {
+              "filename": "38_tent_folding_packing_img4.jpeg",
+              "description": "Foto piegatura passo 2"
+            },
+            {
+              "filename": "38_tent_folding_packing_img5.jpeg",
+              "description": "Foto arrotolamento passo 3"
+            },
+            {
+              "filename": "38_tent_folding_packing_img6.jpeg",
+              "description": "Foto posizionamento borsa passo 4"
+            }
+          ]
+        },
+        {
+          "id": "folding-step-15",
+          "stepNumber": 15,
+          "title": "Verificare la Larghezza del Pacco",
+          "pdfReference": "Pagina 38 | Passo 15.0",
+          "purpose": "Garantire la corretta vestibilità nella borsa di trasporto",
+          "actions": [
+            "Prima di iniziare ad arrotolare il pacco della tenda, controllare che la larghezza corrisponda alla larghezza della borsa",
+            "Regolare la piegatura se necessario per corrispondere alle dimensioni della borsa"
+          ],
+          "images": [
+            {
+              "filename": "38_tent_folding_packing_img3.jpeg",
+              "description": "Esempio verifica larghezza pacco"
+            },
+            {
+              "filename": "38_tent_folding_packing_img4.jpeg",
+              "description": "Controllo dimensioni pacco prima dell'arrotolamento"
+            }
+          ]
+        },
+        {
+          "id": "folding-step-16",
+          "stepNumber": 16,
+          "title": "Fissare la Tenda Imballata",
+          "pdfReference": "Pagina 38 | Passo 16.0",
+          "purpose": "Preparare per trasporto e stoccaggio",
+          "actions": [
+            "Assicurarsi che il pacco sia ben centrato nella borsa",
+            "Chiudere la borsa usando le cinghie fornite",
+            "Stringere saldamente le cinghie",
+            "Verificare che la tenda sia correttamente imballata"
+          ],
+          "images": [
+            {
+              "filename": "38_tent_folding_packing_img7.jpeg",
+              "description": "Foto imballaggio finale passo 5"
+            },
+            {
+              "filename": "38_tent_folding_packing_img8.png",
+              "description": "Schema fissaggio cinghie"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hard-floor-removal",
+      "title": "Smontaggio Pavimento Rigido",
+      "pdfReference": "Pagina 16 (ordine inverso)",
+      "description": "Rimuovere e imballare le piastrelle del pavimento rigido",
+      "steps": [
+        {
+          "id": "hard-floor-step-17",
+          "stepNumber": 17,
+          "title": "Smontare il Pavimento Rigido",
+          "pdfReference": "Pagina 16 | Ordine inverso dell'installazione",
+          "purpose": "Rimuovere le piastrelle per il trasporto",
+          "actions": [
+            "Rimuovere le piastrelle del pavimento rigido in ordine inverso rispetto all'installazione",
+            "Impilare le piastrelle con cura sul pallet",
+            "Usare il transpallet per spostare il pallet delle piastrelle nell'area di stoccaggio",
+            "Peso per pallet: circa 180 kg - usare attrezzatura di sollevamento appropriata"
+          ],
+          "images": [
+            {
+              "filename": "16_hard_floor_installation_reverse_img4.jpeg",
+              "description": "Foto rimozione pavimento"
+            },
+            {
+              "filename": "16_hard_floor_installation_reverse_img6.jpeg",
+              "description": "Foto piastrelle impilate"
+            },
+            {
+              "filename": "16_hard_floor_installation_reverse_img7.png",
+              "description": "Illustrazione transpallet"
+            },
+            {
+              "filename": "16_hard_floor_installation_reverse_img8.jpeg",
+              "description": "Foto trasporto pavimento"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "final-packing",
+      "title": "Inventario Finale e Imballaggio",
+      "pdfReference": "Pagina 34 | Istruzioni Generali",
+      "description": "Completare il processo di smontaggio con inventario e organizzazione",
+      "steps": [
+        {
+          "id": "final-step-18",
+          "stepNumber": 18,
+          "title": "Inventario e Organizzazione",
+          "pdfReference": "Pagina 34 | Istruzioni Generali",
+          "purpose": "Assicurarsi che tutti i componenti siano contabilizzati e correttamente stoccati",
+          "actions": [
+            "Raccogliere tutti i componenti e verificare con la lista di imballaggio",
+            "Pulire tutti gli articoli prima dell'imballaggio",
+            "Controllare le etichette di imballaggio e sostituire le etichette mancanti se necessario",
+            "Assicurarsi che le unità di imballaggio non siano state danneggiate durante lo smontaggio",
+            "Imballare gli articoli più sensibili in alto (es. luci)",
+            "Assicurarsi che nessun articolo possa cadere durante il trasporto o lo stoccaggio",
+            "Eseguire l'inventario completo prima del carico sul camion",
+            "Verificare che tutte e 3 le tende principali siano imballate",
+            "Verificare che tutti e 6 i vestiboli siano imballati",
+            "Verificare che tutte le cabine interne siano imballate",
+            "Verificare che tutti i componenti elettrici siano imballati",
+            "Verificare che le piastrelle del pavimento rigido siano sul pallet",
+            "Verificare che tutti i picchetti, corde e accessori siano nelle borse"
+          ],
+          "images": []
+        }
+      ]
+    },
+    {
+      "id": "storage-preparation",
+      "title": "Preparazione allo Stoccaggio",
+      "pdfReference": "Pagine 39-41 | Sezione 4.1 PMI 5-8",
+      "description": "Preparare i componenti per uno stoccaggio adeguato",
+      "requirements": [
+        {
+          "id": "storage-requirements",
+          "title": "Requisiti di Stoccaggio",
+          "pdfReference": "Pagine 39-41 | PMI 7-8",
+          "content": [
+            "Tutti gli articoli devono essere stoccati in imballaggi adeguati, lontano da acqua e parassiti",
+            "Tutti gli articoli devono essere puliti e completamente asciugati prima dello stoccaggio",
+            "Temperatura di stoccaggio ideale: 18-21°C",
+            "Umidità dell'aria: 60-65%",
+            "L'area di stoccaggio deve avere buona circolazione d'aria",
+            "Nessun parassita deve entrare nell'area di stoccaggio",
+            "Gli articoli devono essere stoccati lontano da fonti d'acqua",
+            "Gli articoli più sensibili devono essere imballati in alto",
+            "Assicurarsi che nessun articolo possa cadere durante il trasporto o lo stoccaggio"
+          ],
+          "images": []
+        },
+        {
+          "id": "maintenance-before-storage",
+          "title": "Manutenzione Prima dello Stoccaggio",
+          "pdfReference": "Pagine 39-41 | PMI 5-6",
+          "content": [
+            "Pulire tutte le parti tessili secondo le istruzioni di pulizia",
+            "Pulire macchie speciali da erba, olio, penne a sfera, ecc.",
+            "Ispezionare visivamente tutte le parti tessili per tagli, buchi, abrasioni, strappi",
+            "Controllare cuciture o giunti saldati aperti per danni",
+            "Identificare le parti rotte che necessitano sostituzione",
+            "Controllare tutte le parti mobili come cerniere aprendo e chiudendole",
+            "Cercare parti rotte o corrose",
+            "Controllare visivamente le borse per eventuali danni",
+            "Assicurarsi che tutte le parti siano asciutte prima dell'imballaggio",
+            "Reimballare tutte le unità pulite, riparate e complete sui pallet corretti"
+          ],
+          "images": []
+        }
+      ]
+    }
+  ]
+}

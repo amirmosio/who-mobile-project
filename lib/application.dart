@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import 'package:who_mobile_project/app_core/theme/colors.dart';
 import 'package:who_mobile_project/app_core/theme/theme.dart';
 import 'package:who_mobile_project/generated/i18n/app_localizations.dart';
+import 'package:who_mobile_project/providers/app_locale/app_locale_provider.dart';
 import 'package:who_mobile_project/routing_config/base_navigator_route_builder.dart';
 import 'package:who_mobile_project/ui/feedback/feedback_floating_button.dart';
 import 'package:who_mobile_project/app_core/config/environment_constants.dart';
@@ -30,14 +31,15 @@ class _MyAppState extends ConsumerState<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: Removed - appPreferencesProvider no longer available
-    // Using default values: isDsaFontEnabled = false, locale = Italian
+    // Watch the locale provider for reactive updates
+    final locale = ref.watch(appLocaleProvider);
+
     return Container(
       color: BZColors.background,
       child: Container(
         color: BZColors.background,
         child: MaterialApp.router(
-          key: UniqueKey(),
+          key: ValueKey(locale), // Rebuild when locale changes
           title: 'App Material',
           color: Colors.transparent,
           debugShowCheckedModeBanner: false,
@@ -46,12 +48,12 @@ class _MyAppState extends ConsumerState<MyApp> {
           routeInformationParser: baseNavRouter.routeInformationParser,
           routeInformationProvider: baseNavRouter.routeInformationProvider,
           localizationsDelegates: [
-            AppLocalizations.delegate, // Add this line
+            AppLocalizations.delegate,
             GlobalMaterialLocalizations.delegate,
             GlobalWidgetsLocalizations.delegate,
             GlobalCupertinoLocalizations.delegate,
           ],
-          locale: const Locale('it', 'IT'), // Default: Italian
+          locale: locale, // Dynamic locale from provider
           supportedLocales: AvailableLanguage.allLocales,
           builder: (context, child) {
             return Stack(

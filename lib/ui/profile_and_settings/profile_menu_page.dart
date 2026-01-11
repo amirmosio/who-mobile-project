@@ -3,12 +3,16 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:who_mobile_project/app_core/theme/colors.dart';
 import 'package:who_mobile_project/app_core/theme/text_styles/app_text_styles.dart';
+import 'package:who_mobile_project/general/constants/available_languages.dart';
 import 'package:who_mobile_project/general/models/auth/app_user.dart';
+import 'package:who_mobile_project/generated/i18n/app_localizations.dart';
+import 'package:who_mobile_project/providers/app_locale/app_locale_provider.dart';
 import 'package:who_mobile_project/providers/auth/auth_provider.dart';
 import 'package:who_mobile_project/providers/auth/current_user_provider.dart';
 import 'package:who_mobile_project/providers/auth/role_access_provider.dart';
 import 'package:who_mobile_project/providers/base/base_api_state.dart';
 import 'package:who_mobile_project/routing_config/routes.dart';
+import 'package:who_mobile_project/ui/profile_and_settings/widgets/language_picker_sheet.dart';
 import 'package:who_mobile_project/ui/profile_and_settings/widgets/profile_header_widget.dart';
 import 'package:who_mobile_project/ui/profile_and_settings/widgets/profile_menu_item.dart';
 
@@ -19,6 +23,7 @@ class ProfileMenuPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
     final userAsync = ref.watch(currentUserProvider);
     final isSuperAdmin = ref.watch(isSuperAdminProvider);
     final hasAdminAccess = ref.watch(hasAdminAccessProvider);
@@ -29,7 +34,7 @@ class ProfileMenuPage extends ConsumerWidget {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text(
-              next.exception.message ?? 'An error occurred',
+              next.exception.message ?? l10n.an_error_occurred,
               style: AppTextStyles.smallText.copyWith(color: GVColors.white),
             ),
             backgroundColor: GVColors.redError,
@@ -49,7 +54,7 @@ class ProfileMenuPage extends ConsumerWidget {
         backgroundColor: GVColors.white,
         elevation: 0,
         title: Text(
-          'Profile & Settings',
+          l10n.profile_settings_title,
           style: AppTextStyles.headingH2.copyWith(
             color: GVColors.black,
             fontSize: 18,
@@ -68,7 +73,7 @@ class ProfileMenuPage extends ConsumerWidget {
       body: userAsync.when(
         data: (user) => _buildContent(context, ref, user, isSuperAdmin, hasAdminAccess),
         loading: () => const Center(child: CircularProgressIndicator()),
-        error: (error, _) => _buildError(context, error.toString()),
+        error: (error, _) => _buildError(context, ref, error.toString()),
       ),
     );
   }
@@ -80,6 +85,8 @@ class ProfileMenuPage extends ConsumerWidget {
     bool isSuperAdmin,
     bool hasAdminAccess,
   ) {
+    final l10n = AppLocalizations.of(context)!;
+
     return SingleChildScrollView(
       padding: const EdgeInsets.all(16),
       child: Column(
@@ -91,23 +98,23 @@ class ProfileMenuPage extends ConsumerWidget {
           const SizedBox(height: 24),
 
           // Auth Section
-          _buildAuthSection(context, ref, user),
+          _buildAuthSection(context, ref, user, l10n),
 
           const SizedBox(height: 24),
 
           // Admin Section (only for admin users)
           if (hasAdminAccess) ...[
-            _buildAdminSection(context, isSuperAdmin),
+            _buildAdminSection(context, isSuperAdmin, l10n),
             const SizedBox(height: 24),
           ],
 
           // Settings Section
-          _buildSettingsSection(context),
+          _buildSettingsSection(context, ref, l10n),
 
           const SizedBox(height: 24),
 
           // App Info Section
-          _buildAppInfoSection(context),
+          _buildAppInfoSection(context, l10n),
 
           const SizedBox(height: 32),
         ],
@@ -115,122 +122,155 @@ class ProfileMenuPage extends ConsumerWidget {
     );
   }
 
-  Widget _buildAuthSection(BuildContext context, WidgetRef ref, AppUser user) {
+  Widget _buildAuthSection(
+    BuildContext context,
+    WidgetRef ref,
+    AppUser user,
+    AppLocalizations l10n,
+  ) {
     return _buildSection(
-      title: 'Account',
+      title: l10n.section_account,
       children: [
         if (user.isGuest) ...[
           ProfileMenuItem(
             icon: Icons.login,
-            title: 'Login as Admin',
-            subtitle: 'Sign in to access admin features',
+            title: l10n.login_as_admin,
+            subtitle: l10n.login_as_admin_subtitle,
             iconColor: GVColors.purpleAccent,
             onTap: () => context.push(YRRoutes.adminLogin),
           ),
         ] else ...[
           ProfileMenuItem(
             icon: Icons.logout,
-            title: 'Logout',
-            subtitle: 'Sign out from your account',
+            title: l10n.logout_button,
+            subtitle: l10n.logout_subtitle,
             iconColor: GVColors.redError,
-            onTap: () => _showLogoutDialog(context, ref),
+            onTap: () => _showLogoutDialog(context, ref, l10n),
           ),
         ],
       ],
     );
   }
 
-  Widget _buildAdminSection(BuildContext context, bool isSuperAdmin) {
+  Widget _buildAdminSection(
+    BuildContext context,
+    bool isSuperAdmin,
+    AppLocalizations l10n,
+  ) {
     return _buildSection(
-      title: 'Administration',
+      title: l10n.section_administration,
       children: [
         if (isSuperAdmin)
           ProfileMenuItem(
             icon: Icons.admin_panel_settings,
-            title: 'Admin Panel',
-            subtitle: 'Manage admin users',
+            title: l10n.admin_panel,
+            subtitle: l10n.admin_panel_subtitle,
             iconColor: GVColors.orangeAccent,
             onTap: () => context.push(YRRoutes.adminPanel),
           ),
         ProfileMenuItem(
           icon: Icons.analytics_outlined,
-          title: 'Analytics',
-          subtitle: 'View app statistics',
+          title: l10n.analytics_menu,
+          subtitle: l10n.analytics_subtitle,
           iconColor: GVColors.blueInfo,
           showComingSoon: true,
-          onTap: () => _showComingSoon(context),
+          onTap: () => _showComingSoon(context, l10n),
         ),
         ProfileMenuItem(
           icon: Icons.settings_applications,
-          title: 'App Configuration',
-          subtitle: 'Manage app settings',
+          title: l10n.app_configuration,
+          subtitle: l10n.app_configuration_subtitle,
           iconColor: GVColors.greenSuccess,
           showComingSoon: true,
-          onTap: () => _showComingSoon(context),
+          onTap: () => _showComingSoon(context, l10n),
         ),
       ],
     );
   }
 
-  Widget _buildSettingsSection(BuildContext context) {
+  Widget _buildSettingsSection(
+    BuildContext context,
+    WidgetRef ref,
+    AppLocalizations l10n,
+  ) {
+    final currentLocale = ref.watch(appLocaleProvider);
+    final currentLanguage = AvailableLanguage.fromLocale(currentLocale);
+
     return _buildSection(
-      title: 'Settings',
+      title: l10n.section_settings,
       children: [
         ProfileMenuItem(
           icon: Icons.notifications_outlined,
-          title: 'Notifications',
-          subtitle: 'Manage notification preferences',
+          title: l10n.notifications_menu,
+          subtitle: l10n.notifications_subtitle,
           iconColor: GVColors.yellowWarning,
           showComingSoon: true,
-          onTap: () => _showComingSoon(context),
+          onTap: () => _showComingSoon(context, l10n),
         ),
         ProfileMenuItem(
           icon: Icons.language,
-          title: 'Language',
-          subtitle: 'Change app language',
+          title: l10n.language_setting,
+          subtitle: l10n.language_subtitle,
           iconColor: GVColors.blueFeature,
-          showComingSoon: true,
-          onTap: () => _showComingSoon(context),
+          trailing: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                currentLanguage.getDisplayName(l10n),
+                style: AppTextStyles.bodyText.copyWith(
+                  color: GVColors.darkGrey,
+                  fontSize: 14,
+                ),
+              ),
+              const SizedBox(width: 4),
+              const Icon(
+                Icons.chevron_right,
+                color: GVColors.lightGrey,
+                size: 20,
+              ),
+            ],
+          ),
+          onTap: () => LanguagePickerSheet.show(context),
         ),
         ProfileMenuItem(
           icon: Icons.dark_mode_outlined,
-          title: 'Appearance',
-          subtitle: 'Light/Dark mode settings',
+          title: l10n.appearance_menu,
+          subtitle: l10n.appearance_subtitle,
           iconColor: GVColors.purpleFeature,
           showComingSoon: true,
-          onTap: () => _showComingSoon(context),
+          onTap: () => _showComingSoon(context, l10n),
         ),
       ],
     );
   }
 
-  Widget _buildAppInfoSection(BuildContext context) {
+  Widget _buildAppInfoSection(BuildContext context, AppLocalizations l10n) {
     return _buildSection(
-      title: 'About',
+      title: l10n.section_about,
       children: [
         ProfileMenuItem(
           icon: Icons.info_outline,
-          title: 'About WHO Mobile',
-          subtitle: 'App information and version',
+          title: l10n.about_app,
+          subtitle: l10n.about_app_subtitle,
           iconColor: GVColors.darkGrey,
           showComingSoon: true,
-          onTap: () => _showComingSoon(context),
+          onTap: () => _showComingSoon(context, l10n),
         ),
         ProfileMenuItem(
           icon: Icons.privacy_tip_outlined,
-          title: 'Privacy Policy',
-          subtitle: 'Read our privacy policy',
+          title: l10n.privacy_policy,
+          subtitle: l10n.privacy_policy_subtitle,
           iconColor: GVColors.darkGrey,
           showComingSoon: true,
-          onTap: () => _showComingSoon(context),
+          onTap: () => _showComingSoon(context, l10n),
         ),
         ProfileMenuItem(
           icon: Icons.description_outlined,
-          title: 'Terms of Service',
-          subtitle: 'Read our terms of service',
+          title: l10n.terms_of_service,
+          subtitle: l10n.terms_of_service_subtitle,
           iconColor: GVColors.darkGrey,
           showComingSoon: true,
-          onTap: () => _showComingSoon(context),
+          onTap: () => _showComingSoon(context, l10n),
         ),
       ],
     );
@@ -270,7 +310,8 @@ class ProfileMenuPage extends ConsumerWidget {
     );
   }
 
-  Widget _buildError(BuildContext context, String error) {
+  Widget _buildError(BuildContext context, WidgetRef ref, String error) {
+    final l10n = AppLocalizations.of(context)!;
     return Center(
       child: Padding(
         padding: const EdgeInsets.all(32),
@@ -284,7 +325,7 @@ class ProfileMenuPage extends ConsumerWidget {
             ),
             const SizedBox(height: 16),
             Text(
-              'Error loading profile',
+              l10n.error_loading_profile,
               style: AppTextStyles.headingH2.copyWith(
                 color: GVColors.black,
               ),
@@ -303,7 +344,11 @@ class ProfileMenuPage extends ConsumerWidget {
     );
   }
 
-  Future<void> _showLogoutDialog(BuildContext context, WidgetRef ref) async {
+  Future<void> _showLogoutDialog(
+    BuildContext context,
+    WidgetRef ref,
+    AppLocalizations l10n,
+  ) async {
     final confirm = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
@@ -311,13 +356,13 @@ class ProfileMenuPage extends ConsumerWidget {
           borderRadius: BorderRadius.circular(16),
         ),
         title: Text(
-          'Logout',
+          l10n.logout_button,
           style: AppTextStyles.headingH3.copyWith(
             color: GVColors.black,
           ),
         ),
         content: Text(
-          'Are you sure you want to logout?',
+          l10n.logout_confirmation,
           style: AppTextStyles.bodyText.copyWith(
             color: GVColors.darkGrey,
           ),
@@ -326,7 +371,7 @@ class ProfileMenuPage extends ConsumerWidget {
           TextButton(
             onPressed: () => Navigator.of(context).pop(false),
             child: Text(
-              'Cancel',
+              l10n.cancel,
               style: AppTextStyles.bodyText.copyWith(
                 color: GVColors.darkGrey,
               ),
@@ -341,7 +386,7 @@ class ProfileMenuPage extends ConsumerWidget {
                 borderRadius: BorderRadius.circular(60),
               ),
             ),
-            child: const Text('Logout'),
+            child: Text(l10n.logout_button),
           ),
         ],
       ),
@@ -352,11 +397,11 @@ class ProfileMenuPage extends ConsumerWidget {
     }
   }
 
-  void _showComingSoon(BuildContext context) {
+  void _showComingSoon(BuildContext context, AppLocalizations l10n) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text(
-          'Coming soon!',
+          l10n.coming_soon,
           style: AppTextStyles.smallText.copyWith(color: GVColors.white),
         ),
         backgroundColor: GVColors.blueInfo,

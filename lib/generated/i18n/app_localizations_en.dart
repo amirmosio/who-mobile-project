@@ -742,7 +742,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get privacy_conditions => 'Privacy and conditions';
 
   @override
-  String get terms_of_service => 'Terms of service';
+  String get terms_of_service => 'Terms of Service';
 
   @override
   String get terms_and_conditions => 'Terms and Conditions';
@@ -3141,4 +3141,722 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get delete => 'Delete';
+
+  @override
+  String get profile_settings_title => 'Profile & Settings';
+
+  @override
+  String get section_account => 'Account';
+
+  @override
+  String get login_as_admin => 'Login as Admin';
+
+  @override
+  String get login_as_admin_subtitle => 'Sign in to access admin features';
+
+  @override
+  String get logout_button => 'Logout';
+
+  @override
+  String get logout_subtitle => 'Sign out from your account';
+
+  @override
+  String get logout_confirmation => 'Are you sure you want to logout?';
+
+  @override
+  String get section_administration => 'Administration';
+
+  @override
+  String get admin_panel => 'Admin Panel';
+
+  @override
+  String get admin_panel_subtitle => 'Manage admin users';
+
+  @override
+  String get analytics_menu => 'Analytics';
+
+  @override
+  String get analytics_subtitle => 'View app statistics';
+
+  @override
+  String get app_configuration => 'App Configuration';
+
+  @override
+  String get app_configuration_subtitle => 'Manage app settings';
+
+  @override
+  String get section_settings => 'Settings';
+
+  @override
+  String get notifications_menu => 'Notifications';
+
+  @override
+  String get notifications_subtitle => 'Manage notification preferences';
+
+  @override
+  String get language_setting => 'Language';
+
+  @override
+  String get language_subtitle => 'Change app language';
+
+  @override
+  String get appearance_menu => 'Appearance';
+
+  @override
+  String get appearance_subtitle => 'Light/Dark mode settings';
+
+  @override
+  String get section_about => 'About';
+
+  @override
+  String get about_app => 'About WHO Mobile';
+
+  @override
+  String get about_app_subtitle => 'App information and version';
+
+  @override
+  String get privacy_policy_subtitle => 'Read our privacy policy';
+
+  @override
+  String get terms_of_service_subtitle => 'Read our terms of service';
+
+  @override
+  String get coming_soon => 'Coming soon!';
+
+  @override
+  String get error_loading_profile => 'Error loading profile';
+
+  @override
+  String get select_language => 'Select Language';
+
+  @override
+  String get language_changed => 'Language changed successfully';
+
+  @override
+  String get an_error_occurred => 'An error occurred';
+
+  @override
+  String get dashboard => 'Dashboard';
+
+  @override
+  String get no_comments => 'No Comments';
+
+  @override
+  String get be_first_to_comment => 'Be the first to add a comment';
+
+  @override
+  String no_comments_in_category(String category) {
+    return 'No comments in $category category';
+  }
+
+  @override
+  String get error_loading_comments => 'Error Loading Comments';
+
+  @override
+  String get add_comment => 'Add Comment';
+
+  @override
+  String get delete_comment => 'Delete Comment';
+
+  @override
+  String get delete_comment_confirmation =>
+      'Are you sure you want to delete this comment? This action cannot be undone.';
+
+  @override
+  String get failed_to_delete_comment => 'Failed to delete comment';
+
+  @override
+  String get comment_deleted => 'Comment deleted';
+
+  @override
+  String get failed_to_load_comments => 'Failed to load comments';
+
+  @override
+  String get no_comments_yet => 'No comments yet';
+
+  @override
+  String view_all_comments(int count) {
+    return 'View all $count comments';
+  }
+
+  @override
+  String get access_denied => 'Access Denied';
+
+  @override
+  String get admin_required_for_comments =>
+      'Admin privileges are required to access comments.';
+
+  @override
+  String get dismantling => 'Dismantling';
+
+  @override
+  String get dismantling_in_progress => 'Dismantling in Progress';
+
+  @override
+  String get dismantling_follow_steps =>
+      'Follow each step carefully to ensure safe removal';
+
+  @override
+  String get dismantling_complete => 'Dismantling Complete';
+
+  @override
+  String get dismantling_complete_message =>
+      'All dismantling steps have been completed. This will reset the installation status.';
+
+  @override
+  String get not_yet => 'Not Yet';
+
+  @override
+  String get complete_dismantling => 'Complete Dismantling';
+
+  @override
+  String get select_item_to_scan => 'Select Item to Scan';
+
+  @override
+  String scan_item(String item) {
+    return 'Scan $item';
+  }
+
+  @override
+  String get choose_image_source => 'Choose image source:';
+
+  @override
+  String get camera => 'Camera';
+
+  @override
+  String get gallery => 'Gallery';
+
+  @override
+  String get analyzing_image => 'Analyzing image...';
+
+  @override
+  String get item_verified => 'Item Verified!';
+
+  @override
+  String get item_not_found => 'Item Not Found';
+
+  @override
+  String get item_verified_message =>
+      'The item has been successfully verified and matched with the packing list.';
+
+  @override
+  String get item_not_found_message =>
+      'The item could not be verified. Please try again or check manually.';
+
+  @override
+  String get item_auto_checked =>
+      'This item will be automatically checked off.';
+
+  @override
+  String get check_item => 'Check Item';
+
+  @override
+  String get idtm_packing_list => 'IDTM Packing List';
+
+  @override
+  String get equipment_checklist => 'Equipment Checklist';
+
+  @override
+  String get verify_all_items => 'Verify all items before installation';
+
+  @override
+  String total_weight(String weight) {
+    return 'Total Weight: $weight kg';
+  }
+
+  @override
+  String get scanning => 'Scanning...';
+
+  @override
+  String get scan_with_camera => 'Scan with Camera';
+
+  @override
+  String get reset_checklist => 'Reset Checklist';
+
+  @override
+  String get reset_checklist_confirmation =>
+      'Are you sure you want to reset all checkboxes? This cannot be undone.';
+
+  @override
+  String get reset => 'Reset';
+
+  @override
+  String get checklist_reset_success => 'Checklist reset successfully';
+
+  @override
+  String get maintenance_mode => 'Maintenance Mode';
+
+  @override
+  String get system_operational => 'System Operational';
+
+  @override
+  String get installation_completed_successfully =>
+      'Installation completed successfully';
+
+  @override
+  String get maintenance_tasks => 'Maintenance Tasks';
+
+  @override
+  String get view_maintenance_guide => 'View Maintenance Guide';
+
+  @override
+  String get maintenance_guide_description =>
+      'Complete maintenance instructions and procedures';
+
+  @override
+  String get daily_inspection => 'Daily Inspection';
+
+  @override
+  String get daily_inspection_description =>
+      'Check system status and connections';
+
+  @override
+  String get weekly_maintenance => 'Weekly Maintenance';
+
+  @override
+  String get weekly_maintenance_description =>
+      'Perform routine maintenance checks';
+
+  @override
+  String get monthly_review => 'Monthly Review';
+
+  @override
+  String get monthly_review_description => 'Complete monthly system review';
+
+  @override
+  String get maintenance_notes => 'Maintenance Notes';
+
+  @override
+  String get quick_actions => 'Quick Actions';
+
+  @override
+  String get view_documentation => 'View Documentation';
+
+  @override
+  String get export_maintenance_log => 'Export Maintenance Log';
+
+  @override
+  String get maintenance_alerts_active => 'Maintenance Alerts Active';
+
+  @override
+  String scheduled_reminders_count(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: 's',
+      one: '',
+    );
+    return '$count scheduled reminder$_temp0';
+  }
+
+  @override
+  String get maintenance_notifications_info =>
+      'You will receive periodic notifications for maintenance tasks';
+
+  @override
+  String get scheduled_reminders => 'Scheduled Reminders';
+
+  @override
+  String get facility_use_guide => 'Facility Use Guide';
+
+  @override
+  String get idtm_facility_use_title => 'IDTM Facility Use & Functioning';
+
+  @override
+  String get facility_use_description =>
+      'Browse sections for operational guidance, safety warnings, and site selection requirements.';
+
+  @override
+  String get installation_guide => 'Installation Guide';
+
+  @override
+  String get maintenance_guide => 'Maintenance Guide';
+
+  @override
+  String get overall_progress => 'Overall Progress';
+
+  @override
+  String steps_completed(int completed, int total) {
+    return '$completed of $total steps completed';
+  }
+
+  @override
+  String error_with_message(String error) {
+    return 'Error: $error';
+  }
+
+  @override
+  String get ready_to_begin_installation =>
+      'Ready to begin installation process';
+
+  @override
+  String get installation_in_progress => 'Installation in progress';
+
+  @override
+  String get system_installed_operational => 'System installed and operational';
+
+  @override
+  String get dismantling_in_progress_status => 'Dismantling in progress';
+
+  @override
+  String get installation_completed => 'Installation completed';
+
+  @override
+  String get start_installation => 'Start Installation';
+
+  @override
+  String get continue_installation => 'Continue Installation';
+
+  @override
+  String get start_dismantling => 'Start Dismantling';
+
+  @override
+  String get continue_dismantling => 'Continue Dismantling';
+
+  @override
+  String get start_new_installation => 'Start New Installation';
+
+  @override
+  String get system_reset_ready => 'System reset. Ready for new installation.';
+
+  @override
+  String get show_packing_list => 'Show Packing List';
+
+  @override
+  String get start_dismantling_question => 'Start Dismantling?';
+
+  @override
+  String get dismantling_confirmation_message =>
+      'You are about to start the dismantling process. This will:';
+
+  @override
+  String get exit_maintenance_mode => 'Exit maintenance mode';
+
+  @override
+  String get begin_dismantling_phase => 'Begin dismantling phase';
+
+  @override
+  String get open_dismantling_guide => 'Open dismantling guide';
+
+  @override
+  String get maintenance_complete_before_dismantling =>
+      'Make sure all maintenance tasks are completed before proceeding.';
+
+  @override
+  String get dismantling_started_message =>
+      'Dismantling phase started. Opening dismantling guide.';
+
+  @override
+  String get installation_guide_progress => 'Installation Guide Progress';
+
+  @override
+  String get installation_complete_title => 'Installation Complete!';
+
+  @override
+  String get installation_complete_maintenance =>
+      'Installation completed! Opening maintenance mode.';
+
+  @override
+  String get finish_go_to_maintenance => 'Finish & Go to Maintenance';
+
+  @override
+  String get dismantling_guide_progress => 'Dismantling Guide Progress';
+
+  @override
+  String get dismantling_complete_title => 'Dismantling Complete!';
+
+  @override
+  String get dismantling_lifecycle_complete =>
+      'Dismantling completed! IDTM lifecycle finished.';
+
+  @override
+  String get idtm_lifecycle_completed => 'IDTM Lifecycle Completed!';
+
+  @override
+  String get lifecycle_completed_description =>
+      'Installation, maintenance, and dismantling phases have been successfully completed.';
+
+  @override
+  String get installed => 'Installed';
+
+  @override
+  String get maintained => 'Maintained';
+
+  @override
+  String get dismantled => 'Dismantled';
+
+  @override
+  String get idtm_installation => 'IDTM Installation';
+
+  @override
+  String get what_is_idtm => 'What is IDTM';
+
+  @override
+  String get idtm_overview => 'IDTM Overview';
+
+  @override
+  String page_indicator(int current, int total) {
+    return 'Page $current of $total';
+  }
+
+  @override
+  String failed_to_load_pdf(String error) {
+    return 'Failed to load PDF: $error';
+  }
+
+  @override
+  String get not_found_404 => '404 Not Found';
+
+  @override
+  String address_label(String address) {
+    return 'Address: $address';
+  }
+
+  @override
+  String get alert_templates => 'Alert Templates';
+
+  @override
+  String get initialize_maintenance_alerts => 'Initialize Maintenance Alerts';
+
+  @override
+  String get all_facilities => 'All Facilities';
+
+  @override
+  String get no_alert_templates => 'No Alert Templates';
+
+  @override
+  String get no_alert_templates_message =>
+      'Tap the + button to create your first alert template for facility maintenance';
+
+  @override
+  String get error_loading_templates => 'Error Loading Templates';
+
+  @override
+  String get super_admin_required_templates =>
+      'Super Admin privileges are required to manage alert templates.';
+
+  @override
+  String get go_to_dashboard => 'Go to Dashboard';
+
+  @override
+  String get add_template => 'Add Template';
+
+  @override
+  String get delete_template => 'Delete Template';
+
+  @override
+  String delete_template_confirmation(String title) {
+    return 'Are you sure you want to delete \"$title\"? This action cannot be undone.';
+  }
+
+  @override
+  String get admin_management => 'Admin Management';
+
+  @override
+  String get manage_alert_templates => 'Manage Alert Templates';
+
+  @override
+  String get no_admin_users => 'No Admin Users';
+
+  @override
+  String get no_admin_users_message =>
+      'Tap the + button to add your first admin user';
+
+  @override
+  String get error_loading_admins => 'Error Loading Admins';
+
+  @override
+  String get super_admin_required_page =>
+      'Super Admin privileges are required to access this page.';
+
+  @override
+  String get add_admin => 'Add Admin';
+
+  @override
+  String get login_removed => 'Login functionality has been removed';
+
+  @override
+  String get address_collection => 'Address Collection';
+
+  @override
+  String get address_collection_removed =>
+      'Address collection functionality has been removed';
+
+  @override
+  String get feedback_available => 'Feedback feature available in main button';
+
+  @override
+  String get installation_notes => 'Installation Notes';
+
+  @override
+  String error_scanning_item(String error) {
+    return 'Error scanning item: $error';
+  }
+
+  @override
+  String item_verified_checked(String item) {
+    return '✓ $item verified and checked!';
+  }
+
+  @override
+  String qty_label(int quantity) {
+    return 'Qty: $quantity';
+  }
+
+  @override
+  String qty_dimensions(int quantity, String dimensions) {
+    return 'Qty: $quantity • $dimensions';
+  }
+
+  @override
+  String weight_label(String weight) {
+    return 'Weight: $weight';
+  }
+
+  @override
+  String get dismantling_notes => 'Dismantling Notes';
+
+  @override
+  String get packing_europallet_1 => 'EUROPALLET 1';
+
+  @override
+  String get packing_europallet_1_desc =>
+      'First europallet containing main tent and accessories';
+
+  @override
+  String get packing_europallet_2 => 'EUROPALLET 2';
+
+  @override
+  String get packing_europallet_2_desc =>
+      'Second europallet containing main tent and sun net';
+
+  @override
+  String get packing_europallet_3 => 'EUROPALLET 3';
+
+  @override
+  String get packing_europallet_3_desc =>
+      'Third europallet containing main tent and sun net';
+
+  @override
+  String get packing_azf4_27_wfp => 'AZF4 27 WFP';
+
+  @override
+  String get packing_azf4_27_wfp_desc => 'Main tent structure';
+
+  @override
+  String get packing_bag_inner_cabins => 'BAG FOR INNER CABINS';
+
+  @override
+  String get packing_bag_inner_cabins_desc => 'Inner cabin partitions';
+
+  @override
+  String get packing_bag_sun_net => 'BAG FOR SUN SHADOWING NET';
+
+  @override
+  String get packing_bag_sun_net_desc => 'Sun protection net';
+
+  @override
+  String get packing_logistic_box_1 => 'LOGISTIC BOX 1';
+
+  @override
+  String get packing_logistic_box_1_desc =>
+      'Logistics box with sun shadowing net';
+
+  @override
+  String get packing_sun_shadowing_net => 'SUN SHADOWING NET';
+
+  @override
+  String get packing_sun_shadowing_net_desc => 'Additional sun protection net';
+
+  @override
+  String get packing_logistic_box_2 => 'LOGISTIC BOX 2';
+
+  @override
+  String get packing_logistic_box_2_desc =>
+      'Logistics box with mid and inner liners';
+
+  @override
+  String get packing_mid_liner => 'MID LINER';
+
+  @override
+  String get packing_mid_liner_desc => 'Mid layer insulation liner';
+
+  @override
+  String get packing_inner_liner => 'INNER LINER';
+
+  @override
+  String get packing_inner_liner_desc => 'Inner insulation liner';
+
+  @override
+  String get packing_logistic_box_3 => 'LOGISTIC BOX 3';
+
+  @override
+  String get packing_logistic_box_3_desc => 'Logistics box with vestibules';
+
+  @override
+  String get packing_vestibule => 'VESTIBULE';
+
+  @override
+  String get packing_vestibule_desc => 'Entry vestibules';
+
+  @override
+  String get packing_logistic_box_4 => 'LOGISTIC BOX 4';
+
+  @override
+  String get packing_logistic_box_4_desc =>
+      'Logistics box with staking kit, inflator, and repair kit';
+
+  @override
+  String get packing_staking_kit => 'AZF4 27 & VESTIBULE STAKING KIT';
+
+  @override
+  String get packing_staking_kit_desc => 'Ground anchoring stakes and ropes';
+
+  @override
+  String get packing_manual_inflator => 'MANUAL INFLATOR';
+
+  @override
+  String get packing_manual_inflator_desc => 'Manual pump for tent inflation';
+
+  @override
+  String get packing_repair_kit => 'REPAIR KIT';
+
+  @override
+  String get packing_repair_kit_desc => 'Emergency repair materials and tools';
+
+  @override
+  String get packing_logistic_box_5 => 'LOGISTIC BOX 5';
+
+  @override
+  String get packing_logistic_box_5_desc => 'Additional logistics box';
+
+  @override
+  String get packing_logistic_box_6 => 'LOGISTIC BOX 6';
+
+  @override
+  String get packing_logistic_box_6_desc => 'Additional logistics box';
+
+  @override
+  String get packing_logistic_box_7 => 'LOGISTIC BOX 7';
+
+  @override
+  String get packing_logistic_box_7_desc => 'Additional logistics box';
+
+  @override
+  String get packing_logistic_box_8 => 'LOGISTIC BOX 8';
+
+  @override
+  String get packing_logistic_box_8_desc => 'Additional logistics box';
+
+  @override
+  String get packing_logistic_box_9 => 'LOGISTIC BOX 9';
+
+  @override
+  String get packing_logistic_box_9_desc => 'Additional logistics box';
+
+  @override
+  String get packing_tiles_pallet => 'TILES PALLET';
+
+  @override
+  String get packing_tiles_pallet_desc => 'Hard flooring tiles for tent base';
 }

@@ -1,0 +1,495 @@
+{
+  "title": "Istruzioni di Manutenzione IDTM",
+  "overview": "Guida completa per la manutenzione preventiva e correttiva dell'IDTM (Modulo di Trattamento Malattie Infettive) basato sul sistema di Tenda Gonfiabile AZF4-27. Questa guida copre la manutenzione durante le operazioni, prima dello stoccaggio, durante lo stoccaggio e le procedure di riparazione.",
+  "sourceDocument": "EN-MAN-AZF4-27-WFP_User_Manual_DRAFT01.pdf",
+  "sections": [
+    {
+      "id": "preventive-maintenance",
+      "title": "Istruzioni di Manutenzione Preventiva (PMI)",
+      "description": "Attività di manutenzione programmate per prevenire problemi e prolungare la vita della tenda",
+      "pdfReference": "Pagine 39-41 | Sezione 4.1",
+      "steps": [
+        {
+          "id": "pmi-1-setup",
+          "title": "PMI 1: Montaggio della Tenda",
+          "purpose": "Garantire un montaggio corretto per prevenire danni durante l'installazione",
+          "pdfStepReference": "Durante il montaggio | Livello di Riparazione 1",
+          "content": [
+            "Seguire le istruzioni di montaggio nel manuale",
+            "Proteggere la pelle della tenda da oggetti appuntiti nell'area di montaggio",
+            "Evitare di trascinare la pelle della tenda sul terreno",
+            "Assicurarsi che gli oggetti interni come i mobili non abbiano piedini appuntiti o con bordi taglienti",
+            "Gli arredi interni non devono toccare le pareti e il tetto della tenda, specialmente durante venti forti",
+            "Non lasciare la tenda incustodita per lunghi periodi, poiché potrebbero verificarsi venti forti"
+          ],
+          "actions": [
+            "Seguire attentamente le istruzioni di montaggio",
+            "Ispezionare l'area di montaggio per oggetti appuntiti",
+            "Posizionare i mobili lontano dalle pareti della tenda",
+            "Assegnare personale per monitorare la tenda durante il montaggio"
+          ],
+          "warnings": [
+            "Non trascinare mai i componenti della tenda sul terreno",
+            "Evitare di lasciare la tenda incustodita con tempo variabile"
+          ]
+        },
+        {
+          "id": "pmi-2-daily-inspection",
+          "title": "PMI 2: Ispezione Giornaliera",
+          "purpose": "Mantenere le condizioni della tenda attraverso ispezioni regolari",
+          "pdfStepReference": "Giornalmente | Livello di Riparazione 1",
+          "content": [
+            "Proteggere la pelle della tenda da oggetti appuntiti all'interno",
+            "Spazzare e/o aspirare il telo di fondo",
+            "Controllare se le cerniere scorrono fluidamente",
+            "Pulire le cerniere dalla sabbia e applicare sapone secco o spray a base di teflon se necessario",
+            "Controllare che tutti i picchetti siano saldamente ancorati e sostituirli se necessario",
+            "Assicurare una buona ventilazione per evitare la muffa"
+          ],
+          "actions": [
+            "Spazzare o aspirare il telo di fondo giornalmente",
+            "Testare tutte le cerniere per un funzionamento fluido",
+            "Applicare lubrificante alle cerniere appiccicose",
+            "Ispezionare e stringere tutti i picchetti",
+            "Garantire una ventilazione adeguata"
+          ],
+          "warnings": [
+            "La muffa può svilupparsi in tende poco ventilate",
+            "I picchetti danneggiati devono essere sostituiti immediatamente"
+          ]
+        },
+        {
+          "id": "pmi-3-weather-conditions",
+          "title": "PMI 3: Condizioni Meteo Eccezionali",
+          "purpose": "Proteggere la tenda durante condizioni meteo avverse",
+          "pdfStepReference": "Giorni ventosi, pioggia, neve, variazioni di temperatura | Livello di Riparazione 1",
+          "content": [
+            "Vento: Chiudere tutte le aperture quando la velocità del vento supera i 40 km/h",
+            "Durante venti forti, controllare regolarmente che i picchetti siano saldamente ancorati e le funi di ancoraggio adeguatamente tensionate",
+            "All'esterno della tenda, riporre tutti gli oggetti che potrebbero volare e danneggiare la tenda",
+            "Pioggia: Prevenire l'acqua che scorre sotto la tenda scavando una piccola trincea di drenaggio",
+            "Fissare la soglia della porta in posizione sollevata per impedire all'acqua di entrare",
+            "Controllare regolarmente la formazione di pozze d'acqua e rimuovere gli accumuli dall'interno in fase iniziale",
+            "Neve: Controllare regolarmente neve e ghiaccio, rimuovere immediatamente",
+            "Variazioni di temperatura: Controllare la pressione del telaio della tenda e rigonfiare se necessario",
+            "Controllare la condensazione all'interno della tenda e assicurare buona ventilazione o ACU",
+            "Controllare formazioni di ghiaccio sulla tenda e rimuovere immediatamente"
+          ],
+          "actions": [
+            "Chiudere tutte le aperture sopra i 40 km/h di vento",
+            "Controllare l'ancoraggio dei picchetti durante venti forti",
+            "Scavare trincea di drenaggio attorno alla tenda",
+            "Rimuovere neve e ghiaccio prontamente",
+            "Monitorare e mantenere la pressione del telaio"
+          ],
+          "warnings": [
+            "Non installare mai la tenda con venti superiori a 40 km/h",
+            "L'accumulo di ghiaccio e neve può danneggiare la struttura",
+            "Le pozze d'acqua possono causare problemi strutturali"
+          ]
+        },
+        {
+          "id": "pmi-4-dismantling",
+          "title": "PMI 4: Smontaggio",
+          "purpose": "Smontare correttamente la tenda per prevenire danni",
+          "pdfStepReference": "Durante lo smontaggio | Livello di Riparazione 1",
+          "content": [
+            "Seguire le istruzioni di smontaggio nel manuale",
+            "Rimuovere tutti gli oggetti e lo sporco dall'interno e dall'esterno della tenda per evitare danni",
+            "Non trascinare i teli della tenda sul terreno - questo potrebbe danneggiare la pelle della tenda",
+            "I teli del tetto sono facili da piegare - se noti resistenza, smetti di piegare e controlla eventuali ostacoli",
+            "Evitare di imballare la tenda quando è bagnata, umida e/o sporca",
+            "Se impacchi la tenda bagnata, disimballa, pulisci e asciuga entro 72 ore per evitare la muffa",
+            "Raccogli, pulisci e imballa tutti gli articoli, esegui l'inventario prima del carico sul camion",
+            "Lo smontaggio è fortemente sconsigliato in caso di venti forti o piogge intense"
+          ],
+          "actions": [
+            "Rimuovere tutti gli oggetti dall'interno della tenda",
+            "Pulire la tenda prima dell'imballaggio",
+            "Seguire la procedura di piegatura corretta",
+            "Eseguire il controllo dell'inventario prima del trasporto"
+          ],
+          "warnings": [
+            "Non trascinare mai i teli della tenda sul terreno",
+            "Le tende bagnate devono essere asciugate entro 72 ore",
+            "Non smontare durante venti forti o piogge intense"
+          ]
+        },
+        {
+          "id": "pmi-5-textile-maintenance",
+          "title": "PMI 5: Manutenzione Parti Tessili",
+          "purpose": "Manutenere i componenti tessili prima dello stoccaggio",
+          "pdfStepReference": "Prima dello stoccaggio | Livello di Riparazione 1",
+          "content": [
+            "Pulire tutte le parti tessili secondo le istruzioni di pulizia (PMI 6)",
+            "Pulire eventuali macchie speciali da erba, olio, penne a sfera, ecc.",
+            "Ispezionare visivamente tutte le parti tessili per tagli, buchi, abrasioni, strappi, cuciture o giunti saldati aperti",
+            "Verificare se il tessuto necessita di lavori di riparazione",
+            "Controllare oggetti appuntiti all'interno della tenda e rimuoverli",
+            "Controllare tutte le parti mobili come cerniere aprendo e chiudendole",
+            "Prestare attenzione a parti rotte o corrose",
+            "Controllare visivamente le borse per eventuali danni",
+            "Tutte le parti devono essere asciutte prima dell'imballaggio",
+            "Reimballare tutte le unità pulite, riparate e complete sui pallet corretti"
+          ],
+          "actions": [
+            "Pulire tutte le parti tessili",
+            "Ispezionare per danni (tagli, buchi, strappi)",
+            "Testare tutte le cerniere e parti mobili",
+            "Assicurarsi che le parti siano completamente asciutte",
+            "Reimballare sui pallet corretti"
+          ],
+          "warnings": [
+            "Non stoccare mai tessuti bagnati o umidi",
+            "Le parti danneggiate devono essere riparate prima dello stoccaggio"
+          ]
+        },
+        {
+          "id": "pmi-6-cleaning",
+          "title": "PMI 6: Pulizia",
+          "purpose": "Procedure di pulizia corrette per i componenti della tenda",
+          "pdfStepReference": "Prima dello stoccaggio | Livello di Riparazione 1",
+          "content": [
+            "Usare una spazzola morbida (nylon) o spugna",
+            "Lavare usando una soluzione detergente a base d'acqua",
+            "Per sporco leggero: concentrazione 5% a 20°C",
+            "Per sporco medio: concentrazione 10% a 20°C",
+            "Per sporco ostinato: concentrazione 10% a 50°C",
+            "Risciacquare con acqua pulita",
+            "Depositi difficili possono includere origine minerale (grassi, catrame, calcare), origine vegetale (foglie, pollini, resine), o origine animale (escrementi di uccelli, insetti schiacciati)",
+            "Questi depositi possono richiedere tecniche speciali - contattare Lanco per consulenza prima di tentare"
+          ],
+          "actions": [
+            "Usare spazzola morbida in nylon o spugna",
+            "Preparare soluzione detergente appropriata",
+            "Applicare la concentrazione corretta in base al livello di sporco",
+            "Risciacquare accuratamente con acqua pulita",
+            "Contattare il produttore per depositi ostinati"
+          ],
+          "warnings": [
+            "Non usare prodotti chimici aggressivi senza consultare Lanco",
+            "Una pulizia impropria può danneggiare il telo della tenda"
+          ]
+        },
+        {
+          "id": "pmi-7-storage-process",
+          "title": "PMI 7: Processo di Stoccaggio",
+          "purpose": "Procedure di stoccaggio corrette per mantenere le condizioni dell'attrezzatura",
+          "pdfStepReference": "Prima dello stoccaggio | Livello di Riparazione 1",
+          "content": [
+            "Tutti gli articoli devono essere sempre stoccati in imballaggi adeguati, lontano da acqua e parassiti",
+            "Tutti gli articoli devono essere puliti e completamente asciugati prima dello stoccaggio",
+            "Controllare le etichette di imballaggio e sostituire le etichette mancanti se necessario",
+            "Assicurarsi che le unità di imballaggio non siano state danneggiate durante il trasporto e/o l'impilamento",
+            "Gli articoli più sensibili devono essere sempre imballati in alto (es. luci)",
+            "Assicurarsi che nessun articolo possa cadere durante il trasporto o lo stoccaggio"
+          ],
+          "actions": [
+            "Assicurarsi che tutti gli articoli siano puliti e asciutti",
+            "Controllare e sostituire le etichette mancanti",
+            "Ispezionare gli imballaggi per danni",
+            "Impilare con gli articoli sensibili in alto",
+            "Fissare gli articoli contro la caduta"
+          ],
+          "warnings": [
+            "Non stoccare mai articoli bagnati o sporchi",
+            "Proteggere da acqua e parassiti"
+          ]
+        },
+        {
+          "id": "pmi-8-storage-conditions",
+          "title": "PMI 8: Condizioni di Stoccaggio",
+          "purpose": "Mantenere un ambiente di stoccaggio ottimale",
+          "pdfStepReference": "Settimanalmente | Livello di Riparazione 1",
+          "content": [
+            "Idealmente la temperatura di stoccaggio dovrebbe essere tra 18 e 21°C",
+            "L'umidità dell'aria dovrebbe essere tra il 60% e il 65%",
+            "L'area di stoccaggio dovrebbe avere buona circolazione d'aria",
+            "Nessun parassita dovrebbe entrare nell'area di stoccaggio"
+          ],
+          "actions": [
+            "Monitorare la temperatura settimanalmente (obiettivo 18-21°C)",
+            "Controllare i livelli di umidità (obiettivo 60-65%)",
+            "Garantire un'adeguata circolazione d'aria",
+            "Ispezionare regolarmente per parassiti"
+          ],
+          "warnings": [
+            "Temperature estreme possono danneggiare i materiali",
+            "L'alta umidità favorisce la crescita di muffa"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "corrective-maintenance",
+      "title": "Istruzioni di Manutenzione Correttiva (CMI)",
+      "description": "Procedure di riparazione per danni e problemi alle attrezzature",
+      "pdfReference": "Pagine 42-43 | Sezione 4.2",
+      "steps": [
+        {
+          "id": "cmi-1-minor-repairs",
+          "title": "CMI 1: Riparazioni Tessili Minori",
+          "purpose": "Riparare danni inferiori a 15cm che non interessano parti portanti",
+          "pdfStepReference": "In caso di danno | Danni minori < 15cm",
+          "content": [
+            "I danni minori sono danni inferiori a 15 cm che non interessano le parti portanti della pelle della tenda come i punti di attacco di cinghie o corde",
+            "Spazzare via sporco/umidità con solvente MEK (metiletilchetone) o alcol denaturato",
+            "Ritagliare una toppa che sovrapponga il taglio/foro di 3 cm su tutti i lati",
+            "Arrotondare gli angoli della toppa",
+            "Posizionare la toppa sopra il foro e segnare il contorno",
+            "Irruvidire l'area dove verrà applicata la toppa usando carta vetrata",
+            "Irruvidire il lato della toppa dove verrà applicata la colla",
+            "Non toccare l'area pulita con le mani per evitare di depositare grasso",
+            "Applicare la colla uniformemente su entrambe le aree (toppa e area danneggiata)",
+            "Seguire le istruzioni della colla",
+            "Attendere il tempo di evaporazione",
+            "Posizionare accuratamente la toppa sul tessuto preparato della tenda",
+            "Premere più forte possibile usando un rullo, raschietto, ecc.",
+            "Prestare particolare attenzione ai bordi della toppa",
+            "La qualità dell'incollaggio dipende solo dalla pressione iniziale"
+          ],
+          "actions": [
+            "Pulire l'area danneggiata con MEK o alcol denaturato",
+            "Ritagliare la toppa 3cm più grande del danno su tutti i lati",
+            "Arrotondare gli angoli della toppa",
+            "Irruvidire entrambe le superfici con carta vetrata",
+            "Applicare la colla uniformemente su entrambe le superfici",
+            "Attendere il tempo di evaporazione",
+            "Posizionare la toppa accuratamente",
+            "Applicare pressione decisa specialmente ai bordi"
+          ],
+          "warnings": [
+            "MEK e alcol denaturato sono altamente infiammabili - tenere lontano da fiamme libere",
+            "Non toccare le superfici pulite a mani nude",
+            "La qualità dipende dall'applicazione della pressione iniziale"
+          ]
+        },
+        {
+          "id": "cmi-2-major-repairs",
+          "title": "CMI 2: Riparazioni Tessili Maggiori",
+          "purpose": "Gestire danni maggiori di 15cm o che interessano parti portanti",
+          "pdfStepReference": "In caso di danno | Danni maggiori > 15cm",
+          "content": [
+            "I danni maggiori sono danni superiori a 15 cm e/o che interessano le parti portanti della pelle della tenda come i punti di attacco di cinghie, corde o kedder",
+            "A seconda della natura e gravità del danno, potrebbero essere necessari strumenti aggiuntivi come macchina da cucire, pistola ad aria calda o rivettatrice ecc.",
+            "Identificare i materiali necessari per la riparazione, contattare Lanco per la fornitura di pezzi di ricambio e materiali di riparazione",
+            "Chiudere fori e fessure con una toppa di riparazione secondo CMI 1",
+            "Se il danno è troppo importante per ripararlo da soli, inviare la parte danneggiata a Lanco per la riparazione"
+          ],
+          "actions": [
+            "Valutare la gravità del danno",
+            "Contattare Lanco per pezzi di ricambio se necessario",
+            "Applicare riparazione con toppa per fori/fessure (secondo CMI 1)",
+            "Inviare in fabbrica per danni estesi"
+          ],
+          "warnings": [
+            "Sia l'alcol denaturato che il MEK sono altamente infiammabili - tenere lontano da fiamme libere",
+            "Osservare tutte le norme di sicurezza applicabili quando si applica la colla",
+            "Condizioni ambientali per riparazioni con colla: Temperatura > 5°C, Umidità relativa < 60%",
+            "Le riparazioni strutturali maggiori devono essere eseguite da Lanco"
+          ]
+        },
+        {
+          "id": "cmi-3-frame-replacement",
+          "title": "CMI 3: Sostituzione Parti del Telaio",
+          "purpose": "Sostituire componenti danneggiati del telaio pneumatico",
+          "pdfStepReference": "In caso di danno",
+          "content": [
+            "Localizzare la fonte della perdita",
+            "In caso di piccola perdita, fare riferimento a CMI 1 per riparazione con toppa",
+            "In caso di danno esteso, ordinare un arco o trave di ricambio",
+            "Rimuovere la trave danneggiata dal telo della tenda, usando i bulloni ad alette",
+            "Installare la nuova trave, usando i bulloni ad alette"
+          ],
+          "actions": [
+            "Localizzare la fonte della perdita",
+            "Applicare toppa per piccole perdite (CMI 1)",
+            "Ordinare pezzi di ricambio per danni estesi",
+            "Rimuovere la trave danneggiata usando i bulloni ad alette",
+            "Installare la nuova trave con i bulloni ad alette"
+          ],
+          "warnings": [
+            "Garantire il corretto montaggio dei pezzi di ricambio",
+            "Testare eventuali perdite dopo l'installazione"
+          ]
+        },
+        {
+          "id": "cmi-4-missing-parts",
+          "title": "CMI 4: Sostituzione Parti Mancanti",
+          "purpose": "Sostituire componenti mancanti",
+          "pdfStepReference": "In caso di parti mancanti",
+          "content": [
+            "Identificare le parti mancanti",
+            "Contattare Lanco per la fornitura di pezzi di ricambio"
+          ],
+          "actions": [
+            "Inventariare tutti i componenti",
+            "Identificare gli articoli mancanti",
+            "Contattare Lanco con numeri di parte e descrizioni"
+          ],
+          "warnings": [
+            "Usare sempre pezzi di ricambio originali Lanco"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "repair-kit",
+      "title": "Contenuto Kit di Riparazione",
+      "description": "Elenco di riferimento degli articoli del kit di riparazione forniti con ogni tenda per manutenzione sul campo di 1° Livello",
+      "pdfReference": "Pagina 44 | Sezione 4.3",
+      "images": [
+        {
+          "filename": "repair_kit_contents.png",
+          "description": "Contenuto completo del kit di riparazione inclusi toppe, strumenti, adesivi e documentazione"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "kit-container",
+          "title": "Contenitore",
+          "content": [
+            "Gabbia in plastica (1)"
+          ]
+        },
+        {
+          "id": "kit-tools",
+          "title": "Strumenti",
+          "content": [
+            "Forbici (1)",
+            "Chiave per valvole (1)",
+            "Kit da cucito (1)",
+            "Spazzola (1)"
+          ]
+        },
+        {
+          "id": "kit-patches",
+          "title": "Toppe in Tessuto (100 x 100 mm ciascuna)",
+          "content": [
+            "Toppa tessuto arco pneumatico (10)",
+            "Toppa tessuto pavimento (10)",
+            "Toppa tessuto telo (10)",
+            "Toppa tessuto rivestimento intermedio (10)",
+            "Toppa tessuto rivestimento interno (10)",
+            "Toppa tessuto cabina (10)"
+          ]
+        },
+        {
+          "id": "kit-valves",
+          "title": "Componenti Valvole",
+          "content": [
+            "Valvola di gonfiaggio completa (1)",
+            "Valvola di sovrappressione completa (1)"
+          ]
+        },
+        {
+          "id": "kit-adhesives",
+          "title": "Adesivi e Solventi",
+          "content": [
+            "Colla/adesivo PVC (1)",
+            "Solvente MEK (Metiletilchetone) (1)",
+            "Carta vetrata per preparazione superfici"
+          ]
+        },
+        {
+          "id": "kit-hardware",
+          "title": "Ferramenta",
+          "content": [
+            "Bulloni in nylon con alette (4)"
+          ]
+        },
+        {
+          "id": "kit-documentation",
+          "title": "Documentazione",
+          "content": [
+            "Manuale (1)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "support-contacts",
+      "title": "Supporto e Contatti",
+      "description": "Informazioni di contatto per pezzi di ricambio e riparazioni in fabbrica",
+      "pdfReference": "Pagina 45 | Sezione 4.4",
+      "requirements": [
+        {
+          "id": "contact-italy",
+          "title": "LANCO Srl (Italia - Sede Centrale)",
+          "content": [
+            "Via Luca Gaurico 9/11",
+            "00143 Roma (RM), Italia",
+            "Tel: +39 654832915",
+            "Email: info@lanco.it",
+            "Web: www.lanco.it"
+          ]
+        },
+        {
+          "id": "contact-germany",
+          "title": "LANCO - Dr. Lange GmbH & Co. KG (Germania)",
+          "content": [
+            "Sure Wisch 6",
+            "30625 Hannover, Germania",
+            "Tel: +49 511367155-0",
+            "Email: info@lanco.eu",
+            "Web: www.lanco.eu"
+          ]
+        },
+        {
+          "id": "contact-romania",
+          "title": "SC LANCO SRL (Romania)",
+          "content": [
+            "Pta Textilistilor 17",
+            "555700, Talmaciu, Romania",
+            "Tel: +40 269206758",
+            "Email: info@lanco.ro",
+            "Web: www.lanco.ro"
+          ]
+        },
+        {
+          "id": "contact-france",
+          "title": "LANCO SAS (Francia)",
+          "content": [
+            "Regus Tour CB21, 16 Place de l'Iris",
+            "92400 Courbevoie, Francia",
+            "Tel: +33 185658221",
+            "Email: info@lanco-tentes.fr",
+            "Web: www.lanco-tentes.fr"
+          ]
+        },
+        {
+          "id": "contact-usa",
+          "title": "LANCO North America Corp (Stati Uniti)",
+          "content": [
+            "101 N. Tryon St., Suite 112 and 6000",
+            "Charlotte, North Carolina, 28246, Stati Uniti",
+            "Tel: +1 7049985670",
+            "Email: info@lanco-rds.com",
+            "Web: www.lanco-rds.com"
+          ]
+        },
+        {
+          "id": "contact-norway",
+          "title": "Rofi AS (Norvegia)",
+          "content": [
+            "Eikremsvingen 2C",
+            "6422 Molde, Norvegia",
+            "Tel: +47 71203333",
+            "Email: sales@rofi.com",
+            "Web: www.rofi.com"
+          ]
+        },
+        {
+          "id": "spare-parts-info",
+          "title": "Informazioni Pezzi di Ricambio",
+          "content": [
+            "Quando si richiedono pezzi di ricambio, fornire:",
+            "- Il numero di parte (P/N) del pezzo, se disponibile, con una breve descrizione",
+            "- Alcune foto, se disponibili",
+            "- La quantità richiesta"
+          ]
+        }
+      ]
+    }
+  ]
+}

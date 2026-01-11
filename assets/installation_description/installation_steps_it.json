@@ -1,0 +1,976 @@
+{
+  "title": "Descrizione Installazione IDTM",
+  "overview": "Questo documento descrive tutte le fasi di installazione per l'IDTM (Modulo di Trattamento Malattie Infettive) basato sul sistema di Tenda Gonfiabile AZF4-27. L'IDTM è composto da 3 tende (2 moduli pazienti + 1 modulo staff) con 6 vestiboli, pavimentazione rigida e reti parasole.",
+  "sourceDocument": "EN-MAN-AZF4-27-WFP_User_Manual_DRAFT01 (1).pdf",
+  "sections": [
+    {
+      "id": "pre-installation",
+      "title": "Requisiti Pre-Installazione",
+      "pdfReference": "Pagine 13-14 | Sezione 3.1 & 3.2",
+      "description": "Condizioni richieste e avvertenze di sicurezza prima dell'installazione",
+      "images": [],
+      "requirements": [
+        {
+          "id": "required-personnel",
+          "title": "Personale Richiesto",
+          "images": [
+            {
+              "filename": "13_required_conditions_img3.png",
+              "description": "Icona condizioni richieste"
+            },
+            {
+              "filename": "13_required_conditions_img4.png",
+              "description": "Icona personale"
+            },
+            {
+              "filename": "13_required_conditions_img11.jpeg",
+              "description": "Personale richiesto (minimo 4 persone)"
+            }
+          ],
+          "content": [
+            "Minimo 4 persone per un'installazione sicura",
+            "Formazione raccomandata per tutto il personale"
+          ]
+        },
+        {
+          "id": "required-tools",
+          "title": "Strumenti e Attrezzature Richiesti",
+          "images": [
+            {
+              "filename": "13_required_conditions_img5.png",
+              "description": "Icona strumenti"
+            },
+            {
+              "filename": "13_required_conditions_img12.jpeg",
+              "description": "Strumenti e attrezzature richiesti"
+            }
+          ],
+          "content": [
+            "Fonte di alimentazione (con cavo di prolunga e presa schuko)",
+            "Gonfiatore elettrico (con cavo elettrico da 7m - presa schuko)",
+            "Collettore tubi di gonfiaggio",
+            "Martello"
+          ]
+        },
+        {
+          "id": "time-requirements",
+          "title": "Requisiti di Tempo",
+          "images": [
+            {
+              "filename": "13_required_conditions_img6.png",
+              "description": "Icona tempo"
+            }
+          ],
+          "content": [
+            "Per tenda: ~5 minuti di gonfiaggio",
+            "Sistema completo: ~4 ore di installazione totale"
+          ]
+        },
+        {
+          "id": "climatic-conditions",
+          "title": "Condizioni Climatiche",
+          "images": [
+            {
+              "filename": "13_required_conditions_img13.png",
+              "description": "Diagramma condizioni climatiche"
+            }
+          ],
+          "content": [
+            "Vento: Massimo 40 km/h durante l'installazione",
+            "Temperatura: +5°C o superiore desiderabile (salvo dispensa speciale)",
+            "Terreno: Richiesta superficie compatta e livellata"
+          ]
+        },
+        {
+          "id": "required-space",
+          "title": "Spazio Richiesto",
+          "images": [
+            {
+              "filename": "13_required_conditions_img8.png",
+              "description": "Icona requisiti spazio"
+            }
+          ],
+          "content": [
+            "Superficie minima: 276 m² (23m x 12m)",
+            "Perimetro di sicurezza aggiuntivo di 2m attorno all'area di installazione"
+          ]
+        },
+        {
+          "id": "safety-warnings",
+          "title": "Avvertenze di Sicurezza",
+          "images": [
+            {
+              "filename": "13_required_conditions_img9.png",
+              "description": "Icona requisiti aggiuntivi"
+            },
+            {
+              "filename": "13_required_conditions_img10.png",
+              "description": "Icona sicurezza"
+            }
+          ],
+          "content": [
+            "Meteo: Non installare mai con velocità del vento superiori a 40 km/h",
+            "Neve: Tenda progettata per carichi neve fino a 15 kg/mq - rimuovere immediatamente accumuli importanti",
+            "Carico vento: Venti sostenuti fino a 100 km/h (raffiche 120 km/h) - Chiudere tutte le aperture sopra i 40 km/h",
+            "Pioggia: Selezionare sito elevato, scavare trincea di drenaggio, evitare aree soggette ad allagamento",
+            "Variazioni temperatura: Controllare regolarmente la pressione, usare monitoraggio automatico se disponibile"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "site-selection",
+      "title": "Selezione e Preparazione del Sito di Installazione",
+      "pdfReference": "Pagina 15 | Sezione 3.3",
+      "description": "Procedure di valutazione e preparazione del sito",
+      "steps": [
+        {
+          "id": "site-selection-step-1",
+          "stepNumber": 1,
+          "title": "Valutazione del Sito",
+          "purpose": "Garantire stabilità e longevità ottimali del sistema tenda",
+          "actions": [
+            "Verificare che il sito di installazione sia piano (pendenza massima: 5%)",
+            "Controllare la superficie minima di 276 m²",
+            "Assicurarsi che il sito sia ad almeno 2m dagli alberi o edifici più vicini",
+            "Verificare che il terreno sia compatto e abbastanza asciutto per i picchetti"
+          ]
+        },
+        {
+          "id": "site-selection-step-2",
+          "stepNumber": 2,
+          "title": "Preparazione del Sito",
+          "purpose": "Prevenire danni ai materiali della tenda e garantire un drenaggio adeguato",
+          "actions": [
+            "Pulire l'area - Rimuovere oggetti appuntiti (pietre, ghiaia, rami)",
+            "Riempire le depressioni profonde se la pendenza supera il 5%",
+            "Scavare trincea di drenaggio attorno al perimetro per prevenire accumulo d'acqua",
+            "Eliminare detriti che potrebbero forare il telo di fondo"
+          ],
+          "warnings": [
+            "Non trascinare mai i componenti della tenda sul terreno per evitare danni"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hard-floor",
+      "title": "Installazione Pavimento Rigido",
+      "pdfReference": "Pagina 16 | Sezione 3.4",
+      "description": "Procedure di installazione del pavimento rigido",
+      "images": [],
+      "steps": [
+        {
+          "id": "hard-floor-step-3-1",
+          "stepNumber": 3.1,
+          "title": "Posizionare il Pallet delle Piastrelle",
+          "purpose": "Stabilire la fondazione base per la struttura della tenda",
+          "images": [
+            {
+              "filename": "16_hard_floor_installation_img4.jpeg",
+              "description": "Pallet di piastrelle"
+            },
+            {
+              "filename": "16_hard_floor_installation_img6.jpeg",
+              "description": "Diagramma posizionamento pallet"
+            }
+          ],
+          "actions": [
+            "Usare transpallet per posizionare il pallet piastrelle vicino all'area di installazione",
+            "Peso: ~180 kg per pallet - usare attrezzatura di sollevamento appropriata"
+          ]
+        },
+        {
+          "id": "hard-floor-step-3-2",
+          "stepNumber": 3.2,
+          "title": "Posare il Pavimento Rigido",
+          "purpose": "Creare una piattaforma stabile e livellata",
+          "layoutConfiguration": "[3 piastrelle] [9 piastrelle] [3 piastrelle] [8 piastrelle]\n[31 piastrelle] [10 piastrelle] [31 piastrelle]",
+          "dimensions": "Area totale 17m x 8m",
+          "images": [
+            {
+              "filename": "16_hard_floor_installation_img7.png",
+              "description": "Dettaglio piastrella"
+            },
+            {
+              "filename": "16_hard_floor_installation_img8.jpeg",
+              "description": "Installazione piastrelle che mostra lo schema di posa"
+            }
+          ],
+          "actions": [
+            "Installare le piastrelle del pavimento secondo lo schema",
+            "Assicurarsi che le piastrelle si incastrino correttamente",
+            "Verificare le dimensioni dell'area di installazione (17m x 8m)",
+            "Controllare che il pavimento sia livellato e installato correttamente"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tent-inflation",
+      "title": "Gonfiaggio Tende e Sistema di Monitoraggio Pressione",
+      "pdfReference": "Pagine 17-24 | Sezione 3.5",
+      "description": "Gonfiaggio completo delle tende e configurazione del monitoraggio pressione",
+      "steps": [
+        {
+          "id": "tent-inflation-step-4-1",
+          "stepNumber": 4.1,
+          "title": "Posizionare le Borse delle Tende",
+          "pdfStepReference": "Pagina 17, Passi 1.0-2.0",
+          "purpose": "Preparare le tende per il dispiegamento",
+          "images": [
+            {
+              "filename": "17_tent_inflation_step_1-2_img5.jpeg",
+              "description": "Borse tende sul pallet"
+            },
+            {
+              "filename": "17_tent_inflation_step_1-2_img6.png",
+              "description": "Icona dettaglio passo"
+            },
+            {
+              "filename": "17_tent_inflation_step_1-2_img8.jpeg",
+              "description": "Posizionamento borse sul pavimento"
+            },
+            {
+              "filename": "17_tent_inflation_step_1-2_img9.jpeg",
+              "description": "Tre borse posizionate sul pavimento rigido"
+            }
+          ],
+          "actions": [
+            "Con 2-3 persone, posizionare le 3 borse vicino all'area di installazione",
+            "Peso per borsa: 245 kg - usare tecnica di sollevamento appropriata",
+            "Posizionare le borse sul pavimento rigido nelle posizioni corrette",
+            "Aprire tutte e 3 le borse"
+          ]
+        },
+        {
+          "id": "tent-inflation-step-4-2",
+          "stepNumber": 4.2,
+          "title": "Dispiegare le Tende",
+          "pdfStepReference": "Pagina 17-18, Passi 3.0-6.0",
+          "purpose": "Srotolare e posizionare le strutture delle tende",
+          "images": [
+            {
+              "filename": "18_tent_inflation_step_3-7_img4.png",
+              "description": "Primo piano della valvola di gonfiaggio e valvola di sovrappressione"
+            },
+            {
+              "filename": "18_tent_inflation_step_3-7_img5.jpeg",
+              "description": "Apertura borsa tenda"
+            },
+            {
+              "filename": "18_tent_inflation_step_3-7_img6.jpeg",
+              "description": "Srotolamento tenda"
+            },
+            {
+              "filename": "18_tent_inflation_step_3-7_img7.jpeg",
+              "description": "Dispiegamento tenda, stesura tramite asole angolari"
+            }
+          ],
+          "actions": [
+            "Controllare che ogni tenda possa essere srotolata nella direzione corretta - Se errato, sollevare la borsa e ruotare di 180°",
+            "Srotolare tutte e 3 le tende",
+            "Dispiegare completamente le tende",
+            "Rimuovere e riporre le borse in un luogo sicuro",
+            "Stendere le tende tirando le quattro asole angolari"
+          ]
+        },
+        {
+          "id": "tent-inflation-step-4-3",
+          "stepNumber": 4.3,
+          "title": "Localizzare le Valvole di Gonfiaggio",
+          "pdfStepReference": "Pagina 18, Passo 7.0",
+          "purpose": "Preparare per il processo di gonfiaggio",
+          "keyInformation": {
+            "valveLocation": "Estremità inferiore di ogni arco pneumatico, sotto i lembi protettivi",
+            "valveTypes": [
+              "Valvola di gonfiaggio (posizione superiore)",
+              "Valvola di sovrappressione (posizione inferiore)"
+            ],
+            "valveCount": "3 valvole di gonfiaggio per tenda (una per arco)"
+          },
+          "actions": [
+            "Localizzare le valvole di gonfiaggio su ogni arco pneumatico",
+            "Rimuovere i lembi protettivi"
+          ]
+        },
+        {
+          "id": "tent-inflation-step-4-4",
+          "stepNumber": 4.4,
+          "title": "Installare le Reti Parasole",
+          "pdfStepReference": "Pagina 19, Passo 8.0",
+          "purpose": "Fornire protezione solare aggiuntiva",
+          "images": [
+            {
+              "filename": "19_tent_inflation_step_8-9_img3.png",
+              "description": "Dettaglio connessione accoppiamento"
+            },
+            {
+              "filename": "19_tent_inflation_step_8-9_img4.png",
+              "description": "Distanziatori installati sul tetto"
+            },
+            {
+              "filename": "19_tent_inflation_step_8-9_img5.png",
+              "description": "Rete stesa sopra la tenda"
+            },
+            {
+              "filename": "19_tent_inflation_step_8-9_img6.jpeg",
+              "description": "Installazione parasole completa"
+            }
+          ],
+          "actions": [
+            "Installare i distanziatori pneumatici sul tetto usando gli accoppiamenti su gronde e colmo",
+            "Collegare il doppio perno sul distanziatore al perno singolo sulla tenda usando perno/bullone di bloccaggio",
+            "Gonfiare i distanziatori pneumatici a 0,3 bar di pressione operativa",
+            "Stendere le reti parasole sopra tenda e distanziatori",
+            "Piegare a metà longitudinalmente, allineare la linea centrale sul distanziatore centrale",
+            "Stendere le funi di ancoraggio verso l'esterno"
+          ]
+        },
+        {
+          "id": "tent-inflation-step-4-5",
+          "stepNumber": 4.5,
+          "title": "Collegare il Gonfiatore Elettrico",
+          "pdfStepReference": "Pagina 19-20, Passi 9.0-11.0",
+          "purpose": "Preparare l'attrezzatura di gonfiaggio",
+          "images": [
+            {
+              "filename": "19_tent_inflation_step_8-9_img7.png",
+              "description": "Unità gonfiatore elettrico"
+            },
+            {
+              "filename": "20_tent_inflation_step_10-13_img4.png",
+              "description": "Collegamento tubo alla valvola"
+            },
+            {
+              "filename": "20_tent_inflation_step_10-13_img5.jpeg",
+              "description": "Rimozione tappi protettivi valvole"
+            }
+          ],
+          "actions": [
+            "Posizionare il gonfiatore elettrico a ~1m dalla tenda, vicino alle valvole di gonfiaggio",
+            "Inserire il collettore tubi di gonfiaggio nell'accoppiamento 'OUTLET'",
+            "Fissare il collettore usando il perno di fissaggio fornito",
+            "Rimuovere i tappi protettivi dalle valvole di gonfiaggio (ruotare in senso antiorario)"
+          ]
+        },
+        {
+          "id": "tent-inflation-step-4-6",
+          "stepNumber": 4.6,
+          "title": "Preparare le Valvole per il Gonfiaggio",
+          "pdfStepReference": "Pagina 20, Passo 12.0",
+          "purpose": "Assicurarsi che le valvole siano chiuse correttamente prima del gonfiaggio",
+          "criticalCheck": "Tutte le valvole devono essere chiuse prima di iniziare il gonfiaggio",
+          "valveStates": {
+            "closed": "Il perno centrale a molla è SU (~1cm sotto il bordo) ✓",
+            "open": "Il perno centrale a molla è GIÙ ✗"
+          },
+          "images": [
+            {
+              "filename": "20_tent_inflation_step_10-13_img7.jpeg",
+              "description": "Chiusura valvola ruotando in senso orario"
+            },
+            {
+              "filename": "20_tent_inflation_step_10-13_img8.jpeg",
+              "description": "Verifica valvola chiusa"
+            }
+          ],
+          "actions": [
+            "Chiudere tutte le valvole aperte: spingendo il perno centrale GIÙ e ruotando la valvola in SENSO ORARIO",
+            "Verificare che tutte le valvole siano chiuse (il perno deve essere SU)"
+          ]
+        },
+        {
+          "id": "tent-inflation-step-4-7",
+          "stepNumber": 4.7,
+          "title": "Collegare i Tubi di Gonfiaggio",
+          "pdfStepReference": "Pagina 20, Passo 13.0",
+          "purpose": "Stabilire la connessione aria al telaio della tenda",
+          "actions": [
+            "Collegare l'estremità dei tubi di gonfiaggio alle valvole",
+            "Fissare i tubi ruotando l'anello a vite in senso orario",
+            "Assicurarsi che il rubinetto di gonfiaggio sia APERTO",
+            "Verificare che tutte le valvole siano collegate ai tubi di gonfiaggio"
+          ]
+        },
+        {
+          "id": "tent-inflation-step-4-8",
+          "stepNumber": 4.8,
+          "title": "Gonfiare le Tende",
+          "pdfStepReference": "Pagina 21, Passi 14.0-15.0",
+          "purpose": "Erigere la struttura della tenda alla pressione operativa",
+          "images": [
+            {
+              "filename": "21_tent_inflation_step_14-15_img4.jpeg",
+              "description": "Gonfiatore ACCESO, tenda in gonfiaggio"
+            },
+            {
+              "filename": "21_tent_inflation_step_14-15_img6.jpeg",
+              "description": "Tenda completamente gonfiata"
+            }
+          ],
+          "operatingPressure": "0,3 bar",
+          "safetyNotes": [
+            "Aprire le porte durante il gonfiaggio per prevenire danni alla valvola di passaggio aria",
+            "Tirare le funi di ancoraggio frontali durante il gonfiaggio per facilitare l'erezione",
+            "Chiudere i rubinetti dei tubi non utilizzati per un gonfiaggio più efficiente"
+          ],
+          "actions": [
+            "Collegare il gonfiatore alla fonte di alimentazione",
+            "Accendere il gonfiatore",
+            "Monitorare il processo di gonfiaggio",
+            "Indicatori di pressione: Con manometro - Fermarsi a 0,3 bar; Senza manometro - Fermarsi quando il suono del gonfiatore diventa più acuto (attendere 1 min)",
+            "Spegnere il gonfiatore"
+          ],
+          "criticalWarnings": [
+            "Pressione massima gonfiatore: 0,45 bar (sotto la soglia della valvola di sovrappressione)",
+            "NON attendere che le valvole di sovrappressione si aprano - questo può causare surriscaldamento",
+            "Non spegnere mai il gonfiatore se le valvole di sovrappressione si aprono"
+          ]
+        },
+        {
+          "id": "tent-inflation-step-4-9",
+          "stepNumber": 4.9,
+          "title": "Scollegare e Proteggere le Valvole",
+          "pdfStepReference": "Pagina 22, Passo 16.0",
+          "purpose": "Sigillare il telaio della tenda dopo il gonfiaggio",
+          "images": [
+            {
+              "filename": "22_tent_inflation_step_16-18_img3.jpeg",
+              "description": "Scollegamento tubi di gonfiaggio"
+            },
+            {
+              "filename": "22_tent_inflation_step_16-18_img5.jpeg",
+              "description": "Riavvitamento tappi protettivi"
+            },
+            {
+              "filename": "22_tent_inflation_step_16-18_img7.jpeg",
+              "description": "Chiusura lembo protettivo PVC"
+            }
+          ],
+          "actions": [
+            "Scollegare i tubi di gonfiaggio dalle valvole della tenda",
+            "Riavvitare i tappi protettivi (ruotare in senso orario)",
+            "Chiudere i lembi PVC per proteggere le valvole da sabbia/fango"
+          ]
+        },
+        {
+          "id": "tent-inflation-step-4-10",
+          "stepNumber": 4.1,
+          "title": "Installare il Sistema di Monitoraggio Pressione",
+          "pdfStepReference": "Pagina 22-23, Passi 18.0-21.0",
+          "purpose": "Abilitare il mantenimento automatico della pressione",
+          "images": [
+            {
+              "filename": "23_tent_inflation_step_19-23_img4.png",
+              "description": "Schema del sistema di monitoraggio pressione"
+            },
+            {
+              "filename": "23_tent_inflation_step_19-23_img5.jpeg",
+              "description": "Valvola di feedback pressione all'interno della tenda"
+            },
+            {
+              "filename": "23_tent_inflation_step_19-23_img7.png",
+              "description": "Display gonfiatore che mostra modalità AUTO e lettura pressione"
+            }
+          ],
+          "systemComponents": [
+            "Tubo bianco di feedback pressione",
+            "Accoppiamento monitoraggio pressione sul gonfiatore",
+            "Valvola di feedback pressione all'interno della tenda"
+          ],
+          "actions": [
+            "Localizzare il tubo bianco di feedback pressione nella borsa del gonfiatore",
+            "Inserire l'estremità libera (senza rubinetto) nell'accoppiamento di monitoraggio pressione del gonfiatore",
+            "Srotolare il tubo di feedback pressione",
+            "Inserire l'altra estremità (con rubinetto) all'interno della tenda attraverso: manicotti condotto HVAC OPPURE aperture valvole di gonfiaggio",
+            "All'interno della tenda, localizzare la valvola di feedback pressione sull'arco pneumatico posteriore",
+            "Aprire il tappo protettivo",
+            "Inserire il rubinetto di gonfiaggio nella valvola di feedback pressione",
+            "Fissare l'anello a vite e aprire il rubinetto"
+          ]
+        },
+        {
+          "id": "tent-inflation-step-4-11",
+          "stepNumber": 4.11,
+          "title": "Abilitare il Controllo Automatico della Pressione",
+          "pdfStepReference": "Pagina 23, Passo 23.0",
+          "purpose": "Mantenere automaticamente la pressione corretta della tenda",
+          "criticalWarning": "Non passare mai ad AUTO se il tubo di feedback NON è collegato - il gonfiatore rileverà pressione errata e si surriscalderà",
+          "operatingMode": {
+            "mode": "AUTO",
+            "features": [
+              "Il gonfiatore mostra la pressione attuale sullo schermo",
+              "Si accende automaticamente se la pressione scende sotto 0,2 bar",
+              "Si spegne automaticamente quando la pressione raggiunge 0,3 bar"
+            ]
+          },
+          "powerOutageProcedure": [
+            "Portare immediatamente il gonfiatore su OFF",
+            "Chiudere tutti i rubinetti dei tubi per prevenire perdita d'aria attraverso il gonfiatore"
+          ],
+          "actions": [
+            "Verificare che il tubo di feedback sia collegato al telaio della tenda",
+            "Portare il gonfiatore in modalità AUTO",
+            "Verificare la lettura della pressione sullo schermo"
+          ]
+        },
+        {
+          "id": "tent-inflation-step-4-12",
+          "stepNumber": 4.12,
+          "title": "Posizionamento Finale della Tenda",
+          "pdfStepReference": "Pagina 24, Passo 24.0",
+          "purpose": "Garantire il corretto allineamento del telo di fondo",
+          "images": [
+            {
+              "filename": "24_tent_inflation_step_24_img4.jpeg",
+              "description": "Tirare gli angoli per raddrizzare il telo di fondo"
+            }
+          ],
+          "actions": [
+            "Tirare i quattro angoli di tutte e 3 le tende",
+            "Raddrizzare il telo di fondo",
+            "Evitare pieghe all'interno della tenda"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "main-tent-anchoring",
+      "title": "Ancoraggio Tende Principali",
+      "pdfReference": "Pagina 29 | Sezione 3.6",
+      "description": "Fissaggio delle tende principali al terreno per resistenza al vento",
+      "steps": [
+        {
+          "id": "main-tent-anchoring-step-6-1",
+          "stepNumber": 6.1,
+          "title": "Ancorare le Tende Principali al Terreno",
+          "pdfStepReference": "Pagina 29, Passi 12.0-13.0",
+          "purpose": "Fissare le tende principali al terreno per resistenza al vento fino a 100 km/h",
+          "pegTypes": {
+            "30cm": {
+              "use": "Per le corde delle asole del telo di fondo",
+              "quantity": "x12 per tenda"
+            },
+            "50cm": {
+              "use": "Per le funi di ancoraggio",
+              "distance": "~1,5m dalla tenda"
+            }
+          },
+          "bestPractice": "Avvolgere la corda attorno al picchetto per tensione/adesione ottimali",
+          "actions": [
+            "Localizzare la borsa contenente picchetti e martello",
+            "Usare picchetti a T da 30cm per le corde delle asole del telo di fondo - Inserire alla distanza appropriata per buona tensione - Avvolgere la corda attorno al picchetto",
+            "Usare picchetti a T da 50cm per le funi di ancoraggio - Inserire a ~1,5m dalla tenda - Avvolgere la corda attorno al picchetto",
+            "Regolare la tensione usando i tenditori a galloccia"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vestibules",
+      "title": "Gonfiaggio e Collegamento Vestiboli",
+      "pdfReference": "Pagine 25-29 | Sezione 3.7",
+      "description": "Dispiegamento, gonfiaggio e collegamento dei vestiboli",
+      "steps": [
+        {
+          "id": "vestibules-step-7-1",
+          "stepNumber": 7.1,
+          "title": "Posizionare le Borse dei Vestiboli",
+          "pdfStepReference": "Pagina 25, Passi 1.0-2.0",
+          "purpose": "Preparare le strutture dei vestiboli per il dispiegamento",
+          "images": [
+            {
+              "filename": "25_vestibules_step_1-4_img4.png",
+              "description": "Icone istruzioni"
+            },
+            {
+              "filename": "25_vestibules_step_1-4_img5.jpeg",
+              "description": "Borse vestiboli"
+            },
+            {
+              "filename": "25_vestibules_step_1-4_img7.jpeg",
+              "description": "Posizionamento borse sul pavimento rigido"
+            }
+          ],
+          "actions": [
+            "Con 2-3 persone, posizionare le 6 borse dei vestiboli vicino all'area di installazione",
+            "Posizionare le borse sul pavimento rigido",
+            "Aprire tutte e 6 le borse"
+          ]
+        },
+        {
+          "id": "vestibules-step-7-2",
+          "stepNumber": 7.2,
+          "title": "Dispiegare i Vestiboli",
+          "pdfStepReference": "Pagina 25-26, Passi 3.0-6.0",
+          "purpose": "Srotolare e posizionare le strutture dei vestiboli",
+          "images": [
+            {
+              "filename": "25_vestibules_step_1-4_img8.png",
+              "description": "Apertura borsa vestibolo"
+            },
+            {
+              "filename": "25_vestibules_step_1-4_img9.png",
+              "description": "Srotolamento vestibolo"
+            },
+            {
+              "filename": "26_vestibules_step_5-7_img3.jpeg",
+              "description": "Vestibolo dispiegato"
+            },
+            {
+              "filename": "26_vestibules_step_5-7_img4.jpeg",
+              "description": "Stesura vestibolo tramite asole angolari"
+            }
+          ],
+          "actions": [
+            "Controllare che il vestibolo possa essere srotolato nella direzione corretta - Se errato, sollevare la borsa e ruotare di 180°",
+            "Srotolare tutti e 6 i vestiboli",
+            "Dispiegare completamente i vestiboli",
+            "Rimuovere e riporre le borse in un luogo sicuro",
+            "Stendere i vestiboli tirando le quattro asole angolari"
+          ]
+        },
+        {
+          "id": "vestibules-step-7-3",
+          "stepNumber": 7.3,
+          "title": "Preparare le Valvole dei Vestiboli",
+          "pdfStepReference": "Pagina 26, Passo 7.0",
+          "purpose": "Preparare i vestiboli per il gonfiaggio",
+          "images": [],
+          "actions": [
+            "Rimuovere i tappi protettivi dalle valvole di gonfiaggio (ruotare in senso antiorario)"
+          ]
+        },
+        {
+          "id": "vestibules-step-7-4",
+          "stepNumber": 7.4,
+          "title": "Gonfiare i Vestiboli",
+          "pdfStepReference": "Pagina 26-27, Passi 8.0-9.0",
+          "purpose": "Erigere le strutture dei vestiboli",
+          "images": [
+            {
+              "filename": "26_vestibules_step_5-7_img6.png",
+              "description": "Collegamento gonfiatore al vestibolo"
+            },
+            {
+              "filename": "26_vestibules_step_5-7_img7.png",
+              "description": "Gonfiatore ACCESO"
+            },
+            {
+              "filename": "27_vestibules_step_8-10_img4.jpeg",
+              "description": "Vestibolo in gonfiaggio"
+            },
+            {
+              "filename": "27_vestibules_step_8-10_img5.jpeg",
+              "description": "Vestibolo completamente gonfiato"
+            }
+          ],
+          "operatingPressure": "0,3 bar",
+          "recommendations": [
+            "Aprire le porte durante il gonfiaggio",
+            "Tirare le funi di ancoraggio frontali",
+            "Chiudere i rubinetti dei tubi non utilizzati"
+          ],
+          "actions": [
+            "Collegare il gonfiatore alla fonte di alimentazione",
+            "Collegare i tubi di gonfiaggio alle valvole dei vestiboli",
+            "Accendere il gonfiatore",
+            "Monitorare fino al raggiungimento della pressione di 0,3 bar",
+            "Spegnere il gonfiatore",
+            "Scollegare i tubi di gonfiaggio",
+            "Riavvitare i tappi protettivi",
+            "Chiudere i lembi PVC"
+          ]
+        },
+        {
+          "id": "vestibules-step-7-5",
+          "stepNumber": 7.5,
+          "title": "Collegare i Vestiboli alle Tende Principali",
+          "pdfStepReference": "Pagina 28, Passo 11.0",
+          "purpose": "Creare un sistema tenda integrato",
+          "images": [
+            {
+              "filename": "28_vestibules_step_11_img3.jpeg",
+              "description": "Sistema di accoppiamento con perni doppi/singoli"
+            },
+            {
+              "filename": "28_vestibules_step_11_img4.png",
+              "description": "Diagramma connessione"
+            },
+            {
+              "filename": "28_vestibules_step_11_img5.jpeg",
+              "description": "Collegamento con perno/bullone di bloccaggio (passo 1)"
+            },
+            {
+              "filename": "28_vestibules_step_11_img6.jpeg",
+              "description": "Collegamento con perno/bullone di bloccaggio (passo 2)"
+            },
+            {
+              "filename": "28_vestibules_step_11_img7.jpeg",
+              "description": "Collegamento con perno/bullone di bloccaggio (passo 3)"
+            },
+            {
+              "filename": "28_vestibules_step_11_img8.jpeg",
+              "description": "Connessione completata"
+            }
+          ],
+          "connectionMethod": "Sistema di accoppiamento con perni/bulloni di bloccaggio",
+          "actions": [
+            "Collegare il doppio perno sul distanziatore del vestibolo al perno singolo sulla tenda",
+            "Usare perno/bullone di bloccaggio per fissare la connessione",
+            "Ripetere per tutte le connessioni vestibolo-tenda"
+          ]
+        },
+        {
+          "id": "vestibules-step-7-6",
+          "stepNumber": 7.6,
+          "title": "Ancorare i Vestiboli",
+          "pdfStepReference": "Pagina 29, Passi 12.0-13.0",
+          "purpose": "Fissare i vestiboli al terreno",
+          "images": [
+            {
+              "filename": "29_vestibules_step_12-13_img4.jpeg",
+              "description": "Picchetti a T da 30cm per asole telo di fondo"
+            },
+            {
+              "filename": "29_vestibules_step_12-13_img5.jpeg",
+              "description": "Picchetti a T da 50cm per funi di ancoraggio"
+            },
+            {
+              "filename": "29_vestibules_step_12-13_img7.jpeg",
+              "description": "Tenditore a galloccia per regolazione funi"
+            }
+          ],
+          "pegTypes": {
+            "30cm": {
+              "use": "Per le corde delle asole del telo di fondo",
+              "quantity": "x12 per tenda"
+            },
+            "50cm": {
+              "use": "Per le funi di ancoraggio",
+              "distance": "~1,5m dalla tenda"
+            }
+          },
+          "bestPractice": "Avvolgere la corda attorno al picchetto per tensione/adesione ottimali",
+          "actions": [
+            "Localizzare la borsa contenente picchetti e martello",
+            "Usare picchetti a T da 30cm per le corde delle asole del telo di fondo - Inserire alla distanza appropriata per buona tensione - Avvolgere la corda attorno al picchetto",
+            "Usare picchetti a T da 50cm per le funi di ancoraggio - Inserire a ~1,5m dalla tenda - Avvolgere la corda attorno al picchetto",
+            "Regolare la tensione usando i tenditori a galloccia"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "inner-cabins",
+      "title": "Installazione Cabine Interne",
+      "pdfReference": "Pagine 30-32 | Sezione 3.8",
+      "description": "Procedure di installazione delle cabine interne",
+      "steps": [
+        {
+          "id": "inner-cabins-step-8-1",
+          "stepNumber": 8.1,
+          "title": "Installare le Barre di Supporto",
+          "pdfStepReference": "Pagina 30, Passo 1.0",
+          "purpose": "Creare la struttura portante per le cabine interne",
+          "images": [
+            {
+              "filename": "30_inner_cabins_step_1_img3.png",
+              "description": "Icona passo"
+            },
+            {
+              "filename": "30_inner_cabins_step_1_img4.png",
+              "description": "Diagramma barra di supporto"
+            },
+            {
+              "filename": "30_inner_cabins_step_1_img5.png",
+              "description": "Schema di installazione"
+            },
+            {
+              "filename": "30_inner_cabins_step_1_img6.jpeg",
+              "description": "Installazione barra di supporto (moduli pazienti: x4 barre)"
+            },
+            {
+              "filename": "30_inner_cabins_step_1_img7.png",
+              "description": "Configurazione modulo staff"
+            },
+            {
+              "filename": "30_inner_cabins_step_1_img8.jpeg",
+              "description": "Installazione barra di supporto (modulo staff: x2 barre)"
+            }
+          ],
+          "configuration": {
+            "patientPods": "x4 barre ciascuno",
+            "staffPod": "x2 barre"
+          },
+          "actions": [
+            "Installare le barre di supporto per le cabine interne secondo lo schema",
+            "Assicurarsi che le barre siano fissate correttamente"
+          ]
+        },
+        {
+          "id": "inner-cabins-step-8-2",
+          "stepNumber": 8.2,
+          "title": "Dispiegare i Rivestimenti delle Cabine Interne",
+          "pdfStepReference": "Pagina 31, Passi 2.0-3.0",
+          "purpose": "Installare le partizioni interne e il controllo climatico",
+          "images": [
+            {
+              "filename": "31_inner_cabins_step_2-4_img5.png",
+              "description": "Diagramma installazione"
+            },
+            {
+              "filename": "31_inner_cabins_step_2-4_img6.jpeg",
+              "description": "Borsa cabina interna"
+            },
+            {
+              "filename": "31_inner_cabins_step_2-4_img7.jpeg",
+              "description": "Dispiegamento rivestimento cabina interna"
+            }
+          ],
+          "actions": [
+            "Posizionare la borsa della cabina interna all'interno della tenda",
+            "Aprire la borsa",
+            "Dispiegare il rivestimento della cabina interna",
+            "Rimuovere e riporre la borsa in un luogo sicuro"
+          ]
+        },
+        {
+          "id": "inner-cabins-step-8-3",
+          "stepNumber": 8.3,
+          "title": "Fissare le Cabine Interne al Telaio",
+          "pdfStepReference": "Pagina 31-32, Passi 4.0-6.0",
+          "purpose": "Fissare le partizioni interne alla struttura della tenda",
+          "images": [
+            {
+              "filename": "32_inner_cabins_step_5-6_img3.png",
+              "description": "Diagramma sequenza di fissaggio"
+            },
+            {
+              "filename": "32_inner_cabins_step_5-6_img4.jpeg",
+              "description": "Primo piano connessione bottone a levetta"
+            },
+            {
+              "filename": "32_inner_cabins_step_5-6_img6.jpeg",
+              "description": "Fissaggio cabina interna completato"
+            },
+            {
+              "filename": "32_inner_cabins_step_5-6_img7.jpeg",
+              "description": "Vista interna con tutti i bottoni a levetta collegati"
+            }
+          ],
+          "attachmentMethod": "Bottoni a levetta ai perni plastici",
+          "actions": [
+            "Partendo da un lato della tenda: Inserire i bottoni a levetta nei perni plastici del telaio esterno",
+            "Procedere lungo gli archi collegando i bottoni a levetta",
+            "Continuare fino a raggiungere l'altro lato della tenda",
+            "Controllo visivo: Verificare che tutti i bottoni a levetta siano correttamente collegati"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "electrical-system",
+      "title": "Installazione Sistema Elettrico",
+      "pdfReference": "Pagina 33 | Sezione 3.10",
+      "description": "Installazione sistema elettrico e illuminazione",
+      "steps": [
+        {
+          "id": "electrical-system-step-9-1",
+          "stepNumber": 9.1,
+          "title": "Panoramica Sistema Elettrico",
+          "pdfStepReference": "Pagina 33, Schema Sistema Elettrico",
+          "purpose": "Fornire alimentazione e illuminazione alla struttura IDTM",
+          "images": [
+            {
+              "filename": "33_electrical_system_img3.png",
+              "description": "Elenco componenti e schema cablaggio"
+            }
+          ],
+          "componentsRequired": [
+            "Quadro di distribuzione principale (x1)",
+            "Multipresa con cavo di prolunga 15m (x8)",
+            "Alimentatore striscia LED (x5)",
+            "Dimmer striscia LED - Master (x5)",
+            "Dimmer striscia LED - Slave (x3)",
+            "Strisce LED (x12)",
+            "Splitter 230V 16A IP54 (x4)",
+            "Cavo di prolunga 48V DC L=3m (x6)",
+            "Cavo di prolunga 230V 16A IP54 L=10m (x1)",
+            "Cavo di prolunga 230V 16A IP54 L=5m (x1)"
+          ]
+        },
+        {
+          "id": "electrical-system-step-9-2",
+          "stepNumber": 9.2,
+          "title": "Installare la Distribuzione Elettrica",
+          "purpose": "Creare la rete di distribuzione elettrica",
+          "actions": [
+            "Posizionare il quadro di distribuzione principale",
+            "Collegare i cavi di prolunga secondo lo schema elettrico",
+            "Installare gli splitter nelle posizioni designate",
+            "Far passare i cavi attraverso i manicotti della tenda"
+          ]
+        },
+        {
+          "id": "electrical-system-step-9-3",
+          "stepNumber": 9.3,
+          "title": "Installare il Sistema di Illuminazione LED",
+          "purpose": "Fornire illuminazione interna",
+          "actions": [
+            "Installare gli alimentatori strisce LED (48V DC)",
+            "Collegare dimmer master e slave",
+            "Posizionare le strisce LED lungo gli archi della tenda",
+            "Collegare le strisce LED agli alimentatori tramite cavi di prolunga da 3m",
+            "Testare il sistema di illuminazione"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "final-inspection",
+      "title": "Ispezione Finale e Completamento",
+      "pdfReference": "Pagine 29, 39-41 | Sezione 4.1",
+      "description": "Verifica finale e attivazione del sistema",
+      "steps": [
+        {
+          "id": "final-inspection-step-10-1",
+          "stepNumber": 10.1,
+          "title": "Checklist Ispezione Finale",
+          "pdfStepReference": "Sezione 3.7 (Pagina 29) e Sezione 4.1 PMI 1 (Pagina 39)",
+          "purpose": "Garantire un'installazione completa e corretta",
+          "checklist": [
+            "Tutte le tende gonfiate a 0,3 bar di pressione operativa",
+            "Sistema di monitoraggio pressione attivo (modalità AUTO)",
+            "Tutti i vestiboli collegati e gonfiati",
+            "Cabine interne correttamente installate e fissate",
+            "Tutti i picchetti saldamente ancorati",
+            "Funi di ancoraggio correttamente tensionate",
+            "Sistema elettrico funzionante e testato",
+            "Tutte le porte e finestre operative",
+            "Drenaggio perimetrale adeguato",
+            "Nessun oggetto appuntito all'interno delle tende",
+            "Telo di fondo pulito e correttamente allineato"
+          ]
+        },
+        {
+          "id": "final-inspection-step-10-2",
+          "stepNumber": 10.2,
+          "title": "Attivazione del Sistema",
+          "purpose": "Completare l'installazione e iniziare la prontezza operativa",
+          "finalActions": [
+            "Verificare che il gonfiatore di monitoraggio pressione sia in modalità AUTO",
+            "Controllare che tutti i manicotti condotto HVAC siano correttamente sigillati",
+            "Verificare che i manicotti cavi siano sigillati",
+            "Testare tutte le porte e finestre per il corretto funzionamento",
+            "Confermare che il sistema elettrico sia operativo (luci, prese di corrente)",
+            "Verificare che tutte le valvole di gonfiaggio siano tappate e protette",
+            "Documentare l'ora di completamento dell'installazione"
+          ],
+          "status": "Installazione Completata ✓"
+        }
+      ]
+    }
+  ]
+}

@@ -3,6 +3,7 @@ import 'package:who_mobile_project/di/injector.dart';
 import 'package:who_mobile_project/general/models/dismantling/dismantling_data_model.dart';
 import 'package:who_mobile_project/general/models/dismantling/flattened_substep_model.dart';
 import 'package:who_mobile_project/general/services/storage/storage_manager.dart';
+import 'package:who_mobile_project/providers/app_locale/app_locale_provider.dart';
 import 'package:who_mobile_project/repository/dismantling/dismantling_repository.dart';
 import 'package:who_mobile_project/routing_config/routes.dart';
 
@@ -12,15 +13,21 @@ part 'dismantling_provider.g.dart';
 class DismantlingData extends _$DismantlingData {
   @override
   Future<DismantlingDataModel> build() async {
-    return getIt<DismantlingRepository>().loadDismantlingData();
+    final locale = ref.watch(appLocaleProvider);
+    return getIt<DismantlingRepository>().loadDismantlingData(
+      localeCode: locale.languageCode,
+    );
   }
 
   Future<void> refresh() async {
     state = const AsyncLoading();
+    final locale = ref.read(appLocaleProvider);
     state = await AsyncValue.guard(() async {
       final repository = getIt<DismantlingRepository>();
       repository.clearCache();
-      return repository.loadDismantlingData();
+      return repository.loadDismantlingData(
+        localeCode: locale.languageCode,
+      );
     });
   }
 
