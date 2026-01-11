@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:get_it/get_it.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:who_mobile_project/general/models/auth/app_user.dart';
@@ -57,23 +56,14 @@ class AuthNotifier extends BaseApiNotifier<BaseApiState> {
   /// Restore installation state from Firebase to local storage
   /// Called after successful login to sync state across devices
   Future<void> _restoreInstallationStateFromFirebase(String uid) async {
-    debugPrint('🔥 _restoreInstallationStateFromFirebase called for uid: $uid');
     try {
       final userData = await _authService.getUserData(uid);
-      debugPrint('🔥 User data from Firebase: $userData');
-
-      if (userData == null) {
-        debugPrint('🔥 userData is null, returning');
-        return;
-      }
+      if (userData == null) return;
 
       final phaseString = userData['installationPhase'] as String?;
-      debugPrint('🔥 phaseString from Firebase: $phaseString');
 
       if (phaseString != null) {
-        debugPrint('🔥 Restoring installation state...');
         final phaseToRestore = FacilityInstallationPhase.fromString(phaseString);
-        debugPrint('🔥 Phase to restore: ${phaseToRestore.value}');
 
         await _storageManager.setCurrentPhase(phaseToRestore);
         await _storageManager.setInstallationId(
@@ -85,20 +75,13 @@ class AuthNotifier extends BaseApiNotifier<BaseApiState> {
         await _storageManager.setFacilityName(
           userData['facilityName'] as String?,
         );
-
-        // Verify the phase was saved correctly
-        final verifyPhase = _storageManager.getCurrentPhase();
-        debugPrint('🔥 Verify phase after save: ${verifyPhase.value}');
-        debugPrint('🔥 Installation state restored successfully!');
       } else {
         // No phase in Firebase means user hasn't started installation yet
         // Reset local storage to initial state to ensure clean slate
-        debugPrint('🔥 No installation phase in Firebase, resetting to initial');
         await _storageManager.setCurrentPhase(FacilityInstallationPhase.initial);
       }
-    } catch (e, st) {
-      debugPrint('🔥 Restore FAILED: $e');
-      debugPrint('🔥 Stack: $st');
+    } catch (_) {
+      // Silently fail - restore is not critical
     }
   }
 

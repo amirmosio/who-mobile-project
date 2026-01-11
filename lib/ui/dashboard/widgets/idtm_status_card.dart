@@ -35,83 +35,39 @@ class _IdtmStatusCardState extends ConsumerState<IdtmStatusCard> {
     _authService = getIt<FirebaseAuthService>();
     // Read phase from storage - this gets the latest value after Firebase restore
     _currentPhase = _storageManager.getCurrentPhase();
-    debugPrint('🔥 IdtmStatusCard initState - phase from storage: ${_currentPhase.value}');
-  }
-
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    // Refresh phase when dependencies change (e.g., after navigation)
-    _refreshPhase();
-  }
-
-  /// Refresh the current phase from storage
-  void _refreshPhase() {
-    final newPhase = _storageManager.getCurrentPhase();
-    debugPrint('🔥 IdtmStatusCard _refreshPhase - newPhase: ${newPhase.value}, currentPhase: ${_currentPhase.value}');
-    if (newPhase != _currentPhase && mounted) {
-      setState(() {
-        _currentPhase = newPhase;
-      });
-    }
   }
 
   /// Sync current installation state to Firebase for cross-device persistence
   Future<void> _syncToFirebase(FacilityInstallationPhase phase) async {
-    debugPrint('🔥 _syncToFirebase called with phase: ${phase.value}');
     try {
       final currentUser = await ref.read(currentUserProvider.future);
-      debugPrint(
-        '🔥 Current user: ${currentUser.uid}, authenticated: ${currentUser.isAuthenticated}',
-      );
-
       if (!currentUser.isAuthenticated || currentUser.uid == null) {
-        debugPrint('🔥 User not authenticated, skipping sync');
         return;
       }
-
-      final installationId = _storageManager.getInstallationId();
-      final facilityId = _storageManager.getFacilityId();
-      final facilityName = _storageManager.getFacilityName();
-
-      debugPrint('🔥 Calling updateInstallationState...');
-      debugPrint('🔥 installationId: $installationId');
-      debugPrint('🔥 facilityId: $facilityId');
-      debugPrint('🔥 facilityName: $facilityName');
 
       await _authService.updateInstallationState(
         currentUser.uid!,
         phase: phase.value,
-        installationId: installationId,
-        facilityId: facilityId,
-        facilityName: facilityName,
+        installationId: _storageManager.getInstallationId(),
+        facilityId: _storageManager.getFacilityId(),
+        facilityName: _storageManager.getFacilityName(),
       );
-      debugPrint('🔥 Firebase sync completed successfully!');
-    } catch (e, st) {
-      debugPrint('🔥 Firebase sync FAILED: $e');
-      debugPrint('🔥 Stack trace: $st');
+    } catch (_) {
+      // Silently fail - Firebase sync is not critical
     }
   }
 
   /// Clear installation state from Firebase
   Future<void> _clearFirebaseState() async {
-    debugPrint('🔥 _clearFirebaseState called');
     try {
       final currentUser = await ref.read(currentUserProvider.future);
-      debugPrint(
-        '🔥 Current user for clear: ${currentUser.uid}, authenticated: ${currentUser.isAuthenticated}',
-      );
-
       if (!currentUser.isAuthenticated || currentUser.uid == null) {
-        debugPrint('🔥 User not authenticated, skipping clear');
         return;
       }
 
       await _authService.clearInstallationState(currentUser.uid!);
-      debugPrint('🔥 Firebase state cleared successfully!');
-    } catch (e, st) {
-      debugPrint('🔥 Firebase clear FAILED: $e');
-      debugPrint('🔥 Stack trace: $st');
+    } catch (_) {
+      // Silently fail - Firebase sync is not critical
     }
   }
 
@@ -432,13 +388,16 @@ class _IdtmStatusCardState extends ConsumerState<IdtmStatusCard> {
     );
 
     if (confirmed == true && mounted) {
-      // Update phase to dismantling
+      // Update phase to dismantling (this also resets dismantling progress)
       await _storageManager.startDismantling();
 
       // Sync to Firebase
       await _syncToFirebase(FacilityInstallationPhase.dismantling);
 
       if (mounted) {
+        // Invalidate dismantling provider to refresh with reset progress
+        ref.invalidate(dismantlingProgressProvider);
+
         setState(() {
           _currentPhase = FacilityInstallationPhase.dismantling;
         });
