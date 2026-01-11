@@ -6,9 +6,11 @@ import 'package:who_mobile_project/di/injector.dart';
 import 'package:who_mobile_project/general/models/idtm/installation_phase.dart';
 import 'package:who_mobile_project/general/services/storage/storage_manager.dart';
 import 'package:who_mobile_project/general/widgets/progress_card_widget.dart';
+import 'package:who_mobile_project/providers/auth/current_user_provider.dart';
 import 'package:who_mobile_project/providers/dismantling/dismantling_provider.dart';
 import 'package:who_mobile_project/providers/installation/installation_provider.dart';
 import 'package:who_mobile_project/routing_config/routes.dart';
+import 'package:who_mobile_project/services/firebase/firebase_auth_service.dart';
 
 /// Dashboard card showing IDTM status and action buttons
 /// Handles installation, maintenance, and dismantling phases
@@ -23,13 +25,94 @@ class IdtmStatusCard extends ConsumerStatefulWidget {
 
 class _IdtmStatusCardState extends ConsumerState<IdtmStatusCard> {
   late final StorageManager _storageManager;
-  late FacilityInstallationPhase _currentPhase;
+  late final FirebaseAuthService _authService;
+  FacilityInstallationPhase _currentPhase = FacilityInstallationPhase.initial;
 
   @override
   void initState() {
     super.initState();
     _storageManager = getIt<StorageManager>();
+    _authService = getIt<FirebaseAuthService>();
+    // Read phase from storage - this gets the latest value after Firebase restore
     _currentPhase = _storageManager.getCurrentPhase();
+    debugPrint('🔥 IdtmStatusCard initState - phase from storage: ${_currentPhase.value}');
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    // Refresh phase when dependencies change (e.g., after navigation)
+    _refreshPhase();
+  }
+
+  /// Refresh the current phase from storage
+  void _refreshPhase() {
+    final newPhase = _storageManager.getCurrentPhase();
+    debugPrint('🔥 IdtmStatusCard _refreshPhase - newPhase: ${newPhase.value}, currentPhase: ${_currentPhase.value}');
+    if (newPhase != _currentPhase && mounted) {
+      setState(() {
+        _currentPhase = newPhase;
+      });
+    }
+  }
+
+  /// Sync current installation state to Firebase for cross-device persistence
+  Future<void> _syncToFirebase(FacilityInstallationPhase phase) async {
+    debugPrint('🔥 _syncToFirebase called with phase: ${phase.value}');
+    try {
+      final currentUser = await ref.read(currentUserProvider.future);
+      debugPrint(
+        '🔥 Current user: ${currentUser.uid}, authenticated: ${currentUser.isAuthenticated}',
+      );
+
+      if (!currentUser.isAuthenticated || currentUser.uid == null) {
+        debugPrint('🔥 User not authenticated, skipping sync');
+        return;
+      }
+
+      final installationId = _storageManager.getInstallationId();
+      final facilityId = _storageManager.getFacilityId();
+      final facilityName = _storageManager.getFacilityName();
+
+      debugPrint('🔥 Calling updateInstallationState...');
+      debugPrint('🔥 installationId: $installationId');
+      debugPrint('🔥 facilityId: $facilityId');
+      debugPrint('🔥 facilityName: $facilityName');
+
+      await _authService.updateInstallationState(
+        currentUser.uid!,
+        phase: phase.value,
+        installationId: installationId,
+        facilityId: facilityId,
+        facilityName: facilityName,
+      );
+      debugPrint('🔥 Firebase sync completed successfully!');
+    } catch (e, st) {
+      debugPrint('🔥 Firebase sync FAILED: $e');
+      debugPrint('🔥 Stack trace: $st');
+    }
+  }
+
+  /// Clear installation state from Firebase
+  Future<void> _clearFirebaseState() async {
+    debugPrint('🔥 _clearFirebaseState called');
+    try {
+      final currentUser = await ref.read(currentUserProvider.future);
+      debugPrint(
+        '🔥 Current user for clear: ${currentUser.uid}, authenticated: ${currentUser.isAuthenticated}',
+      );
+
+      if (!currentUser.isAuthenticated || currentUser.uid == null) {
+        debugPrint('🔥 User not authenticated, skipping clear');
+        return;
+      }
+
+      await _authService.clearInstallationState(currentUser.uid!);
+      debugPrint('🔥 Firebase state cleared successfully!');
+    } catch (e, st) {
+      debugPrint('🔥 Firebase clear FAILED: $e');
+      debugPrint('🔥 Stack trace: $st');
+    }
   }
 
   Color _getStatusColor() {
@@ -97,6 +180,9 @@ class _IdtmStatusCardState extends ConsumerState<IdtmStatusCard> {
                 facilityId: 'default',
                 facilityName: 'Default Facility',
               );
+
+              // Sync to Firebase
+              await _syncToFirebase(FacilityInstallationPhase.installing);
 
               if (mounted) {
                 // Navigate to installation steps and refresh on return
@@ -200,6 +286,9 @@ class _IdtmStatusCardState extends ConsumerState<IdtmStatusCard> {
             onPressed: () async {
               // Reset to initial state
               await _storageManager.resetToInitial();
+
+              // Clear Firebase state
+              await _clearFirebaseState();
 
               if (mounted) {
                 // Invalidate providers to refresh progress state
@@ -346,6 +435,9 @@ class _IdtmStatusCardState extends ConsumerState<IdtmStatusCard> {
       // Update phase to dismantling
       await _storageManager.startDismantling();
 
+      // Sync to Firebase
+      await _syncToFirebase(FacilityInstallationPhase.dismantling);
+
       if (mounted) {
         setState(() {
           _currentPhase = FacilityInstallationPhase.dismantling;
@@ -425,6 +517,9 @@ class _IdtmStatusCardState extends ConsumerState<IdtmStatusCard> {
                     await _storageManager.setCurrentPhase(
                       FacilityInstallationPhase.maintenance,
                     );
+
+                    // Sync to Firebase
+                    await _syncToFirebase(FacilityInstallationPhase.maintenance);
 
                     if (mounted) {
                       setState(() {
@@ -531,6 +626,9 @@ class _IdtmStatusCardState extends ConsumerState<IdtmStatusCard> {
                   onPressed: () async {
                     // Update phase to completed
                     await _storageManager.completeDismantling();
+
+                    // Sync to Firebase
+                    await _syncToFirebase(FacilityInstallationPhase.completed);
 
                     if (mounted) {
                       setState(() {

@@ -244,4 +244,56 @@ class FirebaseAuthService {
   Future<UserCredential> reauthenticate(String email, String password) async {
     return await signInWithEmailPassword(email, password);
   }
+
+  /// Update user's installation state in Firestore
+  /// Used to persist installation progress across devices
+  Future<void> updateInstallationState(
+    String uid, {
+    String? phase,
+    String? installationId,
+    String? facilityId,
+    String? facilityName,
+  }) async {
+    // ignore: avoid_print
+    print('🔥 FirebaseAuthService.updateInstallationState called');
+    // ignore: avoid_print
+    print('🔥 uid: $uid');
+    // ignore: avoid_print
+    print('🔥 phase: $phase');
+    // ignore: avoid_print
+    print('🔥 installationId: $installationId');
+    // ignore: avoid_print
+    print('🔥 facilityId: $facilityId');
+    // ignore: avoid_print
+    print('🔥 facilityName: $facilityName');
+
+    // Use set with merge to add new fields without overwriting existing data
+    await _firestore.collection(_usersCollection).doc(uid).set({
+      'installationPhase': phase,
+      'installationId': installationId,
+      'facilityId': facilityId,
+      'facilityName': facilityName,
+    }, SetOptions(merge: true));
+
+    // ignore: avoid_print
+    print('🔥 Firestore set() completed successfully');
+  }
+
+  /// Clear user's installation state in Firestore
+  /// Called when installation is completed or abandoned
+  Future<void> clearInstallationState(String uid) async {
+    // ignore: avoid_print
+    print('🔥 FirebaseAuthService.clearInstallationState called for uid: $uid');
+
+    // Use set with merge to update fields without overwriting existing data
+    await _firestore.collection(_usersCollection).doc(uid).set({
+      'installationPhase': null,
+      'installationId': null,
+      'facilityId': null,
+      'facilityName': null,
+    }, SetOptions(merge: true));
+
+    // ignore: avoid_print
+    print('🔥 Firestore clear completed successfully');
+  }
 }
