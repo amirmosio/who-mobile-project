@@ -1893,6 +1893,12 @@ class AppLocalizationsEn extends AppLocalizations {
       'Enter your email address to receive a password reset link.';
 
   @override
+  String get sign_in_with_google => 'Sign in with Google';
+
+  @override
+  String get or_continue_with => 'Or continue with';
+
+  @override
   String get verify_email_title => 'Verify Your Email';
 
   @override

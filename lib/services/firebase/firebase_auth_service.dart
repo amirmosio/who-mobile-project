@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:who_mobile_project/general/constants/user_roles.dart';
 import 'package:who_mobile_project/general/models/auth/admin_user.dart';
 
@@ -249,6 +250,42 @@ class FirebaseAuthService {
   /// Firebase handles the email template and reset link generation
   Future<void> sendPasswordResetEmail(String email) async {
     await _auth.sendPasswordResetEmail(email: email.trim().toLowerCase());
+  }
+
+  /// Sign in with Google using Firebase Authentication
+  /// Returns UserCredential on success, throws on failure
+  Future<UserCredential> signInWithGoogle() async {
+    // Ensure GoogleSignIn is initialized
+    try {
+      await GoogleSignIn.instance.initialize();
+    } catch (_) {
+      // Already initialized, ignore
+    }
+
+    // Trigger the Google Sign-In flow
+    final GoogleSignInAccount account = await GoogleSignIn.instance
+        .authenticate(scopeHint: ['email', 'profile']);
+
+    // Get authentication details (idToken only in google_sign_in v7.2.0+)
+    final GoogleSignInAuthentication googleAuth = account.authentication;
+
+    // Create a new credential for Firebase using idToken
+    // Note: accessToken is optional for Firebase Auth with Google
+    final credential = GoogleAuthProvider.credential(
+      idToken: googleAuth.idToken,
+    );
+
+    // Sign in to Firebase with the Google credential
+    return await _auth.signInWithCredential(credential);
+  }
+
+  /// Sign out from Google (in addition to Firebase sign out)
+  Future<void> signOutFromGoogle() async {
+    try {
+      await GoogleSignIn.instance.signOut();
+    } catch (_) {
+      // Ignore errors during sign out
+    }
   }
 
   /// Update user's installation state in Firestore

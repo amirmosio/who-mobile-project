@@ -3662,6 +3662,18 @@ abstract class AppLocalizations {
   /// **'Enter your email address to receive a password reset link.'**
   String get reset_password_enter_email;
 
+  /// Google sign-in button text
+  ///
+  /// In en, this message translates to:
+  /// **'Sign in with Google'**
+  String get sign_in_with_google;
+
+  /// Divider text for social login options
+  ///
+  /// In en, this message translates to:
+  /// **'Or continue with'**
+  String get or_continue_with;
+
   /// Verify email step title
   ///
   /// In en, this message translates to:

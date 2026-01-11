@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:who_mobile_project/generated/i18n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:who_mobile_project/app_core/theme/colors.dart';
@@ -37,6 +38,19 @@ class _AdminLoginPageState extends ConsumerState<AdminLoginPage> {
           _emailController.text.trim(),
           _passwordController.text,
         );
+
+    if (user != null && mounted) {
+      // Navigate based on role
+      if (user.isSuperAdmin) {
+        context.go(YRRoutes.adminPanel);
+      } else {
+        context.go(YRRoutes.dashBoard);
+      }
+    }
+  }
+
+  Future<void> _handleGoogleSignIn() async {
+    final user = await ref.read(authProvider.notifier).signInWithGoogle();
 
     if (user != null && mounted) {
       // Navigate based on role
@@ -154,6 +168,16 @@ class _AdminLoginPageState extends ConsumerState<AdminLoginPage> {
               ),
             ),
 
+            const SizedBox(height: 24),
+
+            // Divider with "Or continue with"
+            _buildDivider(),
+
+            const SizedBox(height: 24),
+
+            // Google Sign-In button
+            _buildGoogleSignInButton(authState),
+
             const SizedBox(height: 32),
 
             // Info text
@@ -232,6 +256,50 @@ class _AdminLoginPageState extends ConsumerState<AdminLoginPage> {
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  Widget _buildDivider() {
+    final l10n = AppLocalizations.of(context)!;
+    return Row(
+      children: [
+        Expanded(child: Divider(color: GVColors.lightBorderGrey)),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: Text(
+            l10n.or_continue_with,
+            style: AppTextStyles.smallText.copyWith(color: GVColors.darkGrey),
+          ),
+        ),
+        Expanded(child: Divider(color: GVColors.lightBorderGrey)),
+      ],
+    );
+  }
+
+  Widget _buildGoogleSignInButton(BaseApiState authState) {
+    final l10n = AppLocalizations.of(context)!;
+    return SizedBox(
+      height: 50,
+      child: OutlinedButton.icon(
+        onPressed: authState is BaseApiLoading ? null : _handleGoogleSignIn,
+        icon: Icon(
+          Icons.g_mobiledata,
+          size: 28,
+          color: authState is BaseApiLoading ? GVColors.darkGrey : GVColors.black,
+        ),
+        label: Text(
+          l10n.sign_in_with_google,
+          style: AppTextStyles.bodyText.copyWith(
+            color: authState is BaseApiLoading ? GVColors.darkGrey : GVColors.black,
+          ),
+        ),
+        style: OutlinedButton.styleFrom(
+          side: BorderSide(color: GVColors.lightBorderGrey),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(60),
+          ),
+        ),
       ),
     );
   }

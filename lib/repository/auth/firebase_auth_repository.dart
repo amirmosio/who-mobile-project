@@ -246,6 +246,63 @@ class FirebaseAuthRepository {
     }
   }
 
+  /// Sign in with Google
+  /// ONLY allows existing users - denies access if email not in system
+  /// Returns AppUser on success, ErrorState on failure
+  Future<RepositoryState> signInWithGoogle() async {
+    try {
+      final credential = await _authService.signInWithGoogle();
+
+      // Check if user exists in Firestore
+      final userData = await _authService.getUserData(credential.user!.uid);
+
+      // DENY access if user doesn't exist in our system
+      if (userData == null) {
+        // Sign out from Firebase and Google since they're not authorized
+        await _authService.signOut();
+        await _authService.signOutFromGoogle();
+        return ErrorState(RepositoryException(
+          message:
+              'Access denied. Your account is not registered in the system. Please contact an administrator.',
+          error: null,
+        ));
+      }
+
+      final appUser = AppUser.fromFirebase(credential.user, userData);
+
+      // Check if user is active
+      if (userData['isActive'] == false) {
+        await _authService.signOut();
+        await _authService.signOutFromGoogle();
+        return ErrorState(RepositoryException(
+          message: 'Account is deactivated. Contact administrator.',
+          error: null,
+        ));
+      }
+
+      return SuccessState(appUser, null);
+    } on FirebaseAuthException catch (e) {
+      return ErrorState(RepositoryException(
+        message: _getFirebaseAuthErrorMessage(e.code),
+        error: null,
+      ));
+    } catch (e) {
+      // Handle Google Sign-In cancellation
+      if (e.toString().contains('sign_in_canceled') ||
+          e.toString().contains('cancelled') ||
+          e.toString().contains('canceled')) {
+        return ErrorState(RepositoryException(
+          message: 'Sign-in was cancelled.',
+          error: null,
+        ));
+      }
+      return ErrorState(RepositoryException(
+        message: 'Google sign-in failed. Please try again.',
+        error: null,
+      ));
+    }
+  }
+
   /// Map Firebase Auth error codes to user-friendly messages
   String _getFirebaseAuthErrorMessage(String code) {
     switch (code) {
