@@ -1877,6 +1877,22 @@ class AppLocalizationsEn extends AppLocalizations {
   String get send_reset_email => 'Send Email';
 
   @override
+  String get reset_password_profile_subtitle =>
+      'Receive a password reset link via email';
+
+  @override
+  String get reset_password_confirmation =>
+      'We will send a password reset link to your registered email address. Do you want to continue?';
+
+  @override
+  String get reset_password_email_sent =>
+      'Password reset email sent! Check your inbox.';
+
+  @override
+  String get reset_password_enter_email =>
+      'Enter your email address to receive a password reset link.';
+
+  @override
   String get verify_email_title => 'Verify Your Email';
 
   @override

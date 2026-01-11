@@ -221,6 +221,31 @@ class FirebaseAuthRepository {
     }
   }
 
+  /// Send password reset email to user
+  /// Returns SuccessState(true) on success, ErrorState on failure
+  Future<RepositoryState> sendPasswordResetEmail(String email) async {
+    try {
+      if (!_isValidEmail(email)) {
+        return ErrorState(RepositoryException(
+          message: 'Please enter a valid email address.',
+          error: null,
+        ));
+      }
+      await _authService.sendPasswordResetEmail(email);
+      return SuccessState(true, null);
+    } on FirebaseAuthException catch (e) {
+      return ErrorState(RepositoryException(
+        message: _getFirebaseAuthErrorMessage(e.code),
+        error: null,
+      ));
+    } catch (e) {
+      return ErrorState(RepositoryException(
+        message: 'Failed to send reset email. Please try again.',
+        error: null,
+      ));
+    }
+  }
+
   /// Map Firebase Auth error codes to user-friendly messages
   String _getFirebaseAuthErrorMessage(String code) {
     switch (code) {

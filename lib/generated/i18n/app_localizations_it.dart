@@ -1888,6 +1888,22 @@ class AppLocalizationsIt extends AppLocalizations {
   String get send_reset_email => 'Invia email';
 
   @override
+  String get reset_password_profile_subtitle =>
+      'Ricevi un link per reimpostare la password via email';
+
+  @override
+  String get reset_password_confirmation =>
+      'Invieremo un link per reimpostare la password al tuo indirizzo email registrato. Vuoi continuare?';
+
+  @override
+  String get reset_password_email_sent =>
+      'Email per reimpostare la password inviata! Controlla la tua casella di posta.';
+
+  @override
+  String get reset_password_enter_email =>
+      'Inserisci il tuo indirizzo email per ricevere un link per reimpostare la password.';
+
+  @override
   String get verify_email_title => 'Verifica la tua email';
 
   @override

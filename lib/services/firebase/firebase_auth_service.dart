@@ -245,6 +245,12 @@ class FirebaseAuthService {
     return await signInWithEmailPassword(email, password);
   }
 
+  /// Send password reset email
+  /// Firebase handles the email template and reset link generation
+  Future<void> sendPasswordResetEmail(String email) async {
+    await _auth.sendPasswordResetEmail(email: email.trim().toLowerCase());
+  }
+
   /// Update user's installation state in Firestore
   /// Used to persist installation progress across devices
   Future<void> updateInstallationState(

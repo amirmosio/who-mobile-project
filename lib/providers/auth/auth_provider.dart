@@ -9,6 +9,7 @@ import 'package:who_mobile_project/providers/base/base_api_notifier.dart';
 import 'package:who_mobile_project/providers/base/base_api_state.dart';
 import 'package:who_mobile_project/providers/maintenance/scheduled_alerts_provider.dart';
 import 'package:who_mobile_project/repository/auth/firebase_auth_repository.dart';
+import 'package:who_mobile_project/repository/repo_state.dart';
 import 'package:who_mobile_project/services/firebase/firebase_auth_service.dart';
 
 part 'auth_provider.g.dart';
@@ -162,6 +163,26 @@ class AuthNotifier extends BaseApiNotifier<BaseApiState> {
       () => _repository.updateAdminDisplayName(uid, displayName),
       successMessage: 'Display name updated',
       errorMessage: 'Failed to update display name',
+    );
+  }
+
+  /// Send password reset email
+  /// If email is provided, uses that (for guests). Otherwise uses current user's email.
+  Future<bool> sendPasswordResetEmail({String? email}) async {
+    final targetEmail = email ?? _authService.currentFirebaseUser?.email;
+
+    if (targetEmail == null || targetEmail.isEmpty) {
+      state = BaseApiError(RepositoryException(
+        message: 'Please provide an email address.',
+        error: null,
+      ));
+      return false;
+    }
+
+    return executeOperationAndSetState(
+      () => _repository.sendPasswordResetEmail(targetEmail),
+      successMessage: 'Password reset email sent successfully',
+      errorMessage: 'Failed to send password reset email',
     );
   }
 

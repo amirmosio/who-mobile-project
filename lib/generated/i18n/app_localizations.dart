@@ -3638,6 +3638,30 @@ abstract class AppLocalizations {
   /// **'Send Email'**
   String get send_reset_email;
 
+  /// Subtitle for reset password in profile menu
+  ///
+  /// In en, this message translates to:
+  /// **'Receive a password reset link via email'**
+  String get reset_password_profile_subtitle;
+
+  /// Reset password confirmation dialog message
+  ///
+  /// In en, this message translates to:
+  /// **'We will send a password reset link to your registered email address. Do you want to continue?'**
+  String get reset_password_confirmation;
+
+  /// Success message after sending reset email
+  ///
+  /// In en, this message translates to:
+  /// **'Password reset email sent! Check your inbox.'**
+  String get reset_password_email_sent;
+
+  /// Prompt for entering email in reset password dialog for guests
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your email address to receive a password reset link.'**
+  String get reset_password_enter_email;
+
   /// Verify email step title
   ///
   /// In en, this message translates to:

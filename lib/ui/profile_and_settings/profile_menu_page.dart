@@ -139,7 +139,21 @@ class ProfileMenuPage extends ConsumerWidget {
             iconColor: GVColors.purpleAccent,
             onTap: () => context.push(YRRoutes.adminLogin),
           ),
+          ProfileMenuItem(
+            icon: Icons.lock_reset,
+            title: l10n.reset_password,
+            subtitle: l10n.reset_password_profile_subtitle,
+            iconColor: GVColors.blueFeature,
+            onTap: () => _showResetPasswordDialogForGuest(context, ref, l10n),
+          ),
         ] else ...[
+          ProfileMenuItem(
+            icon: Icons.lock_reset,
+            title: l10n.reset_password,
+            subtitle: l10n.reset_password_profile_subtitle,
+            iconColor: GVColors.blueFeature,
+            onTap: () => _showResetPasswordDialog(context, ref, l10n),
+          ),
           ProfileMenuItem(
             icon: Icons.logout,
             title: l10n.logout_button,
@@ -394,6 +408,188 @@ class ProfileMenuPage extends ConsumerWidget {
 
     if (confirm == true) {
       await ref.read(authProvider.notifier).signOut();
+    }
+  }
+
+  Future<void> _showResetPasswordDialog(
+    BuildContext context,
+    WidgetRef ref,
+    AppLocalizations l10n,
+  ) async {
+    final confirm = await showDialog<bool>(
+      context: context,
+      builder: (context) => AlertDialog(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16),
+        ),
+        title: Text(
+          l10n.reset_password,
+          style: AppTextStyles.headingH3.copyWith(
+            color: GVColors.black,
+          ),
+        ),
+        content: Text(
+          l10n.reset_password_confirmation,
+          style: AppTextStyles.bodyText.copyWith(
+            color: GVColors.darkGrey,
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(false),
+            child: Text(
+              l10n.cancel,
+              style: AppTextStyles.bodyText.copyWith(
+                color: GVColors.darkGrey,
+              ),
+            ),
+          ),
+          ElevatedButton(
+            onPressed: () => Navigator.of(context).pop(true),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: GVColors.blueFeature,
+              foregroundColor: GVColors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(60),
+              ),
+            ),
+            child: Text(l10n.send_reset_email),
+          ),
+        ],
+      ),
+    );
+
+    if (confirm == true) {
+      final success =
+          await ref.read(authProvider.notifier).sendPasswordResetEmail();
+      if (success && context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(
+              l10n.reset_password_email_sent,
+              style: AppTextStyles.smallText.copyWith(color: GVColors.white),
+            ),
+            backgroundColor: GVColors.greenSuccess,
+            behavior: SnackBarBehavior.floating,
+            margin: const EdgeInsets.all(16),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8),
+            ),
+            duration: const Duration(seconds: 4),
+          ),
+        );
+      }
+    }
+  }
+
+  Future<void> _showResetPasswordDialogForGuest(
+    BuildContext context,
+    WidgetRef ref,
+    AppLocalizations l10n,
+  ) async {
+    final emailController = TextEditingController();
+
+    final email = await showDialog<String>(
+      context: context,
+      builder: (context) => AlertDialog(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16),
+        ),
+        title: Text(
+          l10n.reset_password,
+          style: AppTextStyles.headingH3.copyWith(
+            color: GVColors.black,
+          ),
+        ),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              l10n.reset_password_enter_email,
+              style: AppTextStyles.bodyText.copyWith(
+                color: GVColors.darkGrey,
+              ),
+            ),
+            const SizedBox(height: 16),
+            TextField(
+              controller: emailController,
+              keyboardType: TextInputType.emailAddress,
+              autocorrect: false,
+              decoration: InputDecoration(
+                hintText: l10n.email,
+                hintStyle: AppTextStyles.bodyText.copyWith(
+                  color: GVColors.lightGrey,
+                ),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(8),
+                  borderSide: BorderSide(color: GVColors.lightBorderGrey),
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(8),
+                  borderSide: BorderSide(color: GVColors.lightBorderGrey),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(8),
+                  borderSide: BorderSide(color: GVColors.blueFeature),
+                ),
+                contentPadding: const EdgeInsets.symmetric(
+                  horizontal: 12,
+                  vertical: 12,
+                ),
+              ),
+            ),
+          ],
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(null),
+            child: Text(
+              l10n.cancel,
+              style: AppTextStyles.bodyText.copyWith(
+                color: GVColors.darkGrey,
+              ),
+            ),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              final email = emailController.text.trim();
+              Navigator.of(context).pop(email.isNotEmpty ? email : null);
+            },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: GVColors.blueFeature,
+              foregroundColor: GVColors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(60),
+              ),
+            ),
+            child: Text(l10n.send_reset_email),
+          ),
+        ],
+      ),
+    );
+
+    if (email != null && email.isNotEmpty) {
+      final success = await ref
+          .read(authProvider.notifier)
+          .sendPasswordResetEmail(email: email);
+      if (success && context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(
+              l10n.reset_password_email_sent,
+              style: AppTextStyles.smallText.copyWith(color: GVColors.white),
+            ),
+            backgroundColor: GVColors.greenSuccess,
+            behavior: SnackBarBehavior.floating,
+            margin: const EdgeInsets.all(16),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8),
+            ),
+            duration: const Duration(seconds: 4),
+          ),
+        );
+      }
     }
   }
 
