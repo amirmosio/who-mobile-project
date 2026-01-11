@@ -18,9 +18,14 @@ class InstallationDataModel {
       title: json['title'] as String,
       overview: json['overview'] as String,
       sourceDocument: json['sourceDocument'] as String,
-      sections: (json['sections'] as List<dynamic>)
-          .map((e) => InstallationStepModel.fromJson(e as Map<String, dynamic>))
-          .toList(),
+      sections: (json['sections'] as List<dynamic>).map((i) {
+        try {
+          return InstallationStepModel.fromJson(i as Map<String, dynamic>);
+        } catch (e) {
+          var a = InstallationStepModel.fromJson(i as Map<String, dynamic>);
+          rethrow;
+        }
+      }).toList(),
     );
   }
 

@@ -2,7 +2,6 @@ import 'dismantling_image_model.dart';
 
 class DismantlingSubstepModel {
   final String id;
-  final int stepNumber;
   final String title;
   final String purpose;
   final List<String> actions;
@@ -13,7 +12,6 @@ class DismantlingSubstepModel {
 
   DismantlingSubstepModel({
     required this.id,
-    required this.stepNumber,
     required this.title,
     required this.purpose,
     required this.actions,
@@ -26,7 +24,6 @@ class DismantlingSubstepModel {
   factory DismantlingSubstepModel.fromJson(Map<String, dynamic> json) {
     return DismantlingSubstepModel(
       id: json['id'] as String,
-      stepNumber: json['stepNumber'] as int,
       title: json['title'] as String,
       purpose: json['purpose'] as String,
       actions: (json['actions'] as List<dynamic>)
@@ -46,7 +43,6 @@ class DismantlingSubstepModel {
   Map<String, dynamic> toJson() {
     return {
       'id': id,
-      'stepNumber': stepNumber,
       'title': title,
       'purpose': purpose,
       'actions': actions,

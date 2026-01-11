@@ -15,16 +15,12 @@
           "title": "Required Personnel",
           "images": [
             {
-              "filename": "13_required_conditions_img3.png",
-              "description": "Required conditions icon"
-            },
-            {
-              "filename": "13_required_conditions_img4.png",
-              "description": "Personnel icon"
+              "filename": "13_required_conditions_img12.jpeg",
+              "description": "Boots required"
             },
             {
               "filename": "13_required_conditions_img11.jpeg",
-              "description": "Required personnel (4 persons minimum)"
+              "description": "Gloves required"
             }
           ],
           "content": [
@@ -37,30 +33,28 @@
           "title": "Required Tools and Equipment",
           "images": [
             {
-              "filename": "13_required_conditions_img5.png",
-              "description": "Tools icon"
+              "filename": "13_required_conditions_img3.png",
+              "description": "Power source (with extension cable and schuko socket)"
             },
             {
-              "filename": "13_required_conditions_img12.jpeg",
-              "description": "Required tools and equipment"
+              "filename": "13_required_conditions_img4.png",
+              "description": "Electric inflator (with 7m electrical cable - schuko socket)"
+            },
+            {
+              "filename": "13_required_conditions_img5.png",
+              "description": "Inflation Hose Manifold"
+            },
+            {
+              "filename": "13_required_conditions_img6.png",
+              "description": "Hammer"
             }
           ],
-          "content": [
-            "Power source (with extension cable and schuko socket)",
-            "Electric inflator (with 7m electrical cable - schuko socket)",
-            "Inflation hose manifold",
-            "Hammer"
-          ]
+          "content": []
         },
         {
           "id": "time-requirements",
           "title": "Time Requirements",
-          "images": [
-            {
-              "filename": "13_required_conditions_img6.png",
-              "description": "Time icon"
-            }
-          ],
+          "images": [],
           "content": [
             "Per tent: ~5 minutes inflation",
             "Complete system: ~4 hours total installation"
@@ -72,48 +66,25 @@
           "images": [
             {
               "filename": "13_required_conditions_img13.png",
-              "description": "Climatic conditions diagram"
-            }
-          ],
-          "content": [
-            "Wind: Maximum 40 km/h during installation",
-            "Temperature: +5°C or higher desirable (unless special dispensation)",
-            "Ground: Compact, leveled surface required"
-          ]
-        },
-        {
-          "id": "required-space",
-          "title": "Required Space",
-          "images": [
+              "description": "+ 5°C desirable unless special dispensation"
+            },
             {
-              "filename": "13_required_conditions_img8.png",
-              "description": "Space requirements icon"
+              "filename": "13_required_conditions_img10.png",
+              "description": "Frame with Main Canvas: 40 Km/h max"
             }
           ],
-          "content": [
-            "Minimum surface area: 276 m² (23m x 12m)",
-            "Additional 2m safety perimeter around installation area"
-          ]
+          "content": []
         },
         {
           "id": "safety-warnings",
           "title": "Safety and Security Warnings",
-          "images": [
-            {
-              "filename": "13_required_conditions_img9.png",
-              "description": "Additional requirement icon"
-            },
-            {
-              "filename": "13_required_conditions_img10.png",
-              "description": "Safety icon"
-            }
-          ],
+          "images": [],
           "content": [
-            "Weather: Never install under wind speeds higher than 40 km/h",
-            "Snow: Tent designed for snow loads up to 15 kg/sqm - remove major accumulation immediately",
-            "Wind load: Sustained winds up to 100 km/h (120 km/h gusts) - Close all openings above 40 km/h",
-            "Rain: Select elevated site, dig drainage trench, avoid flooding areas",
-            "Temperature changes: Check pressure regularly, use automatic pressure monitoring if available"
+            "Weather conditions for installation: The tent should under no circumstances be installed under wind speeds higher than 40km/h. In case of higher wind speeds, please make sure all components are safely packed and stored, away from external high winds.",
+            "Snow load (max): The tent is designed and tested for snow loads of up to 15 kg/sqm. Nevertheless, major snow loads should be removed immediately, with a telescopic snow brush if available.",
+            "Wind load (max): The tent is designed for wind speeds of up to 100 km/h (120 km/h gusts). However, such wind resistance is only possible if the tent has been installed and anchored correctly, and that the following measures are implemented as soon as wind speeds reach 40km/h: • Close all openings such as doors, windows, HVAC duct and cable sleeves. • Check that the ground is able to hold the loads and that the pegs are correctly anchored. • Replace all damaged pegs with new ones. • Make sure all furnishings inside are placed at an adequate distance from the walls and roof of the tent, as they can damage or destroy the tent cover through abrasion. Remember the wind will push the tent to the downwind side. • Outside the tent, store away all objects that may fly away, touch the tent or be touched by it.",
+            "Rain: The impact of rain on the tent itself is negligible, but the selection of the installation site has a big influence on the usability in rain. The tent cover and groundsheet are fully water-tight, but some measures can be taken to help prevent the tent from sinking into mud in case of heavy rains: • Make sure the tent is installed on an elevated area and not in a dent where the water can accumulate. • Do not build up the tent close to rivers or in dry riverbeds where flooding can occur. • Prevent the water from running under the tent by digging a drainage trench around it. Make sure the pegs can still fix the tent to the ground.",
+            "Temperature changes: Temperature changes can affect the pressure inside the inflatable frame. • Check regularly that the system is sufficiently pressurized, and re-inflate the tent once or twice a week. • Get an inflator with automatic pressure maintenance if temperature changes (day/night) occur regularly in your geographical area. In the event of condensation inside the tent, remember to open the windows to ventilate the tent, or use a suitable air-conditioning unit."
           ]
         }
       ]
@@ -122,33 +93,33 @@
       "id": "site-selection",
       "title": "Installation Site Selection and Preparation",
       "pdfReference": "Page 15 | Section 3.3",
-      "description": "Site assessment and preparation procedures",
+      "description": "Site assessment and preparation procedures to prolong the life span of AZF Tents and improve operations",
       "steps": [
         {
           "id": "site-selection-step-1",
-          "stepNumber": 1,
           "title": "Site Assessment",
           "purpose": "Ensure optimal stability and longevity of the tent system",
           "actions": [
-            "Verify the installation site is flat (maximum slope: 5%)",
-            "Check for minimum surface area of 276 m²",
+            "Verify the installation site is flat to provide optimal stability for the tent and its furnishings (maximum slope: 5%)",
+            "Check for minimum surface area of 276 m² required to install the IDTM",
             "Ensure site is at least 2m away from nearest trees or buildings",
-            "Verify ground is compact and dry enough for pegs"
+            "Verify ground surface is compact and dry enough to provide sufficient grip for the pegs",
+            "Measure the space needed for installation including a safety perimeter all around the designated installation area"
           ]
         },
         {
           "id": "site-selection-step-2",
-          "stepNumber": 2,
           "title": "Site Preparation",
           "purpose": "Prevent damage to tent materials and ensure proper drainage",
           "actions": [
-            "Clean the area - Remove sharp objects (stones, chippings, branches)",
-            "Fill deep recesses if slope exceeds 5%",
-            "Dig drainage trench around perimeter to prevent water accumulation",
-            "Clear debris that could puncture the groundsheet"
+            "Clean the area - The installation site should be clean and free from sharp objects such as stones, chippings, branches, etc. to avoid damages to the tent groundsheet",
+            "Fill deep recesses prior to installation if slope exceeds 5%",
+            "Dig a water drainage trench around the tent installation perimeter to prevent water from sipping under the tent groundsheet in case of heavy rainfall",
+            "Keep the inside of the tent as clean as possible - Little stones, loose chippings and other peaky objects will damage the tent flooring"
           ],
           "warnings": [
-            "Never drag tent components over the ground to avoid damage"
+            "During installation, avoid dragging the tent components over the ground to avoid damage",
+            "Never pull with too much force, otherwise the tent's fabric will be damaged. If something cannot be moved, find a different method or get more manpower"
           ]
         }
       ]
@@ -157,51 +128,53 @@
       "id": "hard-floor",
       "title": "Hard Floor Installation",
       "pdfReference": "Page 16 | Section 3.4",
-      "description": "Hard floor installation procedures",
+      "description": "Hard floor installation procedures to create a stable, level foundation for the IDTM tent system",
       "images": [],
       "steps": [
         {
           "id": "hard-floor-step-3-1",
-          "stepNumber": 3.1,
           "title": "Position Floor Tiles Pallet",
+          "pdfStepReference": "Page 16, Step 1.0",
           "purpose": "Establish base foundation for tent structure",
           "images": [
             {
               "filename": "16_hard_floor_installation_img4.jpeg",
-              "description": "Pallet of floor tiles"
-            },
-            {
-              "filename": "16_hard_floor_installation_img6.jpeg",
-              "description": "Pallet placement diagram"
+              "description": "Pallet of floor tiles on pallet truck"
             }
           ],
           "actions": [
-            "Use pallet truck to position tiles pallet next to installation area",
-            "Weight: ~180 kg per pallet - use appropriate lifting equipment"
+            "With a pallet truck, place the tiles pallet next to the installation area",
+            "Weight per pallet: ~180 kg - use appropriate lifting equipment and proper lifting technique"
+          ],
+          "warnings": [
+            "Pallet weight is approximately 180 kg - ensure adequate personnel and equipment"
           ]
         },
         {
           "id": "hard-floor-step-3-2",
-          "stepNumber": 3.2,
-          "title": "Lay Hard Floor",
-          "purpose": "Create stable, level platform",
-          "layoutConfiguration": "[3 tiles] [9 tiles] [3 tiles] [8 tiles]\n[31 tiles] [10 tiles] [31 tiles]",
-          "dimensions": "17m x 8m total area",
+          "title": "Install Hard Floor",
+          "pdfStepReference": "Page 16, Step 2.0",
+          "purpose": "Create stable, level platform for tent installation",
           "images": [
             {
+              "filename": "16_hard_floor_installation_img6.jpeg",
+              "description": "Pallet placement next to installation area"
+            },
+            {
               "filename": "16_hard_floor_installation_img7.png",
-              "description": "Floor tile detail"
+              "description": "Floor tile detail showing interlocking mechanism"
             },
             {
               "filename": "16_hard_floor_installation_img8.jpeg",
-              "description": "Floor tile installation showing layout pattern"
+              "description": "Complete hard floor layout pattern showing configuration: Row 1 (x31, x10, x31 tiles) and Row 2 (x3, x9, x3, x9 tiles) covering 17m x 8m total area"
             }
           ],
           "actions": [
-            "Install hard floor tiles according to layout diagram",
-            "Ensure tiles interlock properly",
-            "Verify dimensions of installation area (17m x 8m)",
-            "Check that floor is level and properly installed"
+            "Install hard floor tiles according to the layout diagram",
+            "Follow the specific tile configuration: Row 1 (x31, x10, x31 tiles) and Row 2 (x3, x9, x3, x9 tiles)",
+            "Ensure tiles interlock properly at all connection points",
+            "Verify total dimensions of installation area (17m x 8m)",
+            "Check that the hard floor is correctly installed, level, stable, and has no gaps between tiles"
           ]
         }
       ]
@@ -214,178 +187,220 @@
       "steps": [
         {
           "id": "tent-inflation-step-4-1",
-          "stepNumber": 4.1,
           "title": "Position Tent Bags",
-          "pdfStepReference": "Page 17, Steps 1.0-2.0",
+          "pdfStepReference": "Page 17, Step 1.0",
           "purpose": "Prepare tents for deployment",
           "images": [
             {
               "filename": "17_tent_inflation_step_1-2_img5.jpeg",
-              "description": "Tent bags on pallet"
-            },
-            {
-              "filename": "17_tent_inflation_step_1-2_img6.png",
-              "description": "Step detail icon"
-            },
-            {
-              "filename": "17_tent_inflation_step_1-2_img8.jpeg",
-              "description": "Positioning bags on floor"
-            },
-            {
-              "filename": "17_tent_inflation_step_1-2_img9.jpeg",
-              "description": "Three bags positioned on hard floor"
+              "description": "Tent bag on pallet next to installation area"
             }
           ],
           "actions": [
-            "With 2-3 persons, place 3 bags next to installation area",
-            "Weight per bag: 245 kg - use proper lifting technique",
-            "Place bags on hard floor in correct positions",
-            "Open all 3 bags"
+            "With the help of TBD persons, place the 3 bags (Code to be defined for all parts) next to the installation area",
+            "Please note that one bag weight is 245 kg",
+            "Make sure you have all the necessary items for set-up, including the electric inflator and a power source"
           ]
         },
         {
           "id": "tent-inflation-step-4-2",
-          "stepNumber": 4.2,
-          "title": "Deploy Tents",
-          "pdfStepReference": "Page 17-18, Steps 3.0-6.0",
-          "purpose": "Unroll and position tent structures",
+          "title": "Position Tent Bags on Hard Floor",
+          "pdfStepReference": "Page 17-18, Steps 2.0",
+          "purpose": "Place tent bags on hard floor for deployment",
           "images": [
             {
-              "filename": "18_tent_inflation_step_3-7_img4.png",
-              "description": "Close-up of inflation valve and over-pressure valve"
-            },
-            {
-              "filename": "18_tent_inflation_step_3-7_img5.jpeg",
-              "description": "Opening tent bag"
-            },
-            {
-              "filename": "18_tent_inflation_step_3-7_img6.jpeg",
-              "description": "Rolling out tent"
-            },
-            {
-              "filename": "18_tent_inflation_step_3-7_img7.jpeg",
-              "description": "Unfolding tent, spreading by corner loops"
+              "filename": "17_tent_inflation_step_1-2_img6.png",
+              "description": "With the help of TBD persons, place the 3 bags on the hard floor"
             }
           ],
           "actions": [
-            "Check each tent can be rolled out in correct direction - If incorrect, lift bag and turn 180°",
-            "Roll out all 3 tents",
-            "Unfold tents completely",
-            "Remove and store tent bags in secure location",
-            "Spread tents by pulling on four corner loops"
+            "With the help of TBD persons, place the 3 bags on the hard floor",
+            "Please note that one bag weight is 245 kg"
           ]
         },
         {
           "id": "tent-inflation-step-4-3",
-          "stepNumber": 4.3,
-          "title": "Locate Inflation Valves",
-          "pdfStepReference": "Page 18, Step 7.0",
-          "purpose": "Prepare for inflation process",
-          "keyInformation": {
-            "valveLocation": "Lower end of each pneumatic arch, beneath protective flaps",
-            "valveTypes": [
-              "Inflation valve (upper position)",
-              "Over-pressure valve (lower position)"
-            ],
-            "valveCount": "3 inflation valves per tent (one per arch)"
-          },
+          "title": "Open Tent Bags and Check Direction",
+          "pdfStepReference": "Page 17-18, Step 3.0",
+          "purpose": "Open bags and verify correct tent deployment direction",
+          "images": [
+            {
+              "filename": "17_tent_inflation_step_1-2_img8.jpeg",
+              "description": "Open the 3 bags. Check that each tent can be rolled out in the correct direction, otherwise lift the bag and turn it by 180°"
+            }
+          ],
           "actions": [
-            "Locate inflation valves on each pneumatic arch",
-            "Remove protective flaps"
+            "Open the 3 bags",
+            "Check that each tent can be rolled out in the correct direction, otherwise lift the bag and turn it by 180°"
           ]
         },
         {
           "id": "tent-inflation-step-4-4",
-          "stepNumber": 4.4,
-          "title": "Install Sun Shadowing Nets",
-          "pdfStepReference": "Page 19, Step 8.0",
-          "purpose": "Provide additional sun protection",
+          "title": "Roll Out the Tents",
+          "pdfStepReference": "Page 18, Step 4.0",
+          "purpose": "Unroll tent structures from bags",
           "images": [
             {
-              "filename": "19_tent_inflation_step_8-9_img3.png",
-              "description": "Coupling connection detail"
-            },
-            {
-              "filename": "19_tent_inflation_step_8-9_img4.png",
-              "description": "Spacers installed on roof"
-            },
-            {
-              "filename": "19_tent_inflation_step_8-9_img5.png",
-              "description": "Net spread over tent"
-            },
-            {
-              "filename": "19_tent_inflation_step_8-9_img6.jpeg",
-              "description": "Complete sun shadowing installation"
+              "filename": "17_tent_inflation_step_1-2_img9.jpeg",
+              "description": "Roll out the 3 tents"
             }
           ],
           "actions": [
-            "Install pneumatic spacers on roof using couplings at eaves and ridge",
-            "Connect double stud on spacer to single stud on tent using locking pin/bolt",
-            "Inflate pneumatic spacers to 0.3 bar operating pressure",
-            "Spread sun shadowing nets over tent and spacers",
-            "Fold in half lengthwise, align center line on central spacer",
-            "Spread guy ropes to outside"
+            "Roll out the 3 tents"
+          ]
+        },
+        {
+          "id": "tent-inflation-step-4-4-1",
+          "title": "Unfold Tents and Remove Bags",
+          "pdfStepReference": "Page 18, Step 5.0",
+          "purpose": "Unfold tent structures and store bags",
+          "images": [
+            {
+              "filename": "18_tent_inflation_step_3-7_img4.png",
+              "description": "Unfold the 3 tents and remove the tent bags from beneath the tents. Store the 3 tent bags in a clean and secure location."
+            }
+          ],
+          "actions": [
+            "Unfold the 3 tents and remove the tent bags from beneath the tents",
+            "Store the 3 tent bags in a clean and secure location"
+          ]
+        },
+        {
+          "id": "tent-inflation-step-4-4-2",
+          "title": "Spread Tents by Corner Loops",
+          "pdfStepReference": "Page 18, Step 6.0",
+          "purpose": "Spread tents to full dimensions",
+          "images": [
+            {
+              "filename": "18_tent_inflation_step_3-7_img5.jpeg",
+              "description": "Spread the 3 tents out by pulling on the four corner loops"
+            }
+          ],
+          "actions": [
+            "Spread the 3 tents out by pulling on the four corner loops"
+          ]
+        },
+        {
+          "id": "tent-inflation-step-4-4-3",
+          "title": "Locate Inflation Valves",
+          "pdfStepReference": "Page 18, Step 7.0",
+          "purpose": "Identify valve locations for inflation setup",
+          "images": [
+            {
+              "filename": "18_tent_inflation_step_3-7_img6.jpeg",
+              "description": "Locate the inflation valves on the lower end of each pneumatic arch, on one side of the tent, beneath the protective flaps. The inflation valve is located above the over-pressure valve."
+            }
+          ],
+          "actions": [
+            "Locate the inflation valves on the lower end of each pneumatic arch, on one side of the tent, beneath the protective flaps",
+            "The inflation valve is located above the over-pressure valve",
+            "Each pneumatic arch is fitted with an inflation valve and all valves need to be connected to the electric inflator for simultaneous inflation"
+          ]
+        },
+        {
+          "id": "tent-inflation-step-4-4-4",
+          "title": "Install Sun Shadowing Nets",
+          "pdfStepReference": "Page 19, Step 8.0",
+          "purpose": "Install sun protection nets on tents",
+          "images": [
+            {
+              "filename": "19_tent_inflation_step_8-9_img4.png",
+              "description": "Install the 3 sun shadowing nets on the 3 tents"
+            },
+            {
+              "filename": "19_tent_inflation_step_8-9_img5.png",
+              "description": "Install the pneumatic spacers on the roof"
+            },
+            {
+              "filename": "19_tent_inflation_step_8-9_img6.jpeg",
+              "description": "Spread out the 3 sun shadowing nets over tent and pneumatic spacers"
+            },
+            {
+              "filename": "19_tent_inflation_step_8-9_img7.png",
+              "description": "Fold over the other half of the 3 sun shadowing nets completely"
+            }
+          ],
+          "actions": [
+            "Install the 3 sun shadowing nets on the 3 tents",
+            "Install the pneumatic spacers on the roof. Fix them lengthwise on the tent using the couplings located at the eaves and ridge of the tent. Connect the double stud on the spacer to the single stud on the tent by using a locking pin / bolt",
+            "Inflate the pneumatic spacers until the operating pressure of 0.3 bar is reached",
+            "Spread out the 3 sun shadowing nets over tent and pneumatic spacers. Fold it in half lengthwise. Align the centre line of the sun roof on the central spacer",
+            "Fold over the other half of the 3 sun shadowing nets completely, taking care to spread out the guy ropes to the outside"
           ]
         },
         {
           "id": "tent-inflation-step-4-5",
-          "stepNumber": 4.5,
-          "title": "Connect Electric Inflator",
-          "pdfStepReference": "Page 19-20, Steps 9.0-11.0",
-          "purpose": "Prepare inflation equipment",
+          "title": "Position Electric Inflator and Insert Manifold",
+          "pdfStepReference": "Page 19, Step 9.0",
+          "purpose": "Position inflator and connect inflation hose manifold",
           "images": [
             {
-              "filename": "19_tent_inflation_step_8-9_img7.png",
-              "description": "Electric inflator unit"
-            },
-            {
-              "filename": "20_tent_inflation_step_10-13_img4.png",
-              "description": "Connecting hose to valve"
-            },
-            {
-              "filename": "20_tent_inflation_step_10-13_img5.jpeg",
-              "description": "Removing valve protective caps"
+              "filename": "19_tent_inflation_step_9_img1.jpeg",
+              "description": "Place the electric inflator at approximately 1 m from one tent, next to the inflation valves. Insert the inflation hose manifold inside the 'OUTLET' coupling."
             }
           ],
           "actions": [
-            "Place electric inflator ~1m from tent, next to inflation valves",
-            "Insert inflation hose manifold into 'OUTLET' coupling",
-            "Secure manifold using provided fastening pin",
-            "Remove protective caps from inflation valves (turn counterclockwise)"
+            "Place the electric inflator at approximately 1 m from one tent, next to the inflation valves",
+            "Insert the inflation hose manifold inside the 'OUTLET' coupling"
+          ]
+        },
+        {
+          "id": "tent-inflation-step-4-5-1",
+          "title": "Secure Manifold with Fastening Pin",
+          "pdfStepReference": "Page 20, Step 10.0",
+          "purpose": "Secure the inflation hose manifold",
+          "images": [
+            {
+              "filename": "20_tent_inflation_step_10-13_img4.png",
+              "description": ""
+            }
+          ],
+          "actions": [
+            "Secure the manifold using the provided fastening pin"
+          ]
+        },
+        {
+          "id": "tent-inflation-step-4-5-2",
+          "title": "Remove protective caps",
+          "pdfStepReference": "Page 20, Step 11.0",
+          "purpose": "Prepare for inflation",
+          "images": [
+            {
+              "filename": "20_tent_inflation_step_10-13_img5.jpeg",
+              "description": ""
+            }
+          ],
+          "actions": [
+            "Remove the protective cap of the inflation valves by turning it counterclockwise."
           ]
         },
         {
           "id": "tent-inflation-step-4-6",
-          "stepNumber": 4.6,
           "title": "Prepare Valves for Inflation",
           "pdfStepReference": "Page 20, Step 12.0",
           "purpose": "Ensure valves are properly closed before inflation",
-          "criticalCheck": "All valves must be closed before starting inflation",
-          "valveStates": {
-            "closed": "Central spring pin is UP (~1cm below rim) ✓",
-            "open": "Central spring pin is DOWN ✗"
-          },
           "images": [
             {
-              "filename": "20_tent_inflation_step_10-13_img7.jpeg",
-              "description": "Closing valve by turning clockwise"
-            },
-            {
               "filename": "20_tent_inflation_step_10-13_img8.jpeg",
-              "description": "Verifying valve is closed"
+              "description": ""
             }
           ],
           "actions": [
             "Close all open valves by: pushing central pin DOWN and turning valve tappet CLOCKWISE",
-            "Verify all valves are closed (pin should be UP)"
+            "Check that all valves are closed. When the valve is closed, the central spring pin is up, at approximately 1 cm below the rim of the valve body."
           ]
         },
         {
           "id": "tent-inflation-step-4-7",
-          "stepNumber": 4.7,
           "title": "Connect Inflation Hoses",
           "pdfStepReference": "Page 20, Step 13.0",
           "purpose": "Establish air connection to tent frame",
+          "images": [
+            {
+              "filename": "20_tent_inflation_step_10-13_img7.jpeg",
+              "description": ""
+            }
+          ],
           "actions": [
             "Connect end of inflation hoses to valves",
             "Fasten hoses by turning screw ring clockwise",
@@ -395,42 +410,42 @@
         },
         {
           "id": "tent-inflation-step-4-8",
-          "stepNumber": 4.8,
           "title": "Inflate Tents",
-          "pdfStepReference": "Page 21, Steps 14.0-15.0",
+          "pdfStepReference": "Page 21, Steps 14.0",
           "purpose": "Erect tent structure to operating pressure",
           "images": [
             {
               "filename": "21_tent_inflation_step_14-15_img4.jpeg",
               "description": "Inflator ON, tent inflating"
-            },
-            {
-              "filename": "21_tent_inflation_step_14-15_img6.jpeg",
-              "description": "Fully inflated tent"
             }
           ],
-          "operatingPressure": "0.3 bar",
-          "safetyNotes": [
-            "Open doors during inflation to prevent air passage valve damage",
-            "Pull gable guy ropes during inflation to facilitate erection",
-            "Close unused hose taps for more efficient inflation"
-          ],
           "actions": [
-            "Connect inflator to power source",
-            "Switch inflator ON",
-            "Monitor inflation process",
-            "Pressure indicators: With pressure gauge - Stop at 0.3 bar; Without gauge - Stop when inflator sound becomes higher (wait 1 min)",
-            "Switch inflator OFF"
-          ],
-          "criticalWarnings": [
-            "Maximum inflator pressure: 0.45 bar (below overpressure valve threshold)",
-            "Do NOT wait for overpressure valves to open - this may cause overheating",
-            "Never turn off inflator if overpressure valves open"
+            "Connect the inflator to a power source and switch it on. The pneumatic frame automatically inflates.",
+            "Check that all valves are connected to an inflation hose.",
+            "We recommend you to open the doors and pull on the gable guy ropes during inflation, to facilitate the tent erection process and to prevent damages on the air passage valves of the tent.",
+            "If the inflator you are using has too many hoses, we recommend you close the tap of the unused hoses for a more efficient inflation."
           ]
         },
         {
           "id": "tent-inflation-step-4-9",
-          "stepNumber": 4.9,
+          "title": "Finishing inflation",
+          "pdfStepReference": "Page 21, Steps 15.0",
+          "purpose": "Finish inflation",
+          "images": [
+            {
+              "filename": "21_tent_inflation_step_14-15_img6.jpeg",
+              "description": "Inflator OFF"
+            }
+          ],
+          "actions": [
+            "Once the working pressure of 0.3 bar is reached, you can turn the inflator off.",
+            "If your inflator isn’t fitted with a pressure indicator screen, you can use the sound of the inflator as a pressure indicator. When the sound of the inflator becomes higher, wait for approximately 1 minute and turn the inflator off.",
+            "The maximum pressure of the electric inflator is 0.45 bar, which is well below the opening threshold of the pressure relief valves. This is why the over-pressure valves generally don’t open during the filling process.",
+            "Do not wait for the overpressure valves to open before switching off the inflator, as this may lead to overheating."
+          ]
+        },
+        {
+          "id": "tent-inflation-step-4-10",
           "title": "Disconnect and Secure Valves",
           "pdfStepReference": "Page 22, Step 16.0",
           "purpose": "Seal tent frame after inflation",
@@ -438,14 +453,6 @@
             {
               "filename": "22_tent_inflation_step_16-18_img3.jpeg",
               "description": "Disconnecting inflation hoses"
-            },
-            {
-              "filename": "22_tent_inflation_step_16-18_img5.jpeg",
-              "description": "Screwing protective caps back on"
-            },
-            {
-              "filename": "22_tent_inflation_step_16-18_img7.jpeg",
-              "description": "Closing PVC protective flap"
             }
           ],
           "actions": [
@@ -455,114 +462,113 @@
           ]
         },
         {
-          "id": "tent-inflation-step-4-10",
-          "stepNumber": 4.1,
-          "title": "Install Pressure Monitoring System",
-          "pdfStepReference": "Page 22-23, Steps 18.0-21.0",
+          "id": "tent-inflation-checklist",
+          "title": "Checklist of inflation",
+          "pdfStepReference": "Page 22, Step 17.0",
+          "purpose": "Check inflation steps again",
+          "images": [],
+          "actions": [
+            "☐ Check that the inflation manifold is inserted in the OUTLET coupling.",
+            "☐ Check that the inflation hoses are all connected to the tent valves.",
+            "☐ Check that the inflation taps are all open.",
+            "☐ Check that the inflator is connected to a power source.",
+            "☐ Check that the inflator is turned off."
+          ]
+        },
+        {
+          "id": "tent-inflation-step-4-18",
+          "title": "Install Pressure Feedback",
+          "pdfStepReference": "Page 22-23, Steps 18.0",
+          "purpose": "Enable automatic pressure maintenance",
+          "images": [
+            {
+              "filename": "22_tent_inflation_step_16-18_img5.jpeg",
+              "description": ""
+            }
+          ],
+          "actions": [
+            "Locate the white pressure feedback tube inside the inflator bag, and insert the free end (with no inflation tap) in the pressure monitoring coupling of the inflator."
+          ]
+        },
+        {
+          "id": "tent-inflation-step-4-19",
+          "title": "Install Pressure Feedback 2",
+          "pdfStepReference": "Page 22-23, Steps 19",
+          "purpose": "Enable automatic pressure maintenance",
+          "images": [
+            {
+              "filename": "22_tent_inflation_step_16-18_img7.jpeg",
+              "description": ""
+            }
+          ],
+          "actions": [
+            "Unroll the pressure feeding tube and insert the other end (with a tap) inside the tent.",
+            "You can use the HVAC duct sleeves to insert the pressure feeding tube inside the tent, or slide it through the openings of the inflation valves, as shown."
+          ]
+        },
+        {
+          "id": "tent-inflation-step-4-20",
+          "title": "Install Pressure Feedback 3",
+          "pdfStepReference": "Page 22-23, Steps 20",
           "purpose": "Enable automatic pressure maintenance",
           "images": [
             {
               "filename": "23_tent_inflation_step_19-23_img4.png",
-              "description": "Pressure monitoring system diagram"
-            },
-            {
-              "filename": "23_tent_inflation_step_19-23_img5.jpeg",
-              "description": "Pressure feedback valve inside tent"
-            },
-            {
-              "filename": "23_tent_inflation_step_19-23_img7.png",
-              "description": "Inflator display showing AUTO mode and pressure reading"
+              "description": ""
             }
           ],
-          "systemComponents": [
-            "White pressure feedback tube",
-            "Pressure monitoring coupling on inflator",
-            "Pressure feedback valve inside tent"
-          ],
           "actions": [
-            "Locate white pressure feedback tube in inflator bag",
-            "Insert free end (no tap) into pressure monitoring coupling of inflator",
-            "Unroll pressure feedback tube",
-            "Insert other end (with tap) inside tent through: HVAC duct sleeves OR Inflation valve openings",
-            "Inside tent, locate pressure feedback valve on rear pneumatic arch",
-            "Open protective cap",
-            "Insert inflation tap into pressure feedback valve",
-            "Fasten screw ring and open tap"
+            "Inside the tent, locate the pressure feedback valve on the rear pneumatic arch and open the protective cap.",
+            "You many need to disconnect the inner liner sections if an inner liner is installed."
           ]
         },
         {
-          "id": "tent-inflation-step-4-11",
-          "stepNumber": 4.11,
-          "title": "Enable Automatic Pressure Control",
+          "id": "tent-inflation-step-4-21",
+          "title": "Install Pressure Feedback 4",
+          "pdfStepReference": "Page 22-23, Steps 21",
+          "purpose": "Enable automatic pressure maintenance",
+          "images": [
+            {
+              "filename": "23_tent_inflation_step_19-23_img5.jpeg",
+              "description": ""
+            }
+          ],
+          "actions": [
+            "Insert the inflation tap inside the pressure feedback valve, fasten the screw ring, and open the tap"
+          ]
+        },
+        {
+          "id": "tent-inflation-step-4-23",
+          "title": "Install Pressure Feedback 4",
           "pdfStepReference": "Page 23, Step 23.0",
           "purpose": "Maintain proper tent pressure automatically",
-          "criticalWarning": "Never switch to AUTO if feedback tube is NOT connected - inflator will detect incorrect pressure and overheat",
-          "operatingMode": {
-            "mode": "AUTO",
-            "features": [
-              "Inflator displays current pressure on screen",
-              "Automatically turns ON if pressure drops below 0.2 bar",
-              "Automatically turns OFF when pressure reaches 0.3 bar"
-            ]
-          },
-          "powerOutageProcedure": [
-            "Turn inflator to OFF immediately",
-            "Close all hose taps to prevent air loss through inflator"
+          "images": [
+            {
+              "filename": "23_tent_inflation_step_19-23_img7.png",
+              "description": ""
+            }
           ],
           "actions": [
-            "Verify feedback tube is connected to tent frame",
-            "Turn inflator to AUTO mode",
-            "Verify pressure reading on display screen"
+            "Once the feedback tube is connected to the arch inside the tent, you can turn the inflator on AUTO. The current pressure inside the tent frame is displayed on the pressure control screen, and the inflator automatically turns on if the pressure is too low (below 0.2 bar).",
+            "The inflator should never be switched on AUTO if the feedback tube is not connected to the tent frame, as the inflator will be detecting an incorrect pressure level and turn on repeatedly, until it overheats.",
+            "In case of a power outage, the inflator needs to be turned OFF, and all the hose taps should be closed immediately, to prevent the air inside the frame from escaping through the inflator, which is not air-tight."
           ]
         },
         {
-          "id": "tent-inflation-step-4-12",
-          "stepNumber": 4.12,
+          "id": "tent-inflation-step-4-24",
           "title": "Final Tent Positioning",
           "pdfStepReference": "Page 24, Step 24.0",
           "purpose": "Ensure proper groundsheet alignment",
           "images": [
             {
               "filename": "24_tent_inflation_step_24_img4.jpeg",
-              "description": "Pulling corners to straighten groundsheet"
+              "description": ""
             }
           ],
           "actions": [
             "Pull on four corners of all 3 tents",
             "Straighten groundsheet",
             "Avoid folds inside tent"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "main-tent-anchoring",
-      "title": "Main Tent Anchoring",
-      "pdfReference": "Page 29 | Section 3.6",
-      "description": "Securing main tents to ground for wind resistance",
-      "steps": [
-        {
-          "id": "main-tent-anchoring-step-6-1",
-          "stepNumber": 6.1,
-          "title": "Anchor Main Tents to Ground",
-          "pdfStepReference": "Page 29, Steps 12.0-13.0",
-          "purpose": "Secure main tents to ground for wind resistance up to 100 km/h",
-          "pegTypes": {
-            "30cm": {
-              "use": "For groundsheet loop ropes",
-              "quantity": "x12 per tent"
-            },
-            "50cm": {
-              "use": "For guy ropes",
-              "distance": "~1.5m from tent"
-            }
-          },
-          "bestPractice": "Roll rope around peg for optimal tension/adhesion",
-          "actions": [
-            "Locate bag containing tent pegs and hammer",
-            "Use 30cm T-pegs for groundsheet loop ropes - Insert at appropriate distance for good tension - Roll rope around peg",
-            "Use 50cm T-pegs for guy ropes - Insert at ~1.5m from tent - Roll rope around peg",
-            "Adjust tension using cleat tensioners"
           ]
         }
       ]
@@ -575,117 +581,86 @@
       "steps": [
         {
           "id": "vestibules-step-7-1",
-          "stepNumber": 7.1,
           "title": "Position Vestibule Bags",
-          "pdfStepReference": "Page 25, Steps 1.0-2.0",
+          "pdfStepReference": "Page 25, Steps 1.0-3.0",
           "purpose": "Prepare vestibule structures for deployment",
           "images": [
             {
               "filename": "25_vestibules_step_1-4_img4.png",
-              "description": "Instruction icons"
+              "description": "With 2-3 persons, place 6 vestibule bags next to installation area"
             },
             {
               "filename": "25_vestibules_step_1-4_img5.jpeg",
-              "description": "Vestibule bags"
+              "description": "Place bags on hard floor"
             },
             {
               "filename": "25_vestibules_step_1-4_img7.jpeg",
-              "description": "Placing bags on hard floor"
+              "description": "Open all 6 bags"
             }
           ],
-          "actions": [
-            "With 2-3 persons, place 6 vestibule bags next to installation area",
-            "Place bags on hard floor",
-            "Open all 6 bags"
-          ]
+          "actions": []
         },
         {
           "id": "vestibules-step-7-2",
-          "stepNumber": 7.2,
           "title": "Deploy Vestibules",
           "pdfStepReference": "Page 25-26, Steps 3.0-6.0",
           "purpose": "Unroll and position vestibule structures",
           "images": [
             {
               "filename": "25_vestibules_step_1-4_img8.png",
-              "description": "Opening vestibule bag"
+              "description": "Roll out the 6 vestibules."
             },
             {
               "filename": "25_vestibules_step_1-4_img9.png",
-              "description": "Rolling out vestibule"
+              "description": "Unfold the 6 vestibules and remove the bags. Store the bags in a secure location."
             },
             {
               "filename": "26_vestibules_step_5-7_img3.jpeg",
-              "description": "Unfolded vestibule"
-            },
-            {
-              "filename": "26_vestibules_step_5-7_img4.jpeg",
-              "description": "Spreading vestibule by corner loops"
+              "description": "Spread the 6 vestibules out by pulling on the four corner loops."
             }
           ],
-          "actions": [
-            "Check vestibule can be rolled out in correct direction - If incorrect, lift bag and turn 180°",
-            "Roll out all 6 vestibules",
-            "Unfold vestibules completely",
-            "Remove and store bags in secure location",
-            "Spread vestibules by pulling on four corner loops"
-          ]
+          "actions": []
         },
         {
           "id": "vestibules-step-7-3",
-          "stepNumber": 7.3,
           "title": "Prepare Vestibule Valves",
           "pdfStepReference": "Page 26, Step 7.0",
           "purpose": "Ready vestibules for inflation",
-          "images": [],
-          "actions": [
-            "Remove protective caps from inflation valves (turn counterclockwise)"
-          ]
+          "images": [
+            {
+              "filename": "26_vestibules_step_5-7_img4.jpeg",
+              "description": "Remove protective caps from inflation valves (turn counterclockwise)"
+            }
+          ],
+          "actions": []
         },
         {
           "id": "vestibules-step-7-4",
-          "stepNumber": 7.4,
           "title": "Inflate Vestibules",
-          "pdfStepReference": "Page 26-27, Steps 8.0-9.0",
+          "pdfStepReference": "Page 26-27, Steps 8.0-10.0",
           "purpose": "Erect vestibule structures",
           "images": [
             {
               "filename": "26_vestibules_step_5-7_img6.png",
-              "description": "Connecting inflator to vestibule"
+              "description": "Connect inflator to power source, Connect inflation hoses to vestibule valves"
             },
             {
               "filename": "26_vestibules_step_5-7_img7.png",
-              "description": "Inflator ON"
+              "description": "Inflator ON, Monitor until 0.3 bar pressure reached"
             },
             {
               "filename": "27_vestibules_step_8-10_img4.jpeg",
-              "description": "Vestibule inflating"
+              "description": "Switch inflator OFF"
             },
             {
               "filename": "27_vestibules_step_8-10_img5.jpeg",
-              "description": "Fully inflated vestibule"
+              "description": "Unfasten inflation hoses, Screw protective caps back on, Close PVC flaps"
             }
           ],
-          "operatingPressure": "0.3 bar",
-          "recommendations": [
-            "Open doors during inflation",
-            "Pull gable guy ropes",
-            "Close unused hose taps"
-          ],
-          "actions": [
-            "Connect inflator to power source",
-            "Connect inflation hoses to vestibule valves",
-            "Switch inflator ON",
-            "Monitor until 0.3 bar pressure reached",
-            "Switch inflator OFF",
-            "Unfasten inflation hoses",
-            "Screw protective caps back on",
-            "Close PVC flaps"
-          ]
+          "actions": []
         },
         {
           "id": "vestibules-step-7-5",
-          "stepNumber": 7.5,
           "title": "Connect Vestibules to Main Tents",
           "pdfStepReference": "Page 28, Step 11.0",
           "purpose": "Create integrated tent system",
@@ -724,7 +699,6 @@
         },
         {
           "id": "vestibules-step-7-6",
-          "stepNumber": 7.6,
           "title": "Anchor Vestibules",
           "pdfStepReference": "Page 29, Steps 12.0-13.0",
           "purpose": "Secure vestibules to ground",
@@ -770,7 +744,6 @@
       "steps": [
         {
           "id": "inner-cabins-step-8-1",
-          "stepNumber": 8.1,
           "title": "Install Support Bars",
           "pdfStepReference": "Page 30, Step 1.0",
           "purpose": "Create framework for inner cabins",
@@ -800,10 +773,6 @@
               "description": "Support bar installation (staff pod: x2 bars)"
             }
           ],
-          "configuration": {
-            "patientPods": "x4 bars each",
-            "staffPod": "x2 bars"
-          },
           "actions": [
             "Install support bars for inner cabins according to layout",
             "Ensure bars are properly secured"
@@ -811,41 +780,38 @@
         },
         {
           "id": "inner-cabins-step-8-2",
-          "stepNumber": 8.2,
           "title": "Deploy Inner Cabin Liners",
           "pdfStepReference": "Page 31, Steps 2.0-3.0",
           "purpose": "Install internal partitions and climate control",
           "images": [
             {
+              "filename": "31_inner_cabins_step_1_img4.png",
+              "description": "Place the bag inside the tent and open it."
+            },
+            {
               "filename": "31_inner_cabins_step_2-4_img5.png",
-              "description": "Installation diagram"
+              "description": "Unfold the inner cabin and remove the bags from beneath the inner cabin."
             },
             {
               "filename": "31_inner_cabins_step_2-4_img6.jpeg",
-              "description": "Inner cabin bag"
+              "description": "Starting from one side of the tent, insert the toggle buttons inside the plastic studs of the outer frame."
             },
             {
               "filename": "31_inner_cabins_step_2-4_img7.jpeg",
-              "description": "Unfolding inner cabin liner"
+              "description": "plastic studs"
             }
           ],
-          "actions": [
-            "Place inner cabin bag inside tent",
-            "Open bag",
-            "Unfold inner cabin liner",
-            "Remove and store bag in secure location"
-          ]
+          "actions": []
         },
         {
           "id": "inner-cabins-step-8-3",
-          "stepNumber": 8.3,
           "title": "Attach Inner Cabins to Frame",
-          "pdfStepReference": "Page 31-32, Steps 4.0-6.0",
+          "pdfStepReference": "Page 31-32, Steps 5.0-6.0",
           "purpose": "Secure inner partitions to tent structure",
           "images": [
             {
               "filename": "32_inner_cabins_step_5-6_img3.png",
-              "description": "Attachment sequence diagram"
+              "description": "Move along the arches, and connect the toggle buttons until you reach the other side of the tent."
             },
             {
               "filename": "32_inner_cabins_step_5-6_img4.jpeg",
@@ -853,14 +819,13 @@
             },
             {
               "filename": "32_inner_cabins_step_5-6_img6.jpeg",
-              "description": "Completed inner cabin attachment"
+              "description": "Check that all the toggle buttons are correctly connected."
             },
             {
               "filename": "32_inner_cabins_step_5-6_img7.jpeg",
               "description": "Interior view with all toggle buttons connected"
             }
           ],
-          "attachmentMethod": "Toggle buttons to plastic studs",
           "actions": [
             "Starting from one side of tent: Insert toggle buttons into plastic studs of outer frame",
             "Move along arches connecting toggle buttons",
@@ -878,7 +843,6 @@
       "steps": [
         {
           "id": "electrical-system-step-9-1",
-          "stepNumber": 9.1,
           "title": "Electrical System Overview",
           "pdfStepReference": "Page 33, Electrical System Diagram",
           "purpose": "Provide power and lighting to IDTM facility",
@@ -888,7 +852,8 @@
               "description": "Component list and wiring layout"
             }
           ],
-          "componentsRequired": [
+          "actions": [
+            "Check the component diagram to view the connections and placements.",
             "Main distribution box (x1)",
             "Multisocket with 15m extension cable (x8)",
             "Stripe LED feeder (x5)",
@@ -900,75 +865,6 @@
             "Extension cable 230V 16A IP54 L=10m (x1)",
             "Extension cable 230V 16A IP54 L=5m (x1)"
           ]
-        },
-        {
-          "id": "electrical-system-step-9-2",
-          "stepNumber": 9.2,
-          "title": "Install Electrical Distribution",
-          "purpose": "Create power distribution network",
-          "actions": [
-            "Position main distribution box",
-            "Connect extension cables according to electrical diagram",
-            "Install splitters at designated positions",
-            "Route cables through tent cable sleeves"
-          ]
-        },
-        {
-          "id": "electrical-system-step-9-3",
-          "stepNumber": 9.3,
-          "title": "Install LED Lighting System",
-          "purpose": "Provide interior illumination",
-          "actions": [
-            "Install LED stripe feeders (48V DC)",
-            "Connect master and slave dimmers",
-            "Position LED strips along tent arches",
-            "Connect LED strips to feeders via 3m extension cables",
-            "Test lighting system"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "final-inspection",
-      "title": "Final Inspection and Completion",
-      "pdfReference": "Pages 29, 39-41 | Section 4.1",
-      "description": "Final verification and system activation",
-      "steps": [
-        {
-          "id": "final-inspection-step-10-1",
-          "stepNumber": 10.1,
-          "title": "Final Inspection Checklist",
-          "pdfStepReference": "Section 3.7 (Page 29) and Section 4.1 PMI 1 (Page 39)",
-          "purpose": "Ensure complete and proper installation",
-          "checklist": [
-            "All tents inflated to 0.3 bar operating pressure",
-            "Pressure monitoring system active (AUTO mode)",
-            "All vestibules connected and inflated",
-            "Inner cabins properly installed and attached",
-            "All pegs securely anchored",
-            "Guy ropes properly tensioned",
-            "Electrical system functional and tested",
-            "All doors and windows operational",
-            "Drainage around perimeter adequate",
-            "No sharp objects inside tents",
-            "Groundsheet clean and properly aligned"
-          ]
-        },
-        {
-          "id": "final-inspection-step-10-2",
-          "stepNumber": 10.2,
-          "title": "System Activation",
-          "purpose": "Complete installation and begin operational readiness",
-          "finalActions": [
-            "Verify pressure monitoring inflator is in AUTO mode",
-            "Check all HVAC duct sleeves are properly sealed",
-            "Verify cable sleeves are sealed",
-            "Test all doors and windows for proper operation",
-            "Confirm electrical system is operational (lights, power outlets)",
-            "Verify all inflation valves are capped and protected",
-            "Document installation completion time"
-          ],
-          "status": "Installation Complete ✓"
         }
       ]
     }

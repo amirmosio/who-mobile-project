@@ -141,8 +141,7 @@ class IdtmFacility {
 
   /// Get steps for a specific phase
   List<InstallationStep> getStepsForPhase(String phase) {
-    return steps.where((step) => step.phase.value == phase).toList()
-      ..sort((a, b) => a.stepNumber.compareTo(b.stepNumber));
+    return steps.where((step) => step.phase.value == phase).toList();
   }
 
   /// Get components by category

@@ -33,7 +33,7 @@
           "images": [
             {
               "filename": "34_pre_dismantling_requirements_img4.jpeg",
-              "description": "Temperature changes and environmental considerations"
+              "description": "Peg locations and anchoring system overview (84 total pegs)"
             }
           ]
         },
@@ -54,11 +54,11 @@
           "images": [
             {
               "filename": "34_pre_dismantling_requirements_img5.png",
-              "description": "Site preparation and selection guidelines"
+              "description": "Proper floor panel usage and sun orientation considerations"
             },
             {
               "filename": "34_pre_dismantling_requirements_img6.png",
-              "description": "Installation site preparation requirements"
+              "description": "T-peg installation and removal technique"
             }
           ]
         }
@@ -206,19 +206,19 @@
           "images": [
             {
               "filename": "35_vestibule_sun_shadowing_removal_img3.png",
-              "description": "Locking pin removal illustration"
+              "description": "Inner cabin folding procedure with directional arrows"
             },
             {
               "filename": "35_vestibule_sun_shadowing_removal_img4.png",
-              "description": "Stud connection detail"
+              "description": "Rolling and packing inner cabin into bag"
             },
             {
               "filename": "35_vestibule_sun_shadowing_removal_img5.jpeg",
-              "description": "Vestibule separation photo"
+              "description": "Vestibule connection to main tent with locking pin detail (circled)"
             },
             {
               "filename": "35_vestibule_sun_shadowing_removal_img6.jpeg",
-              "description": "Sun shadowing removal photo"
+              "description": "Double stud disconnection from single stud mechanism"
             }
           ]
         }
@@ -250,11 +250,11 @@
           "images": [
             {
               "filename": "36_tent_deflation_step_7-8_img3.png",
-              "description": "Door position illustration"
+              "description": "Stud disconnection mechanism illustration"
             },
             {
               "filename": "36_tent_deflation_step_7-8_img5.jpeg",
-              "description": "Tent collapse photo step 7"
+              "description": "Opening inflation valve and inflator connection during deflation"
             }
           ]
         },
@@ -274,7 +274,7 @@
           "images": [
             {
               "filename": "36_tent_deflation_step_7-8_img6.jpeg",
-              "description": "Deflation process photo step 8"
+              "description": "Inflation valve operation - closed (inflate) vs open (deflate) positions"
             }
           ]
         },
@@ -298,11 +298,11 @@
           "images": [
             {
               "filename": "37_tent_deflation_step_9-10_img3.jpeg",
-              "description": "Complete deflation photo step 9"
+              "description": "Inflator in deflation mode (INLET) for main tents (x3) and vestibules (x6)"
             },
             {
               "filename": "37_tent_deflation_step_9-10_img4.jpeg",
-              "description": "Valve closure photo"
+              "description": "Deflated tent positioned with guy ropes on top ready for folding"
             }
           ]
         },
@@ -320,15 +320,15 @@
           "images": [
             {
               "filename": "37_tent_deflation_step_9-10_img5.jpeg",
-              "description": "Tent folding pattern diagram - flat panel"
+              "description": "Flat tent panel component for folding reference"
             },
             {
               "filename": "37_tent_deflation_step_9-10_img6.jpeg",
-              "description": "Tent folding pattern diagram - wedge/edge piece"
+              "description": "Wedge-shaped tent component for folding reference"
             },
             {
               "filename": "37_tent_deflation_step_9-10_img7.jpeg",
-              "description": "Final deflation position photo"
+              "description": "Folded tent component showing final compact form"
             }
           ]
         }
@@ -354,24 +354,7 @@
             "Fold sun shadowing nets",
             "Place nets in their corresponding bags"
           ],
-          "images": [
-            {
-              "filename": "35_vestibule_sun_shadowing_removal_img3.png",
-              "description": "Locking pin removal illustration"
-            },
-            {
-              "filename": "35_vestibule_sun_shadowing_removal_img4.png",
-              "description": "Stud disconnection detail"
-            },
-            {
-              "filename": "35_vestibule_sun_shadowing_removal_img5.jpeg",
-              "description": "Spacer separation photo"
-            },
-            {
-              "filename": "35_vestibule_sun_shadowing_removal_img6.jpeg",
-              "description": "Sun shadowing net removal photo"
-            }
-          ]
+          "images": []
         }
       ]
     },
@@ -437,19 +420,19 @@
           "images": [
             {
               "filename": "38_tent_folding_packing_img3.jpeg",
-              "description": "Step 1 folding photo"
+              "description": "Tent folded flat into rectangular bundle lengthwise"
             },
             {
               "filename": "38_tent_folding_packing_img4.jpeg",
-              "description": "Step 2 folding photo"
+              "description": "Starting to roll tent bundle from one end"
             },
             {
               "filename": "38_tent_folding_packing_img5.jpeg",
-              "description": "Step 3 rolling photo"
+              "description": "Incorrect rolling position (marked with red X)"
             },
             {
               "filename": "38_tent_folding_packing_img6.jpeg",
-              "description": "Step 4 bag placement photo"
+              "description": "Correct bag placement under folded end before rolling (red X shows wrong placement)"
             }
           ]
         },
@@ -466,11 +449,11 @@
           "images": [
             {
               "filename": "38_tent_folding_packing_img3.jpeg",
-              "description": "Bundle width verification example"
+              "description": "Tent folded to match bag width for proper fit"
             },
             {
               "filename": "38_tent_folding_packing_img4.jpeg",
-              "description": "Checking bundle dimensions before rolling"
+              "description": "Verifying bundle width matches bag before rolling"
             }
           ]
         },
@@ -489,11 +472,11 @@
           "images": [
             {
               "filename": "38_tent_folding_packing_img7.jpeg",
-              "description": "Step 5 final packing photo"
+              "description": "Two persons rolling tent bundle with width verification (red arrow)"
             },
             {
               "filename": "38_tent_folding_packing_img8.png",
-              "description": "Securing straps diagram"
+              "description": "Securing tent bundle with bag straps illustration"
             }
           ]
         }
@@ -520,19 +503,19 @@
           "images": [
             {
               "filename": "16_hard_floor_installation_reverse_img4.jpeg",
-              "description": "Floor removal photo"
+              "description": "Floor tiles stacked on pallet for transport (approximately 180 kg)"
             },
             {
               "filename": "16_hard_floor_installation_reverse_img6.jpeg",
-              "description": "Stacked tiles photo"
+              "description": "Floor tile installation pattern with directional arrows"
             },
             {
               "filename": "16_hard_floor_installation_reverse_img7.png",
-              "description": "Pallet truck illustration"
+              "description": "Hard floor tile layout pattern showing quantities (x31, x10, x9, x3 tiles)"
             },
             {
               "filename": "16_hard_floor_installation_reverse_img8.jpeg",
-              "description": "Floor transport photo"
+              "description": "Hard floor installation area dimensions (17m x 8m) and layout"
             }
           ]
         }
