@@ -74,7 +74,6 @@ class _DashboardPageState extends ConsumerState<DashboardPage>
               // Facility Use & Functioning Card - only for authenticated users
               if (isAuthenticated) const FacilityUseCard(),
 
-              // Add other dashboard cards here in the future
               const SizedBox(height: 16),
             ],
           ),
