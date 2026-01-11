@@ -1904,6 +1904,12 @@ class AppLocalizationsIt extends AppLocalizations {
       'Inserisci il tuo indirizzo email per ricevere un link per reimpostare la password.';
 
   @override
+  String get sign_in_with_google => 'Accedi con Google';
+
+  @override
+  String get or_continue_with => 'Oppure continua con';
+
+  @override
   String get verify_email_title => 'Verifica la tua email';
 
   @override

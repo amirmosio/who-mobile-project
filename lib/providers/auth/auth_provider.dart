@@ -98,6 +98,9 @@ class AuthNotifier extends BaseApiNotifier<BaseApiState> {
       () => _repository.signOut(),
       successMessage: 'Signed out successfully',
       onSuccess: () async {
+        // Sign out from Google as well (in case user signed in with Google)
+        await _authService.signOutFromGoogle();
+
         // Cancel all scheduled maintenance alerts
         await ref.read(scheduledAlertsProvider.notifier).cancelAllAlerts();
 
@@ -184,6 +187,38 @@ class AuthNotifier extends BaseApiNotifier<BaseApiState> {
       successMessage: 'Password reset email sent successfully',
       errorMessage: 'Failed to send password reset email',
     );
+  }
+
+  /// Sign in with Google
+  /// Only allows existing users registered in the system
+  /// Returns AppUser on success, null on failure
+  Future<AppUser?> signInWithGoogle() async {
+    final user = await executeApiCallAndSetState<AppUser>(
+      () => _repository.signInWithGoogle(),
+      loadingMessage: 'Signing in with Google...',
+      successMessage: 'Signed in successfully',
+    );
+
+    if (user != null) {
+      // Cache user data for quick access
+      await _storageManager.cacheUserData(user);
+      await _storageManager.cacheUserRole(user.role);
+
+      // Update current user provider
+      ref.read(currentUserProvider.notifier).setUser(user);
+
+      // Restore installation state from Firebase (if any)
+      if (user.uid != null) {
+        await _restoreInstallationStateFromFirebase(user.uid!);
+      }
+
+      // Schedule general alerts for this user
+      await ref.read(scheduledAlertsProvider.notifier).scheduleGeneralAlerts(
+        userId: user.uid!,
+      );
+    }
+
+    return user;
   }
 
   /// Check if there's a currently authenticated user
