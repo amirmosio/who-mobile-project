@@ -30,7 +30,6 @@ import 'route_observer.dart';
 import 'package:who_mobile_project/services/navigation_tracker.dart';
 import 'package:who_mobile_project/ui/dashboard/dashboard_page.dart';
 import 'package:who_mobile_project/ui/initial_loading/initial_loading.dart';
-import 'package:who_mobile_project/general/widgets/section_placeholder.dart';
 import 'package:who_mobile_project/ui/profile_and_settings/profile_menu_page.dart';
 import 'package:who_mobile_project/ui/idtm/packing_list_page.dart';
 import 'package:who_mobile_project/ui/idtm/maintenance_page.dart';
@@ -40,12 +39,9 @@ import 'package:who_mobile_project/ui/comments/comments_page.dart';
 
 GoRouter baseNavRouterBuilder() {
   final homeGlobalKey = GlobalKey<NavigatorState>(debugLabel: "homeGlobalKey");
-  // TODO: Re-enable when Store feature is ready
-  // final callGlobalKey = GlobalKey<NavigatorState>(debugLabel: 'callGlobalKey');
   final commentsGlobalKey = GlobalKey<NavigatorState>(
     debugLabel: 'commentsGlobalKey',
   );
-  final blogGlobalKey = GlobalKey<NavigatorState>(debugLabel: 'blogGlobalKey');
   final settingsGlobalKey = GlobalKey<NavigatorState>(
     debugLabel: 'settingsGlobalKey',
   );
@@ -349,20 +345,6 @@ GoRouter baseNavRouterBuilder() {
           //     ),
           //   ],
           // ),
-          StatefulShellBranch(
-            navigatorKey: blogGlobalKey,
-            routes: <RouteBase>[
-              GoRoute(
-                path: YRRoutes.blog,
-                name: YRRoutes.blog,
-                pageBuilder: (context, state) => const MaterialPage(
-                  child: Scaffold(
-                    body: Center(child: SectionPlaceholder(text: 'Blog')),
-                  ),
-                ),
-              ),
-            ],
-          ),
           StatefulShellBranch(
             navigatorKey: settingsGlobalKey,
             routes: <RouteBase>[

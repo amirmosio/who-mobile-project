@@ -39,14 +39,7 @@ class _BasePageWithNavBarState extends ConsumerState<BasePageWithNavBar>
         case 1: // Comments tab
           context.go(YRRoutes.comments);
           break;
-        // TODO: Re-enable when Store feature is ready
-        // case 2: // Store tab
-        //   context.go(YRRoutes.recentCallList);
-        //   break;
-        case 2: // Blog tab
-          context.go(YRRoutes.blog);
-          break;
-        case 3: // Profile tab
+        case 2: // Profile tab
           context.go(YRRoutes.profileMenu);
           break;
       }
@@ -125,14 +118,9 @@ class _BasePageWithNavBarState extends ConsumerState<BasePageWithNavBar>
                         //   2
                         // ),
                         (
-                          'assets/images/figma_designs/icon_nav_blog.svg',
-                          AppLocalizations.of(context)!.news,
-                          2,
-                        ),
-                        (
                           'assets/images/figma_designs/icon_nav_profile.svg',
                           AppLocalizations.of(context)!.profile,
-                          3,
+                          2,
                         ),
                       ],
                     ),
