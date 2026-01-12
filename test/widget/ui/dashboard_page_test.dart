@@ -3,6 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:who_mobile_project/ui/dashboard/dashboard_page.dart';
 import 'package:who_mobile_project/ui/dashboard/widgets/idtm_status_card.dart';
 import 'package:who_mobile_project/ui/dashboard/widgets/what_is_idtm_card.dart';
+import '../../test_helpers.dart';
 
 /// Widget tests for DashboardPage
 ///
@@ -19,9 +20,7 @@ void main() {
     testWidgets('should display dashboard page with appbar', (WidgetTester tester) async {
       // Arrange & Act
       await tester.pumpWidget(
-        const MaterialApp(
-          home: DashboardPage(),
-        ),
+        makeTestableWidget(const DashboardPage()),
       );
       await tester.pumpAndSettle();
 
@@ -33,9 +32,7 @@ void main() {
     testWidgets('should display What is IDTM card', (WidgetTester tester) async {
       // Arrange & Act
       await tester.pumpWidget(
-        const MaterialApp(
-          home: DashboardPage(),
-        ),
+        makeTestableWidget(const DashboardPage()),
       );
       await tester.pumpAndSettle();
 
@@ -46,9 +43,7 @@ void main() {
     testWidgets('should display IDTM Status card', (WidgetTester tester) async {
       // Arrange & Act
       await tester.pumpWidget(
-        const MaterialApp(
-          home: DashboardPage(),
-        ),
+        makeTestableWidget(const DashboardPage()),
       );
       await tester.pumpAndSettle();
 
@@ -59,9 +54,7 @@ void main() {
     testWidgets('should display cards in scrollable column', (WidgetTester tester) async {
       // Arrange & Act
       await tester.pumpWidget(
-        const MaterialApp(
-          home: DashboardPage(),
-        ),
+        makeTestableWidget(const DashboardPage()),
       );
       await tester.pumpAndSettle();
 
@@ -75,9 +68,7 @@ void main() {
     testWidgets('should have RefreshIndicator', (WidgetTester tester) async {
       // Arrange & Act
       await tester.pumpWidget(
-        const MaterialApp(
-          home: DashboardPage(),
-        ),
+        makeTestableWidget(const DashboardPage()),
       );
       await tester.pumpAndSettle();
 
@@ -88,9 +79,7 @@ void main() {
     testWidgets('should trigger refresh on pull down', (WidgetTester tester) async {
       // Arrange
       await tester.pumpWidget(
-        const MaterialApp(
-          home: DashboardPage(),
-        ),
+        makeTestableWidget(const DashboardPage()),
       );
       await tester.pumpAndSettle();
 
@@ -111,9 +100,7 @@ void main() {
     testWidgets('should rebuild cards when app resumed', (WidgetTester tester) async {
       // Arrange
       await tester.pumpWidget(
-        const MaterialApp(
-          home: DashboardPage(),
-        ),
+        makeTestableWidget(const DashboardPage()),
       );
       await tester.pumpAndSettle();
 
@@ -136,9 +123,7 @@ void main() {
     testWidgets('should use AlwaysScrollableScrollPhysics', (WidgetTester tester) async {
       // Arrange & Act
       await tester.pumpWidget(
-        const MaterialApp(
-          home: DashboardPage(),
-        ),
+        makeTestableWidget(const DashboardPage()),
       );
       await tester.pumpAndSettle();
 
@@ -152,9 +137,7 @@ void main() {
     testWidgets('should have proper spacing between cards', (WidgetTester tester) async {
       // Arrange & Act
       await tester.pumpWidget(
-        const MaterialApp(
-          home: DashboardPage(),
-        ),
+        makeTestableWidget(const DashboardPage()),
       );
       await tester.pumpAndSettle();
 

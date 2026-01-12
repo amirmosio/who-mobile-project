@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:who_mobile_project/ui/installation_guide/installation_steps_list_page.dart';
+import '../../test_helpers.dart';
 
 /// Widget tests for Installation Guide
 ///
@@ -22,9 +23,7 @@ void main() {
     testWidgets('should display installation guide page', (WidgetTester tester) async {
       // Arrange & Act
       await tester.pumpWidget(
-        const MaterialApp(
-          home: InstallationStepsListPage(),
-        ),
+        makeTestableWidget(const InstallationStepsListPage()),
       );
       await tester.pumpAndSettle();
 
@@ -35,9 +34,7 @@ void main() {
     testWidgets('should have appbar with title', (WidgetTester tester) async {
       // Arrange & Act
       await tester.pumpWidget(
-        const MaterialApp(
-          home: InstallationStepsListPage(),
-        ),
+        makeTestableWidget(const InstallationStepsListPage()),
       );
       await tester.pumpAndSettle();
 
@@ -48,9 +45,7 @@ void main() {
     testWidgets('should display progress indicator', (WidgetTester tester) async {
       // Arrange & Act
       await tester.pumpWidget(
-        const MaterialApp(
-          home: InstallationStepsListPage(),
-        ),
+        makeTestableWidget(const InstallationStepsListPage()),
       );
       await tester.pumpAndSettle();
 
@@ -65,9 +60,7 @@ void main() {
     testWidgets('should display list of installation steps', (WidgetTester tester) async {
       // Arrange & Act
       await tester.pumpWidget(
-        const MaterialApp(
-          home: InstallationStepsListPage(),
-        ),
+        makeTestableWidget(const InstallationStepsListPage()),
       );
       await tester.pumpAndSettle();
 
@@ -80,9 +73,7 @@ void main() {
     testWidgets('should display step numbers', (WidgetTester tester) async {
       // Arrange & Act
       await tester.pumpWidget(
-        const MaterialApp(
-          home: InstallationStepsListPage(),
-        ),
+        makeTestableWidget(const InstallationStepsListPage()),
       );
       await tester.pumpAndSettle();
 
@@ -94,9 +85,7 @@ void main() {
     testWidgets('should be scrollable', (WidgetTester tester) async {
       // Arrange & Act
       await tester.pumpWidget(
-        const MaterialApp(
-          home: InstallationStepsListPage(),
-        ),
+        makeTestableWidget(const InstallationStepsListPage()),
       );
       await tester.pumpAndSettle();
 
@@ -109,9 +98,7 @@ void main() {
     testWidgets('should be tappable for navigation', (WidgetTester tester) async {
       // Arrange
       await tester.pumpWidget(
-        const MaterialApp(
-          home: InstallationStepsListPage(),
-        ),
+        makeTestableWidget(const InstallationStepsListPage()),
       );
       await tester.pumpAndSettle();
 
@@ -129,9 +116,7 @@ void main() {
     testWidgets('should show loading state initially', (WidgetTester tester) async {
       // Arrange & Act
       await tester.pumpWidget(
-        const MaterialApp(
-          home: InstallationStepsListPage(),
-        ),
+        makeTestableWidget(const InstallationStepsListPage()),
       );
 
       // Assert - Before pumpAndSettle, might show loading
@@ -146,9 +131,7 @@ void main() {
     testWidgets('should display completion indicators', (WidgetTester tester) async {
       // Arrange & Act
       await tester.pumpWidget(
-        const MaterialApp(
-          home: InstallationStepsListPage(),
-        ),
+        makeTestableWidget(const InstallationStepsListPage()),
       );
       await tester.pumpAndSettle();
 
@@ -166,9 +149,7 @@ void main() {
     testWidgets('should handle empty steps list gracefully', (WidgetTester tester) async {
       // Arrange & Act
       await tester.pumpWidget(
-        const MaterialApp(
-          home: InstallationStepsListPage(),
-        ),
+        makeTestableWidget(const InstallationStepsListPage()),
       );
       await tester.pumpAndSettle();
 
@@ -179,9 +160,7 @@ void main() {
     testWidgets('should render without errors', (WidgetTester tester) async {
       // Arrange & Act
       await tester.pumpWidget(
-        const MaterialApp(
-          home: InstallationStepsListPage(),
-        ),
+        makeTestableWidget(const InstallationStepsListPage()),
       );
 
       // Should not throw any exceptions

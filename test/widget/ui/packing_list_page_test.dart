@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:who_mobile_project/ui/idtm/packing_list_page.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:who_mobile_project/generated/i18n/app_localizations.dart';
+import '../../test_helpers.dart';
 
 /// Widget tests for PackingListPage
 ///
@@ -22,22 +21,6 @@ void main() {
     // Clear SharedPreferences before each test
     SharedPreferences.setMockInitialValues({});
   });
-
-  // Helper function to wrap widgets with localization
-  Widget makeTestableWidget(Widget child) {
-    return MaterialApp(
-      localizationsDelegates: const [
-        AppLocalizations.delegate,
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      supportedLocales: const [
-        Locale('en'),
-      ],
-      home: child,
-    );
-  }
 
   group('PackingListPage - Display Tests', () {
     testWidgets('should display packing list page with header', (WidgetTester tester) async {
