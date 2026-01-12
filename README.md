@@ -9,9 +9,9 @@ Major features of the app:
 - Furniture and equipment instruction Kian
 - Dismantling and repacking Amir
 - ~~Facility use and functioning Amin~~
-- make the state of instalation persist Amin
-- add localization for English and Italian Amin![alt text](image.png)
-- Every user can leave notes after use (document damages, reparations etc for future users)
+- ~~make the state of instalation persist Amin~~
+- ~~add localization for English and Italian Amin!~~
+- ~~Every loggedin user can leave notes after use (document damages, reparations etc for future users)~~
 
 
 - ~~Login (guest, admin) Firebase Authentication~~
