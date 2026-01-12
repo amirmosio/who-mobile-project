@@ -28,6 +28,9 @@ class _BasePageWithNavBarState extends ConsumerState<BasePageWithNavBar>
   // void _handleAuthenticationState(BaseApiState authState) { ... }
   // void _checkSubscribedUserAddress() { ... }
 
+  // Toggle state for showing/hiding nav bar in landscape mode
+  bool _showNavBarInLandscape = true;
+
   void _onNavigationItemSelected(int index) {
     // If the same tab is selected, navigate to root of that branch
     if (widget.navigationShell.currentIndex == index) {
@@ -62,11 +65,26 @@ class _BasePageWithNavBarState extends ConsumerState<BasePageWithNavBar>
 
     final orientation = MediaQuery.of(context).orientation;
     final isLandscape = orientation == Orientation.landscape;
+    final showNavBar = !isLandscape || _showNavBarInLandscape;
 
     return Scaffold(
       resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       floatingActionButtonLocation: FloatingActionButtonLocation.centerTop,
+      floatingActionButton: isLandscape
+          ? FloatingActionButton.small(
+              onPressed: () {
+                setState(() {
+                  _showNavBarInLandscape = !_showNavBarInLandscape;
+                });
+              },
+              backgroundColor: Colors.grey.shade800.withValues(alpha: 0.9),
+              child: Icon(
+                _showNavBarInLandscape ? Icons.expand_more : Icons.expand_less,
+                color: Colors.white,
+              ),
+            )
+          : null,
       body: SafeArea(
         top: true,
         bottom: false,
@@ -84,14 +102,14 @@ class _BasePageWithNavBarState extends ConsumerState<BasePageWithNavBar>
                   key: ValueKey("navigationShell padding"),
                   children: [
                     Expanded(child: widget.navigationShell),
-                    if (!isLandscape)
+                    if (showNavBar)
                       SizedBox(
                         height: YRBottomNavBar.bottomNavBarHeight,
                         width: double.infinity,
                       ),
                   ],
                 ),
-                if (!isLandscape)
+                if (showNavBar)
                   Align(
                     alignment: Alignment.bottomCenter,
                     child: YRBottomNavBar(

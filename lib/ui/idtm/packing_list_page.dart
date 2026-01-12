@@ -474,6 +474,8 @@ class _PackingListPageState extends State<PackingListPage> {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
+    final orientation = MediaQuery.of(context).orientation;
+    final isLandscape = orientation == Orientation.landscape;
 
     if (_isLoading) {
       return Scaffold(
@@ -511,207 +513,378 @@ class _PackingListPageState extends State<PackingListPage> {
           ),
         ],
       ),
-      body: Column(
-        children: [
-          // Header card
-          Card(
-            margin: const EdgeInsets.all(16),
-            color: BZColors.bronzeDark.withValues(alpha: 0.1),
-            child: Padding(
-              padding: const EdgeInsets.all(16),
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                      const Icon(
-                        Icons.inventory_2,
-                        size: 40,
-                        color: BZColors.bronzeDark,
-                      ),
-                      const SizedBox(width: 16),
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              l10n.equipment_checklist,
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .titleLarge
-                                  ?.copyWith(
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                            ),
-                            const SizedBox(height: 4),
-                            Text(
-                              l10n.verify_all_items,
-                              style: Theme.of(context).textTheme.bodyMedium,
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 12),
-                  // Progress bar
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(8),
-                    child: LinearProgressIndicator(
-                      value: _totalItems > 0 ? _checkedCount / _totalItems : 0,
-                      minHeight: 8,
-                      backgroundColor: Colors.grey[300],
-                      valueColor: const AlwaysStoppedAnimation<Color>(
-                        BZColors.bronzeDark,
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 8),
-                  Text(
-                    l10n.total_weight(IdtmPackingListData.getTotalWeight().toStringAsFixed(0)),
-                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                          color: Colors.grey[700],
-                        ),
-                  ),
-                ],
-              ),
-            ),
-          ),
+      body: isLandscape
+          ? _buildLandscapeLayout(l10n, mainItems)
+          : _buildPortraitLayout(l10n, mainItems),
+    );
+  }
 
-          // Packing list items
-          Expanded(
-            child: ListView.builder(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              itemCount: mainItems.length + 1, // +1 for comments section
-              itemBuilder: (context, index) {
-                // Show comments section at the end
-                if (index == mainItems.length) {
-                  return Padding(
-                    padding: const EdgeInsets.only(top: 8, bottom: 16),
-                    child: CommentsSectionWidget(
-                      category: CommentCategory.install,
-                      maxComments: 3,
-                      showAddButton: true,
-                      showViewAll: true,
-                      title: l10n.installation_notes,
-                      collapsible: true,
-                      initiallyCollapsed: true,
-                    ),
-                  );
-                }
-
-                final item = mainItems[index];
-                final subItems = _getSubItems(item.id);
-                final isExpanded = _expandedItems[item.id] ?? false;
-
-                return _PackingListCard(
-                  item: item,
-                  subItems: subItems,
-                  isChecked: _checkedItems[item.id] ?? false,
-                  isExpanded: isExpanded,
-                  onCheckChanged: (value) {
-                    _handleParentCheckChanged(item.id, value);
-                  },
-                  onExpandChanged: () {
-                    setState(() {
-                      _expandedItems[item.id] = !isExpanded;
-                    });
-                    _saveExpandedState(item.id, !isExpanded);
-                  },
-                  onSubItemCheckChanged: (subItemId, value) {
-                    _handleSubItemCheckChanged(item.id, subItemId, value);
-                  },
-                  getSubItemChecked: (subItemId) =>
-                      _checkedItems[subItemId] ?? false,
-                );
-              },
-            ),
-          ),
-
-          // Action buttons
-          Container(
+  Widget _buildPortraitLayout(AppLocalizations l10n, List<PackingListItem> mainItems) {
+    return Column(
+      children: [
+        // Header card
+        Card(
+          margin: const EdgeInsets.all(16),
+          color: BZColors.bronzeDark.withValues(alpha: 0.1),
+          child: Padding(
             padding: const EdgeInsets.all(16),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withValues(alpha: 0.1),
-                  blurRadius: 4,
-                  offset: const Offset(0, -2),
-                ),
-              ],
-            ),
             child: Column(
-              mainAxisSize: MainAxisSize.min,
               children: [
-                ElevatedButton.icon(
-                  onPressed: _isScanning ? null : _scanItemWithCamera,
-                  icon: _isScanning
-                      ? const SizedBox(
-                          width: 20,
-                          height: 20,
-                          child: CircularProgressIndicator(
-                            strokeWidth: 2,
-                            valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+                Row(
+                  children: [
+                    const Icon(
+                      Icons.inventory_2,
+                      size: 40,
+                      color: BZColors.bronzeDark,
+                    ),
+                    const SizedBox(width: 16),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            l10n.equipment_checklist,
+                            style: Theme.of(context)
+                                .textTheme
+                                .titleLarge
+                                ?.copyWith(
+                                  fontWeight: FontWeight.bold,
+                                ),
                           ),
-                        )
-                      : const Icon(Icons.camera_alt),
-                  label: Text(_isScanning ? l10n.scanning : l10n.scan_with_camera),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: BZColors.bronzeDark,
-                    foregroundColor: Colors.white,
-                    minimumSize: const Size(double.infinity, 48),
-                  ),
-                ),
-                const SizedBox(height: 8),
-                OutlinedButton.icon(
-                  onPressed: () async {
-                    // Show confirmation dialog
-                    final confirmed = await showDialog<bool>(
-                      context: context,
-                      builder: (context) => AlertDialog(
-                        title: Text(l10n.reset_checklist),
-                        content: Text(l10n.reset_checklist_confirmation),
-                        actions: [
-                          TextButton(
-                            onPressed: () => Navigator.of(context).pop(false),
-                            child: Text(l10n.cancel),
-                          ),
-                          TextButton(
-                            onPressed: () => Navigator.of(context).pop(true),
-                            child: Text(l10n.reset),
+                          const SizedBox(height: 4),
+                          Text(
+                            l10n.verify_all_items,
+                            style: Theme.of(context).textTheme.bodyMedium,
                           ),
                         ],
                       ),
-                    );
-
-                    if (confirmed == true) {
-                      // Clear all checkboxes and save to preferences
-                      final prefs = await SharedPreferences.getInstance();
-                      setState(() {
-                        for (var key in _checkedItems.keys) {
-                          _checkedItems[key] = false;
-                          prefs.setBool('checked_$key', false);
-                        }
-                      });
-
-                      if (mounted) {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(
-                            content: Text(l10n.checklist_reset_success),
-                            duration: const Duration(seconds: 2),
-                          ),
-                        );
-                      }
-                    }
-                  },
-                  icon: const Icon(Icons.refresh),
-                  label: Text(l10n.reset_checklist),
-                  style: OutlinedButton.styleFrom(
-                    foregroundColor: BZColors.bronzeDark,
-                    minimumSize: const Size(double.infinity, 48),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 12),
+                // Progress bar
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(8),
+                  child: LinearProgressIndicator(
+                    value: _totalItems > 0 ? _checkedCount / _totalItems : 0,
+                    minHeight: 8,
+                    backgroundColor: Colors.grey[300],
+                    valueColor: const AlwaysStoppedAnimation<Color>(
+                      BZColors.bronzeDark,
+                    ),
                   ),
                 ),
+                const SizedBox(height: 8),
+                Text(
+                  l10n.total_weight(IdtmPackingListData.getTotalWeight().toStringAsFixed(0)),
+                  style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                        color: Colors.grey[700],
+                      ),
+                ),
               ],
+            ),
+          ),
+        ),
+
+        // Packing list items
+        Expanded(
+          child: _buildItemsList(l10n, mainItems),
+        ),
+
+        // Action buttons
+        _buildActionButtons(l10n),
+      ],
+    );
+  }
+
+  Widget _buildLandscapeLayout(AppLocalizations l10n, List<PackingListItem> mainItems) {
+    return Row(
+      children: [
+        // Left side: Compact header and action buttons
+        Container(
+          width: 280,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withValues(alpha: 0.1),
+                blurRadius: 4,
+                offset: const Offset(2, 0),
+              ),
+            ],
+          ),
+          child: Column(
+            children: [
+              // Compact header
+              Card(
+                margin: const EdgeInsets.all(12),
+                color: BZColors.bronzeDark.withValues(alpha: 0.1),
+                child: Padding(
+                  padding: const EdgeInsets.all(12),
+                  child: Column(
+                    children: [
+                      const Icon(
+                        Icons.inventory_2,
+                        size: 32,
+                        color: BZColors.bronzeDark,
+                      ),
+                      const SizedBox(height: 8),
+                      Text(
+                        l10n.equipment_checklist,
+                        style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                              fontWeight: FontWeight.bold,
+                            ),
+                        textAlign: TextAlign.center,
+                      ),
+                      const SizedBox(height: 8),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(8),
+                        child: LinearProgressIndicator(
+                          value: _totalItems > 0 ? _checkedCount / _totalItems : 0,
+                          minHeight: 6,
+                          backgroundColor: Colors.grey[300],
+                          valueColor: const AlwaysStoppedAnimation<Color>(
+                            BZColors.bronzeDark,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 6),
+                      Text(
+                        l10n.total_weight(IdtmPackingListData.getTotalWeight().toStringAsFixed(0)),
+                        style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                              color: Colors.grey[700],
+                            ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              const Spacer(),
+              // Action buttons in sidebar
+              Padding(
+                padding: const EdgeInsets.all(12),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    ElevatedButton.icon(
+                      onPressed: _isScanning ? null : _scanItemWithCamera,
+                      icon: _isScanning
+                          ? const SizedBox(
+                              width: 16,
+                              height: 16,
+                              child: CircularProgressIndicator(
+                                strokeWidth: 2,
+                                valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+                              ),
+                            )
+                          : const Icon(Icons.camera_alt, size: 18),
+                      label: Text(
+                        _isScanning ? l10n.scanning : l10n.scan_with_camera,
+                        style: const TextStyle(fontSize: 13),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: BZColors.bronzeDark,
+                        foregroundColor: Colors.white,
+                        minimumSize: const Size(double.infinity, 44),
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                    OutlinedButton.icon(
+                      onPressed: () async {
+                        final confirmed = await showDialog<bool>(
+                          context: context,
+                          builder: (context) => AlertDialog(
+                            title: Text(l10n.reset_checklist),
+                            content: Text(l10n.reset_checklist_confirmation),
+                            actions: [
+                              TextButton(
+                                onPressed: () => Navigator.of(context).pop(false),
+                                child: Text(l10n.cancel),
+                              ),
+                              TextButton(
+                                onPressed: () => Navigator.of(context).pop(true),
+                                child: Text(l10n.reset),
+                              ),
+                            ],
+                          ),
+                        );
+
+                        if (confirmed == true) {
+                          final prefs = await SharedPreferences.getInstance();
+                          setState(() {
+                            for (var key in _checkedItems.keys) {
+                              _checkedItems[key] = false;
+                              prefs.setBool('checked_$key', false);
+                            }
+                          });
+
+                          if (mounted) {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text(l10n.checklist_reset_success),
+                                duration: const Duration(seconds: 2),
+                              ),
+                            );
+                          }
+                        }
+                      },
+                      icon: const Icon(Icons.refresh, size: 18),
+                      label: Text(
+                        l10n.reset_checklist,
+                        style: const TextStyle(fontSize: 13),
+                      ),
+                      style: OutlinedButton.styleFrom(
+                        foregroundColor: BZColors.bronzeDark,
+                        minimumSize: const Size(double.infinity, 44),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+
+        // Right side: Full-height items list
+        Expanded(
+          child: _buildItemsList(l10n, mainItems),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildItemsList(AppLocalizations l10n, List<PackingListItem> mainItems) {
+    return ListView.builder(
+      padding: const EdgeInsets.symmetric(horizontal: 16),
+      itemCount: mainItems.length + 1, // +1 for comments section
+      itemBuilder: (context, index) {
+        // Show comments section at the end
+        if (index == mainItems.length) {
+          return Padding(
+            padding: const EdgeInsets.only(top: 8, bottom: 16),
+            child: CommentsSectionWidget(
+              category: CommentCategory.install,
+              maxComments: 3,
+              showAddButton: true,
+              showViewAll: true,
+              title: l10n.installation_notes,
+              collapsible: true,
+              initiallyCollapsed: true,
+            ),
+          );
+        }
+
+        final item = mainItems[index];
+        final subItems = _getSubItems(item.id);
+        final isExpanded = _expandedItems[item.id] ?? false;
+
+        return _PackingListCard(
+          item: item,
+          subItems: subItems,
+          isChecked: _checkedItems[item.id] ?? false,
+          isExpanded: isExpanded,
+          onCheckChanged: (value) {
+            _handleParentCheckChanged(item.id, value);
+          },
+          onExpandChanged: () {
+            setState(() {
+              _expandedItems[item.id] = !isExpanded;
+            });
+            _saveExpandedState(item.id, !isExpanded);
+          },
+          onSubItemCheckChanged: (subItemId, value) {
+            _handleSubItemCheckChanged(item.id, subItemId, value);
+          },
+          getSubItemChecked: (subItemId) =>
+              _checkedItems[subItemId] ?? false,
+        );
+      },
+    );
+  }
+
+  Widget _buildActionButtons(AppLocalizations l10n) {
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.1),
+            blurRadius: 4,
+            offset: const Offset(0, -2),
+          ),
+        ],
+      ),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          ElevatedButton.icon(
+            onPressed: _isScanning ? null : _scanItemWithCamera,
+            icon: _isScanning
+                ? const SizedBox(
+                    width: 20,
+                    height: 20,
+                    child: CircularProgressIndicator(
+                      strokeWidth: 2,
+                      valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+                    ),
+                  )
+                : const Icon(Icons.camera_alt),
+            label: Text(_isScanning ? l10n.scanning : l10n.scan_with_camera),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: BZColors.bronzeDark,
+              foregroundColor: Colors.white,
+              minimumSize: const Size(double.infinity, 48),
+            ),
+          ),
+          const SizedBox(height: 8),
+          OutlinedButton.icon(
+            onPressed: () async {
+              // Show confirmation dialog
+              final confirmed = await showDialog<bool>(
+                context: context,
+                builder: (context) => AlertDialog(
+                  title: Text(l10n.reset_checklist),
+                  content: Text(l10n.reset_checklist_confirmation),
+                  actions: [
+                    TextButton(
+                      onPressed: () => Navigator.of(context).pop(false),
+                      child: Text(l10n.cancel),
+                    ),
+                    TextButton(
+                      onPressed: () => Navigator.of(context).pop(true),
+                      child: Text(l10n.reset),
+                    ),
+                  ],
+                ),
+              );
+
+              if (confirmed == true) {
+                // Clear all checkboxes and save to preferences
+                final prefs = await SharedPreferences.getInstance();
+                setState(() {
+                  for (var key in _checkedItems.keys) {
+                    _checkedItems[key] = false;
+                    prefs.setBool('checked_$key', false);
+                  }
+                });
+
+                if (mounted) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      content: Text(l10n.checklist_reset_success),
+                      duration: const Duration(seconds: 2),
+                    ),
+                  );
+                }
+              }
+            },
+            icon: const Icon(Icons.refresh),
+            label: Text(l10n.reset_checklist),
+            style: OutlinedButton.styleFrom(
+              foregroundColor: BZColors.bronzeDark,
+              minimumSize: const Size(double.infinity, 48),
             ),
           ),
         ],

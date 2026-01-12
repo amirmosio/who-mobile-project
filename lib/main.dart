@@ -18,10 +18,12 @@ final GlobalKey<NavigatorState> mainRouterKey = GlobalKey<NavigatorState>();
 Future<void> initialSetup() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // Lock app to portrait orientation by default
+  // Allow all orientations (portrait and landscape)
   await SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
+    DeviceOrientation.landscapeLeft,
+    DeviceOrientation.landscapeRight,
   ]);
 
   SystemChrome.setEnabledSystemUIMode(
