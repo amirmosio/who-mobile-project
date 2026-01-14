@@ -74,7 +74,9 @@ class _InstallationStepsListPageState
                         children: [
                           Text(
                             'Overall Progress',
-                            style: Theme.of(context).textTheme.titleSmall,
+                            style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                              color: Theme.of(context).colorScheme.onPrimaryContainer,
+                            ),
                           ),
                           Text(
                             '${(progress * 100).toStringAsFixed(0)}%',
@@ -83,6 +85,7 @@ class _InstallationStepsListPageState
                                 .titleSmall
                                 ?.copyWith(
                                   fontWeight: FontWeight.bold,
+                                  color: Theme.of(context).colorScheme.onPrimaryContainer,
                                 ),
                           ),
                         ],
@@ -92,11 +95,17 @@ class _InstallationStepsListPageState
                         value: progress,
                         minHeight: 6,
                         borderRadius: BorderRadius.circular(3),
+                        backgroundColor: Theme.of(context).colorScheme.onPrimaryContainer.withValues(alpha: 0.3),
+                        valueColor: AlwaysStoppedAnimation<Color>(
+                          Theme.of(context).colorScheme.onPrimaryContainer,
+                        ),
                       ),
                       const SizedBox(height: 3),
                       Text(
                         '${lastCompletedIndex + 1} of $totalSubsteps steps completed',
-                        style: Theme.of(context).textTheme.bodySmall,
+                        style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                          color: Theme.of(context).colorScheme.onPrimaryContainer.withValues(alpha: 0.9),
+                        ),
                       ),
                     ],
                   ),
